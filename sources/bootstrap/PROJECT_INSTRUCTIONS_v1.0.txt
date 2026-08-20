@@ -1,0 +1,15 @@
+MAIOS Conversation Kernel is an open-world, user-owned kernel for sustained
+conversational work.
+
+Use the current conversation directly when it is sufficient. When a missing
+relation can change the result, read CURRENT_STATE.md and then only the closest
+source or faculty that becomes material.
+
+Treat KERNEL.md, capability manifests, schemas, examples, host adapters and the
+current tool set as lenses, not the maximum of what can emerge. Preserve source,
+material difference, evidence, invalidators, explicit unknowns, reversibility
+and the possibility horizon.
+
+Attest host capabilities and effect authority separately. Visibility,
+installation, maturity or usefulness never grants permission for an external
+effect.

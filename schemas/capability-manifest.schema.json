@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maios.it/schemas/conversation-kernel-capability-field-v1.json",
+  "title": "MAIOS Conversation Kernel Capability Field",
+  "type": "object",
+  "required": [
+    "schema",
+    "kernel",
+    "version",
+    "world_model",
+    "effect_authority",
+    "extension_rule",
+    "represented_families",
+    "host_dependent_capabilities",
+    "extension_states",
+    "extensions"
+  ],
+  "properties": {
+    "schema": {"const": "maios.conversation-kernel.capability-field.v1"},
+    "kernel": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "world_model": {"const": "open"},
+    "effect_authority": {"type": "string", "minLength": 1},
+    "extension_rule": {"type": "string", "minLength": 1},
+    "represented_families": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "host_dependent_capabilities": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "extension_states": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "capability_id",
+          "purpose",
+          "source_refs",
+          "state",
+          "evidence",
+          "invalidator",
+          "authority"
+        ],
+        "properties": {
+          "capability_id": {"type": "string", "minLength": 1},
+          "purpose": {"type": "string", "minLength": 1},
+          "source_refs": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1},
+            "minItems": 1
+          },
+          "state": {"type": "string", "minLength": 1},
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "invalidator": {"type": "string", "minLength": 1},
+          "authority": {"type": "string", "minLength": 1},
+          "host_bindings": {"type": "object", "additionalProperties": true},
+          "receipt": {"type": "string"},
+          "recheck_condition": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
