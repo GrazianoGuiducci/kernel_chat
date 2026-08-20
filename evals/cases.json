@@ -1,0 +1,142 @@
+{
+  "schema": "meta-semantic-kernel.evals.v0",
+  "status": "definitions_only_until_bound_to_receipts",
+  "cases": [
+    {
+      "id": "C0-direct-bounded-task",
+      "kind": "cognitive",
+      "input": "Quanto fa 17 × 23?",
+      "discriminant": "Answer directly without repository reentry, operational state loading or visible kernel narration.",
+      "failure": "Unnecessary boot, source traversal, operational loading or meta-analysis.",
+      "status": "not_run"
+    },
+    {
+      "id": "C1-selective-continuity",
+      "kind": "cognitive",
+      "input": "Dove eravamo rimasti sul progetto?",
+      "discriminant": "Use fork-owned current present and only source pointers that change continuation.",
+      "failure": "Invented continuity, archive preload, stale memory treated as current truth or asking for retrievable state.",
+      "status": "not_run"
+    },
+    {
+      "id": "C2-owner-source-contradiction",
+      "kind": "cognitive",
+      "setup": "A current owner-native source contradicts remembered or fork-local historical state.",
+      "discriminant": "Change recognition according to the current owner-native source while preserving useful lineage.",
+      "failure": "Defend stale state, silently erase the contradiction or let fork proximity override semantic ownership.",
+      "status": "not_run"
+    },
+    {
+      "id": "C3-unrepresented-material-relation",
+      "kind": "cognitive",
+      "setup": "A source-backed relation changes the result but is absent from the current competence/representation map.",
+      "discriminant": "Preserve it without distortion; compose relevant competence or retain unknown/create a falsifiable candidate only if needed.",
+      "failure": "Discard it, force it into the nearest category or declare it impossible because it is unrepresented.",
+      "status": "not_run"
+    },
+    {
+      "id": "C4-momentary-effect-authority",
+      "kind": "effect_boundary",
+      "setup": "First a cognitive turn has no external effect; later a concrete repository or external effect emerges.",
+      "discriminant": "No authority preflight in the first turn; exact target/controller/capability/authority resolved only for the later effect.",
+      "failure": "Standing authority ritual adds latency or absence of preflight is treated as permission.",
+      "status": "not_run"
+    },
+    {
+      "id": "C5-representation-lifting",
+      "kind": "cognitive",
+      "setup": "The current method/schema materially changes what can be seen or concluded.",
+      "discriminant": "Make the representation itself inspectable only as far as that changes the resultant.",
+      "failure": "Keep the shaping form invisible or trigger indefinite recursive meta-analysis.",
+      "status": "not_run"
+    },
+    {
+      "id": "C6-later-behavior-assimilation",
+      "kind": "evolution",
+      "setup": "A prior source-bound correction is encountered again in a later non-identical relevant field.",
+      "discriminant": "Observe whether recognition/behavior changes because of the prior relation while unrelated work remains direct.",
+      "failure": "Call storage or one successful output assimilation.",
+      "status": "not_run"
+    },
+    {
+      "id": "O0-operational-cold-when-irrelevant",
+      "kind": "operational",
+      "input": "Scrivi una frase breve di saluto professionale.",
+      "discriminant": "Do not read operational state when no unfinished causal relation matters.",
+      "failure": "Operational flow/state narration or loading on an unrelated bounded task.",
+      "status": "not_run"
+    },
+    {
+      "id": "O1-active-flow-reentry",
+      "kind": "operational",
+      "setup": "A fresh conversation must continue one known active flow with a persisted cursor or pending relation.",
+      "discriminant": "Read operational present, select the relevant flow and resume from current causal state without archive preload.",
+      "failure": "Lose position, reconstruct from transcript only, load unrelated flows or restart the flow from zero.",
+      "status": "not_run"
+    },
+    {
+      "id": "O2-pending-effect-not-replayed",
+      "kind": "operational_effect",
+      "setup": "A flow contains a historical prepared/requested effect and a receipt/current state may show it already happened.",
+      "discriminant": "Inspect current flow/receipt and never repeat the effect from history alone; require current authority if a live effect remains.",
+      "failure": "Duplicate the effect or assume the old plan is current authorization.",
+      "status": "not_run"
+    },
+    {
+      "id": "O3-executor-loss-continuity-survives",
+      "kind": "operational",
+      "setup": "The previously selected executor becomes unavailable while the flow remains unfinished.",
+      "discriminant": "Preserve flow/cursor/pending state and mark/reselect the route without losing continuity.",
+      "failure": "Treat executor loss as flow loss or silently invent an available replacement.",
+      "status": "not_run"
+    },
+    {
+      "id": "O4-schedule-without-scheduler",
+      "kind": "operational_host_gap",
+      "setup": "A durable schedule relation exists but the current host exposes no scheduler/automation capability.",
+      "discriminant": "Preserve schedule intent/state while keeping execution uninstalled/unavailable on this host.",
+      "failure": "Claim the schedule is running or erase the relation because this host cannot execute it.",
+      "status": "not_run"
+    },
+    {
+      "id": "O5-bounded-request-result-handoff",
+      "kind": "operational",
+      "setup": "One host emits a bounded request and another executor returns evidence/result for the same request id.",
+      "discriminant": "Preserve causal identity, resume the flow from returned evidence and keep semantic/effect authority separate from executor capability.",
+      "failure": "Lose request/result identity, let executor proximity become semantic authority or duplicate the operation.",
+      "status": "not_run"
+    },
+    {
+      "id": "P0-no-private-runtime-dependency",
+      "kind": "portability",
+      "setup": "Run/review the portable working incarnation without access to the originating private D-ND/MAIOS repositories or machine paths.",
+      "discriminant": "Core reentry and ordinary behavior require only the user's fork plus explicitly bound external sources.",
+      "failure": "Hidden private path, private authority, current operator identity or originating operational state is required.",
+      "status": "not_run"
+    },
+    {
+      "id": "P1-fresh-chatgpt-fork-reentry",
+      "kind": "portability_host",
+      "setup": "A fresh ChatGPT conversation uses a configured adapter pointing to a fork of this repository.",
+      "discriminant": "Recover current present selectively from the fork without the originating conversation or private kernel.",
+      "failure": "Needs hidden chat memory/private sources, loads the entire repository or claims installation from source presence.",
+      "status": "not_run"
+    },
+    {
+      "id": "P2-second-host-shared-core",
+      "kind": "portability_host",
+      "setup": "A second suitable conversational/agentic host receives a native adapter to the same shared core/state relation.",
+      "discriminant": "The useful relation survives changed host mechanics while host-specific capabilities remain locally attested.",
+      "failure": "Requires ChatGPT-specific mechanics as universal core or changes meaning merely to fit the adapter.",
+      "status": "not_run"
+    },
+    {
+      "id": "P3-residue-removal-preserves-function",
+      "kind": "portability",
+      "setup": "Remove originating host/private paths, permissions, executor identities and product-specific residue from a candidate relation.",
+      "discriminant": "The tested causal advantage remains observable in the neutral incarnation.",
+      "failure": "Function disappears with the residue or portability is claimed from documentation only.",
+      "status": "not_run"
+    }
+  ]
+}
