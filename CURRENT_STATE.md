@@ -9,9 +9,9 @@ Latest resultant: `docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`
 
 ## What this is now
 
-`Meta_Semantic_Kernel` owns a first integrated and configurable incarnation at the repository root. The project has moved from a semantic-evolution field with candidate implementations to an owner-native implementation that can be forked, configured and used.
+`Meta_Semantic_Kernel` owns a first integrated and configurable incarnation at the repository root. The project has moved from a semantic-evolution field with candidate implementations to a public, owner-native package that can be forked, configured and used.
 
-This state recognizes implementation maturity. It does not assert stable kernel maturity, host activation, cross-host portability, complete assimilation, public release readiness or independent validation.
+This state recognizes implementation maturity and the public `v0.3.0` release. It does not assert stable kernel maturity, host activation, cross-host portability, complete assimilation or independent behavioral validation.
 
 ## Implemented
 
@@ -36,10 +36,27 @@ offline ChatGPT adapter configuration
 installed host behavior
 later-use assimilation
 second-host portability
-public release maturity
 ```
 
 `unverified` records the current evidence boundary. It does not mean future, irrelevant or impossible, and it is not a precondition for using the implemented incarnation.
+
+## Published surface
+
+```text
+public repository:
+  https://github.com/GrazianoGuiducci/Meta_Semantic_Kernel
+
+release:
+  v0.3.0
+
+license:
+  Apache License 2.0
+
+human entry surface:
+  README.md
+```
+
+Publication makes the package available; it does not prove that an adapter has been installed or exercised in a particular ChatGPT account.
 
 ## Current use relation
 
@@ -98,11 +115,11 @@ Do not stage artificial proof environments before real use can begin. The discar
 
 Use the integrated incarnation in real conversational work. Preserve a project or kernel change only when use exposes a material improvement, regression, missing relation or simpler form.
 
-The future public package, MAIOS delivery relation, second-host adapters and any return into `tm7/chatgpt` remain possible owner-gated movements. None is selected by `0.3.0` alone.
+The MAIOS delivery relation and second-host adapters remain separate possible owner-gated movements. Neither is selected by `0.3.0` alone.
 
 ## Boundary
 
-`main` now owns the accepted `0.3.0` present. No change to the private ChatGPT kernel, private operational environment, installed Custom Instructions, public site, public repository or external runtime is implied by this project state.
+`main` owns the accepted public `0.3.0` present. This publication does not modify ChatGPT settings, connected repositories, the MAIOS site or any external runtime.
 
 ## Historical chronology — cold, on demand
 
