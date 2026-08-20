@@ -170,7 +170,26 @@ A material change may belong to state, an operational contract, an adapter, a lo
 
 Useful evolution should remain reversible and source-linked. A component may be simplified or removed when it becomes ritual, noise, redundant structure or host-specific residue.
 
-## 8. What is intentionally not inside the core
+## 8. Autopoietic direction
+
+The package is designed as a logical and structural harness for a progressively
+self-evolving AI system. Its organs connect reasoning, persistent state,
+situated competence, unfinished operations, crystallization, reentry, and
+reversible evolution without collapsing their owners or treating
+self-observation as self-approval.
+
+This makes autopoietic AI a developmental direction: the system can be evolved
+toward preserving its operational identity, recognizing changes in its own
+functioning, integrating useful capabilities, and revising its organization
+while provenance, causal coherence, recovery, and effect authority remain
+inspectable.
+
+That foundation may participate in future forms meaningfully described as
+artificial general intelligence. The architecture does not equate a persistent
+repository, a self-description, or a written evolution candidate with AGI or
+with demonstrated autonomous self-evolution.
+
+## 9. What is intentionally not inside the core
 
 The current integrated incarnation does not require:
 
@@ -187,6 +206,6 @@ one provider's mechanics as universal architecture
 
 Those may exist elsewhere as lineage, implementation history or future product relations. They are not runtime dependencies of the portable core.
 
-## 9. Current maturity boundary
+## 10. Current maturity boundary
 
-`0.3.0` means that a coherent all-in-one implementation exists and can be configured and used. It does not by itself prove stable kernel maturity, later-use assimilation, second-host portability or public-release maturity.
+`0.3.0` means that a coherent all-in-one implementation exists, is publicly released, and can be configured and used. It does not by itself prove stable kernel maturity, autonomous self-evolution in an installed host, later-use assimilation or second-host portability.

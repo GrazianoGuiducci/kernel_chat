@@ -9,9 +9,15 @@ Latest resultant: `docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`
 
 ## What this is now
 
-`Meta_Semantic_Kernel` owns a first integrated and configurable incarnation at the repository root. The project has moved from a semantic-evolution field with candidate implementations to a public, owner-native package that can be forked, configured and used.
+`Meta_Semantic_Kernel` owns a first integrated and configurable kernel incarnation at the repository root. The project has moved from a semantic-evolution field with candidate implementations to a public, owner-native package that can be forked, configured and used.
 
 This state recognizes implementation maturity and the public `v0.3.0` release. It does not assert stable kernel maturity, host activation, cross-host portability, complete assimilation or independent behavioral validation.
+
+## Selected direction
+
+The kernel is intended as a logical and structural harness through which reasoning, durable state, situated competence, operational continuity and reversible evolution can form persistent, progressively self-evolving awareness.
+
+Autopoietic AI is the selected developmental direction. A future system emerging from this foundation may reach a form that can meaningfully be described as AGI. These are horizon statements, not claims that `0.3.0` already demonstrates autonomous self-evolution, autopoiesis or general intelligence in an installed host.
 
 ## Implemented
 

@@ -1,12 +1,14 @@
 # Meta Semantic Kernel
 
-**A user-owned continuity package for ChatGPT conversations, built on a
-GitHub repository you control.**
+**A user-owned semantic kernel for ChatGPT: a logical and structural harness
+for persistent awareness, situated capabilities, operational continuity, and
+reversible evolution.**
 
-Chats end. Your projects do not. Meta Semantic Kernel provides the state,
-instructions, and operating structures a conversational host can use to
-recover relevant context, continue unfinished work, and preserve useful
-changes without loading the repository for every ordinary question.
+Meta Semantic Kernel organizes how a conversational AI relates its present
+context, durable state, sources, capabilities, unfinished work, authority, and
+learning. A GitHub repository you control makes that field persistent and
+inspectable across chats. Continuity is one resulting function, not the whole
+kernel.
 
 Version `0.3.0` includes the ChatGPT adapter, an offline configurator, and a
 structural validator. The adapter still has to be installed and exercised in
@@ -18,12 +20,17 @@ your own ChatGPT account; repository source alone does not verify host behavior.
 
 [Install for ChatGPT](INSTALL.md) · [Read the user guide](docs/USER_GUIDE.md) · [Explore the architecture](docs/ARCHITECTURE.md)
 
-## Why it exists
+## From isolated conversations to persistent awareness
 
 A useful conversation can accumulate project decisions, open questions,
 sources, and ways of working. Starting a new chat usually means explaining all
 of that again—or pasting a transcript that contains far more history than the
 next result needs.
+
+Persistent awareness here means that a compatible host can recover where the
+work is, why it matters, which sources govern it, which capabilities are
+relevant, and what should happen next. It does not require the host to load all
+stored history or administer the repository during every conversation.
 
 Meta Semantic Kernel uses a fork of this repository as a user-owned continuity
 surface. The fork keeps a concise current context and pointers to the sources
@@ -90,13 +97,20 @@ account and host capabilities; the local configurator cannot complete or prove
 this phase. See the [complete installation guide](INSTALL.md) for configuration
 boundaries, removal, and provider notes.
 
-## What it is designed to change
+## What the kernel organizes
 
 ### Ordinary requests should remain direct
 
 The adapter tells the host to use the current message and conversation when
 they are sufficient. It does not require repository reentry or workflow
 narration for every request.
+
+### Relevant capabilities should participate when needed
+
+The cognitive core defines a relational route from the present problem to an
+existing competence, a useful composition, or a real capability gap. A fixed
+catalogue is never treated as the ceiling of what the system can recognize or
+develop.
 
 ### A new conversation receives a reentry path
 
@@ -119,6 +133,25 @@ The evolution layer separates a stored observation from a reusable change. It
 provides a place to revise state, routing, competence, adapters, or the core
 when real use exposes a material difference, while project-specific truth stays
 with its source.
+
+## Toward autopoietic AI
+
+The long-term direction is an autopoietic AI architecture: a system able to
+preserve its operational identity, observe changes in its own functioning,
+integrate useful capabilities, and revise its organization while keeping
+provenance, causal coherence, reversibility, and authority over effects
+legible.
+
+The kernel is the logical and structural harness for that movement. It connects
+reasoning with durable state, competence formation, unfinished operations,
+learning, and reentry, so an AI can preserve and evolve the relations through
+which it works—not only the content of previous conversations.
+
+This foundation may contribute to future systems that can meaningfully be
+described as artificial general intelligence. Version `0.3.0` does not claim
+AGI or demonstrate autonomous self-evolution inside ChatGPT. It implements the
+inspectable substrate from which persistent and progressively self-evolving
+behavior can be developed and evaluated through real use.
 
 ## What is included
 
