@@ -19,6 +19,8 @@ REQUIRED = [
     "README.md",
     "CURRENT_STATE.md",
     "INSTALL.md",
+    "LICENSE",
+    "NOTICE",
     "VERSION",
     "CHANGELOG.md",
     "docs/ARCHITECTURE.md",
@@ -127,6 +129,14 @@ def main() -> int:
     version = read_text("VERSION").strip()
     if version != "0.3.0":
         errors.append(f"VERSION must contain exactly 0.3.0, found {version!r}")
+
+    license_text = read_text("LICENSE")
+    if "Apache License" not in license_text or "Version 2.0, January 2004" not in license_text:
+        errors.append("LICENSE must contain the canonical Apache License 2.0 text")
+
+    notice = read_text("NOTICE")
+    if "Copyright 2026 Graziano Guiducci" not in notice:
+        errors.append("NOTICE must identify the current copyright owner")
 
     changelog = read_text("CHANGELOG.md")
     for released_version in ("0.1.0", "0.2.0", "0.3.0"):

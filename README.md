@@ -77,3 +77,7 @@ public release maturity: unverified
 ```
 
 Use [`CURRENT_STATE.md`](CURRENT_STATE.md) for reentry and [`docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`](docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md) for the causal movement from `0.2.0`.
+
+## License
+
+Copyright 2026 Graziano Guiducci. Licensed under the [Apache License 2.0](LICENSE).

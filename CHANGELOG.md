@@ -8,6 +8,7 @@ This file records project-level resultants. It does not turn structural validati
 - Added the replaceable ChatGPT adapter, offline fork configuration, durable semantic state, operational continuity, reversible evolution, behavioral discriminants and structural validation.
 - Subtracted provisional RepoKernel morphology, fixed capability taxonomy, product seed and artificial proof scaffolding from the current package.
 - Added installation, architecture, normal-use and fork update/portability documentation.
+- Selected Apache License 2.0 for public source distribution.
 - Kept installed-host behavior, later-use assimilation, second-host portability and public-release maturity unverified.
 
 Source: [`docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`](docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md)
