@@ -1,0 +1,25 @@
+{
+  "schema": "meta-semantic-kernel.host-adapter.v0",
+  "adapter_id": "chatgpt-custom-instructions",
+  "host_name": "ChatGPT",
+  "status": "source_candidate",
+  "behavioral_state": "unverified",
+  "entry_surface": "Custom Instructions",
+  "semantic_reentry": "state/CURRENT_PRESENT.md",
+  "operational_reentry": "operations/CURRENT_STATE.md",
+  "kernel_entry": "kernel/KERNEL.md",
+  "repository_binding": "<YOUR_GITHUB_USER>/<YOUR_REPOSITORY>",
+  "host_form": "conversation_turn_reactive",
+  "persistent_runtime_assumed": false,
+  "capabilities": {
+    "repository_read": "unverified_until_host_attestation",
+    "repository_write": "unverified_until_host_attestation_and_effect_authority",
+    "tool_execution": "unverified_until_host_attestation",
+    "network_access": "unverified_until_host_attestation",
+    "scheduler_or_automation": "unverified_until_host_attestation",
+    "external_services": "unverified_until_host_attestation_and_effect_authority"
+  },
+  "effect_authority": "none_by_default",
+  "installation": "manual_complete_replacement",
+  "replacement_or_removal": "replace or remove the complete Custom Instructions adapter; repository source change alone does not update host settings"
+}
