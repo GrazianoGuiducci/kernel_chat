@@ -38,6 +38,8 @@ Start with the surface that matches the current need:
 - [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) — normal use, project bindings, operational continuity, recovery and troubleshooting;
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — how boot, cognition, state, operations, evolution and ownership fit together;
 - [`docs/UPDATE_AND_PORTABILITY.md`](docs/UPDATE_AND_PORTABILITY.md) — update a fork without erasing user state and move the same incarnation across repositories or future hosts;
+- [`CHANGELOG.md`](CHANGELOG.md) — concise project-level movement from `0.1.0` through the current version;
+- [`VERSION`](VERSION) — current upstream package version;
 - [`CURRENT_STATE.md`](CURRENT_STATE.md) — current project/reentry state;
 - [`docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`](docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md) — causal movement that produced the current incarnation.
 

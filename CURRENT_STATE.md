@@ -66,6 +66,9 @@ real use changes recognition, continuity or behavior
 project state and maturity:
   this file + latest resultant
 
+upstream package version:
+  VERSION
+
 integrated implementation:
   adapters/ kernel/ state/ operations/ evolution/ evals/ scripts/
 

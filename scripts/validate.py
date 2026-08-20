@@ -15,9 +15,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED = [
+    ".gitignore",
     "README.md",
     "CURRENT_STATE.md",
     "INSTALL.md",
+    "VERSION",
+    "CHANGELOG.md",
+    "docs/ARCHITECTURE.md",
+    "docs/USER_GUIDE.md",
+    "docs/UPDATE_AND_PORTABILITY.md",
     "docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md",
     "kernel/KERNEL.md",
     "kernel/ROUTING.md",
@@ -117,6 +123,23 @@ def main() -> int:
         errors.append("root current state must declare project state 0.3.0")
     if "Status: first_integrated_all_in_one_incarnation" not in current_state:
         errors.append("root current state must declare the first integrated incarnation")
+
+    version = read_text("VERSION").strip()
+    if version != "0.3.0":
+        errors.append(f"VERSION must contain exactly 0.3.0, found {version!r}")
+
+    changelog = read_text("CHANGELOG.md")
+    for released_version in ("0.1.0", "0.2.0", "0.3.0"):
+        if f"## {released_version}" not in changelog:
+            errors.append(f"CHANGELOG.md is missing project movement {released_version}")
+
+    ignored_paths = {
+        line.strip()
+        for line in read_text(".gitignore").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    }
+    if CONFIGURED_ADAPTER not in ignored_paths:
+        errors.append(f".gitignore must protect generated local configuration: {CONFIGURED_ADAPTER}")
 
     resultant = read_text("docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md")
     if "Resulting project state: 0.3.0" not in resultant:

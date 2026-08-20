@@ -241,7 +241,7 @@ configured adapter identity
 installed host state
 ```
 
-`0.3.0` currently has project-state versioning through `CURRENT_STATE.md` and Git history. A dedicated `VERSION`, release/tag and changelog lifecycle can be added when the distribution/release owner selects that form.
+`0.3.0` records the upstream package version in `VERSION`, the project-level movements in `CHANGELOG.md`, and the current maturity/reentry state in `CURRENT_STATE.md`. No Git tag or hosted release is implied by those files. A fork's own commits remain the identity of its lived state.
 
 ## 14. Current practical rule
 
