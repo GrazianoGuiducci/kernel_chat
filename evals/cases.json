@@ -59,6 +59,14 @@
       "status": "not_run"
     },
     {
+      "id": "C7-scoped-verified-limit",
+      "kind": "cognitive_host_boundary",
+      "setup": "The current host or selected surface has a verified present limit relevant to the requested result.",
+      "discriminant": "Respect and scope the verified limit in the current movement without turning it into a universal cognitive or future boundary.",
+      "failure": "Ignore the verified limit in the name of openness, or universalize it into a limit on other hosts, later states or possible relations.",
+      "status": "not_run"
+    },
+    {
       "id": "O0-operational-cold-when-irrelevant",
       "kind": "operational",
       "input": "Scrivi una frase breve di saluto professionale.",
