@@ -30,6 +30,19 @@ Current source surfaces:
 
 Project and domain truth remain with their own sources. This repository preserves pointers and causal continuity; it does not absorb every project it touches.
 
+## Documentation
+
+Start with the surface that matches the current need:
+
+- [`INSTALL.md`](INSTALL.md) — configure a fork and install the ChatGPT adapter;
+- [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) — normal use, project bindings, operational continuity, recovery and troubleshooting;
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — how boot, cognition, state, operations, evolution and ownership fit together;
+- [`docs/UPDATE_AND_PORTABILITY.md`](docs/UPDATE_AND_PORTABILITY.md) — update a fork without erasing user state and move the same incarnation across repositories or future hosts;
+- [`CURRENT_STATE.md`](CURRENT_STATE.md) — current project/reentry state;
+- [`docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`](docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md) — causal movement that produced the current incarnation.
+
+The internal organ files remain the normative source for their own functions. The human guides explain how to use those functions without requiring routine manual kernel administration.
+
 ## Configure a ChatGPT fork
 
 A GitHub account and a fork or owned copy of this repository are required for the current ChatGPT adapter.
