@@ -99,7 +99,7 @@ The future public package, MAIOS delivery relation, second-host adapters and any
 
 ## Boundary
 
-No change to `main`, private ChatGPT kernel, operational environment, installed Custom Instructions, public site, public repository or external runtime is implied by this branch state.
+`main` now owns the accepted `0.3.0` present. No change to the private ChatGPT kernel, private operational environment, installed Custom Instructions, public site, public repository or external runtime is implied by this project state.
 
 ## Historical chronology — cold, on demand
 
