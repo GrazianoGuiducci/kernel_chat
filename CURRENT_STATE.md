@@ -1,110 +1,106 @@
 # CURRENT STATE
 
 Date: 2026-08-20
-Project state: 0.2.0
+Project state: 0.3.0
+Status: first_integrated_all_in_one_incarnation
 Baseline: 0.1.0
-Latest resultant: `docs/RESULTANT_0.2.0.md`
+Entering state: 0.2.0
+Latest resultant: `docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md`
 
 ## What this is now
 
-`Meta_Semantic_Kernel` is currently a project and a semantic-evolution surface. The repository name expresses a possible direction, not current kernel maturity.
+`Meta_Semantic_Kernel` owns a first integrated and configurable incarnation at the repository root. The project has moved from a semantic-evolution field with candidate implementations to an owner-native implementation that can be forked, configured and used.
 
-The project is **not yet a kernel**. Kernel status is not inferred from repository naming, coherent documentation, recursive behavior or model agreement. It becomes relevant only if an owner-native function that emerges here can later be integrated coherently into a fitting kernel incarnation with behavioral evidence rather than by absorption or naming.
+This state recognizes implementation maturity. It does not assert stable kernel maturity, host activation, cross-host portability, complete assimilation, public release readiness or independent validation.
 
-## Present context
-
-The system from which this project emerges is already in use. `Meta_Skill`, `KA`, `dnd-skill-evolution-guard`, LAB5-derived knowledge, the ChatGPT host kernel and the other available faculties are active resources used to create new functions and products. They are not completed historical work being imported into a replacement architecture.
-
-The current ChatGPT host acts through its own kernel/competence incarnation while working here; that private host kernel is not copied into this repository.
-
-Use faculties for what they can actually change in the present:
-
-- **Meta_Skill**: recognise, reuse, compose, generate and evolve capability when the work requires it.
-- **KA**: use as a competence for source distinction, material difference, contradiction, invalidation, retained unknown, reversibility and non-contamination; do not import KA's project procedure as a mandatory workflow here.
-- **dnd-skill-evolution-guard**: consolidate a sufficiently demonstrated reusable operational change when such a change actually emerges.
-- **ChatGPT host kernel / competence field**: provide situated host cognition and composition while work occurs, without becoming project truth or being copied here.
-- **Other faculties and tools**: allow them to participate when they are relevant or plausibly capable of changing the resultant. The known catalogue is not the boundary of possible capability.
-
-No mandatory sequence among these faculties is asserted here.
-
-## Latest movement — 0.2.0
-
-The first real-work movement changed the status of the baseline's proposed exhaustive provenance/function regression.
-
-An attempted rule intended to preserve possibility introduced its own structure into the field. The operator correction exposed that the form used to interpret the field had itself become materially causal.
-
-Using the current host kernel, KA and Meta_Skill on that occurrence produced this bounded observation:
+## Implemented
 
 ```text
-an interpretive form participates
-+ materially changes what can be seen, selected or concluded
--> the form is no longer transparent residue
--> it can itself become part of the present field
--> source / inference / introduced form / unknown can be discriminated again
+boot adapter
+cognitive-semantic core
+relational routing
+situated competence relation
+durable present and active/cold state
+operational continuity
+bounded request/result handoff
+receipts, replay protection and recovery
+crystallization and reversible evolution
+behavioral eval definitions
+static structural validation
+offline ChatGPT adapter configuration
 ```
 
-This is an observed project relation, not a universal axiom.
-
-### Material consequence
-
-The baseline regression:
+## Unverified
 
 ```text
-axiom / function / gate / schema
--> provenance / function / transformation / owner / residue
+installed host behavior
+later-use assimilation
+second-host portability
+public release maturity
 ```
 
-remains available as a useful faculty, but it is no longer the project's compulsory next program.
+`unverified` records the current evidence boundary. It does not mean future, irrelevant or impossible, and it is not a precondition for using the implemented incarnation.
 
-Current movement is instead:
+## Current use relation
 
 ```text
-work from the real present
--> let relevant faculties participate
--> make a representation or method inspectable when its participation becomes materially causal
--> regress provenance/function/owner only as far as that changes the resultant
--> preserve a durable delta only when later work would otherwise differ
+conversation sufficient
+-> work directly
+
+durable semantic relation can change the result
+-> use state/CURRENT_PRESENT.md selectively
+
+unfinished causal work can change continuation
+-> use operations/CURRENT_STATE.md selectively
+
+host binding needed
+-> configure and install the relevant adapter
+
+real use changes recognition, continuity or behavior
+-> preserve the smallest owner-native delta
 ```
 
-Do not turn this compression into a mandatory workflow; it records the causal change from the entering state.
+## Source of truth
 
-## Competence result of the movement
+```text
+project state and maturity:
+  this file + latest resultant
 
-No new competence was required.
+integrated implementation:
+  adapters/ kernel/ state/ operations/ evolution/ evals/ scripts/
 
-- Meta_Skill already contains the relevant aperture and competence-composition capacity.
-- KA provided the needed discrimination/non-contamination relation.
-- No skill-level reusable delta required `dnd-skill-evolution-guard` action.
-- No ChatGPT-kernel evolution candidate is opened by this movement because the current host kernel already contains a closely related lifting relation and cross-host portability has not been demonstrated.
+ChatGPT configuration path:
+  INSTALL.md + scripts/configure_chatgpt_adapter.py
 
-This `no new competence / no host-kernel change` result is itself part of the observed use of the existing competence field.
+historical movements:
+  docs/BASELINE_0.1.0.md
+  docs/RESULTANT_0.2.0.md
+  Git history when a named lineage question requires it
+```
 
-## Current movement
+## Residue not to follow
 
-Continue doing real work in this project rather than constructing its final form in advance.
+Do not stage artificial proof environments before real use can begin. The discarded test scaffolding, generated alpha morphology, fixed capability-family coverage, product seed and provisional product identity have been removed from the current tree. Their useful relations are already carried by the implementation and this resultant; their source forms remain recoverable only through Git history and are not reentry material.
 
-When a material occurrence changes recognition, capability, relation or later behavior:
+## Reentry
 
-- keep source, inference, verification and residue distinguishable when useful;
-- use owner-native live faculties rather than stale copied descriptions;
-- compare the entering state with the resulting state;
-- preserve only the delta that changes future work;
-- leave unresolved relations unresolved when collapsing them would manufacture the answer.
+1. Read this active state.
+2. Use the root implementation directly.
+3. Read the latest resultant only when the movement from `0.2.0` matters.
+4. Use `INSTALL.md` when configuring a fork.
+5. Open owner-native competence or project sources only when they can change the present result.
+6. Let ordinary use produce the next evidence and correction.
 
-These are current re-entry consequences of observed work, not a closed ontology of the future system.
+## Current next
 
-## Re-entry
+Use the integrated incarnation in real conversational work. Preserve a project or kernel change only when use exposes a material improvement, regression, missing relation or simpler form.
 
-1. Read this file first.
-2. Read `docs/RESULTANT_0.2.0.md` when the first real-work semantic movement is relevant.
-3. Read `docs/BASELINE_0.1.0.md` when the opening genealogy and initial regression are needed.
-4. Read live owner-native sources for Meta_Skill, KA, the current host kernel or another faculty only when their current state can change the resultant.
-5. Continue from the present rather than reconstructing the project from its name or replaying prior procedures.
+The future public package, MAIOS delivery relation, second-host adapters and any return into `tm7/chatgpt` remain possible owner-gated movements. None is selected by `0.3.0` alone.
 
-## Version movement
+## Boundary
 
-A next project version is warranted when real work produces a material change in understanding, a reusable function, a changed relation among faculties, a demonstrable competence effect, or another resultant that changes later behavior.
+No change to `main`, private ChatGPT kernel, operational environment, installed Custom Instructions, public site, public repository or external runtime is implied by this branch state.
 
-At that point preserve the new causal resultant and update this state. Do not silently rewrite prior versions to make the later form appear inevitable.
+## Historical chronology — cold, on demand
 
-A candidate return to a host kernel or wider system is separate from project versioning. It requires its own evidence, owner relation and, when portability is claimed, removal of host/private residue plus behavioral support in another fitting incarnation where possible.
+The causal history remains in the versioned resultants, contributions and Git commits. It is cold by default; recover it only for a named source, contradiction, regression or lineage decision.

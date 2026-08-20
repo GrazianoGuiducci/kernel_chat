@@ -15,6 +15,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED = [
+    "README.md",
+    "CURRENT_STATE.md",
+    "INSTALL.md",
+    "docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md",
     "kernel/KERNEL.md",
     "kernel/ROUTING.md",
     "kernel/COMPETENCE.md",
@@ -31,7 +35,15 @@ REQUIRED = [
     "adapters/chatgpt/adapter.json",
     "adapters/chatgpt/INSTALLATION_STATE.md",
     "evals/cases.json",
+    "scripts/configure_chatgpt_adapter.py",
 ]
+
+CONFIGURED_ADAPTER = "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md"
+INSTALL_MARKER = "## Complete text to install"
+CONFIGURED_REENTRY_RE = re.compile(
+    r"`([A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/"
+    r"[A-Za-z0-9_.-]+/state/CURRENT_PRESENT\.md)`"
+)
 
 PORTABLE_ROOTS = [
     "kernel",
@@ -72,6 +84,23 @@ def portable_files() -> list[Path]:
     return files
 
 
+def adapter_install_text(document: str) -> str:
+    if INSTALL_MARKER not in document:
+        raise ValueError(f"adapter install section missing: {INSTALL_MARKER}")
+    return document.split(INSTALL_MARKER, 1)[1].strip()
+
+
+def redact_configured_repository(text: str, relative: str) -> str:
+    if relative != CONFIGURED_ADAPTER:
+        return text
+    match = CONFIGURED_REENTRY_RE.search(text)
+    if not match:
+        return text
+    return text.replace(
+        match.group(1), "<CONFIGURED_REPOSITORY>/state/CURRENT_PRESENT.md"
+    )
+
+
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -82,6 +111,20 @@ def main() -> int:
 
     if errors:
         return finish(errors, warnings)
+
+    current_state = read_text("CURRENT_STATE.md")
+    if "Project state: 0.3.0" not in current_state:
+        errors.append("root current state must declare project state 0.3.0")
+    if "Status: first_integrated_all_in_one_incarnation" not in current_state:
+        errors.append("root current state must declare the first integrated incarnation")
+
+    resultant = read_text("docs/RESULTANT_0.3.0_FIRST_INTEGRATED_INCARNATION.md")
+    if "Resulting project state: 0.3.0" not in resultant:
+        errors.append("0.3.0 resultant does not declare its resulting project state")
+
+    install_doc = read_text("INSTALL.md")
+    if "scripts/configure_chatgpt_adapter.py" not in install_doc:
+        errors.append("INSTALL.md does not expose the deterministic adapter configurator")
 
     try:
         adapter = load_json("adapters/chatgpt/adapter.json")
@@ -121,16 +164,36 @@ def main() -> int:
             warnings.append(f"nonstandard eval status in {case.get('id', '<unknown>')}: {case.get('status')}")
 
     adapter_doc = read_text("adapters/chatgpt/CUSTOM_INSTRUCTIONS.md")
-    marker = "## Complete text to install"
-    if marker not in adapter_doc:
+    if INSTALL_MARKER not in adapter_doc:
         errors.append("ChatGPT adapter install section missing")
     else:
-        install_text = adapter_doc.split(marker, 1)[1].strip()
+        install_text = adapter_install_text(adapter_doc)
         if len(install_text) > 1500:
             errors.append(f"ChatGPT Custom Instructions exceed 1500 characters: {len(install_text)}")
         for placeholder in ("<YOUR_GITHUB_USER>", "<YOUR_REPOSITORY>"):
             if placeholder not in install_text:
                 errors.append(f"ChatGPT adapter missing user-owned placeholder: {placeholder}")
+
+    configured_path = ROOT / CONFIGURED_ADAPTER
+    if configured_path.is_file():
+        try:
+            configured_doc = configured_path.read_text(encoding="utf-8")
+            configured_text = adapter_install_text(configured_doc)
+        except (OSError, ValueError) as exc:
+            errors.append(f"invalid configured ChatGPT adapter: {exc}")
+        else:
+            if len(configured_text) > 1500:
+                errors.append(
+                    "configured ChatGPT Custom Instructions exceed 1500 characters: "
+                    f"{len(configured_text)}"
+                )
+            if "<YOUR_" in configured_text:
+                errors.append("configured ChatGPT adapter retains unresolved placeholders")
+            matches = CONFIGURED_REENTRY_RE.findall(configured_text)
+            if len(matches) != 1:
+                errors.append(
+                    "configured ChatGPT adapter must contain exactly one valid repository reentry path"
+                )
 
     operational_state = read_text("operations/CURRENT_STATE.md")
     if "installed_schedules: none_attested" not in operational_state:
@@ -144,8 +207,9 @@ def main() -> int:
         except UnicodeDecodeError:
             continue
         relative = path.relative_to(ROOT).as_posix()
+        residue_text = redact_configured_repository(text, relative)
         for pattern in PRIVATE_RESIDUE_PATTERNS:
-            if re.search(re.escape(pattern), text, flags=re.IGNORECASE):
+            if re.search(re.escape(pattern), residue_text, flags=re.IGNORECASE):
                 errors.append(f"private/origin residue {pattern!r} in portable file {relative}")
 
     # Claims that source presence must never make automatically.

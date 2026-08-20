@@ -3,6 +3,7 @@ name: validate-portable-working-incarnation
 on:
   push:
     branches:
+      - main
       - tm9/joint-kernel-field
   pull_request:
 
