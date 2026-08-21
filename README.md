@@ -10,7 +10,7 @@ When a missing durable relation can change the result, the adapter gives the
 host a path to a repository controlled by the user, where it can recover only
 the state or source that matters when access is actually available.
 
-[![Version](https://img.shields.io/badge/version-0.1.0-f2b84b.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.4.0-f2b84b.svg)](VERSION)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
@@ -83,6 +83,9 @@ user-owned continuity surface.
   narrowing the field and revise that closure before it becomes structure.
 - **Revisable evolution.** Real use can leave a small, attributable change in
   state, an adapter, a competence relation, or the kernel itself.
+- **Operational continuity.** Unfinished flows, bounded requests and results,
+  effect receipts, and recovery can remain continuable without implying a
+  background runtime.
 - **Exact effect boundaries.** Capability, source access, ownership, and
   authority remain distinct when a material external effect appears.
 
@@ -92,13 +95,15 @@ under [`state/`](state/) by the configurator.
 
 ## What exists now
 
-Version `0.1.0` provides:
+Version `0.4.0` provides:
 
 - a host-neutral kernel contract;
 - competence and metacompetence participation;
 - the FDLA self-observation and choice function;
 - a ChatGPT Custom Instructions adapter;
 - first-project state initialization;
+- optional operational continuity for unfinished work, requests/results,
+  receipts, replay protection, and recovery;
 - a dependency-free structural validator.
 
 Run:
@@ -110,7 +115,7 @@ python scripts/validate.py
 The validator checks this repository's structure and configured artifacts. It
 does not simulate ChatGPT or prove that a connector is available in a specific
 account. ChatGPT is the first implemented adapter; other cloud-chat adapters
-remain possible but are not claimed by version `0.1.0`.
+remain possible but are not claimed by version `0.4.0`.
 
 ## Development direction
 
@@ -129,7 +134,8 @@ possible through observable use and continued development.
 - [Installation](INSTALL.md)
 - [User guide](docs/USER_GUIDE.md)
 - [Architecture](docs/ARCHITECTURE.md)
-- [Lineage and rebuild boundary](docs/LINEAGE.md)
+- [Operational continuity](operations/CURRENT.md)
+- [Lineage and migration](docs/LINEAGE.md)
 - [Current project state](CURRENT_STATE.md)
 - [Changelog](CHANGELOG.md)
 

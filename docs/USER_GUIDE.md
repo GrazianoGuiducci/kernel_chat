@@ -50,9 +50,10 @@ should survive the conversation. Describe what is unfinished and what evidence
 exists. Do not turn it into an automatic task queue or authority to execute an
 old instruction.
 
-If real use eventually needs richer flows, results, or receipts, add that organ
-because the observed work requires it. Version `0.1.0` does not impose an
-operations subsystem in advance.
+If work would lose a material cursor, pending relation, result, or effect
+receipt between conversations, use the optional [`operations/`](../operations/)
+organ. Keep it cold when nothing there changes continuation. Version `0.4.0`
+does not imply that a scheduler, daemon, or executor is running.
 
 ## Evolve the kernel
 

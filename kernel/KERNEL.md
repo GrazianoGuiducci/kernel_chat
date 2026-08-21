@@ -49,7 +49,7 @@ relations or later forms.
 
 ## Persistence
 
-The core does not require one storage technology. Version `0.1.0` uses a
+The core does not require one storage technology. Version `0.4.0` uses a
 user-owned GitHub repository because ChatGPT can access that surface in some
 accounts. Another adapter may use another inspectable, durable, user-controlled
 surface.

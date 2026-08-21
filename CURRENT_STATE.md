@@ -1,8 +1,8 @@
 # kernel_chat — current state
 
 ```text
-version: 0.1.0
-status: first_clean_public_incarnation
+version: 0.4.0
+status: canonical_kernel_chat_incarnation
 date: 2026-08-21
 owner: Graziano Guiducci
 ```
@@ -25,6 +25,8 @@ persistence surface. Neither is the identity or the future limit of the core.
 - the validator checks the distributable structure and configured state;
 - the package contains no runtime, scheduler, daemon, or background-agent
   claim;
+- the optional operational organ can preserve unfinished flows,
+  requests/results, receipts, replay protection, and recovery;
 - the public source is independent of private workspace paths and repositories.
 
 ## Not established by source alone
@@ -39,10 +41,12 @@ These are evidence boundaries, not definitions of what the project may become.
 
 ## Source relation
 
-This repository is a clean rebuild. It retains portable relations developed
-through the private ChatGPT kernel, Meta Semantic Kernel `0.3.0`, KA,
-Meta_Skill, and FDLA, while leaving their private topology and historical
-morphology outside the new product. See `docs/LINEAGE.md`.
+This repository is the canonical continuation of the public package previously
+developed as Meta Semantic Kernel `0.3.0`. Its Git ancestry and historical
+release are preserved here, while `kernel_chat` supplies the clearer product
+identity and the rebuilt portable form. It also retains relations developed
+through the private ChatGPT kernel, KA, Meta_Skill, and FDLA without importing
+their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
@@ -52,6 +56,6 @@ artificial proof programme in advance of that use.
 
 ## Boundary
 
-This state does not modify the former `Meta_Semantic_Kernel` repository,
-ChatGPT settings, or another provider. Publication of the source does not
-prove host activation.
+The predecessor repository has no continuing operational role after the
+migration. ChatGPT settings and other providers remain separate host-owned
+surfaces. Publication of the source does not prove host activation.

@@ -18,11 +18,14 @@ host adapter
 user-owned state
   current point, source pointers, corrections, open work, next movement
 
+operational continuity
+  optional flows, requests/results, receipts, replay protection, recovery
+
 persistence adapter
   makes state inspectable and reachable across conversations
 ```
 
-Version `0.1.0` uses ChatGPT Custom Instructions as the host adapter and a
+Version `0.4.0` uses ChatGPT Custom Instructions as the host adapter and a
 GitHub repository as the persistence adapter.
 
 ## Reentry
@@ -40,6 +43,13 @@ conversation
 State remains a compact index. Owner-native project sources remain the truth
 owners. The kernel repository does not become a copy of every connected
 project.
+
+## Unfinished work
+
+When losing a cursor, pending relation, result, or effect receipt would change
+continuation, the optional [`operations/`](../operations/) organ preserves the
+smallest causal state needed to resume. It does not create a worker, scheduler,
+daemon, or permission to repeat an historical effect.
 
 ## Competence field
 

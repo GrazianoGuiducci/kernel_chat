@@ -1,12 +1,14 @@
-# Lineage and rebuild boundary
+# Lineage and migration
 
-`kernel_chat` is a new public product repository, not a rename or directory
-copy of `Meta_Semantic_Kernel`.
+`kernel_chat` is the canonical continuation of the public package developed up
+to version `0.3.0` under the name Meta Semantic Kernel. The product was rebuilt
+around the more precise `kernel_chat` identity, then the complete predecessor
+Git ancestry and historical release were integrated here.
 
 Its source lineage includes:
 
 - the private ChatGPT host kernel and its present-first, turn-reactive routing;
-- `Meta_Semantic_Kernel` `0.3.0`, which assembled the first portable package
+- Meta Semantic Kernel `0.3.0`, which assembled the first portable package
   and exposed both useful relations and structural contamination;
 - KA, for source-bound difference, unknowns, invalidators, reversibility, and
   an open possibility horizon;
@@ -27,6 +29,7 @@ mechanisms. Those source projects remain their own owners.
 - private workspace paths, credentials, host state, or authority;
 - a claim of support for providers without an implemented adapter.
 
-The former public repository remains historical evidence until its owner
-separately decides whether to archive it, redirect readers, or preserve it as a
-research branch. This repository makes no mutation to that surface.
+The predecessor repository is not a second product, compatibility surface, or
+runtime dependency. Its evidence remains reachable through this repository's
+ancestry and the historical `v0.3.0` release; the old repository can therefore
+be removed without losing the project lineage.
