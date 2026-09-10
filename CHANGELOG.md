@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.5.2 — 2026-09-10
+
+- Added a public contribution path for testers, operators, developers and AI
+  coders through `CONTRIBUTING.md` and an Evolution Feedback Issue template.
+- Made first-use impressions part of the evidence field when they expose useful
+  friction, clarity, unexpected success or a new possibility.
+- Added a light source-contact relation to the installed ChatGPT adapter:
+  roughly seven days between checks during active use, or sooner when a current
+  problem may already have been corrected upstream.
+- Kept source contact read-only and non-blocking: newer source is a possibility,
+  not an automatic update or host mutation.
+- Added coder guidance to prepare compact Evolution Feedback and require
+  operator consent before any public submission; concrete changes use fork +
+  Pull Request rather than implied write access to upstream `main`.
+- Extended structural/configuration tests so the configured adapter must carry
+  the weekly source-contact and feedback relations.
+
+This source patch does not itself create a `v0.5.2` release, update installed
+Custom Instructions, submit feedback, or schedule background work.
+
 ## 0.5.1 — 2026-09-10
 
 - Made the ChatGPT host-activation boundary explicit during adoption: repository

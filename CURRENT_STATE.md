@@ -1,7 +1,7 @@
 # kernel_chat — current state
 
 ```text
-version: 0.5.1
+version: 0.5.2
 status: canonical_kernel_chat_incarnation
 date: 2026-09-10
 owner: Graziano Guiducci
@@ -28,6 +28,13 @@ persistence surface. Neither is the identity or the future limit of the core.
 - adoption guidance distinguishes repository configuration from the manual
   ChatGPT UI activation that belongs to the operator;
 - the configurator emits the host-UI boundary and the truthful pending status;
+- the installed adapter carries a light source-contact relation: around seven
+  days during active use, or sooner when a current problem may already have
+  been corrected upstream;
+- `CONTRIBUTING.md` and the Evolution Feedback Issue template provide a
+  public-safe return path for tester/operator/coder experience;
+- public feedback requires operator consent and concrete source changes use
+  fork + Pull Request rather than implied upstream write authority;
 - the validator checks the distributable structure and configured state;
 - the package contains no runtime, scheduler, daemon, or background-agent
   claim;
@@ -40,6 +47,8 @@ persistence surface. Neither is the identity or the future limit of the core.
 - installation in a particular ChatGPT account;
 - operator completion of the Custom Instructions UI step;
 - GitHub connector availability or write capability in a particular turn;
+- that a weekly source check has actually occurred in a given installation;
+- that any Evolution Feedback has been submitted or accepted;
 - later-use assimilation;
 - behavior on a second chat provider;
 - autonomous self-evolution or AGI.
@@ -57,14 +66,28 @@ their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
-Source `0.5.1` on `main` is a bounded adoption patch over `v0.5.0`. It makes the
-operator-owned ChatGPT UI step explicit in the coder instructions, public
-README, installation guide, adapter documentation and configurator output.
+Source `0.5.2` on `main` adds the public evolution return loop over the 0.5.1
+adoption boundary. The host adapter, `AGENTS.md`, README and contribution
+surfaces now agree on this relation:
 
-The latest tagged stable distribution remains `v0.5.0` until a separate
-`v0.5.1` release is selected. Source version, tagged release, repository
-configuration, operator-confirmed host instructions, host reachability and
-behavioral assimilation remain separate facts.
+```text
+active real use
+-> light upstream source check around seven days, or sooner when materially useful
+-> no automatic update
+
+informative first-use or later observation
+-> coder prepares Evolution Feedback
+-> operator approves public submission
+-> GitHub Issue
+
+concrete source correction
+-> fork / focused Pull Request
+```
+
+The latest tagged stable distribution remains `v0.5.0` until a separate later
+release is selected. Source version, tagged release, repository configuration,
+operator-confirmed host instructions, source-contact observation, contribution
+submission, host reachability and behavioral assimilation remain separate facts.
 
 For a first adoption:
 
@@ -75,19 +98,21 @@ repository configured
 -> operator copies and saves the configured instructions in ChatGPT UI
 -> host instructions installed (operator-confirmed)
 -> selected reachability check
--> later real use may provide assimilation evidence
+-> later real use may provide assimilation and feedback evidence
 ```
 
 No repository-side success may substitute for the operator-owned UI transition.
+No source-contact rule creates background work, and no useful feedback grants
+public-write authority without operator consent.
 
 The accumulated [package evolution guide](docs/EVOLUTION_GUIDE.md) carries the
 0.5.0 transfer's reasons and verification. It is package-maintenance history
-and reentry, not a required chat boot or a substitute for the current adoption
-instructions.
+and reentry, not a required chat boot or a substitute for current adoption and
+contribution instructions.
 
 ## Boundary
 
 The predecessor repository has no continuing operational role after the
 migration. ChatGPT settings and other providers remain separate host-owned
 surfaces. Publication or configuration of the source does not prove host
-activation.
+activation; upstream availability does not authorize automatic adoption.

@@ -44,6 +44,31 @@ the current tool surface cannot perform.
 This boundary applies when adoption or host update is actually selected; it is
 not a mandatory interruption of ordinary kernel work.
 
+## Source contact and evolution feedback
+
+When `kernel_chat` is actively being used, keep a light relation to the upstream
+source. If the last known upstream check is about seven days old, or if the
+current problem could plausibly have been corrected upstream, inspect the
+canonical repository in read-only mode. Start with `VERSION`, `CHANGELOG.md`
+and the latest release or only the current source that can change the movement.
+
+A newer source is a possibility, not an update command. Do not automatically
+pull, merge, replace configured instructions or change the host. Surface only a
+material delta and let the operator select any adoption effect. This relation
+creates no timer, scheduler, background process or mandatory startup check.
+
+Real testers are part of the evolution field. After a first meaningful use, or
+when later use exposes informative friction, failure, unexpected success,
+missing context or a new possibility, prepare a compact Evolution Feedback when
+that evidence could improve the upstream kernel. Ask the operator before any
+public submission. With consent, use a GitHub Issue for observed feedback; use
+a fork and Pull Request for a concrete source change. Do not grant an external
+tester direct write authority over upstream `main` by implication.
+
+Do not emit feedback merely to satisfy a cadence. Preserve the first impression
+or later observation only when it changes future understanding, behavior,
+safety, usability or attainable results.
+
 Project continuity and operating knowledge have different entry paths. For a
 missing project relation, use `state/CURRENT.md` and its relevant source
 pointers. For a missing kernel or method relation, use only the owner needed:

@@ -10,15 +10,15 @@ When a missing durable relation can change the result, the adapter gives the
 host a path to a repository controlled by the user, where it can recover only
 the state or source that matters when access is actually available.
 
-[![Source version](https://img.shields.io/badge/source_version-0.5.1-f2b84b.svg)](VERSION)
+[![Source version](https://img.shields.io/badge/source_version-0.5.2-f2b84b.svg)](VERSION)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
 [Install in ChatGPT](INSTALL.md) · [User guide](docs/USER_GUIDE.md) ·
-[Architecture](docs/ARCHITECTURE.md)
+[Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md)
 
-Source `0.5.1` is published on `main`. The latest tagged stable distribution is
-`v0.5.0` until a separate `0.5.1` release is selected. Source publication,
+Source `0.5.2` is published on `main`. The latest tagged stable distribution is
+`v0.5.0` until a separate later release is selected. Source publication,
 tagged distribution, host installation and behavioral assimilation are
 distinct facts.
 
@@ -121,6 +121,43 @@ later real use changes behavior as intended
 
 A coder should not collapse these states into a generic “installed” claim.
 
+## Feedback and updates
+
+`kernel_chat` is meant to learn from real adoption. Testers are useful not only
+when they find a bug: first impressions can expose unclear entry, unnecessary
+latency, missing context, unexpected strengths and possibilities that become
+harder to see once the system is familiar.
+
+During active use, the coder should keep a light source relation. When the last
+known upstream check is about seven days old, or when a current problem may
+already have been corrected upstream, inspect `VERSION`, `CHANGELOG.md` and the
+latest release or relevant source in read-only mode. A newer source is not an
+automatic update; surface only a material delta and let the operator decide
+whether to adopt it.
+
+When real use produces an informative first impression, friction, failure,
+unexpected success or new possibility, the coder can prepare a compact
+**Evolution Feedback**. Public submission always requires the operator's
+consent. Use a GitHub Issue for observed feedback; use a fork and Pull Request
+for a concrete source change. Do not grant testers direct write authority over
+upstream `main` by implication.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the feedback and contribution
+relation. The Issue template lives at
+[`.github/ISSUE_TEMPLATE/evolution-feedback.md`](.github/ISSUE_TEMPLATE/evolution-feedback.md).
+
+This is a light return loop, not a reporting quota or background monitor:
+
+```text
+real use
+-> useful observation
+-> operator-approved feedback
+-> upstream issue / focused pull request
+-> later source evolution
+-> future source check
+-> situated adoption when useful
+```
+
 ## What the kernel carries
 
 - **Present-first work.** A bounded request remains bounded; repository reentry
@@ -150,7 +187,7 @@ under [`state/`](state/) by the configurator.
 
 ## What exists now
 
-Source version `0.5.1` provides:
+Source version `0.5.2` provides:
 
 - a host-neutral kernel contract;
 - competence and metacompetence participation;
@@ -162,6 +199,8 @@ Source version `0.5.1` provides:
 - practical user-owned competence cultivation and learning in its actual owner;
 - adapter preview and explicit replacement, preserving configured files by default;
 - an explicit coder-to-operator handoff for the manual ChatGPT UI activation;
+- a light source-freshness relation for active use, normally around seven days;
+- operator-approved Evolution Feedback through GitHub Issues and focused Pull Requests;
 - optional operational continuity for unfinished work, requests/results,
   receipts, replay protection, and recovery;
 - dependency-free structural validation and configuration regression tests.
@@ -174,10 +213,11 @@ python -B -m unittest discover -s tests -v
 ```
 
 The validator checks repository structure and configured artifacts. The tests
-exercise local configuration behavior, including preservation and the adoption
-handoff emitted by the configurator. CI runs both checks on Windows and Linux.
-These checks do not simulate ChatGPT, prove connector availability, install
-account instructions or establish model assimilation.
+exercise local configuration behavior, including preservation, host adoption
+handoff and propagation of source-contact / Evolution Feedback guidance into
+the configured adapter. CI runs both checks on Windows and Linux. These checks
+do not simulate ChatGPT, prove connector availability, install account
+instructions or establish model assimilation.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by this source version.
@@ -200,6 +240,8 @@ possible through observable use and continued development.
 - [User guide](docs/USER_GUIDE.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [ChatGPT adapter](adapters/chatgpt/README.md)
+- [Contributing](CONTRIBUTING.md)
+- [Evolution Feedback template](.github/ISSUE_TEMPLATE/evolution-feedback.md)
 - [Operational continuity](operations/CURRENT.md)
 - [Lineage and migration](docs/LINEAGE.md)
 - [Current project state](CURRENT_STATE.md)

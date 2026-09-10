@@ -12,8 +12,10 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
     "README.md",
     "INSTALL.md",
+    "CONTRIBUTING.md",
     "AGENTS.md",
     "CURRENT_STATE.md",
+    ".github/ISSUE_TEMPLATE/evolution-feedback.md",
     "docs/ARCHITECTURE.md",
     "docs/USER_GUIDE.md",
     "docs/EVOLUTION_GUIDE.md",
@@ -55,6 +57,9 @@ def main() -> int:
         for marker in ("{{GITHUB_USER}}", "{{REPOSITORY}}"):
             if template.count(marker) != 1:
                 errors.append(f"adapter template must contain {marker} once")
+        for relation in ("seven days", "Evolution Feedback", "operator consent"):
+            if relation not in template:
+                errors.append(f"adapter template missing evolution relation: {relation}")
 
     configured = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md"
     if configured.exists():
