@@ -9,9 +9,9 @@ latest tagged distribution remains v0.5.0.
 
 
 ```text
-version: 0.5.2
+version: 0.5.3
 status: canonical_kernel_chat_incarnation
-date: 2026-09-10
+date: 2026-09-11
 owner: Graziano Guiducci
 ```
 
@@ -74,9 +74,16 @@ their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
-Source `0.5.2` on `main` adds the public evolution return loop over the 0.5.1
-adoption boundary. The host adapter, `AGENTS.md`, README and contribution
-surfaces now agree on this relation:
+Source `0.5.3` at `63dca993ee212e8362d1d281adbfb9ccb6ae2898` distinguishes
+canonical upstream and feedback destination from the configured user repository.
+Source contact considers upstream main as well as release/version signals;
+when submission is unavailable, the adapter returns prepared feedback without
+claiming it was sent. CI is green for that source revision.
+
+Resume from actual adoption, informative use feedback, or a newly selected source
+change. Reconcile any proposed host update with the operator's configured
+instructions; no release or host activation is pending merely because source
+0.5.3 is published. The current return relation is:
 
 ```text
 active real use
