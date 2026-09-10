@@ -104,7 +104,7 @@ def main() -> int:
     )
 
     actual_chars = len(adapter_output.read_text(encoding="utf-8"))
-    relative_adapter = adapter_output.relative_to(ROOT)
+    relative_adapter = adapter_output.relative_to(ROOT).as_posix()
     print(f"adapter={relative_adapter} status={adapter_status} chars={actual_chars}")
     print("HOST UI BOUNDARY: this script does not install or update ChatGPT Custom Instructions.")
 
