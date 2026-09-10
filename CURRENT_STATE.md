@@ -1,5 +1,13 @@
 # kernel_chat — current state
 
+## Source 0.5.3 — 2026-09-11
+
+The configured adapter distinguishes the user repository from canonical upstream
+and feedback destination. This corrects the ambiguous 0.5.2 source-contact
+reference. No host instructions are installed by publishing the source; the
+latest tagged distribution remains v0.5.0.
+
+
 ```text
 version: 0.5.2
 status: canonical_kernel_chat_incarnation

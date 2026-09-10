@@ -58,6 +58,13 @@ A useful Pull Request states:
 
 ## Source freshness while testing
 
+The canonical upstream is [GrazianoGuiducci/kernel_chat](https://github.com/GrazianoGuiducci/kernel_chat).
+It supplies source updates and receives approved feedback; the configured user
+repository owns the user’s project continuity. Inspect upstream `main` as well
+as version/release signals, since source changes may precede a tag. If access
+or submission is unavailable, state that limitation and return prepared feedback
+to the operator without claiming an external effect.
+
 During active use, a coder should keep a light relation to upstream. When the
 last known source check is about seven days old, or when a current problem may
 already have been addressed upstream, inspect the repository in read-only mode.

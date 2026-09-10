@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.3 — 2026-09-11
+
+- Distinguish the user-owned fork from the canonical upstream for source contact
+  and approved feedback. Include source-only changes on main and a truthful
+  fallback when submission is unavailable. Existing configured/installed
+  instructions are preserved until an explicit host update.
+
 ## 0.5.2 — 2026-09-10
 
 - Added a public contribution path for testers, operators, developers and AI

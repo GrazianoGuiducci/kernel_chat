@@ -46,6 +46,13 @@ not a mandatory interruption of ordinary kernel work.
 
 ## Source contact and evolution feedback
 
+The canonical upstream is [GrazianoGuiducci/kernel_chat](https://github.com/GrazianoGuiducci/kernel_chat).
+It supplies source updates and receives approved feedback; the configured user
+repository owns the user’s project continuity. Inspect upstream `main` as well
+as version/release signals, since source changes may precede a tag. If access
+or submission is unavailable, state that limitation and return prepared feedback
+to the operator without claiming an external effect.
+
 When `kernel_chat` is actively being used, keep a light relation to the upstream
 source. If the last known upstream check is about seven days old, or if the
 current problem could plausibly have been corrected upstream, inspect the

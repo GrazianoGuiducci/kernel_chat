@@ -10,14 +10,14 @@ When a missing durable relation can change the result, the adapter gives the
 host a path to a repository controlled by the user, where it can recover only
 the state or source that matters when access is actually available.
 
-[![Source version](https://img.shields.io/badge/source_version-0.5.2-f2b84b.svg)](VERSION)
+[![Source version](https://img.shields.io/badge/source_version-0.5.3-f2b84b.svg)](VERSION)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
 [Install in ChatGPT](INSTALL.md) · [User guide](docs/USER_GUIDE.md) ·
 [Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md)
 
-Source `0.5.2` is published on `main`. The latest tagged stable distribution is
+Source `0.5.3` is published on `main`. The latest tagged stable distribution is
 `v0.5.0` until a separate later release is selected. Source publication,
 tagged distribution, host installation and behavioral assimilation are
 distinct facts.
@@ -187,7 +187,7 @@ under [`state/`](state/) by the configurator.
 
 ## What exists now
 
-Source version `0.5.2` provides:
+Source version `0.5.3` provides:
 
 - a host-neutral kernel contract;
 - competence and metacompetence participation;
