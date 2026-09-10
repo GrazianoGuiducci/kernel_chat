@@ -103,10 +103,20 @@ def main() -> int:
     )
 
     actual_chars = len(adapter_output.read_text(encoding="utf-8"))
-    print(f"adapter={adapter_output.relative_to(ROOT)} status={adapter_status} chars={actual_chars}")
+    relative_adapter = adapter_output.relative_to(ROOT)
+    print(f"adapter={relative_adapter} status={adapter_status} chars={actual_chars}")
     if adapter_status == "kept":
         print("Use --preview-adapter to review the candidate; --replace-adapter selects local replacement.")
-    print("Installed host instructions are unchanged; synchronize them separately when selected.")
+    print("HOST UI BOUNDARY: this script does not install or update ChatGPT Custom Instructions.")
+    print(
+        "For first adoption, or for a selected host update, the operator must copy "
+        f"the complete text from {relative_adapter} into ChatGPT Custom Instructions "
+        "through the ChatGPT UI and save it."
+    )
+    print(
+        "Until the operator confirms that UI action for the current adoption/update, "
+        "report: repository configured / host activation pending."
+    )
     print(f"state/CURRENT.md={current_status}")
     print(f"state/SOURCES.md={sources_status}")
     return 0

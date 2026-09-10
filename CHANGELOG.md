@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.5.1 — 2026-09-10
+
+- Made the ChatGPT host-activation boundary explicit during adoption: repository
+  configuration no longer risks being reported as completed ChatGPT installation.
+- Added an adoption rule to `AGENTS.md`: once the configured adapter exists, a
+  coder or agent must immediately tell the operator that the ChatGPT UI
+  copy/save step is still required.
+- Added an explicit host-UI boundary message to the configurator output and
+  covered that handoff in the existing configuration regression suite.
+- Reworked README and installation guidance so repository configuration,
+  operator-confirmed Custom Instructions installation, host reachability and
+  behavioral assimilation remain distinct evidence states.
+- Clarified the same operator boundary in the ChatGPT adapter documentation.
+
+This source patch does not itself create a `v0.5.1` tag, release, account
+installation or behavioral-assimilation claim. Those remain separate effects.
+
 ## 0.5.0 — 2026-09-10
 
 - Deepened semantic comprehension: understand represented knowledge through

@@ -1,7 +1,7 @@
 # kernel_chat — current state
 
 ```text
-version: 0.5.0
+version: 0.5.1
 status: canonical_kernel_chat_incarnation
 date: 2026-09-10
 owner: Graziano Guiducci
@@ -25,6 +25,9 @@ persistence surface. Neither is the identity or the future limit of the core.
 - reruns preserve configured adapter and state; preview writes nothing and
   adapter/state replacement is selected independently;
 - project context and kernel-method retrieval have distinct selective entries;
+- adoption guidance distinguishes repository configuration from the manual
+  ChatGPT UI activation that belongs to the operator;
+- the configurator emits the host-UI boundary and the truthful pending status;
 - the validator checks the distributable structure and configured state;
 - the package contains no runtime, scheduler, daemon, or background-agent
   claim;
@@ -35,6 +38,7 @@ persistence surface. Neither is the identity or the future limit of the core.
 ## Not established by source alone
 
 - installation in a particular ChatGPT account;
+- operator completion of the Custom Instructions UI step;
 - GitHub connector availability or write capability in a particular turn;
 - later-use assimilation;
 - behavior on a second chat provider;
@@ -53,24 +57,37 @@ their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
-Source `0.5.0` is published on `main`: the September 10 transfer was published
-at `2b5f689`, followed by the bounded routing and public-state refinement.
-The stable result is selected for tagged release `v0.5.0`; the
-[release record](https://github.com/GrazianoGuiducci/kernel_chat/releases/tag/v0.5.0)
-identifies its publication and exact source. Source publication, a tagged
-GitHub release, actual host installation/update and behavioral assimilation
-remain separate facts.
+Source `0.5.1` on `main` is a bounded adoption patch over `v0.5.0`. It makes the
+operator-owned ChatGPT UI step explicit in the coder instructions, public
+README, installation guide, adapter documentation and configurator output.
+
+The latest tagged stable distribution remains `v0.5.0` until a separate
+`v0.5.1` release is selected. Source version, tagged release, repository
+configuration, operator-confirmed host instructions, host reachability and
+behavioral assimilation remain separate facts.
+
+For a first adoption:
+
+```text
+repository configured
+-> coder immediately surfaces the required UI action
+-> host activation pending
+-> operator copies and saves the configured instructions in ChatGPT UI
+-> host instructions installed (operator-confirmed)
+-> selected reachability check
+-> later real use may provide assimilation evidence
+```
+
+No repository-side success may substitute for the operator-owned UI transition.
 
 The accumulated [package evolution guide](docs/EVOLUTION_GUIDE.md) carries the
-transfer's reasons and verification. It is the package maintenance reentry,
-not a required chat boot or a pending source-publication task.
-
-When installation or upgrade is selected, preserve the fork's state and
-competences, review the candidate adapter and separately reconcile the actual
-host instructions. Let real project use expose the next useful correction.
+0.5.0 transfer's reasons and verification. It is package-maintenance history
+and reentry, not a required chat boot or a substitute for the current adoption
+instructions.
 
 ## Boundary
 
 The predecessor repository has no continuing operational role after the
 migration. ChatGPT settings and other providers remain separate host-owned
-surfaces. Publication of the source does not prove host activation.
+surfaces. Publication or configuration of the source does not prove host
+activation.

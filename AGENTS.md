@@ -17,6 +17,33 @@ Keep distinguishable:
 - host capability;
 - authority over a material effect.
 
+## Adoption boundary
+
+When the selected work is adopting or installing `kernel_chat` for an operator,
+repository-side configuration is not ChatGPT host activation.
+
+As soon as `scripts/configure.py` has produced
+`adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`, tell the operator
+immediately that a manual ChatGPT UI action is required:
+
+1. open the configured instructions file;
+2. copy its complete text into ChatGPT Custom Instructions through the ChatGPT UI;
+3. save the instructions and confirm that this host-owned step was completed.
+
+The coder may continue repository-side setup, but until the operator confirms
+that UI action, report the state as `repository configured / host activation
+pending`. Do not report `kernel_chat` as installed or active in ChatGPT merely
+because the repository, configurator, tests, or connector setup succeeded.
+
+After operator confirmation, verify host reachability when that verification is
+selected: a new chat should be able to reach the configured project state and,
+when needed, the pertinent kernel owner. Reachability is evidence of access,
+not proof of behavioral assimilation. Never simulate or claim a host UI action
+the current tool surface cannot perform.
+
+This boundary applies when adoption or host update is actually selected; it is
+not a mandatory interruption of ordinary kernel work.
+
 Project continuity and operating knowledge have different entry paths. For a
 missing project relation, use `state/CURRENT.md` and its relevant source
 pointers. For a missing kernel or method relation, use only the owner needed:

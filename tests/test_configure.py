@@ -62,6 +62,9 @@ class ConfigureTests(unittest.TestCase):
         self.assertNotIn("{{", adapter)
         self.assertIn("Research", (self.root / CURRENT).read_text(encoding="utf-8"))
         self.assertIn("https://example.org/project", (self.root / SOURCES).read_text(encoding="utf-8"))
+        self.assertIn("HOST UI BOUNDARY", result.stdout)
+        self.assertIn(ADAPTER, result.stdout)
+        self.assertIn("repository configured / host activation pending", result.stdout)
 
     def test_rerun_preserves_all_owned_bytes_even_with_new_arguments(self) -> None:
         before = self.customize()

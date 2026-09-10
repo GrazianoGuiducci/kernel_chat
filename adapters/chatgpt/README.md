@@ -18,8 +18,15 @@ python scripts/configure.py \
 ```
 
 The generated `CUSTOM_INSTRUCTIONS_CONFIGURED.md` is intentionally ignored by
-Git. Copy it into ChatGPT Custom Instructions. The template remains versioned
-here so adapter changes are inspectable.
+Git. The configurator only prepares this local file; it cannot install or
+modify account-level ChatGPT instructions.
+
+For first adoption, the **operator must manually copy the complete configured
+text into ChatGPT Custom Instructions through the ChatGPT UI and save it**. If
+a coder or agent is performing setup, it must surface that required UI action
+immediately after the configured file exists. Until the operator confirms the
+UI step, the truthful status is `repository configured / host activation
+pending`.
 
 GitHub access and Custom Instructions availability depend on the current
 ChatGPT account and host. The adapter cannot grant those capabilities.
@@ -36,5 +43,13 @@ performs no writes, including when replacement flags are supplied.
 
 Repository template, configured local file and installed account instructions
 are distinct. Compare the candidate with your customizations and actual host
-instructions before selecting an update. Installation is separate and cannot
-be observed or performed by this script. See [update guidance](../../INSTALL.md#update-or-remove).
+instructions before selecting an update. For a selected host update, the coder
+must again tell the operator that replacing the local configured adapter does
+not change the ChatGPT UI field.
+
+After the operator confirms installation, host reachability can be checked in
+a new conversation by reading the configured project state and, when needed,
+the pertinent owner through `AGENTS.md`. Reachability still does not prove
+behavioral assimilation.
+
+See [installation and update guidance](../../INSTALL.md).
