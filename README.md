@@ -10,12 +10,17 @@ When a missing durable relation can change the result, the adapter gives the
 host a path to a repository controlled by the user, where it can recover only
 the state or source that matters when access is actually available.
 
-[![Version](https://img.shields.io/badge/version-0.5.0-f2b84b.svg)](VERSION)
+[![Source version](https://img.shields.io/badge/source_version-0.5.0-f2b84b.svg)](VERSION)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
 [Install in ChatGPT](INSTALL.md) · [User guide](docs/USER_GUIDE.md) ·
 [Architecture](docs/ARCHITECTURE.md)
+
+Source `0.5.0` is published on `main`. Tagged distributions are available in
+[GitHub Releases](https://github.com/GrazianoGuiducci/kernel_chat/releases).
+A source update or tagged release does not install or update host instructions
+and does not establish behavioral assimilation.
 
 ## What changes
 
@@ -25,12 +30,12 @@ truth, relevant ways of working, and a place for useful changes to survive.
 
 ```mermaid
 flowchart LR
-    A[Current conversation] -->|enough context| B[Work directly]
-    A -->|a durable relation is missing| C[User-owned repository]
-    C --> D[Current state and source pointers]
-    D --> E[Relevant competence or metacompetence]
-    E --> B
-    B -->|reusable change from real use| C
+    A[Current conversation] -->|sufficient| B[Work]
+    A -->|missing project relation| C[Current state / pertinent project source]
+    C --> B
+    A -->|missing operating relation| D[AGENTS / pertinent kernel or competence owner]
+    D --> B
+    B -->|reusable material difference| E[Appropriate living owner / user-owned persistence]
 ```
 
 The repository is the first persistence adapter. It is not the identity of the

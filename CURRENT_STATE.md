@@ -53,10 +53,17 @@ their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
-The September 10 transfer is implemented in source as `0.5.0`; the accumulated
-[package evolution guide](docs/EVOLUTION_GUIDE.md) carries its reasons, actual
-verification and any remaining source-publication step. It is the package
-maintenance reentry, not a required chat boot.
+Source `0.5.0` is published on `main`: the September 10 transfer was published
+at `2b5f689`, followed by the bounded routing and public-state refinement.
+The stable result is selected for tagged release `v0.5.0`; the
+[release record](https://github.com/GrazianoGuiducci/kernel_chat/releases/tag/v0.5.0)
+identifies its publication and exact source. Source publication, a tagged
+GitHub release, actual host installation/update and behavioral assimilation
+remain separate facts.
+
+The accumulated [package evolution guide](docs/EVOLUTION_GUIDE.md) carries the
+transfer's reasons and verification. It is the package maintenance reentry,
+not a required chat boot or a pending source-publication task.
 
 When installation or upgrade is selected, preserve the fork's state and
 competences, review the candidate adapter and separately reconcile the actual

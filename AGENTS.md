@@ -3,10 +3,9 @@
 Work from the present. If the current request and working set are sufficient,
 act directly.
 
-When a missing durable relation can materially change the result, read
-`CURRENT_STATE.md` for the package or `state/CURRENT.md` for the configured
-user continuum. Follow only the source pointers that matter to the current
-movement.
+Read root `CURRENT_STATE.md` only when the package-maintenance state itself
+can materially change the result. Project context and operating knowledge use
+their distinct selective paths below; neither requires package state first.
 
 Keep distinguishable:
 
