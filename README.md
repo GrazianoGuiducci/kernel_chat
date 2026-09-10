@@ -10,7 +10,7 @@ When a missing durable relation can change the result, the adapter gives the
 host a path to a repository controlled by the user, where it can recover only
 the state or source that matters when access is actually available.
 
-[![Version](https://img.shields.io/badge/version-0.4.0-f2b84b.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.5.0-f2b84b.svg)](VERSION)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
@@ -78,7 +78,9 @@ user-owned continuity surface.
 - **Source-aware continuity.** Current state points to owner-native sources
   instead of copying whole projects or chat histories.
 - **Situated competence.** A competence or metacompetence participates when it
-  can change the result; the current catalogue is not a ceiling.
+  can change the result. Its result may call another competence, form a
+  temporary composition or correct an earlier method; the catalogue is not
+  a ceiling. Competences can grow from knowledge, intent and possibility.
 - **Self-observation.** The kernel can notice when its own interpretation is
   narrowing the field and revise that closure before it becomes structure.
 - **Revisable evolution.** Real use can leave a small, attributable change in
@@ -95,13 +97,16 @@ under [`state/`](state/) by the configurator.
 
 ## What exists now
 
-Version `0.4.0` provides:
+Version `0.5.0` provides:
 
 - a host-neutral kernel contract;
 - competence and metacompetence participation;
 - the FDLA self-observation and choice function;
 - a ChatGPT Custom Instructions adapter;
 - first-project state initialization;
+- separate selective entry to project context and kernel operating knowledge;
+- practical user-owned competence cultivation and learning in its actual owner;
+- adapter preview and explicit replacement, preserving configured files by default;
 - optional operational continuity for unfinished work, requests/results,
   receipts, replay protection, and recovery;
 - a dependency-free structural validator.
@@ -110,12 +115,14 @@ Run:
 
 ```bash
 python scripts/validate.py
+python -B -m unittest discover -s tests -v
 ```
 
 The validator checks this repository's structure and configured artifacts. It
 does not simulate ChatGPT or prove that a connector is available in a specific
-account. ChatGPT is the first implemented adapter; other cloud-chat adapters
-remain possible but are not claimed by version `0.4.0`.
+account. The regression tests exercise local configuration; CI runs both checks
+on Windows and Linux. ChatGPT is the first implemented adapter; other cloud-chat
+adapters remain possible but are not claimed by version `0.5.0`.
 
 ## Development direction
 
@@ -137,6 +144,7 @@ possible through observable use and continued development.
 - [Operational continuity](operations/CURRENT.md)
 - [Lineage and migration](docs/LINEAGE.md)
 - [Current project state](CURRENT_STATE.md)
+- [Package evolution guide](docs/EVOLUTION_GUIDE.md)
 - [Changelog](CHANGELOG.md)
 
 ## License

@@ -22,6 +22,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--project-name", required=True)
     parser.add_argument("--project-source", required=True)
     parser.add_argument(
+        "--replace-adapter",
+        action="store_true",
+        help="Replace the local configured adapter; does not change installed host instructions.",
+    )
+    parser.add_argument(
+        "--preview-adapter",
+        action="store_true",
+        help="Print the candidate adapter without writing adapter or state files.",
+    )
+    parser.add_argument(
         "--replace-state",
         action="store_true",
         help="Replace state/CURRENT.md and state/SOURCES.md if they exist.",
@@ -44,7 +54,7 @@ def render(path: Path, replacements: dict[str, str]) -> str:
     return text
 
 
-def write_state(path: Path, content: str, replace: bool) -> str:
+def write_owned_file(path: Path, content: str, replace: bool) -> str:
     if path.exists() and not replace:
         return "kept"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -73,20 +83,30 @@ def main() -> int:
     sources_template = ROOT / "templates/state/SOURCES.md"
 
     adapter = render(adapter_template, replacements)
-    adapter_output.write_text(adapter, encoding="utf-8", newline="\n")
+    if args.preview_adapter:
+        print(adapter, end="")
+        return 0
 
-    current_status = write_state(
+    # Resolve all inputs before changing any owned file.
+    current = render(current_template, replacements)
+    sources = render(sources_template, replacements)
+    adapter_status = write_owned_file(adapter_output, adapter, args.replace_adapter)
+    current_status = write_owned_file(
         ROOT / "state/CURRENT.md",
-        render(current_template, replacements),
+        current,
         args.replace_state,
     )
-    sources_status = write_state(
+    sources_status = write_owned_file(
         ROOT / "state/SOURCES.md",
-        render(sources_template, replacements),
+        sources,
         args.replace_state,
     )
 
-    print(f"adapter={adapter_output.relative_to(ROOT)} chars={len(adapter)}")
+    actual_chars = len(adapter_output.read_text(encoding="utf-8"))
+    print(f"adapter={adapter_output.relative_to(ROOT)} status={adapter_status} chars={actual_chars}")
+    if adapter_status == "kept":
+        print("Use --preview-adapter to review the candidate; --replace-adapter selects local replacement.")
+    print("Installed host instructions are unchanged; synchronize them separately when selected.")
     print(f"state/CURRENT.md={current_status}")
     print(f"state/SOURCES.md={sources_status}")
     return 0

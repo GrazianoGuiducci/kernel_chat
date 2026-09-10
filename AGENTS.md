@@ -18,6 +18,21 @@ Keep distinguishable:
 - host capability;
 - authority over a material effect.
 
+Project continuity and operating knowledge have different entry paths. For a
+missing project relation, use `state/CURRENT.md` and its relevant source
+pointers. For a missing kernel or method relation, use only the owner needed:
+
+- [Core](kernel/KERNEL.md): understanding sources, representations and context;
+- [Competence](kernel/COMPETENCE.md): use, formation, circulation and cultivation;
+- [Evolution](kernel/EVOLUTION.md): learning ownership, reentry and source return;
+- [FDLA](kernel/FDLA.md): correction of an interpretation that closes the field;
+- [Operations](operations/CURRENT.md): unfinished effects and recovery, when material.
+
+This is selective reachability, not a loading order. A new conversation alone
+does not require a boot. A state, instruction or prior solution read first can
+frame interpretation without becoming authority: understand its function in
+the present before letting its form prescribe the method.
+
 Let relevant competences and metacompetences participate because the present
 relation calls for them. Do not treat the current catalogue, schema, adapter,
 host, or first plausible answer as the limit of what can emerge.

@@ -25,7 +25,7 @@ persistence adapter
   makes state inspectable and reachable across conversations
 ```
 
-Version `0.4.0` uses ChatGPT Custom Instructions as the host adapter and a
+Version `0.5.0` uses ChatGPT Custom Instructions as the host adapter and a
 GitHub repository as the persistence adapter.
 
 ## Reentry
@@ -35,14 +35,20 @@ relation can change the result.
 
 ```text
 conversation
--> state/CURRENT.md
--> only the relevant source in state/SOURCES.md
+-> missing project context: state/CURRENT.md and pertinent source pointers
+-> missing operating method: AGENTS.md and the relevant kernel/competence owner
 -> current result
 ```
 
 State remains a compact index. Owner-native project sources remain the truth
 owners. The kernel repository does not become a copy of every connected
 project.
+
+The two retrieval paths are alternatives made pertinent by the work, not a
+sequence. Reading a state representation first does not give it authority,
+but can frame interpretation; the acting competence understands its function
+before letting it prescribe the method. Kernel knowledge remains outside
+project state, and no central catalogue is required.
 
 ## Unfinished work
 
@@ -57,6 +63,11 @@ The kernel does not ship a closed capability taxonomy. A configured fork may
 point to competences, metacompetences, guides, or project-specific methods.
 They become active when the present relation makes them useful and the current
 host can actually reach them.
+
+Results can make another competence pertinent, form a temporary composition
+or expose a consequence that revises an earlier contributing method. Reusable
+learning lives in the affected owner; state preserves its reentry implication
+and location. The concrete cultivation path is in the user guide.
 
 ## Choice and self-observation
 

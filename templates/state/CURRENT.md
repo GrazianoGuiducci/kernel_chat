@@ -13,6 +13,8 @@ Describe where the work is now in the smallest form that changes reentry.
 ## Why it matters
 
 State the purpose or decision pressure that should survive the conversation.
+Keep the still-valid reason behind a determination and what would revise it
+when those relations change continuation.
 
 ## Active relations
 
@@ -25,7 +27,9 @@ State the purpose or decision pressure that should survive the conversation.
 
 ## Accepted corrections
 
-- Preserve corrections that should change later understanding or behavior.
+- Preserve the current implication and pointer for corrections that change
+  reentry. Reusable methods and deeper reasons live in the competence or
+  kernel owner that must use them, not solely in this state.
 
 ## Next movement
 

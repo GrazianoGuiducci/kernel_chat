@@ -40,8 +40,11 @@ state/CURRENT.md                                    user-owned, commit it
 state/SOURCES.md                                    user-owned, commit it
 ```
 
-Existing state is kept by default. Use `--replace-state` only when you
-deliberately want the initializer to replace both state files.
+Existing state and the local configured adapter are kept by default, even if
+you rerun setup with different arguments. Use `--replace-state` to deliberately
+replace both state files; use `--replace-adapter` independently to replace the
+local adapter. Preview the candidate before choosing replacement as described
+below. Configuration reports which files were kept or written.
 
 ## 3. Commit the state
 
@@ -77,8 +80,30 @@ becomes automatic permission for an external effect.
 
 ## Update or remove
 
-To update the package, merge or rebase upstream code without replacing your
-`state/` files. Regenerate the local adapter when its template changes.
+To update the package, merge or rebase upstream code while preserving your
+state, competences and local changes. A changed template does not update your
+configured file or the instructions installed in ChatGPT.
+
+Run the setup command with your actual configuration and `--preview-adapter`
+to print the candidate without writing any files. Compare it with your local
+configured adapter and the instructions actually installed in your account.
+Preserve still-useful user changes. Preview takes precedence over replacement
+flags and never initializes or replaces state.
+
+When replacement is selected, rerun with `--replace-adapter`; state remains
+preserved unless you also explicitly use `--replace-state`. Reconcile any
+local customizations before separately copying the selected instructions into
+the host settings. The configurator cannot read or change those settings and
+does not infer which instructions are fresher from a repository version.
+
+The generated character count helps check the actual instruction field's
+capacity. If it does not fit alongside your instructions, keep the entry and
+essential behavior compact and leave deeper methods at their linked owners.
+Do not assume a successful configuration means the host accepted the text.
+
+In a new conversation, verify that the host can reach the project state and,
+when a method is needed, the pertinent owner through `AGENTS.md`. Actual access
+and use are separate from local configuration or structural validation.
 
 To remove the integration, delete the kernel text from Custom Instructions and
 disconnect GitHub if you no longer want repository access. Your fork remains

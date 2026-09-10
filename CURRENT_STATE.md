@@ -1,9 +1,9 @@
 # kernel_chat — current state
 
 ```text
-version: 0.4.0
+version: 0.5.0
 status: canonical_kernel_chat_incarnation
-date: 2026-08-21
+date: 2026-09-10
 owner: Graziano Guiducci
 ```
 
@@ -22,6 +22,9 @@ persistence surface. Neither is the identity or the future limit of the core.
 - the package has a distinct host-neutral kernel and ChatGPT adapter;
 - the configurator creates a local adapter and initial project state without
   credentials or network calls;
+- reruns preserve configured adapter and state; preview writes nothing and
+  adapter/state replacement is selected independently;
+- project context and kernel-method retrieval have distinct selective entries;
 - the validator checks the distributable structure and configured state;
 - the package contains no runtime, scheduler, daemon, or background-agent
   claim;
@@ -50,9 +53,14 @@ their private topology. See `docs/LINEAGE.md`.
 
 ## Current next
 
-Install the package in a real user-owned fork, use it on an actual project, and
-let the first material difference determine the next change. Do not create an
-artificial proof programme in advance of that use.
+The September 10 transfer is implemented in source as `0.5.0`; the accumulated
+[package evolution guide](docs/EVOLUTION_GUIDE.md) carries its reasons, actual
+verification and any remaining source-publication step. It is the package
+maintenance reentry, not a required chat boot.
+
+When installation or upgrade is selected, preserve the fork's state and
+competences, review the candidate adapter and separately reconcile the actual
+host instructions. Let real project use expose the next useful correction.
 
 ## Boundary
 

@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.5.0 — 2026-09-10
+
+- Deepened semantic comprehension: understand represented knowledge through
+  its function and still-valid reasons, and regenerate methods in new contexts.
+- Separated selective project reentry from kernel-method retrieval through
+  the existing AGENTS entry, without introducing an automatic boot.
+- Made competence circulation, formation from knowledge/success/possibility,
+  owner-local learning and practical cultivation explicit in existing owners.
+- Preserved causal reentry reasons while keeping reusable methods out of state.
+- Clarified source-change sensing, local embodiment and recipient claim levels.
+- Preserved configured adapters by default; added independent `--replace-adapter`
+  and no-write `--preview-adapter`. Host installation remains separate.
+- Added eight configuration regression tests, Windows/Linux CI coverage and
+  package-link checks. These validate source mechanics, not model assimilation.
+
+The version identifies the evolved source package. A tag, release and account
+installation are separate actions.
+
 ## 0.4.0 — 2026-08-21
 
 Canonical `kernel_chat` incarnation and continuation of the `0.3.0` lineage.

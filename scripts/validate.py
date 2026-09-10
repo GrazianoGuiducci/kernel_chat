@@ -14,6 +14,9 @@ REQUIRED = [
     "INSTALL.md",
     "AGENTS.md",
     "CURRENT_STATE.md",
+    "docs/ARCHITECTURE.md",
+    "docs/USER_GUIDE.md",
+    "docs/EVOLUTION_GUIDE.md",
     "VERSION",
     "LICENSE",
     "kernel/KERNEL.md",
@@ -28,6 +31,7 @@ REQUIRED = [
     "templates/state/CURRENT.md",
     "templates/state/SOURCES.md",
     "scripts/configure.py",
+    "tests/test_configure.py",
 ]
 
 
@@ -65,6 +69,19 @@ def main() -> int:
             r"{{[A-Z_]+}}", path.read_text(encoding="utf-8")
         ):
             errors.append(f"configured state contains unresolved fields: {relative}")
+
+    # The selective kernel entry must lead to existing local owners.
+    # This checks reachability, not whether a model understands or uses them.
+    for relative in REQUIRED:
+        path = ROOT / relative
+        if path.suffix != ".md" or not path.is_file():
+            continue
+        for target in re.findall(r"\]\(([^\s)]+)\)", path.read_text(encoding="utf-8")):
+            if re.match(r"[a-zA-Z][a-zA-Z0-9+.-]*:", target) or target.startswith("#"):
+                continue
+            destination = target.split("#", 1)[0]
+            if destination and not (path.parent / destination).exists():
+                errors.append(f"broken local link in {path.relative_to(ROOT)}: {target}")
 
     result = {
         "valid": not errors,
