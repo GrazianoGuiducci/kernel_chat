@@ -63,6 +63,7 @@ class ConfigureTests(unittest.TestCase):
         self.assertIn("Research", (self.root / CURRENT).read_text(encoding="utf-8"))
         self.assertIn("https://example.org/project", (self.root / SOURCES).read_text(encoding="utf-8"))
         self.assertIn("HOST UI BOUNDARY", result.stdout)
+        self.assertIn("NEXT OPERATOR ACTION FOR ADOPTION", result.stdout)
         self.assertIn(ADAPTER, result.stdout)
         self.assertIn("repository configured / host activation pending", result.stdout)
 
@@ -72,6 +73,8 @@ class ConfigureTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(self.owned_bytes(), before)
         self.assertIn("status=kept", result.stdout)
+        self.assertIn("Configured adapter preserved. No host update occurred.", result.stdout)
+        self.assertNotIn("NEXT OPERATOR ACTION FOR HOST UPDATE", result.stdout)
 
     def test_replace_adapter_does_not_replace_state(self) -> None:
         before = self.customize()
@@ -82,6 +85,8 @@ class ConfigureTests(unittest.TestCase):
         self.assertNotEqual(after[ADAPTER], before[ADAPTER])
         self.assertEqual(after[CURRENT], before[CURRENT])
         self.assertEqual(after[SOURCES], before[SOURCES])
+        self.assertIn("NEXT OPERATOR ACTION FOR HOST UPDATE", result.stdout)
+        self.assertIn("local adapter updated / host instructions unchanged", result.stdout)
 
     def test_replace_state_does_not_replace_adapter(self) -> None:
         before = self.customize()

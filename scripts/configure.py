@@ -90,6 +90,7 @@ def main() -> int:
     # Resolve all inputs before changing any owned file.
     current = render(current_template, replacements)
     sources = render(sources_template, replacements)
+    adapter_preexisting = adapter_output.exists()
     adapter_status = write_owned_file(adapter_output, adapter, args.replace_adapter)
     current_status = write_owned_file(
         ROOT / "state/CURRENT.md",
@@ -105,18 +106,37 @@ def main() -> int:
     actual_chars = len(adapter_output.read_text(encoding="utf-8"))
     relative_adapter = adapter_output.relative_to(ROOT)
     print(f"adapter={relative_adapter} status={adapter_status} chars={actual_chars}")
-    if adapter_status == "kept":
-        print("Use --preview-adapter to review the candidate; --replace-adapter selects local replacement.")
     print("HOST UI BOUNDARY: this script does not install or update ChatGPT Custom Instructions.")
-    print(
-        "For first adoption, or for a selected host update, the operator must copy "
-        f"the complete text from {relative_adapter} into ChatGPT Custom Instructions "
-        "through the ChatGPT UI and save it."
-    )
-    print(
-        "Until the operator confirms that UI action for the current adoption/update, "
-        "report: repository configured / host activation pending."
-    )
+
+    if not adapter_preexisting:
+        print(
+            "NEXT OPERATOR ACTION FOR ADOPTION: copy the complete text from "
+            f"{relative_adapter} into ChatGPT Custom Instructions through the "
+            "ChatGPT UI and save it."
+        )
+        print(
+            "Until the operator confirms that UI action, report: "
+            "repository configured / host activation pending."
+        )
+    elif args.replace_adapter:
+        print(
+            "NEXT OPERATOR ACTION FOR HOST UPDATE: the local configured adapter was "
+            f"replaced. To update ChatGPT, copy the complete text from {relative_adapter} "
+            "into ChatGPT Custom Instructions through the ChatGPT UI and save it."
+        )
+        print(
+            "Until the operator confirms that UI action, report: "
+            "local adapter updated / host instructions unchanged."
+        )
+    else:
+        print("Configured adapter preserved. No host update occurred.")
+        print(
+            "If first adoption is still pending, the operator must copy the existing "
+            f"{relative_adapter} into ChatGPT Custom Instructions through the ChatGPT UI. "
+            "For an adapter update, review --preview-adapter and select --replace-adapter "
+            "before asking the operator to update the host."
+        )
+
     print(f"state/CURRENT.md={current_status}")
     print(f"state/SOURCES.md={sources_status}")
     return 0
