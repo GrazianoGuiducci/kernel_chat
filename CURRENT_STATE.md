@@ -5,7 +5,7 @@
 ```text
 version: 0.6.0
 status: canonical_kernel_chat_incarnation
-review_state: external_rereview_pending
+review_state: rereview_findings_reconciliation_candidate
 latest_tagged_distribution: v0.5.0
 owner: Graziano Guiducci
 ```
@@ -294,8 +294,9 @@ not establish:
 - later non-identical assimilation;
 - autonomous self-evolution or AGI.
 
-The current regression suite contains **54 cases**: 32 configurator cases and
-22 validator/drift/provenance/reachability/delivery cases. It includes a source-bound real 0.5.3
+The current regression suite contains **53 cases**: 33 configurator cases, 17
+structural/receipt/drift/provenance/delivery validator cases, and 3 independent
+CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3
 migration shape, custom/unknown legacy identity, repository-target match and
 mismatch, raw-byte LF/CRLF discrimination, additive v1 receipt compatibility,
 refresh/replace/confirm effect separation, missing-local-bridge preservation,
@@ -315,31 +316,31 @@ See `docs/LINEAGE.md` and `docs/EVOLUTION_GUIDE.md`.
 
 ## External review before release
 
-The external review of canonical revision
-`2c81697595baf4a330f99f6a9e96d799dac4370e` produced ten material findings.
-The current canonical source reconciles all ten findings and carries native
-regressions for their failure shapes. It is the new external re-review target.
+The first external review of `2c816975...` produced ten findings. The rereview
+of `1a0720fa...` confirmed nine previous material defects closed, kept F06 open
+at the semantic Markdown-consumer boundary, and added N1 (preview/schema
+composition) plus N2 (delivery-proof quality).
 
-The reconciliation preserves the existing architecture and deepens the seams
-that carry it:
+The current branch reconciles those three remaining relations:
 
 ```text
-receipt persistence / recovery
-schema and mutation authority
-persisted receipt coherence
-bridge resultant identity
-preview as no-write observation
-Markdown consumer-surface fit
-discovery anchor reachability
-GitHub repository identity semantics
-remote delivery of host-confirmation receipt
-missing user-state preservation
+R1 / F06
+  runtime validator stops claiming arbitrary Markdown parsing
+  + explicit structural discovery routes remain dependency-free
+  + independent CommonMark test oracle owns consumer-surface link semantics
+
+N1
+  --preview-adapter renders/returns before INSTANCE interpretation
+
+N2
+  documentation regression proves ordered
+  confirm -> add -> commit -> push -> remote readback -> reentry
 ```
 
-Before release, canonical validator/tests/CI must belong to this exact revision
-and the external reviewer should verify this new SHA, repeating the original
-counterexamples where applicable. A material re-review finding forms another
-resultant; `no_change` permits the later release decision to proceed.
+The full branch proof is 53 tests across all 8 supported Python/OS jobs. This is
+still branch evidence: before rerelease review, reconstruct the accepted net
+result on current canonical main, run proof on that exact canonical revision,
+and update the review brief to the new SHA.
 
 ## Current next
 
