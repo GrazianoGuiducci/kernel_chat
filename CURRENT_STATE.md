@@ -359,7 +359,7 @@ not establish:
 - later non-identical assimilation;
 - autonomous self-evolution or AGI.
 
-The current regression suite contains **53 cases**: 33 configurator cases, 17
+The current regression suite contains **58 cases**: 38 configurator cases, 17
 structural/receipt/drift/provenance/delivery validator cases, and 3 independent
 CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3
 migration shape, custom/unknown legacy identity, repository-target match and
@@ -416,17 +416,17 @@ rendered consumer HTML
 constitutive discovery
 -> active AGENTS link
 + destination
-+ exactly one Markdown owner heading
-+ explicit simple-ASCII fragment contract
++ one explicit prefixed custom anchor adjacent to the intended owner heading
 
 test oracle identity
 -> markdown-it-py 4.2.0
 + mdurl 0.1.2
 ```
 
-The current canonical source still carries 53 tests across all 8 supported
-Python/OS jobs; the relevant oracle cases became stronger rather than more
-numerous. Canonical proof must belong to the exact revision being rereviewed;
+The current source carries 58 tests across all 8 supported Python/OS jobs.
+Five new configurator regressions cover writer-lock conflict/recovery,
+confirmation validity, delayed bridge confirmation, literal template-like user
+data and conservative custom-bridge attribution. Canonical proof must belong to the exact revision being rereviewed;
 branch proof and prior reviewed SHAs remain genealogy/evidence for their own
 identities.
 
