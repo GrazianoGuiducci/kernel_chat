@@ -804,6 +804,27 @@ class ConfigureTests(unittest.TestCase):
         self.assertTrue((self.root / SOURCES).exists())
         self.assertIn("context_kind: none_selected", (self.root / CURRENT).read_text(encoding="utf-8"))
 
+    def test_preview_ignores_unsupported_instance_schema(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        instance_path = self.root / INSTANCE
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["schema"] = "kernel_chat.instance.v2"
+        instance["host_adapter"] = "future-host"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+        before = self.owned_bytes()
+
+        result = self.run_configure(
+            "--preview-adapter",
+            "--github-user", "another-user",
+            "--repository", "another-kernel",
+            with_project=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("another-user/another-kernel", result.stdout)
+        self.assertEqual(self.owned_bytes(), before)
+
 
 if __name__ == "__main__":
     unittest.main()
