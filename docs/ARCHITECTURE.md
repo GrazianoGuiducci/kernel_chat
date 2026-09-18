@@ -160,12 +160,13 @@ template and can therefore establish configured byte identity, target and
 provenance; for an existing instance it does not migrate the instance repository.
 It still does not change the installed ChatGPT instructions.
 
-When the operator later confirms that the current configured bridge was
-copied/saved in ChatGPT, `--confirm-host-installation` snapshots the
-already-reconciled configured byte identity and semantic target/provenance. It
-does not repair a drifted local bridge. If the local bridge changes again, the
-last confirmed host incarnation remains distinct until another operator
-confirmation.
+When a configured bridge is delivered, its raw-byte digest becomes the
+correlation identity for that operator handoff. A later
+`--confirm-host-installation --expected-bridge-sha256 ...` snapshots the
+operator report only when that delivered incarnation is still the current
+configured bridge. A late confirmation cannot be transferred from A to B. The
+command does not repair drift or inspect ChatGPT; the last confirmed host
+incarnation remains distinct until another attributable confirmation.
 
 ## Semantic relation and operational incarnation
 
