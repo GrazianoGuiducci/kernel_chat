@@ -497,19 +497,19 @@ def main() -> int:
             )
 
         digest = sha256_bytes(actual_adapter_bytes)
-        if digest != args.expected_bridge_sha256:
-            raise SystemExit(
-                "Operator confirmation refers to a different bridge delivery than the "
-                "currently configured adapter. Re-deliver the current configured bridge "
-                "and confirm that exact incarnation instead of transferring a late "
-                "confirmation across bridge changes."
-            )
         recorded_digest = existing_instance.get("configured_bridge_sha256")
         if recorded_digest != digest:
             raise SystemExit(
                 "Configured adapter bytes differ from INSTANCE.configured_bridge_sha256. "
                 "Host confirmation cannot reconcile local artifact drift; review or "
                 "replace the adapter first."
+            )
+        if digest != args.expected_bridge_sha256:
+            raise SystemExit(
+                "Operator confirmation refers to a different bridge delivery than the "
+                "currently configured adapter. Re-deliver the current configured bridge "
+                "and confirm that exact incarnation instead of transferring a late "
+                "confirmation across bridge changes."
             )
 
         receipt_repository = existing_instance.get("configured_bridge_repository")
