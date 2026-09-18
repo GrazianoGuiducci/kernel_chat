@@ -317,7 +317,7 @@ findings against `1a0720fa...`, and the later proof gaps exposed on
 `82078ed2...` are reconciled in the current source. Runtime validation remains
 dependency-free and conservative; richer consumer semantics stay in an
 independent CommonMark oracle. That oracle now observes rendered links including
-raw-HTML anchors, binds constitutive discovery to a real rendered owner heading
+raw-HTML anchors, binds constitutive discovery to a real Markdown owner heading
 rather than a matching string, and runs with the exact
 `markdown-it-py 4.2.0 + mdurl 0.1.2` dependency pair. Preview remains
 independent of unsupported INSTANCE schemas, and host-receipt delivery is
