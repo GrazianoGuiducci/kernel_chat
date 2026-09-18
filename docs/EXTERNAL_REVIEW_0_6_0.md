@@ -372,6 +372,23 @@ The native suite remains **58 tests**. Rereview should rerun N01–N04 against
 the exact canonical SHA produced from this reconciliation and should continue
 to preserve the already-closed F01–F05, M01 and P01 controls.
 
+## Reconciliation of the affbc66b rereview residuals
+
+The rereview of
+`affbc66b039739f1c9f7fb5f7261b2c8e2ff32c2` confirmed N01–N04 and all earlier
+mechanical relations, but exposed one remaining proof seam plus minor current
+wording drift:
+
+| Residual | Reconciliation | Discriminant |
+| --- | --- | --- |
+| N05 / anchor-owner projection dropped intervening rendered content | The CommonMark consumer now records non-whitespace rendered content as an owner event. An anchor satisfies the owner relation only when the next relevant rendered event is the intended heading. | active anchor + intervening rendered paragraph + expected later heading must not form the constitutive pair |
+| D01 / abbreviated confirmation wording | Current README, INSTALL and adapter summaries name the generated confirmation command as `--confirm-host-installation` plus the delivered digest required by `--expected-bridge-sha256`. | no current operational shorthand presents the bare flag as the complete executable confirmation effect |
+
+This reconciliation changes proof fidelity and current delivery wording only.
+The reviewer should preserve the closed F01–F05, M01, P01 and N01–N04 controls,
+rerun the N05 counterexample on the exact resulting SHA, and move observation
+once more to a materially independent surface before returning `no_change`.
+
 ## Intentionally deferred effects
 External review is selected before:
 

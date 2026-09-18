@@ -275,7 +275,8 @@ re-initialization is actually selected. Use `--preview-adapter` before any selec
 template and can therefore establish its byte identity, target and provenance;
 for an existing INSTANCE it does **not** migrate `instance_repository`.
 The operator must still copy/save a selected replacement in ChatGPT, then run
-`--confirm-host-installation` again.
+the generated host-confirmation command again: `--confirm-host-installation`
+plus the delivered bridge digest required by `--expected-bridge-sha256`.
 
 User-owned `CURRENT`, `SOURCES`, competences and local learning are preserved by
 default. See [the adoption guide](docs/ADOPTION_GUIDE.md) for legacy migration

@@ -161,9 +161,9 @@ Use:
   missing CURRENT/SOURCES in an existing instance remain missing until an
   explicit state replacement/restoration is selected
 
---confirm-host-installation
-  bind an operator-confirmed ChatGPT copy/save to the already-reconciled current
-  configured bridge identity; INSTANCE only
+--confirm-host-installation + --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
+  bind an operator-confirmed ChatGPT copy/save to the delivered,
+  already-reconciled current configured bridge identity; INSTANCE only
 ```
 
 Rerunning configuration preserves user-owned CURRENT/SOURCES and the configured

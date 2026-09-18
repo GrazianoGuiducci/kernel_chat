@@ -239,6 +239,21 @@ would later refuse to confirm. This adds no new state machine or controller;
 it lets the present model/operator resolve the visible conflict at the seam
 where it exists.
 
+## Final rereview convergence
+
+The latest rereview found no regression in the architecture or in the previously
+reconciled mechanics. One remaining proof seam was local to the CommonMark
+consumer oracle: its event projection could discard rendered content between a
+constitutive anchor and the intended owner heading. The oracle now preserves
+that intervening content as a material event, so only an anchor whose next
+relevant rendered event is the intended heading satisfies the composed owner
+relation.
+
+Current onboarding shorthand also names the complete host-confirmation effect:
+`--confirm-host-installation` is paired with the delivered bridge digest through
+`--expected-bridge-sha256`. These changes refine proof and delivery wording;
+they do not change INSTANCE, bridge, host or kernel architecture.
+
 ## Portable semantic deepening
 The package preserves a deeper distinction across sources and incarnations:
 

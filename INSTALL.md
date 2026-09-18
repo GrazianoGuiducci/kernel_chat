@@ -166,9 +166,9 @@ Existing user state and the configured bridge are preserved by default. Use:
   while preserving configured-bridge identity/provenance and observations;
   local artifact drift remains visible rather than being accepted
 
---confirm-host-installation
-  after the operator actually copied/saved the current configured bridge in
-  ChatGPT, bind that operator confirmation to the already-reconciled configured
+--confirm-host-installation + --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
+  after the operator actually copied/saved the delivered configured bridge in
+  ChatGPT, bind that operator confirmation to that already-reconciled configured
   bridge byte identity and semantic target/provenance; mutates INSTANCE only
 ```
 
@@ -379,8 +379,9 @@ python scripts/configure.py \
 A local bridge replacement does **not** update ChatGPT. The previous
 operator-confirmed installed digest is preserved, while the local/host state is
 marked unconfirmed. After the operator copies/saves the replacement in ChatGPT,
-run `--confirm-host-installation` again to bind the new host confirmation to the
-new configured digest.
+run the generated host-confirmation command again, including
+`--expected-bridge-sha256` for that delivered replacement, to bind the new host
+confirmation to the new configured digest.
 
 A package update that leaves the bridge contract unchanged does not require a
 host UI update merely because the package version changed.

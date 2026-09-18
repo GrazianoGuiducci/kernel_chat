@@ -59,6 +59,8 @@ class ConsumerSurfaceParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self._heading_tag is not None:
             self._heading_text.append(data)
+        elif data.strip():
+            self.owner_events.append(("content", data.strip()))
 
     def handle_endtag(self, tag: str) -> None:
         if self._heading_tag == tag:
@@ -244,6 +246,23 @@ class MarkdownConsumerTests(unittest.TestCase):
         self.assertIn(
             ("kernel-chat-mobile-observation", "Wrong owner"),
             active_anchor_owner_pairs(wrong_active_with_fenced_decoy),
+        )
+
+        intervening_rendered_content = (
+            '<a name="kernel-chat-mobile-observation"></a>\n\n'
+            "Wrong owner content.\n\n"
+            "## Mobile observation without losing the point\n"
+        )
+        self.assertEqual(
+            active_anchors(intervening_rendered_content),
+            ["kernel-chat-mobile-observation"],
+        )
+        self.assertNotIn(
+            (
+                "kernel-chat-mobile-observation",
+                "Mobile observation without losing the point",
+            ),
+            active_anchor_owner_pairs(intervening_rendered_content),
         )
 
 if __name__ == "__main__":
