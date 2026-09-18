@@ -2,6 +2,22 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **Deep-rereview consumer convergence (pre-release):** reconciled the four
+  residuals found on `c7d2d9c5...` without changing the architecture. The
+  configurator now emits a complete executable confirmation command including
+  the delivered `--expected-bridge-sha256`; unreconciled local bridge bytes are
+  reported only as diagnostic observation and are no longer offered as a
+  host-delivery incarnation.
+- `AGENTS.md` now routes local confirmation through the living receipt
+  publication/fresh-readback contract in `INSTALL.md` before remote/new-chat
+  reachability. The delivery regression protects that route instead of copying
+  the full installation procedure into the entry surface.
+- The CommonMark oracle now observes explicit anchor and following rendered
+  heading as one ordered consumer relation. A wrong active anchor plus a fenced
+  decoy containing the expected raw source adjacency no longer satisfies the
+  proof.
+- The suite remains **58 cases**; these corrections deepen existing tests rather
+  than introducing another framework or expanding the runtime validator.
 - **Deep-review temporal-integrity reconciliation (pre-release):** after the
   review of `0d1fa97f...`, cooperative configurator writers now serialize
   `INSTANCE` through a visible transient lock acquired before read/modify/write;
