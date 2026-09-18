@@ -284,14 +284,24 @@ lives under [`adapters/chatgpt/`](adapters/chatgpt/). User state lives under
 
 ## Verification
 
-Run:
+Run the dependency-free structural validator directly:
 
 ```bash
 python scripts/validate.py
+```
+
+For the complete regression suite, install the **test-only** CommonMark oracle
+and then run all tests:
+
+```bash
+python -m pip install -r requirements-test.txt
 python -B -m unittest discover -s tests -v
 ```
 
-The validator checks package structure and configured artifacts. The current
+The runtime validator checks package structure, receipts, configured artifacts
+and explicit discovery-route contracts. Full Markdown consumer semantics are
+kept out of the runtime parser and are checked independently in the test suite
+with `markdown-it-py`. The current
 suite contains **54 regression cases**: 32 configurator cases and 22 validator /
 drift / provenance / reachability / delivery cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
