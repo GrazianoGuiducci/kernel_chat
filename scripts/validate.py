@@ -69,6 +69,25 @@ def bridge_repositories(text: str) -> set[str]:
     return set(BRIDGE_REPOSITORY.findall(text))
 
 
+def normalized_github_repository(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    parts = value.strip().split("/")
+    if len(parts) != 2 or not all(parts):
+        return None
+    return "/".join(part.casefold() for part in parts)
+
+
+def same_github_repository(left: object, right: object) -> bool:
+    left_normalized = normalized_github_repository(left)
+    right_normalized = normalized_github_repository(right)
+    return (
+        left_normalized is not None
+        and right_normalized is not None
+        and left_normalized == right_normalized
+    )
+
+
 def validate_instance(value: object, label: str, errors: list[str]) -> None:
     if not isinstance(value, dict):
         errors.append(f"{label} must be a JSON object")
@@ -119,7 +138,9 @@ def validate_instance(value: object, label: str, errors: list[str]) -> None:
     elif (
         isinstance(configured_repository, str)
         and configured_repository != "unknown"
-        and configured_repository != value.get("instance_repository")
+        and not same_github_repository(
+            configured_repository, value.get("instance_repository")
+        )
     ):
         errors.append(
             f"{label} configured_bridge_repository must match instance_repository "
@@ -173,9 +194,32 @@ def validate_instance(value: object, label: str, errors: list[str]) -> None:
                 f"{label} host_installation.installed_bridge_template_version must be null, semantic, or 'unknown'"
             )
 
-        if host.get("state") == "installed_operator_confirmed" and installed_digest is None:
+        if host.get("state") == "installed_operator_confirmed":
+            if installed_digest is None:
+                errors.append(
+                    f"{label} installed_operator_confirmed requires installed_bridge_sha256"
+                )
+            if not isinstance(confirmed_at, str) or not confirmed_at.strip():
+                errors.append(
+                    f"{label} installed_operator_confirmed requires confirmed_at"
+                )
+
+        configured_digest = value.get("configured_bridge_sha256")
+        if (
+            isinstance(configured_digest, str)
+            and isinstance(installed_digest, str)
+            and configured_digest == installed_digest
+            and isinstance(configured_repository, str)
+            and configured_repository not in ("", "unknown")
+            and isinstance(installed_repository, str)
+            and installed_repository not in ("", "unknown")
+            and not same_github_repository(
+                configured_repository, installed_repository
+            )
+        ):
             errors.append(
-                f"{label} installed_operator_confirmed requires installed_bridge_sha256"
+                f"{label} same bridge digest has conflicting configured/installed "
+                "repository identities"
             )
 
     source_contact = value.get("source_contact")
@@ -191,30 +235,103 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def _blank_markdown_region(text: str) -> str:
+    return "".join(char if char in "\r\n" else " " for char in text)
+
+
 def markdown_link_surface(text: str) -> str:
-    """Return Markdown prose where inline-link syntax is semantically active."""
+    """Return the navigation-active Markdown surface used by package checks."""
+    # HTML comments are not part of rendered navigation.
+    text = re.sub(
+        r"<!--.*?-->",
+        lambda match: _blank_markdown_region(match.group(0)),
+        text,
+        flags=re.DOTALL,
+    )
+
     visible: list[str] = []
     fence_char: str | None = None
+    fence_length = 0
 
     for line in text.splitlines(keepends=True):
-        fence = re.match(r"^[ \t]{0,3}(`{3,}|~{3,})", line)
-        if fence:
-            char = fence.group(1)[0]
-            if fence_char is None:
-                fence_char = char
-            elif fence_char == char:
-                fence_char = None
-            visible.append("\n" if line.endswith(("\n", "\r")) else "")
-            continue
+        body = line.rstrip("\r\n")
+        ending = line[len(body):]
 
         if fence_char is not None:
-            visible.append("\n" if line.endswith(("\n", "\r")) else "")
+            closing = re.match(
+                rf"^ {{0,3}}{re.escape(fence_char)}{{{fence_length},}}[ \t]*$",
+                body,
+            )
+            visible.append(_blank_markdown_region(body) + ending)
+            if closing:
+                fence_char = None
+                fence_length = 0
             continue
 
-        # Inline code is example content, not an active Markdown link surface.
-        visible.append(re.sub(r"`[^`\r\n]*`", "", line))
+        opening = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", body)
+        if opening:
+            marker = opening.group(1)
+            fence_char = marker[0]
+            fence_length = len(marker)
+            visible.append(_blank_markdown_region(body) + ending)
+            continue
 
-    return "".join(visible)
+        if body.startswith("    ") or body.startswith("\t"):
+            visible.append(_blank_markdown_region(body) + ending)
+            continue
+
+        visible.append(line)
+
+    surface = "".join(visible)
+
+    # CommonMark code spans may cross line boundaries. Hide complete spans
+    # before looking for active links, while preserving newlines for multiline
+    # malformed-link detection.
+    chars = list(surface)
+    i = 0
+    while i < len(surface):
+        if surface[i] != "`":
+            i += 1
+            continue
+        j = i
+        while j < len(surface) and surface[j] == "`":
+            j += 1
+        run_length = j - i
+        pattern = re.compile(
+            rf"(?<!`)`{{{run_length}}}(?!`)"
+        )
+        closing = pattern.search(surface, j)
+        if closing is None:
+            i = j
+            continue
+        end = closing.end()
+        for index in range(i, end):
+            if chars[index] not in "\r\n":
+                chars[index] = " "
+        i = end
+
+    return "".join(chars)
+
+
+def markdown_heading_anchors(text: str) -> set[str]:
+    anchors: set[str] = set()
+    counts: dict[str, int] = {}
+    surface = markdown_link_surface(text)
+    for line in surface.splitlines():
+        match = re.match(r"^ {0,3}#{1,6}[ \t]+(.+?)\s*#*\s*$", line)
+        if not match:
+            continue
+        heading = re.sub(r"<[^>]+>", "", match.group(1))
+        heading = heading.strip().lower()
+        heading = re.sub(r"[^\w\- ]", "", heading)
+        heading = re.sub(r"[ \t]+", "-", heading)
+        base = heading.strip("-")
+        if not base:
+            continue
+        index = counts.get(base, 0)
+        counts[base] = index + 1
+        anchors.add(base if index == 0 else f"{base}-{index}")
+    return anchors
 
 
 def main() -> int:
@@ -359,7 +476,9 @@ def main() -> int:
                 )
             elif len(repositories) == 1:
                 configured_repository = next(iter(repositories))
-                if configured_repository != instance_value.get("instance_repository"):
+                if not same_github_repository(
+                    configured_repository, instance_value.get("instance_repository")
+                ):
                     warnings.append(
                         "configured bridge targets a different user-owned repository than "
                         "INSTANCE.instance_repository: "
@@ -370,7 +489,9 @@ def main() -> int:
                 if (
                     isinstance(receipt_repository, str)
                     and receipt_repository not in ("", "unknown")
-                    and receipt_repository != configured_repository
+                    and not same_github_repository(
+                        receipt_repository, configured_repository
+                    )
                 ):
                     warnings.append(
                         "configured bridge repository differs from the persisted configured "
@@ -396,7 +517,9 @@ def main() -> int:
                     isinstance(installed_repository, str)
                     and installed_repository not in ("", "unknown")
                     and len(repositories) == 1
-                    and installed_repository != next(iter(repositories))
+                    and not same_github_repository(
+                        installed_repository, next(iter(repositories))
+                    )
                 ):
                     warnings.append(
                         "local configured bridge repository differs from the last "
@@ -411,6 +534,21 @@ def main() -> int:
         for route in AGENT_DISCOVERY_ROUTES:
             if f"]({route})" not in agents_surface:
                 errors.append(f"AGENTS.md missing operating discovery route: {route}")
+                continue
+            destination, anchor = route.split("#", 1)
+            target = ROOT / destination
+            if not target.is_file():
+                errors.append(
+                    f"AGENTS.md discovery route target is missing: {route}"
+                )
+                continue
+            anchors = markdown_heading_anchors(
+                target.read_text(encoding="utf-8")
+            )
+            if anchor not in anchors:
+                errors.append(
+                    f"AGENTS.md discovery route anchor is missing: {route}"
+                )
 
     # Package contract Markdown must lead to existing local owners.
     # This checks reachability, not whether a model understands or uses them.
