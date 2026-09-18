@@ -274,6 +274,151 @@ class ValidateTests(unittest.TestCase):
         warnings = "\n".join(payload["warnings"])
         self.assertIn("last operator-confirmed installed bridge digest", warnings)
 
+    def test_confirmed_receipt_same_digest_conflicting_target_is_invalid_without_bridge(self) -> None:
+        configured = self.configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        confirmed = self.confirm_host()
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / "state/INSTANCE.json"
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["host_installation"]["installed_bridge_repository"] = "other-user/other-kernel"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+        (self.root / "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md").unlink()
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "state/INSTANCE.json same bridge digest has conflicting configured/installed repository identities",
+            payload["errors"],
+        )
+
+    def test_confirmed_receipt_requires_confirmation_time(self) -> None:
+        configured = self.configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        confirmed = self.confirm_host()
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / "state/INSTANCE.json"
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["host_installation"]["confirmed_at"] = None
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "state/INSTANCE.json installed_operator_confirmed requires confirmed_at",
+            payload["errors"],
+        )
+
+    def test_multiline_inline_code_is_not_treated_as_active_link(self) -> None:
+        agents = self.root / "AGENTS.md"
+        agents.write_text(
+            agents.read_text(encoding="utf-8")
+            + "\n`[Owner]\n(missing-owner.md)`\n",
+            encoding="utf-8",
+        )
+
+        result, payload = self.validate()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue(payload["valid"])
+
+    def test_active_broken_link_after_multiline_code_span_is_detected(self) -> None:
+        agents = self.root / "AGENTS.md"
+        agents.write_text(
+            agents.read_text(encoding="utf-8")
+            + "\n`literal\n` [Broken](missing-owner.md) `another`\n",
+            encoding="utf-8",
+        )
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "broken local link in AGENTS.md: missing-owner.md",
+            payload["errors"],
+        )
+
+    def test_fence_length_and_indented_code_remain_outside_navigation_surface(self) -> None:
+        agents = self.root / "AGENTS.md"
+        agents.write_text(
+            agents.read_text(encoding="utf-8")
+            + "\n````text\n[Example](missing-one.md)\n```\n"
+            + "[Still fenced](missing-two.md)\n````\n"
+            + "    [Indented example](missing-three.md)\n",
+            encoding="utf-8",
+        )
+
+        result, payload = self.validate()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue(payload["valid"])
+
+    def test_discovery_route_requires_destination_anchor(self) -> None:
+        core = self.root / "kernel/KERNEL.md"
+        core.write_text(
+            core.read_text(encoding="utf-8").replace(
+                "## Mobile observation without losing the point",
+                "## Mobile observation moved",
+            ),
+            encoding="utf-8",
+        )
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "AGENTS.md discovery route anchor is missing: "
+            "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
+            payload["errors"],
+        )
+
+    def test_discovery_route_inside_html_comment_does_not_count(self) -> None:
+        agents = self.root / "AGENTS.md"
+        text_value = agents.read_text(encoding="utf-8")
+        route = "kernel/KERNEL.md#mobile-observation-without-losing-the-point"
+        text_value = text_value.replace(f"]({route})", "](kernel/KERNEL.md)")
+        text_value += f"\n<!-- [Hidden route]({route}) -->\n"
+        agents.write_text(text_value, encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "AGENTS.md missing operating discovery route: " + route,
+            payload["errors"],
+        )
+
+    def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
+        for relative in ("README.md", "INSTALL.md", "adapters/chatgpt/README.md"):
+            text_value = (self.root / relative).read_text(encoding="utf-8")
+            confirmation = text_value.find("--confirm-host-installation")
+            self.assertGreaterEqual(confirmation, 0, relative)
+            delivery = text_value[confirmation:]
+            self.assertIn("git add state/INSTANCE.json", delivery, relative)
+            self.assertIn("git push", delivery, relative)
+
+    def test_github_repository_identity_case_differences_are_not_drift(self) -> None:
+        configured = self.configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        confirmed = self.confirm_host()
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / "state/INSTANCE.json"
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["instance_repository"] = "Example-User/Example-Kernel"
+        instance["configured_bridge_repository"] = "EXAMPLE-USER/example-kernel"
+        instance["host_installation"]["installed_bridge_repository"] = "example-user/EXAMPLE-KERNEL"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue(payload["valid"])
+        warnings = "\n".join(payload["warnings"])
+        self.assertNotIn("different user-owned repository", warnings)
+        self.assertNotIn("repository differs", warnings)
+
 
 if __name__ == "__main__":
     unittest.main()

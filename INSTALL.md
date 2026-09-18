@@ -225,6 +225,18 @@ receipt, confirmation stops rather than reconciling that drift. The command does
 not inspect the ChatGPT UI and therefore remains operator-confirmed evidence,
 not direct host proof.
 
+The confirmation receipt is still only local until it is committed and pushed:
+
+```bash
+git add state/INSTANCE.json
+git commit -m "Record ChatGPT host installation receipt"
+git push
+```
+
+Before starting the new chat in step 5, read the remote receipt back — for
+example with `git show @{upstream}:state/INSTANCE.json` — and verify that the
+published state records `installed_operator_confirmed`.
+
 Keep the states separate:
 
 ```text

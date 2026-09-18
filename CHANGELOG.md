@@ -2,6 +2,24 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **External-review reconciliation (pre-release):** reconciled all ten findings
+  from the review of `2c816975...` without adding a controller or new runtime
+  subsystem. Owned text files now publish through temporary-file + atomic
+  replacement at the single-file boundary; unsupported INSTANCE schemas/host
+  adapters are rejected before mutation; persisted host/configured receipt
+  contradictions are validated even without a local bridge; A→B→A bridge
+  replacement can recover an already-confirmed host incarnation from identity;
+  adapter preview no longer depends on decoding/preserving an incoherent old
+  bridge; GitHub repository identity comparisons are case-insensitive while
+  bridge bytes remain byte-exact; refresh preserves missing CURRENT/SOURCES;
+  Markdown validation handles multiline code spans, fence length, indented code
+  and HTML comments for the package navigation surface; discovery routes prove
+  their destination anchors; host-confirmation docs now require commit/push and
+  remote readback before a new chat relies on the receipt.
+- The post-review native suite contains **54 cases** (32 configurator + 22
+  validator/drift/provenance/reachability/delivery) and is exercised across all
+  8 Python 3.11–3.14 × Ubuntu/Windows matrix jobs. Review findings still require
+  proof on the final canonical revision before release.
 - Reframed the package around a **user-owned continuity kernel** rather than a
   mandatory project-first harness. A kernel instance can now be configured
   without an active project; a project remains an optional current context.
@@ -99,8 +117,8 @@
 - Declared Python **3.11–3.14** support and expanded CI across every declared
   Python line (3.11, 3.12, 3.13, 3.14) on Ubuntu and Windows. GitHub Actions are
   pinned to immutable current Node-24 action revisions.
-- The current regression suite contains **38 cases** (25 configurator + 13
-  validator/drift/provenance/reachability), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
+- The current regression suite contains **54 cases** (32 configurator + 22
+  validator/drift/provenance/reachability/delivery), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
   exact canonical revision that runs validator + full tests; repository proof
   does not claim host behavior.
 

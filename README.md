@@ -143,6 +143,20 @@ when known. It does not inspect ChatGPT directly. If the local bridge has drifte
 from its persisted configured receipt, confirmation stops instead of silently
 accepting that drift.
 
+The confirmation changes `state/INSTANCE.json` locally. Publish that receipt
+before relying on a new remote conversation:
+
+```bash
+git add state/INSTANCE.json
+git commit -m "Record ChatGPT host installation receipt"
+git push
+```
+
+Read the pushed `state/INSTANCE.json` back from the remote repository (or with
+`git show @{upstream}:state/INSTANCE.json`) and confirm that it contains
+`installed_operator_confirmed` before treating the receipt as remotely
+available.
+
 Until the operator confirms the copy/save, the truthful state is:
 
 ```text
@@ -206,7 +220,9 @@ After a package update, `--refresh-instance` can refresh package identity and
 the bridge template currently available while preserving configured-bridge
 identity/provenance, source-contact and host observations. It observes local
 bridge drift but does not accept changed bytes as the new configured
-incarnation. Use `--preview-adapter` before any selected bridge replacement.
+incarnation. In an existing instance, missing `CURRENT` or `SOURCES` remain
+missing during refresh; use an explicit state replacement when restoration or
+re-initialization is actually selected. Use `--preview-adapter` before any selected bridge replacement.
 `--replace-adapter` regenerates the local configured file from the current
 template and can therefore establish its byte identity, target and provenance;
 for an existing INSTANCE it does **not** migrate `instance_repository`.
@@ -276,14 +292,21 @@ python -B -m unittest discover -s tests -v
 ```
 
 The validator checks package structure and configured artifacts. The current
-suite contains **38 regression cases**: 25 configurator cases and 13 validator /
-drift / provenance / reachability cases. It includes a source-bound real 0.5.3 migration shape,
+suite contains **54 regression cases**: 32 configurator cases and 22 validator /
+drift / provenance / reachability / delivery cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
 compatibility, refresh/confirm/replacement effect boundaries, missing-local-
 bridge handling, configured/installed semantic identity and host-adoption
 boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 3.13 and 3.14** — on both Ubuntu and Windows. These checks do not simulate ChatGPT, prove connector
 availability, independently verify the UI copy/save, or establish behavioral
 assimilation.
+
+The external-review findings against `2c816975...` are reconciled in the current
+canonical source with native regressions for receipt persistence/coherence, unsupported
+schemas, bridge transition identity, no-write preview, Markdown consumer fit,
+discovery anchors, GitHub repository identity, remote receipt delivery and
+missing-state preservation. The external re-review belongs to the exact current
+canonical revision; any later source change forms a different review target.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by the current source.

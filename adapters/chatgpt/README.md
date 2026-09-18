@@ -89,6 +89,18 @@ receipt, confirmation refuses to reconcile that drift implicitly. This lets
 later validation distinguish local configured state from the last
 operator-confirmed host incarnation.
 
+Because the command changes only the local `state/INSTANCE.json`, publish the
+receipt before a new remote chat is expected to observe it:
+
+```bash
+git add state/INSTANCE.json
+git commit -m "Record ChatGPT host installation receipt"
+git push
+```
+
+Read the pushed receipt back from the remote/upstream branch before treating the
+confirmation as available to the ChatGPT-side consumer.
+
 GitHub access and Custom Instructions availability depend on the current
 account and host. The adapter cannot grant or prove those capabilities.
 
@@ -113,7 +125,9 @@ Use:
 --refresh-instance
   refresh package identity and the bridge template currently available while
   preserving configured-bridge identity/provenance and host observations;
-  observed local drift is not accepted as configured state
+  observed local drift is not accepted as configured state;
+  missing CURRENT/SOURCES in an existing instance remain missing until an
+  explicit state replacement/restoration is selected
 
 --confirm-host-installation
   bind an operator-confirmed ChatGPT copy/save to the already-reconciled current
