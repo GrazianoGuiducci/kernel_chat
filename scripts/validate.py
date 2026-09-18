@@ -46,20 +46,21 @@ REQUIRED = [
 
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
 SHA256 = re.compile(r"[0-9a-f]{64}")
-BRIDGE_REPOSITORY = re.compile(
-    r"^User-owned kernel (?:repository|instance):\s*"
-    r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*$",
-    re.MULTILINE,
+BRIDGE_IDENTITY_HEADER = re.compile(
+    r"\AWork from the present\. Act directly when the conversation and working set "
+    r"suffice; a new chat alone does not require a boot\.\r?\n\r?\n"
+    r"User-owned kernel (?:repository|instance):\s*"
+    r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
 )
 
 AGENT_DISCOVERY_ROUTES = (
     (
-        "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
-        "## Mobile observation without losing the point",
+        "kernel/KERNEL.md#kernel-chat-mobile-observation",
+        '<a name="kernel-chat-mobile-observation"></a>',
     ),
     (
-        "kernel/EVOLUTION.md#converge-the-changed-resultant",
-        "## Converge the changed resultant",
+        "kernel/EVOLUTION.md#kernel-chat-converge-resultant",
+        '<a name="kernel-chat-converge-resultant"></a>',
     ),
 )
 
@@ -74,7 +75,8 @@ def read_semver(path: Path, label: str, errors: list[str]) -> str | None:
 
 
 def bridge_repositories(text: str) -> set[str]:
-    return set(BRIDGE_REPOSITORY.findall(text))
+    match = BRIDGE_IDENTITY_HEADER.match(text)
+    return {match.group(1)} if match is not None else set()
 
 
 def normalized_github_repository(value: object) -> str | None:
@@ -248,8 +250,8 @@ def has_discovery_route_declaration(text: str, route: str) -> bool:
     return any(line.strip() == declaration for line in text.splitlines())
 
 
-def has_owner_heading(text: str, heading: str) -> bool:
-    return any(line.strip() == heading for line in text.splitlines())
+def has_owner_marker(text: str, marker: str) -> bool:
+    return any(line.strip() == marker for line in text.splitlines())
 
 
 def main() -> int:
@@ -447,7 +449,7 @@ def main() -> int:
     agents_path = ROOT / "AGENTS.md"
     if agents_path.is_file():
         agents_text = agents_path.read_text(encoding="utf-8")
-        for route, heading in AGENT_DISCOVERY_ROUTES:
+        for route, marker in AGENT_DISCOVERY_ROUTES:
             if not has_discovery_route_declaration(agents_text, route):
                 errors.append(
                     f"AGENTS.md missing structural discovery route: {route}"
@@ -460,11 +462,11 @@ def main() -> int:
                     f"AGENTS.md discovery route target is missing: {route}"
                 )
                 continue
-            if not has_owner_heading(
-                target.read_text(encoding="utf-8"), heading
+            if not has_owner_marker(
+                target.read_text(encoding="utf-8"), marker
             ):
                 errors.append(
-                    f"AGENTS.md discovery route owner heading is missing: {route}"
+                    f"AGENTS.md discovery route owner marker is missing: {route}"
                 )
 
     # Full Markdown consumer semantics are tested with an independent CommonMark
