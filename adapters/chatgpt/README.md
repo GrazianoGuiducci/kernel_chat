@@ -99,7 +99,14 @@ git push
 ```
 
 Read the pushed receipt back from the remote/upstream branch before treating the
-confirmation as available to the ChatGPT-side consumer.
+confirmation as available to the ChatGPT-side consumer:
+
+```bash
+git show @{upstream}:state/INSTANCE.json
+```
+
+Confirm that the remote receipt records `installed_operator_confirmed` before
+starting a new remote conversation.
 
 GitHub access and Custom Instructions availability depend on the current
 account and host. The adapter cannot grant or prove those capabilities.
