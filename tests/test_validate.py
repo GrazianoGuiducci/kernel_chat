@@ -326,11 +326,12 @@ class ValidateTests(unittest.TestCase):
         )
 
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
+        readme = (self.root / "README.md").read_text(encoding="utf-8")
+        self.assertIn("[Install / adopt](INSTALL.md)", readme)
+        self.assertIn("[Adoption model](docs/ADOPTION_GUIDE.md)", readme)
+        self.assertIn("[ChatGPT adapter guide](adapters/chatgpt/README.md)", readme)
+
         cases = {
-            "README.md": (
-                "confirmation_bridge_sha256",
-                "Then verify reachability in a new conversation",
-            ),
             "INSTALL.md": (
                 "confirmation_bridge_sha256",
                 "## 5. Verify reachability",
