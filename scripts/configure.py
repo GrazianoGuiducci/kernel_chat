@@ -363,6 +363,19 @@ def refresh_instance(
         }
     return value
 
+def print_host_confirmation_command(
+    github_user: str,
+    repository: str,
+    delivered_bridge_sha256: str,
+) -> None:
+    print("After that UI action, run:")
+    print("python scripts/configure.py \\")
+    print(f"  --github-user {github_user} \\")
+    print(f"  --repository {repository} \\")
+    print("  --confirm-host-installation \\")
+    print(f"  --expected-bridge-sha256 {delivered_bridge_sha256}")
+
+
 def confirm_host_installation(
     current: dict[str, object],
     *,
@@ -689,6 +702,19 @@ def main() -> int:
         instance_candidate = existing_instance
         instance_action = "kept"
 
+    configured_digest = (
+        instance_candidate.get("configured_bridge_sha256")
+        if isinstance(instance_candidate, dict)
+        else None
+    )
+    delivery_bridge_sha256 = (
+        adapter_digest
+        if isinstance(configured_digest, str)
+        and adapter_digest is not None
+        and adapter_digest == configured_digest
+        else None
+    )
+
     if missing_existing_adapter:
         adapter_status = "missing-preserved"
     else:
@@ -727,8 +753,15 @@ def main() -> int:
     )
     relative_adapter = adapter_output.relative_to(ROOT).as_posix()
     print(f"adapter={relative_adapter} status={adapter_status} chars={actual_chars}")
-    if adapter_digest is not None:
-        print(f"confirmation_bridge_sha256={adapter_digest}")
+    if delivery_bridge_sha256 is not None:
+        print(f"confirmation_bridge_sha256={delivery_bridge_sha256}")
+    elif adapter_digest is not None:
+        print(f"observed_local_bridge_sha256={adapter_digest}")
+        print(
+            "LOCAL BRIDGE DRIFT: local adapter bytes are not the reconciled configured "
+            "incarnation recorded by INSTANCE. Reconcile or explicitly replace the "
+            "adapter before any host copy/save action."
+        )
     print(f"state/INSTANCE.json={instance_status}")
     print("HOST UI BOUNDARY: this script does not install or update ChatGPT Custom Instructions.")
 
@@ -738,10 +771,15 @@ def main() -> int:
             f"{relative_adapter} into ChatGPT Custom Instructions through the "
             "ChatGPT UI and save it."
         )
-        print(
-            "After that UI action, run the same repository identity with "
-            "--confirm-host-installation to bind the operator confirmation to the "
-            "already-reconciled configured bridge identity."
+        if delivery_bridge_sha256 is None:
+            raise SystemExit(
+                "Initial adoption cannot offer a host action without a reconciled "
+                "configured bridge identity."
+            )
+        print_host_confirmation_command(
+            args.github_user,
+            args.repository,
+            delivery_bridge_sha256,
         )
         print(
             "Until the operator confirms that UI action, report: "
@@ -764,10 +802,14 @@ def main() -> int:
                 f"replaced. To update ChatGPT, copy the complete text from {relative_adapter} "
                 "into ChatGPT Custom Instructions through the ChatGPT UI and save it."
             )
-            print(
-                "After that UI action, run the same repository identity with "
-                "--confirm-host-installation to bind the installed-host receipt to the "
-                "already-reconciled configured bridge identity."
+            if delivery_bridge_sha256 is None:
+                raise SystemExit(
+                    "Adapter replacement did not produce a reconciled delivery identity."
+                )
+            print_host_confirmation_command(
+                args.github_user,
+                args.repository,
+                delivery_bridge_sha256,
             )
             print(
                 "Until the operator confirms that UI action, report: "
@@ -786,12 +828,28 @@ def main() -> int:
                 "BRIDGE IDENTITY NOTICE: the preserved adapter repository identity "
                 "could not be verified from known kernel_chat bridge syntax."
             )
-        print(
-            "If first adoption is still pending, the operator must copy the existing "
-            f"{relative_adapter} into ChatGPT Custom Instructions through the ChatGPT UI. "
-            "For an adapter update, review --preview-adapter and select --replace-adapter "
-            "before asking the operator to update the host."
-        )
+        if delivery_bridge_sha256 is None:
+            print(
+                "HOST DELIVERY BLOCKED: the local adapter differs from the configured "
+                "incarnation recorded by INSTANCE. Do not copy/save this local file into "
+                "the host yet; reconcile the local change or explicitly select "
+                "--replace-adapter first."
+            )
+        else:
+            print(
+                "If first adoption is actually selected and still pending, the operator "
+                f"may copy the reconciled {relative_adapter} into ChatGPT Custom "
+                "Instructions through the ChatGPT UI."
+            )
+            print_host_confirmation_command(
+                args.github_user,
+                args.repository,
+                delivery_bridge_sha256,
+            )
+            print(
+                "For an adapter update, review --preview-adapter and select "
+                "--replace-adapter before asking the operator to update the host."
+            )
 
     print(f"state/CURRENT.md={current_status}")
     print(f"state/SOURCES.md={sources_status}")
