@@ -21,6 +21,7 @@ class ConsumerSurfaceParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.links: list[str] = []
+        self.anchors: list[str] = []
         self.headings: list[str] = []
         self._heading_tag: str | None = None
         self._heading_text: list[str] = []
@@ -36,6 +37,9 @@ class ConsumerSurfaceParser(HTMLParser):
     ) -> None:
         if tag == "a":
             self._capture_link(attrs)
+            for name, value in attrs:
+                if name in ("name", "id") and value is not None:
+                    self.anchors.append(value)
         if re.fullmatch(r"h[1-6]", tag):
             self._heading_tag = tag
             self._heading_text = []
@@ -66,6 +70,10 @@ def consumer_surface(text: str) -> ConsumerSurfaceParser:
 
 def active_links(text: str) -> list[str]:
     return consumer_surface(text).links
+
+
+def active_anchors(text: str) -> list[str]:
+    return consumer_surface(text).anchors
 
 
 def active_headings(text: str) -> list[str]:
@@ -159,46 +167,42 @@ class MarkdownConsumerTests(unittest.TestCase):
         agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         links = set(active_links(agents))
         contracts = {
-            "kernel/KERNEL.md#mobile-observation-without-losing-the-point": (
+            "kernel/KERNEL.md#kernel-chat-mobile-observation": (
                 ROOT / "kernel/KERNEL.md",
+                "kernel-chat-mobile-observation",
                 "Mobile observation without losing the point",
             ),
-            "kernel/EVOLUTION.md#converge-the-changed-resultant": (
+            "kernel/EVOLUTION.md#kernel-chat-converge-resultant": (
                 ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-converge-resultant",
                 "Converge the changed resultant",
             ),
         }
 
-        for route, (target, heading) in contracts.items():
+        for route, (target, anchor, heading) in contracts.items():
             with self.subTest(route=route):
                 self.assertIn(route, links)
-                rendered_headings = active_headings(
-                    target.read_text(encoding="utf-8")
-                )
+                target_text = target.read_text(encoding="utf-8")
                 self.assertEqual(
-                    rendered_headings.count(heading),
+                    active_anchors(target_text).count(anchor),
                     1,
-                    f"{route} must resolve to one real consumer heading",
+                    f"{route} must resolve to one explicit consumer anchor",
                 )
-                fragment = urlsplit(route).fragment
-                self.assertEqual(fragment, constitutive_fragment(heading))
+                self.assertIn(
+                    f'<a name="{anchor}"></a>\n\n## {heading}',
+                    target_text,
+                    f"{route} anchor must belong to the intended owner heading",
+                )
 
-        decoy = (
-            "## Mobile observation moved\n\n"
-            "```text\n"
+        collision_fixture = (
+            "## mobile observation without losing the point\n"
+            "Different section.\n\n"
+            '<a name="kernel-chat-mobile-observation"></a>\n\n'
             "## Mobile observation without losing the point\n"
-            "```\n"
         )
-        self.assertNotIn(
-            "Mobile observation without losing the point",
-            active_headings(decoy),
-        )
-        raw_html_decoy = (
-            "<h2>Mobile observation without losing the point</h2>\n"
-        )
-        self.assertNotIn(
-            "Mobile observation without losing the point",
-            active_headings(raw_html_decoy),
+        self.assertEqual(
+            active_anchors(collision_fixture),
+            ["kernel-chat-mobile-observation"],
         )
 
 
