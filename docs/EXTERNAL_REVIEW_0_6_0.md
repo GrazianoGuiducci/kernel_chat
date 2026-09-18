@@ -381,7 +381,7 @@ wording drift:
 
 | Residual | Reconciliation | Discriminant |
 | --- | --- | --- |
-| N05 / anchor-owner projection dropped intervening rendered content | The CommonMark consumer now records non-whitespace rendered content as an owner event. An anchor satisfies the owner relation only when the next relevant rendered event is the intended heading. | active anchor + intervening rendered paragraph + expected later heading must not form the constitutive pair |
+| N05 / anchor-owner projection dropped intervening rendered content | The CommonMark consumer now records intervening rendered text and elements as owner events. An anchor satisfies the owner relation only when the next relevant rendered event is the intended heading. | active anchor + intervening rendered paragraph or non-text element + expected later heading must not form the constitutive pair |
 | D01 / abbreviated confirmation wording | Current README, INSTALL and adapter summaries name the generated confirmation command as `--confirm-host-installation` plus the delivered digest required by `--expected-bridge-sha256`. | no current operational shorthand presents the bare flag as the complete executable confirmation effect |
 
 This reconciliation changes proof fidelity and current delivery wording only.

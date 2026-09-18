@@ -3,8 +3,9 @@
 ## 0.6.0 — 2026-09-18
 
 - **Final rereview proof/wording convergence (pre-release):** the CommonMark
-  oracle now preserves non-whitespace rendered content in its anchor-owner event
-  stream, so an anchor separated from the intended heading by active content
+  oracle now preserves intervening rendered text and elements in its
+  anchor-owner event stream, so an anchor separated from the intended heading
+  by active content
   cannot be treated as directly owning that heading. Current README/INSTALL/
   adapter shorthand now names the full host-confirmation contract, including
   the delivered bridge digest. No runtime, state model or architecture changed.

@@ -36,25 +36,45 @@ class ConsumerSurfaceParser(HTMLParser):
     def handle_starttag(
         self, tag: str, attrs: list[tuple[str, str | None]]
     ) -> None:
+        heading_tag = re.fullmatch(r"h[1-6]", tag) is not None
+        anchor_added = False
         if tag == "a":
             self._capture_link(attrs)
             for name, value in attrs:
                 if name in ("name", "id") and value is not None:
                     self.anchors.append(value)
                     self.owner_events.append(("anchor", value))
-        if re.fullmatch(r"h[1-6]", tag):
+                    anchor_added = True
+        if (
+            not anchor_added
+            and not heading_tag
+            and self._heading_tag is None
+            and self.owner_events
+            and self.owner_events[-1][0] == "anchor"
+        ):
+            self.owner_events.append(("content", f"<{tag}>"))
+        if heading_tag:
             self._heading_tag = tag
             self._heading_text = []
 
     def handle_startendtag(
         self, tag: str, attrs: list[tuple[str, str | None]]
     ) -> None:
+        anchor_added = False
         if tag == "a":
             self._capture_link(attrs)
             for name, value in attrs:
                 if name in ("name", "id") and value is not None:
                     self.anchors.append(value)
                     self.owner_events.append(("anchor", value))
+                    anchor_added = True
+        if (
+            not anchor_added
+            and self._heading_tag is None
+            and self.owner_events
+            and self.owner_events[-1][0] == "anchor"
+        ):
+            self.owner_events.append(("content", f"<{tag}/>"))
 
     def handle_data(self, data: str) -> None:
         if self._heading_tag is not None:
@@ -263,6 +283,23 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "Mobile observation without losing the point",
             ),
             active_anchor_owner_pairs(intervening_rendered_content),
+        )
+
+        intervening_rendered_element = (
+            '<a name="kernel-chat-mobile-observation"></a>\n\n'
+            '<img src="wrong-owner.png" alt="Wrong owner">\n\n'
+            "## Mobile observation without losing the point\n"
+        )
+        self.assertEqual(
+            active_anchors(intervening_rendered_element),
+            ["kernel-chat-mobile-observation"],
+        )
+        self.assertNotIn(
+            (
+                "kernel-chat-mobile-observation",
+                "Mobile observation without losing the point",
+            ),
+            active_anchor_owner_pairs(intervening_rendered_element),
         )
 
 if __name__ == "__main__":
