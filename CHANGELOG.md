@@ -2,6 +2,22 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **External rereview reconciliation (pre-release):** after the rereview of
+  `1a0720fa...`, closed the remaining Markdown consumer-surface problem by
+  contracting the dependency-free runtime validator to explicit structural
+  discovery contracts and moving full Markdown link semantics to an independent
+  test-only CommonMark oracle (`markdown-it-py`). This avoids extending a partial
+  runtime parser case by case while still falsifying the reported GFM/CommonMark
+  counterexamples and active local-link delivery.
+- Moved pure `--preview-adapter` ahead of INSTANCE loading so unsupported/future
+  schemas or host adapters cannot block a no-write candidate observation.
+- Strengthened the host-confirmation delivery regression to prove ordered
+  confirmation → `git add` → `git commit` → `git push` → remote readback →
+  remote reentry, rather than checking only that two strings occur later.
+- Full pre-release suite now contains **53 cases**: 33 configurator, 17
+  structural/receipt/drift/provenance/delivery validator, and 3 independent
+  CommonMark consumer-oracle tests. CI installs the Markdown parser only as a
+  test dependency; `scripts/validate.py` remains dependency-free.
 - **External-review reconciliation (pre-release):** reconciled all ten findings
   from the review of `2c816975...` without adding a controller or new runtime
   subsystem. Owned text files now publish through temporary-file + atomic
@@ -117,8 +133,8 @@
 - Declared Python **3.11–3.14** support and expanded CI across every declared
   Python line (3.11, 3.12, 3.13, 3.14) on Ubuntu and Windows. GitHub Actions are
   pinned to immutable current Node-24 action revisions.
-- The current regression suite contains **54 cases** (32 configurator + 22
-  validator/drift/provenance/reachability/delivery), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
+- The current regression suite contains **53 cases** (33 configurator + 17
+  structural/receipt/drift/provenance/delivery + 3 CommonMark consumer-oracle), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
   exact canonical revision that runs validator + full tests; repository proof
   does not claim host behavior.
 
