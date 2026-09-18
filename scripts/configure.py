@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import atexit
 import hashlib
 import json
 import os
@@ -15,11 +16,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = re.compile(r"^[A-Za-z0-9_.-]+$")
-BRIDGE_REPOSITORY = re.compile(
-    r"^User-owned kernel (?:repository|instance):\s*"
-    r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*$",
-    re.MULTILINE,
+SHA256_HEX = re.compile(r"^[0-9a-f]{64}$")
+TEMPLATE_FIELD = re.compile(r"\{\{([A-Z_]+)\}\}")
+BRIDGE_IDENTITY_HEADER = re.compile(
+    r"\AWork from the present\. Act directly when the conversation and working set "
+    r"suffice; a new chat alone does not require a boot\.\r?\n\r?\n"
+    r"User-owned kernel (?:repository|instance):\s*"
+    r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
 )
+INSTANCE_LOCK_NAME = ".INSTANCE.write.lock"
 CANONICAL_UPSTREAM = "https://github.com/GrazianoGuiducci/kernel_chat"
 
 
@@ -56,6 +61,10 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Record operator confirmation for the already-reconciled current configured bridge; mutates INSTANCE only.",
     )
+    parser.add_argument(
+        "--expected-bridge-sha256",
+        help="Exact configured bridge digest that was delivered for the operator action being confirmed.",
+    )
     return parser.parse_args()
 
 
@@ -65,13 +74,17 @@ def validate_slug(value: str, label: str) -> None:
 
 
 def render(path: Path, replacements: dict[str, str]) -> str:
+    """Render template fields once; inserted user data is never reinterpreted."""
+
     text = path.read_text(encoding="utf-8")
-    for key, value in replacements.items():
-        text = text.replace("{{" + key + "}}", value)
-    unresolved = sorted(set(re.findall(r"{{[A-Z_]+}}", text)))
-    if unresolved:
-        raise SystemExit(f"Unresolved template fields in {path}: {unresolved}")
-    return text
+
+    def replace_field(match: re.Match[str]) -> str:
+        key = match.group(1)
+        if key not in replacements:
+            raise SystemExit(f"Unresolved template field in {path}: {{{{{key}}}}}")
+        return replacements[key]
+
+    return TEMPLATE_FIELD.sub(replace_field, text)
 
 
 def atomic_write_text(path: Path, content: str) -> None:
@@ -107,6 +120,52 @@ def write_owned_file(path: Path, content: str, replace: bool) -> str:
         return "kept"
     atomic_write_text(path, content)
     return "written"
+
+
+def acquire_instance_write_lock(instance_path: Path) -> Path:
+    """Serialize cooperative writers of INSTANCE without hiding stale ownership."""
+
+    lock_path = instance_path.parent / INSTANCE_LOCK_NAME
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        descriptor = os.open(
+            lock_path,
+            os.O_CREAT | os.O_EXCL | os.O_WRONLY,
+            0o600,
+        )
+    except FileExistsError as exc:
+        raise SystemExit(
+            f"INSTANCE write lock already exists: {lock_path}. "
+            "Another configurator may still be writing, or an earlier process may "
+            "have stopped unexpectedly. Inspect the lock and current INSTANCE; "
+            "remove the lock only after establishing that no writer still owns it."
+        ) from exc
+
+    try:
+        payload = {
+            "pid": os.getpid(),
+            "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        }
+        with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as handle:
+            json.dump(payload, handle, sort_keys=True)
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+    except BaseException:
+        try:
+            lock_path.unlink()
+        except FileNotFoundError:
+            pass
+        raise
+
+    def release() -> None:
+        try:
+            lock_path.unlink()
+        except FileNotFoundError:
+            pass
+
+    atexit.register(release)
+    return lock_path
 
 
 def normalized_github_repository(value: object) -> str | None:
@@ -147,13 +206,10 @@ def read_semver(path: Path, label: str) -> str:
 
 
 def configured_bridge_repository(text: str) -> str | None:
-    matches = set(BRIDGE_REPOSITORY.findall(text))
-    if len(matches) > 1:
-        raise SystemExit(
-            "Configured adapter contains conflicting user-owned repository identities: "
-            f"{sorted(matches)!r}"
-        )
-    return next(iter(matches), None)
+    """Return a repository only for the recognized constitutive bridge header."""
+
+    match = BRIDGE_IDENTITY_HEADER.match(text)
+    return match.group(1) if match is not None else None
 
 
 def load_instance(path: Path) -> dict[str, object]:
@@ -278,8 +334,14 @@ def refresh_instance(
             )
         )
         confirmed_at = host.get("confirmed_at")
+        prior_state = host.get("state")
+        receipt_still_applicable = prior_state in (
+            "installed_operator_confirmed",
+            "local_adapter_updated_host_unconfirmed",
+        )
         receipt_matches_result = (
-            host.get("installed_bridge_sha256") == observed_bridge_sha256
+            receipt_still_applicable
+            and host.get("installed_bridge_sha256") == observed_bridge_sha256
             and isinstance(confirmed_at, str)
             and bool(confirmed_at.strip())
             and repository_matches
@@ -343,6 +405,19 @@ def main() -> int:
             "--confirm-host-installation is an exact receipt effect and cannot be "
             "combined with adapter/state/instance mutation flags."
         )
+    if args.expected_bridge_sha256 and not args.confirm_host_installation:
+        raise SystemExit(
+            "--expected-bridge-sha256 is valid only with --confirm-host-installation."
+        )
+    if args.confirm_host_installation and not args.expected_bridge_sha256:
+        raise SystemExit(
+            "--confirm-host-installation requires --expected-bridge-sha256 for the "
+            "bridge incarnation that was actually delivered to the operator."
+        )
+    if args.expected_bridge_sha256 and not SHA256_HEX.fullmatch(
+        args.expected_bridge_sha256
+    ):
+        raise SystemExit("--expected-bridge-sha256 must be a lowercase SHA-256 digest.")
 
     instance_repository = f"{args.github_user}/{args.repository}"
     package_source_version = read_semver(ROOT / "VERSION", "VERSION")
@@ -367,6 +442,8 @@ def main() -> int:
         )
         print(adapter_candidate, end="")
         return 0
+
+    acquire_instance_write_lock(instance_output)
 
     adapter_preexisting = adapter_output.exists()
     existing_instance = load_instance(instance_output) if instance_output.exists() else None
@@ -420,6 +497,13 @@ def main() -> int:
             )
 
         digest = sha256_bytes(actual_adapter_bytes)
+        if digest != args.expected_bridge_sha256:
+            raise SystemExit(
+                "Operator confirmation refers to a different bridge delivery than the "
+                "currently configured adapter. Re-deliver the current configured bridge "
+                "and confirm that exact incarnation instead of transferring a late "
+                "confirmation across bridge changes."
+            )
         recorded_digest = existing_instance.get("configured_bridge_sha256")
         if recorded_digest != digest:
             raise SystemExit(
@@ -643,6 +727,8 @@ def main() -> int:
     )
     relative_adapter = adapter_output.relative_to(ROOT).as_posix()
     print(f"adapter={relative_adapter} status={adapter_status} chars={actual_chars}")
+    if adapter_digest is not None:
+        print(f"confirmation_bridge_sha256={adapter_digest}")
     print(f"state/INSTANCE.json={instance_status}")
     print("HOST UI BOUNDARY: this script does not install or update ChatGPT Custom Instructions.")
 
