@@ -34,6 +34,27 @@ the actual resulting paths and receipts before retrying; rerun only the effects
 whose current owner state shows they remain incomplete. Do not infer rollback
 or replay from the command name alone.
 
+For `state/INSTANCE.json`, atomic replacement also does not preserve a
+concurrent read-modify-write by itself. Cooperative configurator writers use
+`state/.INSTANCE.write.lock`: acquire it before reading INSTANCE, keep it
+through the write, and fail visibly if another writer already owns it.
+
+A stale lock is evidence of an interrupted/uncertain writer, not permission for
+automatic deletion:
+
+```text
+lock present
+-> inspect lock metadata + current INSTANCE + active writer reality
+-> writer active: wait / hand off
+-> no writer remains: remove stale lock explicitly
+-> re-read current INSTANCE
+-> continue from actual resultant
+```
+
+An external API/repository writer that cannot participate in the local lock must
+coordinate at its own owner boundary and reconcile a fresh current state before
+writing. Do not narrate local locking as universal serialization.
+
 Before continuing effect-bearing work, distinguish whether the earlier effect
 never happened, completed, failed with recoverable state, remains unknown, or
 was superseded. Recovery may mean rollback, compensating action, retry,
