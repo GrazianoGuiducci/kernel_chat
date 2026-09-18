@@ -292,14 +292,21 @@ python -B -m unittest discover -s tests -v
 ```
 
 The validator checks package structure and configured artifacts. The current
-suite contains **38 regression cases**: 25 configurator cases and 13 validator /
-drift / provenance / reachability cases. It includes a source-bound real 0.5.3 migration shape,
+suite contains **54 regression cases**: 32 configurator cases and 22 validator /
+drift / provenance / reachability / delivery cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
 compatibility, refresh/confirm/replacement effect boundaries, missing-local-
 bridge handling, configured/installed semantic identity and host-adoption
 boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 3.13 and 3.14** — on both Ubuntu and Windows. These checks do not simulate ChatGPT, prove connector
 availability, independently verify the UI copy/save, or establish behavioral
 assimilation.
+
+The external-review findings against `2c816975...` are reconciled in the current
+candidate with native regressions for receipt persistence/coherence, unsupported
+schemas, bridge transition identity, no-write preview, Markdown consumer fit,
+discovery anchors, GitHub repository identity, remote receipt delivery and
+missing-state preservation. A new external review still belongs to the exact
+canonical revision that receives this resultant.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by the current source.
