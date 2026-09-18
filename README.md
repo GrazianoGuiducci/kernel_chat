@@ -47,6 +47,29 @@ kernel, and its contents are not automatic authority. Connected project/domain
 sources continue to own their truth; the user continues to own external
 effects.
 
+## Choose the carrier that matches the environment
+
+`kernel_chat` is primarily for conversational hosts that do **not** own a
+durable project workspace. If the receiving AI/coder already operates inside a
+persistent local or remote filesystem and can work directly on the project,
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
+is normally the more native fit: it installs into that workspace and lets the
+project-owned kernel evolve there.
+
+A useful first distinction is:
+
+```text
+durable local / remote project filesystem + coder / terminal
+-> usually MAIOS Project Kernel
+
+cloud chat + no durable workspace owned by the chat
++ reachable user-owned repository
+-> kernel_chat
+```
+
+This is product fit, not a prohibition. The actual host, tools, persistence and
+operator intent determine the useful carrier.
+
 ## Three ways to approach the package
 
 ### Study it
@@ -68,12 +91,25 @@ When its state is deliberately public, a normal public fork is valid.
 See [the adoption guide](docs/ADOPTION_GUIDE.md) for the distinction between
 package, user instance, configured bridge and installed host.
 
-## Quick start
+## Quick start — let the host use the means it actually has
 
-You need Python 3.11–3.14, a GitHub account, and a ChatGPT account where the required
-repository access and Custom Instructions are available.
+An assisted installation should begin from the repository URL and the receiving
+environment, not from an assumption that the operator must manually run every
+command.
 
-After creating your user-owned repository, configure the ChatGPT bridge and
+A capable model/coder should first determine what it can actually do: read
+GitHub, create or write a user-owned repository, use a local or remote
+filesystem/terminal, and run the reference configurator. It should perform the
+effects it is authorized and equipped to perform, and explain only the missing
+operator-owned step.
+
+The reference implementation uses Python 3.11–3.14 and Git. Those are the
+supported mechanics for the commands below; they are not a requirement that the
+human personally type them. If no available execution surface can run the
+reference configurator or an equivalently verified transformation, setup
+remains pending rather than inventing configured state.
+
+After the user-owned repository exists, configure the ChatGPT bridge and
 continuity state **without requiring a project**:
 
 ```bash
@@ -118,7 +154,10 @@ git push
 
 ### Operator action — activate ChatGPT
 
-Repository configuration does **not** install anything in ChatGPT.
+Repository configuration does **not** install anything in ChatGPT. This remains
+an operator-owned boundary even when an AI performed all repository-side work.
+The assistant should provide the complete configured Custom Instructions text
+and the exact UI step instead of claiming it changed account settings.
 
 1. Open `adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`.
 2. Copy its complete text into ChatGPT Custom Instructions.
