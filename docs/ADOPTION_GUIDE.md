@@ -17,6 +17,28 @@ study / evaluation
 
 ## Choose the relation you need
 
+### Evaluation receiver and operating host are different
+
+The AI that receives the repository link may be only the **evaluation receiver**:
+it can study the public source, explain the kernel, assess value and fit, and
+help plan adoption.
+
+That does not make the same model or product an implemented `kernel_chat`
+host.
+
+```text
+can understand / explain the portable kernel
+!= host adapter exists
+!= user-owned persistence is reachable
+!= host installation is complete
+!= behavior has been exercised
+```
+
+The current package implements ChatGPT as the first host adapter. Other LLMs and
+chat products can still participate in evaluation or source study. A
+receiver-native adapter or equivalent verified incarnation is required before
+claiming host adoption there.
+
 ### Choose the carrier before choosing the mechanics
 
 `kernel_chat` is for continuity across chat environments that do not own a
