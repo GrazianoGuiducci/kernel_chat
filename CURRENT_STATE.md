@@ -22,8 +22,16 @@ migration and ChatGPT host activation.
 
 ## Object now
 
-`kernel_chat` is a **user-owned continuity kernel** for cloud chats and small
-conversational systems that do not own a durable workspace.
+`kernel_chat` is a **user-owned semantic operating kernel for conversational
+hosts**. Its current incarnation provides durable reentry and continuity, but
+persistence is an enabling relation rather than the full identity of the
+kernel.
+
+The portable core lets present relation, still-valid determinations, materially
+pertinent possibilities, owner-native knowledge, competences, actual means and
+consequence awareness participate in situated movement. Real use can preserve a
+revisable difference into later work; the current representation is not treated
+as the limit of the object.
 
 The kernel instance can exist before any project is selected. A project can
 later become one current context and source relation without becoming the
@@ -32,6 +40,30 @@ identity of the kernel itself.
 ChatGPT is the first implemented host adapter. GitHub is the first implemented
 persistence surface. Neither is the identity or future limit of the portable
 core.
+
+## Public self-representation refinement
+
+After the v0.6.0 release, the public README was corrected to distinguish the
+kernel's semantic identity from the mechanics of its current incarnation.
+
+The previous README was technically accurate but over-weighted repository,
+bridge, receipt, migration and review mechanics in the first product encounter.
+Those mechanics remain available in their owning installation, adapter,
+architecture and review documents.
+
+The README now presents:
+
+```text
+kernel identity / open operating relation
+-> practical consequences for the user
+-> current ChatGPT/GitHub incarnation
+-> adoption entry
+-> deeper maintenance and evidence surfaces
+```
+
+This is a documentation/self-representation correction. It does not change the
+portable kernel, runtime, state schema, bridge contract, release tag or the
+material-review identity.
 
 ## Current package relation
 
