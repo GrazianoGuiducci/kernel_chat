@@ -147,7 +147,7 @@ whether they are compatible, sequential, alternative, transformed views of one
 relation, or still unresolved. Preserve the unresolved difference rather than
 manufacturing co-reference.
 
-## Mobile observation without losing the point
+<a name="kernel-chat-mobile-observation"></a>\n\n## Mobile observation without losing the point
 
 A present object can remain the same while the current frame becomes the limit
 of what the system can see about it. When that difference can change the
