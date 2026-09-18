@@ -197,8 +197,8 @@
 - Declared Python **3.11–3.14** support and expanded CI across every declared
   Python line (3.11, 3.12, 3.13, 3.14) on Ubuntu and Windows. GitHub Actions are
   pinned to immutable current Node-24 action revisions.
-- The current regression suite contains **53 cases** (33 configurator + 17
-  structural/receipt/drift/provenance/delivery + 3 CommonMark consumer-oracle), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
+- At that technical-evidence checkpoint, the regression suite contained **53 cases** (33 configurator + 17
+  structural/receipt/drift/provenance/delivery + 3 CommonMark consumer-oracle), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercised all **8 Python/OS matrix jobs**. Canonical proof belongs to the
   exact canonical revision that runs validator + full tests; repository proof
   does not claim host behavior.
 
