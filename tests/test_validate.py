@@ -399,6 +399,26 @@ class ValidateTests(unittest.TestCase):
             self.assertIn("git add state/INSTANCE.json", delivery, relative)
             self.assertIn("git push", delivery, relative)
 
+    def test_github_repository_identity_case_differences_are_not_drift(self) -> None:
+        configured = self.configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        confirmed = self.confirm_host()
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / "state/INSTANCE.json"
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["instance_repository"] = "Example-User/Example-Kernel"
+        instance["configured_bridge_repository"] = "EXAMPLE-USER/example-kernel"
+        instance["host_installation"]["installed_bridge_repository"] = "example-user/EXAMPLE-KERNEL"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue(payload["valid"])
+        warnings = "\n".join(payload["warnings"])
+        self.assertNotIn("different user-owned repository", warnings)
+        self.assertNotIn("repository differs", warnings)
+
 
 if __name__ == "__main__":
     unittest.main()
