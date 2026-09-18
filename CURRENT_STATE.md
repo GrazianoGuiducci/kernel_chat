@@ -448,8 +448,8 @@ not establish:
 - later non-identical assimilation;
 - autonomous self-evolution or AGI.
 
-The current regression suite contains **58 cases**: 38 configurator cases, 17
-structural/receipt/drift/provenance/delivery validator cases, and 3 independent
+The current regression suite contains **59 cases**: 38 configurator cases, 18
+structural/receipt/drift/provenance/delivery/public-entry validator cases, and 3 independent
 CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3
 migration shape, custom/unknown legacy identity, repository-target match and
 mismatch, raw-byte LF/CRLF discrimination, additive v1 receipt compatibility,
@@ -512,7 +512,7 @@ test oracle identity
 + mdurl 0.1.2
 ```
 
-The current source carries 58 tests across all 8 supported Python/OS jobs.
+The current source carries 59 tests across all 8 supported Python/OS jobs.
 Five new configurator regressions cover writer-lock conflict/recovery,
 confirmation validity, delayed bridge confirmation, literal template-like user
 data and conservative custom-bridge attribution. Canonical proof must belong to the exact revision being rereviewed;
