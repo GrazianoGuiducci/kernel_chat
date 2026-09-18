@@ -166,35 +166,44 @@ and the exact UI step instead of claiming it changed account settings.
    access you intend.
 5. Confirm that the UI step was completed.
 
-After the operator actually copied/saved the current configured bridge, persist
-that operator-reported receipt for the exact configured bytes:
+When the configured bridge is shown to the operator, retain the
+`confirmation_bridge_sha256` printed by the configurator as the identity of
+that delivery. After the operator actually copied/saved **that delivered
+incarnation**, persist the operator-reported receipt:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 This snapshots the SHA-256 digest of the **raw configured bridge bytes**, the
 bridge repository target when observable, and configured-template provenance
-when known. It does not inspect ChatGPT directly. If the local bridge has drifted
-from its persisted configured receipt, confirmation stops instead of silently
-accepting that drift.
+when known. It does not inspect ChatGPT directly. If the configured bridge has
+changed since the delivered digest, a late confirmation is rejected; re-deliver
+the current bridge rather than transferring confirmation across incarnations.
 
 The confirmation changes `state/INSTANCE.json` locally. Publish that receipt
-before relying on a new remote conversation:
+and make a **fresh remote observation** before relying on a new conversation:
 
 ```bash
 git add state/INSTANCE.json
 git commit -m "Record ChatGPT host installation receipt"
+git rev-parse HEAD
 git push
+git branch --show-current
+git fetch --no-tags origin <BRANCH>
+git rev-parse FETCH_HEAD
+git show FETCH_HEAD:state/INSTANCE.json
 ```
 
-Read the pushed `state/INSTANCE.json` back from the remote repository (or with
-`git show @{upstream}:state/INSTANCE.json`) and confirm that it contains
-`installed_operator_confirmed` before treating the receipt as remotely
-available.
+Record the commit from `git rev-parse HEAD`. After the fetch, `FETCH_HEAD`
+must resolve to that same commit; if it does not, the remote branch advanced and
+must be reconciled before reentry. Then verify that the fetched receipt contains
+`installed_operator_confirmed`. A remote-tracking ref remembered locally is
+not itself a new observation of the server.
 
 Until the operator confirms the copy/save, the truthful state is:
 
