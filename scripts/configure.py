@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
+import tempfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -72,12 +74,58 @@ def render(path: Path, replacements: dict[str, str]) -> str:
     return text
 
 
+def atomic_write_text(path: Path, content: str) -> None:
+    """Publish one text file without truncating the previous incarnation first."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            temporary = Path(handle.name)
+            handle.write(content)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+        temporary = None
+    finally:
+        if temporary is not None:
+            try:
+                temporary.unlink()
+            except FileNotFoundError:
+                pass
+
+
 def write_owned_file(path: Path, content: str, replace: bool) -> str:
     if path.exists() and not replace:
         return "kept"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+    atomic_write_text(path, content)
     return "written"
+
+
+def normalized_github_repository(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    parts = value.strip().split("/")
+    if len(parts) != 2 or not all(parts):
+        return None
+    return "/".join(part.casefold() for part in parts)
+
+
+def same_github_repository(left: object, right: object) -> bool:
+    left_normalized = normalized_github_repository(left)
+    right_normalized = normalized_github_repository(right)
+    return (
+        left_normalized is not None
+        and right_normalized is not None
+        and left_normalized == right_normalized
+    )
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -115,6 +163,18 @@ def load_instance(path: Path) -> dict[str, object]:
         raise SystemExit(f"Cannot read valid instance state from {path}: {exc}") from exc
     if not isinstance(value, dict):
         raise SystemExit(f"Instance state must be a JSON object: {path}")
+    schema = value.get("schema")
+    if schema != "kernel_chat.instance.v1":
+        raise SystemExit(
+            f"Unsupported instance schema in {path}: {schema!r}. "
+            "This configurator only mutates kernel_chat.instance.v1."
+        )
+    host_adapter = value.get("host_adapter")
+    if host_adapter != "chatgpt":
+        raise SystemExit(
+            f"Unsupported host_adapter in {path}: {host_adapter!r}. "
+            "This configurator only mutates the ChatGPT incarnation."
+        )
     return value
 
 
@@ -213,14 +273,22 @@ def refresh_instance(
         repository_matches = (
             installed_repository in (None, "", "unknown")
             or observed_bridge_repository is None
-            or installed_repository == observed_bridge_repository
+            or same_github_repository(
+                installed_repository, observed_bridge_repository
+            )
         )
-        if not (
-            host.get("state") == "installed_operator_confirmed"
-            and host.get("installed_bridge_sha256") == observed_bridge_sha256
+        confirmed_at = host.get("confirmed_at")
+        receipt_matches_result = (
+            host.get("installed_bridge_sha256") == observed_bridge_sha256
+            and isinstance(confirmed_at, str)
+            and bool(confirmed_at.strip())
             and repository_matches
-        ):
-            host["state"] = "local_adapter_updated_host_unconfirmed"
+        )
+        host["state"] = (
+            "installed_operator_confirmed"
+            if receipt_matches_result
+            else "local_adapter_updated_host_unconfirmed"
+        )
 
     value["host_installation"] = host
 
@@ -300,7 +368,9 @@ def main() -> int:
 
     if existing_instance is not None and not args.preview_adapter:
         recorded_instance_repository = existing_instance.get("instance_repository")
-        if recorded_instance_repository != instance_repository:
+        if not same_github_repository(
+            recorded_instance_repository, instance_repository
+        ):
             raise SystemExit(
                 "Command repository identity does not match INSTANCE.instance_repository. "
                 "Use the repository identity already owned by the instance; repository "
@@ -319,7 +389,7 @@ def main() -> int:
             )
 
         recorded_repository = existing_instance.get("instance_repository")
-        if recorded_repository != instance_repository:
+        if not same_github_repository(recorded_repository, instance_repository):
             raise SystemExit(
                 "Host confirmation repository does not match INSTANCE.instance_repository: "
                 f"{instance_repository!r} != {recorded_repository!r}"
@@ -328,7 +398,10 @@ def main() -> int:
         actual_adapter_bytes = adapter_output.read_bytes()
         actual_adapter = decode_bridge(actual_adapter_bytes, adapter_output)
         embedded_repository = configured_bridge_repository(actual_adapter)
-        if embedded_repository is not None and embedded_repository != recorded_repository:
+        if (
+            embedded_repository is not None
+            and not same_github_repository(embedded_repository, recorded_repository)
+        ):
             raise SystemExit(
                 "Configured adapter targets a different user-owned repository than "
                 "INSTANCE: "
@@ -350,13 +423,16 @@ def main() -> int:
         if (
             receipt_repository != "unknown"
             and embedded_repository is not None
-            and receipt_repository != embedded_repository
+            and not same_github_repository(receipt_repository, embedded_repository)
         ):
             raise SystemExit(
                 "Configured adapter repository differs from the persisted configured "
                 "bridge repository receipt."
             )
-        if receipt_repository != "unknown" and receipt_repository != recorded_repository:
+        if (
+            receipt_repository != "unknown"
+            and not same_github_repository(receipt_repository, recorded_repository)
+        ):
             raise SystemExit(
                 "Persisted configured bridge repository differs from INSTANCE.instance_repository."
             )
@@ -378,9 +454,7 @@ def main() -> int:
             installed_bridge_repository=installed_repository,
             installed_bridge_template_version=installed_template,
         )
-        instance_output.write_text(
-            render_json(confirmed), encoding="utf-8", newline="\n"
-        )
+        atomic_write_text(instance_output, render_json(confirmed))
         print("state/INSTANCE.json=host-confirmed")
         print(
             "HOST INSTALLATION RECEIPT: operator confirmation bound to configured "
@@ -419,10 +493,15 @@ def main() -> int:
         "DATE": date.today().isoformat(),
     }
 
-    # Resolve every candidate and validate existing instance state before writes.
+    # Resolve every candidate before mutation. Preview is an observation effect:
+    # it must not inherit preservation/decoding prerequisites from the old bridge.
     adapter_candidate = render(adapter_template, replacements)
     current_candidate = render(current_template, replacements)
     sources_candidate = render(sources_template, replacements)
+
+    if args.preview_adapter:
+        print(adapter_candidate, end="")
+        return 0
 
     previous_adapter_bytes = adapter_output.read_bytes() if adapter_preexisting else None
     missing_existing_adapter = (
@@ -461,7 +540,10 @@ def main() -> int:
                 "Cannot preserve configured adapter because the instance repository "
                 "identity is missing or invalid."
             )
-        if embedded_repository is not None and embedded_repository != preserved_repository:
+        if (
+            embedded_repository is not None
+            and not same_github_repository(embedded_repository, preserved_repository)
+        ):
             raise SystemExit(
                 "Existing configured adapter targets a different user-owned repository "
                 "than the instance being preserved: "
@@ -512,33 +594,33 @@ def main() -> int:
         instance_candidate = existing_instance
         instance_action = "kept"
 
-    if args.preview_adapter:
-        print(adapter_candidate, end="")
-        return 0
-
     if missing_existing_adapter:
         adapter_status = "missing-preserved"
     else:
         adapter_status = write_owned_file(
             adapter_output, adapter_candidate, bool(adapter_bytes_changed)
         )
-    current_status = write_owned_file(
-        ROOT / "state/CURRENT.md", current_candidate, args.replace_state
-    )
-    sources_status = write_owned_file(
-        ROOT / "state/SOURCES.md", sources_candidate, args.replace_state
-    )
+    current_output = ROOT / "state/CURRENT.md"
+    sources_output = ROOT / "state/SOURCES.md"
+    if existing_instance is not None and not args.replace_state and not current_output.exists():
+        current_status = "missing-preserved"
+    else:
+        current_status = write_owned_file(
+            current_output, current_candidate, args.replace_state
+        )
+    if existing_instance is not None and not args.replace_state and not sources_output.exists():
+        sources_status = "missing-preserved"
+    else:
+        sources_status = write_owned_file(
+            sources_output, sources_candidate, args.replace_state
+        )
 
     if not instance_output.exists():
         instance_output.parent.mkdir(parents=True, exist_ok=True)
-        instance_output.write_text(
-            render_json(instance_candidate), encoding="utf-8", newline="\n"
-        )
+        atomic_write_text(instance_output, render_json(instance_candidate))
         instance_status = "written"
     elif instance_action == "refreshed":
-        instance_output.write_text(
-            render_json(instance_candidate), encoding="utf-8", newline="\n"
-        )
+        atomic_write_text(instance_output, render_json(instance_candidate))
         instance_status = "refreshed"
     else:
         instance_status = "kept"
