@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+import re
 import unittest
 
 from markdown_it import MarkdownIt
@@ -13,22 +15,80 @@ ROOT = Path(__file__).resolve().parents[1]
 MARKDOWN = MarkdownIt("commonmark")
 
 
+class ConsumerSurfaceParser(HTMLParser):
+    """Observe rendered links and headings instead of Markdown token shortcuts."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.links: list[str] = []
+        self.headings: list[str] = []
+        self._heading_tag: str | None = None
+        self._heading_text: list[str] = []
+
+    def _capture_link(self, attrs: list[tuple[str, str | None]]) -> None:
+        for name, value in attrs:
+            if name == "href" and value is not None:
+                self.links.append(value)
+                return
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        if tag == "a":
+            self._capture_link(attrs)
+        if re.fullmatch(r"h[1-6]", tag):
+            self._heading_tag = tag
+            self._heading_text = []
+
+    def handle_startendtag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        if tag == "a":
+            self._capture_link(attrs)
+
+    def handle_data(self, data: str) -> None:
+        if self._heading_tag is not None:
+            self._heading_text.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._heading_tag == tag:
+            self.headings.append("".join(self._heading_text).strip())
+            self._heading_tag = None
+            self._heading_text = []
+
+
+def consumer_surface(text: str) -> ConsumerSurfaceParser:
+    parser = ConsumerSurfaceParser()
+    parser.feed(MARKDOWN.render(text))
+    parser.close()
+    return parser
+
+
 def active_links(text: str) -> list[str]:
-    links: list[str] = []
+    return consumer_surface(text).links
 
-    def visit(tokens: list[object]) -> None:
-        for token in tokens:
-            token_type = getattr(token, "type", None)
-            if token_type == "link_open":
-                href = token.attrGet("href")
-                if href is not None:
-                    links.append(href)
-            children = getattr(token, "children", None)
-            if children:
-                visit(children)
 
-    visit(MARKDOWN.parse(text))
-    return links
+def active_headings(text: str) -> list[str]:
+    """Return real Markdown headings that can own the constitutive fragment."""
+    tokens = MARKDOWN.parse(text)
+    headings: list[str] = []
+    for index, token in enumerate(tokens):
+        if token.type != "heading_open":
+            continue
+        if index + 1 >= len(tokens) or tokens[index + 1].type != "inline":
+            continue
+        headings.append(tokens[index + 1].content.strip())
+    return headings
+
+
+def constitutive_fragment(heading: str) -> str:
+    """Map deliberately simple ASCII owner headings to their stable route fragment."""
+    if re.fullmatch(r"[A-Za-z0-9]+(?: [A-Za-z0-9]+)*", heading) is None:
+        raise AssertionError(
+            "Constitutive discovery headings must keep a simple ASCII shape "
+            "or gain an explicit fragment contract."
+        )
+    return heading.lower().replace(" ", "-")
 
 
 class MarkdownConsumerTests(unittest.TestCase):
@@ -76,6 +136,14 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "\\`[Broken](missing-owner.md)\\`\n",
                 True,
             ),
+            "raw-html-anchor": (
+                '<a href="missing-owner.md">Broken</a>\n',
+                True,
+            ),
+            "raw-html-anchor-in-fence": (
+                '```html\n<a href="missing-owner.md">Example</a>\n```\n',
+                False,
+            ),
         }
 
         for name, (markdown, expected_active) in cases.items():
@@ -90,13 +158,47 @@ class MarkdownConsumerTests(unittest.TestCase):
     def test_constitutive_discovery_links_are_active_for_consumer(self) -> None:
         agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         links = set(active_links(agents))
-        self.assertIn(
-            "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
-            links,
+        contracts = {
+            "kernel/KERNEL.md#mobile-observation-without-losing-the-point": (
+                ROOT / "kernel/KERNEL.md",
+                "Mobile observation without losing the point",
+            ),
+            "kernel/EVOLUTION.md#converge-the-changed-resultant": (
+                ROOT / "kernel/EVOLUTION.md",
+                "Converge the changed resultant",
+            ),
+        }
+
+        for route, (target, heading) in contracts.items():
+            with self.subTest(route=route):
+                self.assertIn(route, links)
+                rendered_headings = active_headings(
+                    target.read_text(encoding="utf-8")
+                )
+                self.assertEqual(
+                    rendered_headings.count(heading),
+                    1,
+                    f"{route} must resolve to one real consumer heading",
+                )
+                fragment = urlsplit(route).fragment
+                self.assertEqual(fragment, constitutive_fragment(heading))
+
+        decoy = (
+            "## Mobile observation moved\n\n"
+            "```text\n"
+            "## Mobile observation without losing the point\n"
+            "```\n"
         )
-        self.assertIn(
-            "kernel/EVOLUTION.md#converge-the-changed-resultant",
-            links,
+        self.assertNotIn(
+            "Mobile observation without losing the point",
+            active_headings(decoy),
+        )
+        raw_html_decoy = (
+            "<h2>Mobile observation without losing the point</h2>\n"
+        )
+        self.assertNotIn(
+            "Mobile observation without losing the point",
+            active_headings(raw_html_decoy),
         )
 
 

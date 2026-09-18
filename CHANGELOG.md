@@ -2,6 +2,14 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **Second rereview proof reconciliation (pre-release):** strengthened the
+  test-only consumer oracle after the rereview of `82078ed2...`. Link
+  observation now follows rendered HTML so raw `<a href>` navigation is not
+  invisible; constitutive discovery now composes an active AGENTS link with one
+  real Markdown owner heading and its explicit simple-ASCII fragment contract,
+  rejecting fenced-heading decoys; and the oracle environment pins both
+  `markdown-it-py==4.2.0` and `mdurl==0.1.2`. These are stronger assertions
+  inside the existing oracle cases, so the suite remains 53 tests.
 - **External rereview reconciliation (pre-release):** after the rereview of
   `1a0720fa...`, closed the remaining Markdown consumer-surface problem by
   contracting the dependency-free runtime validator to explicit structural

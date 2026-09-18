@@ -337,9 +337,33 @@ N2
   confirm -> add -> commit -> push -> remote readback -> reentry
 ```
 
-The current canonical source carries 53 tests across all 8 supported Python/OS
-jobs. Canonical proof must belong to the exact revision being rereviewed; branch
-proof and prior reviewed SHAs remain genealogy/evidence for their own identities.
+A further rereview of `82078ed2...` found no reopened runtime/product defect,
+but exposed three proof gaps in that oracle: raw-HTML anchors were outside the
+token-only link observation, discovery evidence could be individually true
+without proving that the fragment reached a real owner heading, and the
+transitive parser dependency was not pinned exactly. The current resultant
+therefore strengthens proof without widening the runtime validator:
+
+```text
+rendered consumer HTML
+-> Markdown links + raw-HTML anchors observed on one surface
+
+constitutive discovery
+-> active AGENTS link
++ destination
++ exactly one Markdown owner heading
++ explicit simple-ASCII fragment contract
+
+test oracle identity
+-> markdown-it-py 4.2.0
++ mdurl 0.1.2
+```
+
+The current canonical source still carries 53 tests across all 8 supported
+Python/OS jobs; the relevant oracle cases became stronger rather than more
+numerous. Canonical proof must belong to the exact revision being rereviewed;
+branch proof and prior reviewed SHAs remain genealogy/evidence for their own
+identities.
 
 ## Current next
 
