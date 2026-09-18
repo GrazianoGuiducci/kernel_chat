@@ -23,6 +23,43 @@ today; they are not its identity or its future limit.
 [Adoption model](docs/ADOPTION_GUIDE.md) · [User guide](docs/USER_GUIDE.md) ·
 [Core](kernel/KERNEL.md) · [Architecture](docs/ARCHITECTURE.md)
 
+## If an AI / LLM received this link
+
+A GPT, Claude, Gemini, DeepSeek or another capable model does not need to be the
+final host of `kernel_chat` in order to understand the repository.
+
+When an operator gives an AI this link, the useful first task is **not**
+installation. The model should first understand the object and report back in
+plain language:
+
+```text
+what kernel_chat is
+what changes compared with an ordinary isolated chat
+what value it could have for this operator's actual way of working
+which parts are available now
+which parts are only a direction or possibility
+whether kernel_chat is the right carrier for this environment
+what the model can actually do itself
+what still requires operator authority or another execution surface
+```
+
+The model should distinguish its ability to **study and explain** the source
+from its ability to **adopt it in its own host**.
+
+Any capable LLM can inspect the public source when it can reach it. The current
+repository, however, implements a **ChatGPT host adapter**. Another model or
+chat host should not claim that `kernel_chat` is installed or supported there
+merely because it can understand the kernel. It can still explain the product,
+assess fit, use the portable kernel as a source of operating knowledge, and
+identify what receiver-native adapter or persistent surface would be needed.
+
+If the operator then wants to adopt it, continue with
+[Install / adopt](INSTALL.md) and the
+[Adoption model](docs/ADOPTION_GUIDE.md). If the operator already works with an
+AI/coder inside a durable project filesystem, also compare the fit with
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
+before choosing a carrier.
+
 ## What the kernel is
 
 The kernel is a portable operating relation through which a conversational
@@ -139,10 +176,27 @@ mechanics the semantic owner of the kernel.
 
 ## Start using it
 
-The simplest entry is to give the repository or release to a capable AI/coder
-and ask it to help adopt `kernel_chat` using the means it actually has.
+There are two natural starts.
 
-For example:
+### 1. Understand whether it is useful to you
+
+Give the repository link to a capable AI/LLM and ask:
+
+```text
+Read kernel_chat as a product, not only as a code repository.
+Explain what it is, what it could change in the way we work, which value is
+relevant to my current environment, what is implemented today, and what is not.
+Then tell me whether kernel_chat is the right carrier here before proposing any
+installation.
+```
+
+A good answer should be specific to the operator's environment rather than
+repeating the README as marketing copy.
+
+### 2. Adopt it
+
+If the fit is clear, ask the model/coder to adopt `kernel_chat` using the means
+it actually has:
 
 ```text
 Help me adopt kernel_chat in a user-owned repository and configure it for this
@@ -164,6 +218,10 @@ mechanics live in [INSTALL.md](INSTALL.md), the
 [Adoption guide](docs/ADOPTION_GUIDE.md) and the
 [ChatGPT adapter guide](adapters/chatgpt/README.md). They are deliberately not
 the definition of the kernel.
+
+After adoption, ordinary use starts from the user's real work rather than from a
+special boot phrase. See the [User guide](docs/USER_GUIDE.md) for the first
+conversation, reentry, continuity and competence use.
 
 ### Which carrier?
 
