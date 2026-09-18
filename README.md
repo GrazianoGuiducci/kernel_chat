@@ -20,7 +20,7 @@ continuity rather than the identity of the kernel itself.
 
 [Source version](VERSION) · [Install / adopt](INSTALL.md) ·
 [Adoption model](docs/ADOPTION_GUIDE.md) · [User guide](docs/USER_GUIDE.md) ·
-[Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md)
+[Architecture](docs/ARCHITECTURE.md) · [External review brief](docs/EXTERNAL_REVIEW_0_6_0.md) · [Contributing](CONTRIBUTING.md)
 
 `VERSION` identifies the current source package. Tagged releases, a configured
 user instance, an operator-confirmed installed bridge, repository reachability
@@ -306,6 +306,7 @@ make increasingly possible through observable use and continued development.
 - [Adoption guide](docs/ADOPTION_GUIDE.md)
 - [User guide](docs/USER_GUIDE.md)
 - [Architecture](docs/ARCHITECTURE.md)
+- [External review brief — 0.6.0](docs/EXTERNAL_REVIEW_0_6_0.md)
 - [ChatGPT adapter](adapters/chatgpt/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [Evolution Feedback template](.github/ISSUE_TEMPLATE/evolution-feedback.md)

@@ -5,6 +5,7 @@
 ```text
 version: 0.6.0
 status: canonical_kernel_chat_incarnation
+review_state: external_review_pending
 latest_tagged_distribution: v0.5.0
 owner: Graziano Guiducci
 ```
@@ -311,6 +312,20 @@ the evolved ChatGPT source; those systems remain separate owners and are not
 runtime dependencies of `kernel_chat`.
 
 See `docs/LINEAGE.md` and `docs/EVOLUTION_GUIDE.md`.
+
+## External review before release
+
+Canonical source **0.6.0** is ready for an external repository review before a
+numbered `v0.6.0` tag/release is selected.
+
+The reviewer should pin the exact `main` commit being reviewed rather than
+treating moving `main`, this state file, or a later release as interchangeable.
+The dedicated [external review brief](docs/EXTERNAL_REVIEW_0_6_0.md) identifies
+the product relations, reproducible checks and evidence boundaries that matter.
+
+A review finding can reopen only the relation it materially changes. The review
+does not by itself authorize a tag/release, user-instance migration, bridge
+replacement or host update.
 
 ## Current next
 
