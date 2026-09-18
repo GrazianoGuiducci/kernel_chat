@@ -366,6 +366,23 @@ class ValidateTests(unittest.TestCase):
                 self.assertGreaterEqual(reentry, 0, (relative, reentry_marker))
                 self.assertEqual(positions, sorted(positions), relative)
 
+        agents = (self.root / "AGENTS.md").read_text(encoding="utf-8")
+        route = (
+            "[receipt publication and fresh remote readback contract]"
+            "(INSTALL.md#receipt-publication-and-fresh-readback)"
+        )
+        confirm = agents.find("--confirm-host-installation")
+        delivery_route = agents.find(route, confirm)
+        reentry = agents.find("verify host reachability", delivery_route)
+        self.assertGreaterEqual(confirm, 0, "AGENTS confirmation")
+        self.assertGreater(delivery_route, confirm, "AGENTS delivery route")
+        self.assertGreater(reentry, delivery_route, "AGENTS remote reentry")
+        install = (self.root / "INSTALL.md").read_text(encoding="utf-8")
+        self.assertIn(
+            '<a name="receipt-publication-and-fresh-readback"></a>',
+            install,
+        )
+
     def test_github_repository_identity_case_differences_are_not_drift(self) -> None:
         configured = self.configure()
         self.assertEqual(configured.returncode, 0, configured.stderr)
