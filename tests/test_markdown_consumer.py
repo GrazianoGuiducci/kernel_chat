@@ -200,6 +200,11 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-converge-resultant",
                 "Converge the changed resultant",
             ),
+            "INSTALL.md#receipt-publication-and-fresh-readback": (
+                ROOT / "INSTALL.md",
+                "receipt-publication-and-fresh-readback",
+                "Receipt publication and fresh remote readback",
+            ),
         }
 
         for route, (target, anchor, heading) in contracts.items():
