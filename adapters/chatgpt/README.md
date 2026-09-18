@@ -95,41 +95,43 @@ Until the operator confirms the UI step, the truthful state is:
 repository configured / host activation pending
 ```
 
-After the operator actually copies/saves the current configured bridge, record
-that operator-reported effect with:
+Retain the `confirmation_bridge_sha256` emitted for the bridge shown to the
+operator. After the operator actually copies/saves **that delivered bridge
+incarnation**, record the operator-reported effect with:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 The receipt stores the SHA-256 digest of the raw configured bridge bytes and
 snapshots its repository target/template provenance when available. It does not
-inspect ChatGPT settings directly. If local bytes differ from the configured
-receipt, confirmation refuses to reconcile that drift implicitly. This lets
-later validation distinguish local configured state from the last
-operator-confirmed host incarnation.
+inspect ChatGPT settings directly. If the current bridge no longer matches the
+delivered digest, confirmation is rejected instead of being transferred to a
+newer incarnation.
 
 Because the command changes only the local `state/INSTANCE.json`, publish the
-receipt before a new remote chat is expected to observe it:
+receipt and make a fresh observation of the selected remote branch before a new
+chat relies on it:
 
 ```bash
 git add state/INSTANCE.json
 git commit -m "Record ChatGPT host installation receipt"
+git rev-parse HEAD
 git push
+git branch --show-current
+git fetch --no-tags origin <BRANCH>
+git rev-parse FETCH_HEAD
+git show FETCH_HEAD:state/INSTANCE.json
 ```
 
-Read the pushed receipt back from the remote/upstream branch before treating the
-confirmation as available to the ChatGPT-side consumer:
-
-```bash
-git show @{upstream}:state/INSTANCE.json
-```
-
-Confirm that the remote receipt records `installed_operator_confirmed` before
-starting a new remote conversation.
+The fetched commit must equal the expected local commit recorded before push.
+If the remote has advanced, reconcile that state first. Confirm
+`installed_operator_confirmed` in the fetched receipt before starting a new
+remote conversation.
 
 GitHub access and Custom Instructions availability depend on the current
 account and host. The adapter cannot grant or prove those capabilities.

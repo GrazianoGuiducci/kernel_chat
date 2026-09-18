@@ -166,35 +166,44 @@ and the exact UI step instead of claiming it changed account settings.
    access you intend.
 5. Confirm that the UI step was completed.
 
-After the operator actually copied/saved the current configured bridge, persist
-that operator-reported receipt for the exact configured bytes:
+When the configured bridge is shown to the operator, retain the
+`confirmation_bridge_sha256` printed by the configurator as the identity of
+that delivery. After the operator actually copied/saved **that delivered
+incarnation**, persist the operator-reported receipt:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 This snapshots the SHA-256 digest of the **raw configured bridge bytes**, the
 bridge repository target when observable, and configured-template provenance
-when known. It does not inspect ChatGPT directly. If the local bridge has drifted
-from its persisted configured receipt, confirmation stops instead of silently
-accepting that drift.
+when known. It does not inspect ChatGPT directly. If the configured bridge has
+changed since the delivered digest, a late confirmation is rejected; re-deliver
+the current bridge rather than transferring confirmation across incarnations.
 
 The confirmation changes `state/INSTANCE.json` locally. Publish that receipt
-before relying on a new remote conversation:
+and make a **fresh remote observation** before relying on a new conversation:
 
 ```bash
 git add state/INSTANCE.json
 git commit -m "Record ChatGPT host installation receipt"
+git rev-parse HEAD
 git push
+git branch --show-current
+git fetch --no-tags origin <BRANCH>
+git rev-parse FETCH_HEAD
+git show FETCH_HEAD:state/INSTANCE.json
 ```
 
-Read the pushed `state/INSTANCE.json` back from the remote repository (or with
-`git show @{upstream}:state/INSTANCE.json`) and confirm that it contains
-`installed_operator_confirmed` before treating the receipt as remotely
-available.
+Record the commit from `git rev-parse HEAD`. After the fetch, `FETCH_HEAD`
+must resolve to that same commit; if it does not, the remote branch advanced and
+must be reconciled before reentry. Then verify that the fetched receipt contains
+`installed_operator_confirmed`. A remote-tracking ref remembered locally is
+not itself a new observation of the server.
 
 Until the operator confirms the copy/save, the truthful state is:
 
@@ -341,7 +350,7 @@ The runtime validator checks package structure, receipts, configured artifacts
 and explicit discovery-route contracts. Full Markdown consumer semantics are
 kept out of the runtime parser and are checked independently in the test suite
 with `markdown-it-py`. The current
-suite contains **53 regression cases**: 33 configurator cases, 17 structural /
+suite contains **58 regression cases**: 38 configurator cases, 17 structural /
 receipt / drift / provenance / delivery validator cases, and 3 independent
 CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
@@ -351,17 +360,14 @@ boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 
 availability, independently verify the UI copy/save, or establish behavioral
 assimilation.
 
-The first external-review findings against `2c816975...`, the rereview
-findings against `1a0720fa...`, and the later proof gaps exposed on
-`82078ed2...` are reconciled in the current source. Runtime validation remains
-dependency-free and conservative; richer consumer semantics stay in an
-independent CommonMark oracle. That oracle now observes rendered links including
-raw-HTML anchors, binds constitutive discovery to a real Markdown owner heading
-rather than a matching string, and runs with the exact
-`markdown-it-py 4.2.0 + mdurl 0.1.2` dependency pair. Preview remains
-independent of unsupported INSTANCE schemas, and host-receipt delivery is
-protected as an ordered confirm → commit → push → remote-readback → reentry
-relation. Any later canonical source change forms a new review target.
+The current source keeps runtime validation dependency-free and conservative.
+Richer Markdown consumer semantics remain in the independent test oracle;
+constitutive discovery now uses explicit stable anchors rather than depending
+on automatic heading-slug identity. INSTANCE writer conflicts, bridge-delivery
+identity and fresh remote receipt readback are explicit parts of the current
+pre-release proof. Detailed review genealogy and counterexamples live in
+[the external review brief](docs/EXTERNAL_REVIEW_0_6_0.md), so the product
+narrative does not require the reader to reconstruct every audit cycle.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by the current source.

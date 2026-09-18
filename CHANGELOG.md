@@ -2,6 +2,28 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **Deep-review temporal-integrity reconciliation (pre-release):** after the
+  review of `0d1fa97f...`, cooperative configurator writers now serialize
+  `INSTANCE` through a visible transient lock acquired before read/modify/write;
+  stale ownership remains an explicit recovery condition instead of being
+  auto-deleted. Historical host receipts are restored only while their current
+  validity has not been explicitly invalidated.
+- Host confirmation is now correlated with the bridge incarnation actually
+  delivered to the operator through `--expected-bridge-sha256`; late
+  confirmation of A cannot confirm a later B. Template rendering is single-pass,
+  so user data resembling `{{PLACEHOLDER}}` remains literal.
+- Configured bridge repository identity is considered known only when the
+  constitutive bridge header is recognized; examples/comments or unrecognized
+  custom forms no longer become authoritative target identity.
+- Constitutive AGENTS discovery now routes through explicit prefixed custom
+  anchors, avoiding automatic heading-anchor collision ambiguity. Receipt
+  publication now requires a fresh fetch of the selected remote branch and
+  commit-identity comparison before readback/reentry; cached remote-tracking
+  state is not described as a fresh remote observation.
+- The pre-release suite now contains **58 cases**: 38 configurator, 17
+  structural/receipt/drift/provenance/delivery validator and 3 independent
+  CommonMark consumer-oracle tests.
+
 - **Capability-relative onboarding (pre-release):** clarified that
   `kernel_chat` is primarily the cloud-chat continuity carrier while MAIOS
   Project Kernel is normally the more native fit for an AI/coder already living

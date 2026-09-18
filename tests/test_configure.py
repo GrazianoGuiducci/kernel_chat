@@ -55,6 +55,17 @@ class ConfigureTests(unittest.TestCase):
                 "--project-source", "https://example.org/project",
             ])
         command.extend(flags)
+        if (
+            "--confirm-host-installation" in flags
+            and "--expected-bridge-sha256" not in flags
+        ):
+            instance = json.loads((self.root / INSTANCE).read_text(encoding="utf-8"))
+            command.extend(
+                [
+                    "--expected-bridge-sha256",
+                    str(instance["configured_bridge_sha256"]),
+                ]
+            )
         return subprocess.run(
             command,
             cwd=self.root,
@@ -78,6 +89,103 @@ class ConfigureTests(unittest.TestCase):
         return (
             self.root / "adapters/chatgpt/VERSION"
         ).read_text(encoding="utf-8").strip()
+
+    def test_instance_writer_lock_blocks_concurrent_mutation(self) -> None:
+        configured = self.run_configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        instance_path = self.root / INSTANCE
+        before = instance_path.read_bytes()
+        lock = self.root / "state/.INSTANCE.write.lock"
+        lock.write_text('{"pid": 999, "created_at": "stale-test"}\n', encoding="utf-8")
+
+        blocked = self.run_configure("--refresh-instance", with_project=False)
+        self.assertNotEqual(blocked.returncode, 0)
+        self.assertIn("INSTANCE write lock already exists", blocked.stderr)
+        self.assertEqual(instance_path.read_bytes(), before)
+
+        lock.unlink()
+        recovered = self.run_configure("--refresh-instance", with_project=False)
+        self.assertEqual(recovered.returncode, 0, recovered.stderr)
+
+    def test_unknown_host_state_is_not_resurrected_by_identical_replacement(self) -> None:
+        configured = self.run_configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        confirmed = self.run_configure(
+            "--confirm-host-installation", with_project=False
+        )
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / INSTANCE
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["host_installation"]["state"] = "unknown"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+
+        replaced = self.run_configure("--replace-adapter", with_project=False)
+        self.assertEqual(replaced.returncode, 0, replaced.stderr)
+        updated = json.loads(instance_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            updated["host_installation"]["state"],
+            "local_adapter_updated_host_unconfirmed",
+        )
+
+    def test_late_confirmation_cannot_confirm_a_newer_bridge(self) -> None:
+        configured = self.run_configure()
+        self.assertEqual(configured.returncode, 0, configured.stderr)
+        instance_path = self.root / INSTANCE
+        original = json.loads(instance_path.read_text(encoding="utf-8"))
+        delivered_digest = original["configured_bridge_sha256"]
+
+        template = self.root / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
+        template.write_text(
+            template.read_text(encoding="utf-8") + "\nNew delivered relation.\n",
+            encoding="utf-8",
+        )
+        (self.root / "adapters/chatgpt/VERSION").write_text("1.0.1\n", encoding="utf-8")
+        replaced = self.run_configure("--replace-adapter", with_project=False)
+        self.assertEqual(replaced.returncode, 0, replaced.stderr)
+
+        late = self.run_configure(
+            "--confirm-host-installation",
+            "--expected-bridge-sha256",
+            delivered_digest,
+            with_project=False,
+        )
+        self.assertNotEqual(late.returncode, 0)
+        self.assertIn("different bridge delivery", late.stderr)
+        state = json.loads(instance_path.read_text(encoding="utf-8"))
+        self.assertNotEqual(
+            state["host_installation"]["state"],
+            "installed_operator_confirmed",
+        )
+
+    def test_user_values_that_look_like_template_fields_remain_literal(self) -> None:
+        result = self.run_configure(
+            "--project-name",
+            "Study {{DATE}}",
+            "--project-source",
+            "https://example.org/{{DATE}}",
+            with_project=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        current = (self.root / CURRENT).read_text(encoding="utf-8")
+        sources = (self.root / SOURCES).read_text(encoding="utf-8")
+        self.assertIn("Study {{DATE}}", current)
+        self.assertIn("https://example.org/{{DATE}}", sources)
+
+    def test_unrecognized_custom_bridge_does_not_promote_example_identity(self) -> None:
+        adapter = self.root / ADAPTER
+        adapter.parent.mkdir(parents=True, exist_ok=True)
+        adapter.write_text(
+            "Work from the present.\n\n"
+            "Continuity target: example-user/my-kernel.\n\n"
+            "<!-- User-owned kernel instance: fake-user/fake-kernel. -->\n",
+            encoding="utf-8",
+        )
+
+        result = self.run_configure(with_project=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        instance = json.loads((self.root / INSTANCE).read_text(encoding="utf-8"))
+        self.assertEqual(instance["configured_bridge_repository"], "unknown")
 
     def test_first_configuration_with_project(self) -> None:
         result = self.run_configure()

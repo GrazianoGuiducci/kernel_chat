@@ -76,7 +76,7 @@ For a clean checkout the expected repository-level relation is:
 
 ```text
 validator: valid=true, errors=[], warnings=[]
-tests: 33 configurator + 17 structural/receipt/drift/provenance/delivery + 3 CommonMark oracle = 53
+tests: 38 configurator + 17 structural/receipt/drift/provenance/delivery + 3 CommonMark oracle = 58
 CI: Python 3.11 / 3.12 / 3.13 / 3.14 x Ubuntu / Windows = 8 jobs
 ```
 
@@ -315,6 +315,38 @@ they are meant to establish.
 
 The next reviewer should falsify the composed consumer/discovery relation
 directly, not infer closure from the unchanged test count.
+
+
+## Reconciliation of the 0d1fa97 whole-system review findings
+
+The deep review of
+`0d1fa97f5c09a3794a4aa748d7ebfa2caff53e0a` returned
+`changes_required` while preserving the product architecture. The current
+source reconciles the reported mechanical/proof seams without adding a
+supervisory controller:
+
+| Finding | Reconciliation | Discriminant |
+| --- | --- | --- |
+| F01 / concurrent INSTANCE writers | Mutating configurator commands acquire `state/.INSTANCE.write.lock` before reading INSTANCE and hold ownership through publication. A competing/stale lock fails visibly; uncertain stale ownership is reconciled explicitly rather than auto-deleted. | second cooperative writer cannot complete a stale read-modify-write; explicit stale-lock removal + reread recovers |
+| F02 / historical receipt validity | Automatic return to `installed_operator_confirmed` is allowed only from a still-applicable confirmed/local-drift state. Explicit `unknown` is not overwritten by historical byte equality. | A→B→A without invalidation still restores; A→unknown→A does not |
+| F03 / bridge target attribution | Repository identity is extracted only from the recognized constitutive bridge header. Unrecognized/custom forms degrade to `unknown`; later examples/comments are non-authoritative. | custom body + fake recognized comment does not create known target |
+| F04 / anchor collision proof | Constitutive routes use explicit prefixed custom anchors adjacent to the intended owner headings. The CommonMark oracle verifies the active route and explicit rendered anchor rather than automatic heading-slug uniqueness. | prior colliding heading cannot steal the constitutive route |
+| F05 / remote readback | Documentation requires push → fresh fetch of the selected branch → fetched commit identity comparison → readback from `FETCH_HEAD`. | local remote-tracking cache is no longer called fresh remote observation |
+| M01 / template-like user data | Template fields are substituted in one pass over the original template. Inserted values are never reinterpreted as placeholders. | literal `{{DATE}}` in user data survives |
+| P01 / delayed operator confirmation | Confirmation requires the digest of the bridge incarnation that was actually delivered. If the current bridge differs, the late response is rejected and the current bridge must be delivered again. | delivered A + current B cannot confirm B with A's response |
+
+The suite now contains **58 tests**: 38 configurator, 17
+structural/receipt/drift/provenance/delivery validator and 3 CommonMark
+consumer-oracle cases. The writer lock is intentionally narrow: it serializes
+cooperating filesystem configurators around the single INSTANCE owner; it is
+not narrated as a universal database transaction or as coordination for every
+possible external API writer.
+
+The reviewer should rerun the original counterexamples on the exact resulting
+canonical SHA. In particular, F01 must produce either preserved state or an
+explicit writer conflict, F02 must preserve the positive A→B→A control, and
+F05 should distinguish a fresh fetched remote ref from remembered tracking
+state.
 
 ## Intentionally deferred effects
 

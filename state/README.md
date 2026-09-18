@@ -80,11 +80,14 @@ bridge template is currently available without changing configured identity or
 provenance; independently changed local bytes remain drift until a selected
 replacement/reconciliation occurs.
 
-After the operator actually copies/saves the **current configured bridge** in
-ChatGPT, `--confirm-host-installation` can record the operator report and bind it
-to the already-reconciled configured raw-byte identity plus target/provenance
-snapshot. If local bytes no longer match the configured receipt, confirmation
-stops instead of accepting the drift. This does not inspect ChatGPT directly.
+When a configured bridge is delivered to the operator, its
+`confirmation_bridge_sha256` is the correlation identity for that handoff.
+After the operator actually copies/saves that delivered bridge in ChatGPT,
+`--confirm-host-installation --expected-bridge-sha256 ...` can record the
+operator report only if the delivered incarnation is still current. If local
+bytes or the delivery identity no longer match, confirmation stops instead of
+transferring evidence across incarnations. This does not inspect ChatGPT
+directly.
 
 If the local configured bridge later changes, preserve the previous installed
 digest until the operator confirms the new host update. The difference is useful

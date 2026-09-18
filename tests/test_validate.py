@@ -68,11 +68,16 @@ class ValidateTests(unittest.TestCase):
         )
 
     def confirm_host(self) -> subprocess.CompletedProcess[str]:
+        instance = json.loads(
+            (self.root / "state/INSTANCE.json").read_text(encoding="utf-8")
+        )
         return self.run_python(
             "scripts/configure.py",
             "--github-user", "example-user",
             "--repository", "example-kernel",
             "--confirm-host-installation",
+            "--expected-bridge-sha256",
+            str(instance["configured_bridge_sha256"]),
         )
 
     def test_clean_package_is_valid(self) -> None:
@@ -93,7 +98,7 @@ class ValidateTests(unittest.TestCase):
     def test_agents_must_keep_mobile_observation_discovery_route(self) -> None:
         agents = self.root / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
-        route = "kernel/KERNEL.md#mobile-observation-without-losing-the-point"
+        route = "kernel/KERNEL.md#kernel-chat-mobile-observation"
         text = text.replace(
             f"- `{route}`",
             "- `kernel/KERNEL.md`",
@@ -105,7 +110,7 @@ class ValidateTests(unittest.TestCase):
         self.assertFalse(payload["valid"])
         self.assertIn(
             "AGENTS.md missing structural discovery route: "
-            "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
+            "kernel/KERNEL.md#kernel-chat-mobile-observation",
             payload["errors"],
         )
 
@@ -289,8 +294,8 @@ class ValidateTests(unittest.TestCase):
         core = self.root / "kernel/KERNEL.md"
         core.write_text(
             core.read_text(encoding="utf-8").replace(
-                "## Mobile observation without losing the point",
-                "## Mobile observation moved",
+                '<a name="kernel-chat-mobile-observation"></a>',
+                '<a name="kernel-chat-mobile-observation-moved"></a>',
             ),
             encoding="utf-8",
         )
@@ -299,15 +304,15 @@ class ValidateTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertFalse(payload["valid"])
         self.assertIn(
-            "AGENTS.md discovery route owner heading is missing: "
-            "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
+            "AGENTS.md discovery route owner marker is missing: "
+            "kernel/KERNEL.md#kernel-chat-mobile-observation",
             payload["errors"],
         )
 
     def test_discovery_route_inside_html_comment_does_not_count(self) -> None:
         agents = self.root / "AGENTS.md"
         text_value = agents.read_text(encoding="utf-8")
-        route = "kernel/KERNEL.md#mobile-observation-without-losing-the-point"
+        route = "kernel/KERNEL.md#kernel-chat-mobile-observation"
         text_value = text_value.replace(f"- `{route}`", "")
         text_value += f"\n<!-- - `{route}` -->\n"
         agents.write_text(text_value, encoding="utf-8")
@@ -323,15 +328,15 @@ class ValidateTests(unittest.TestCase):
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         cases = {
             "README.md": (
-                "After the operator actually copied/saved the current configured bridge",
+                "confirmation_bridge_sha256",
                 "Then verify reachability in a new conversation",
             ),
             "INSTALL.md": (
-                "After the operator has actually copied and saved the **current configured",
+                "confirmation_bridge_sha256",
                 "## 5. Verify reachability",
             ),
             "adapters/chatgpt/README.md": (
-                "After the operator actually copies/saves the current configured bridge",
+                "confirmation_bridge_sha256",
                 "## Reachability and evidence",
             ),
         }
@@ -339,8 +344,11 @@ class ValidateTests(unittest.TestCase):
             "--confirm-host-installation",
             "git add state/INSTANCE.json",
             'git commit -m "Record ChatGPT host installation receipt"',
+            "git rev-parse HEAD",
             "git push",
-            "git show @{upstream}:state/INSTANCE.json",
+            "git fetch --no-tags origin",
+            "git rev-parse FETCH_HEAD",
+            "git show FETCH_HEAD:state/INSTANCE.json",
         )
         for relative, (start_marker, reentry_marker) in cases.items():
             with self.subTest(relative=relative):

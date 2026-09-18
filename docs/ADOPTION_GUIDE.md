@@ -135,12 +135,14 @@ Use these evidence states when they matter:
 instance configured
 -> host activation pending
 
-operator copies/saves the current configured bridge
--> host action reported by operator
+assistant/coder delivers configured bridge incarnation A
+-> retain A's confirmation_bridge_sha256
 
---confirm-host-installation
--> operator report persisted and bound to the already-reconciled configured
-   bridge byte identity + target/provenance snapshot when known
+operator copies/saves delivered incarnation A
+-> host action reported by operator for A
+
+--confirm-host-installation + expected digest A
+-> operator report persisted only if A is still the configured incarnation
 
 new conversation reaches the instance and pertinent owners
 -> host reachability observed
@@ -152,10 +154,12 @@ later non-identical use retains the useful relation
 -> stronger assimilation evidence
 ```
 
-The confirmation receipt is still operator-reported evidence. It makes **which
-bridge incarnation** was reported installed reconstructible through raw-byte
-identity and the durable target/provenance relations available at confirmation;
-it does not give the repository direct visibility into ChatGPT settings.
+The confirmation receipt is still operator-reported evidence. The expected
+digest correlates the report with the bridge delivery it answers; a delayed
+confirmation for A cannot silently confirm a later B. If the delivery identity
+is no longer available, re-deliver the current bridge and ask for confirmation
+again rather than guessing. This does not give the repository direct visibility
+into ChatGPT settings.
 
 ## Package update, available bridge and configured bridge are different
 
@@ -221,7 +225,8 @@ After the operator copies/saves the replacement, run:
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 The receipt stores the raw-byte digest and target/provenance snapshot of the

@@ -4,3 +4,4 @@ __pycache__/
 .venv/
 venv/
 adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md
+state/.INSTANCE.write.lock\n

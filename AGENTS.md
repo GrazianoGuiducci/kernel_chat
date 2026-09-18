@@ -77,14 +77,17 @@ that UI action, report the state as `repository configured / host activation
 pending`. Do not report `kernel_chat` as installed or active in ChatGPT merely
 because the repository, configurator, tests, or connector setup succeeded.
 
-When the operator confirms the UI copy/save and repository writing is available,
-record that exact observation with:
+When the configured bridge is delivered, retain the
+`confirmation_bridge_sha256` printed by the configurator. When the operator
+confirms the UI copy/save and repository writing is available, record that
+observation only against the digest of the bridge actually delivered:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 This receipt does **not** perform or independently verify the host action. It
@@ -213,18 +216,18 @@ use `kernel/FDLA.md` to inspect and revise that closure. This is not a mandatory
 workflow and does not delay direct work when the field is already sufficient.
 
 If the point or object remains stable but the current frame may itself hide a
-material relation, use [Core mobile observation](kernel/KERNEL.md#mobile-observation-without-losing-the-point) only as far as another causal or identity
+material relation, use [Core mobile observation](kernel/KERNEL.md#kernel-chat-mobile-observation) only as far as another causal or identity
 position can change the result.
 
-If a material correction creates a new resultant, use [Evolution closure convergence](kernel/EVOLUTION.md#converge-the-changed-resultant) to reconcile only the
+If a material correction creates a new resultant, use [Evolution closure convergence](kernel/EVOLUTION.md#kernel-chat-converge-resultant) to reconcile only the
 proof, consumer/reachability, state and descriptive surfaces whose truth changed
 with it. The previous green result remains evidence for its own revision.
 
 Constitutive discovery routes are also stated as stable owner paths so runtime
 validation does not need to emulate a full Markdown renderer:
 
-- `kernel/KERNEL.md#mobile-observation-without-losing-the-point`
-- `kernel/EVOLUTION.md#converge-the-changed-resultant`
+- `kernel/KERNEL.md#kernel-chat-mobile-observation`
+- `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
 
 When repository/package work forms a stronger claim, keep claim identity and
 proof identity joined before calling the result closed. Human labels and
