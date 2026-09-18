@@ -268,7 +268,7 @@ relations in the new consumer oracle:
 | Rereview finding | Reconciliation | Discriminant |
 | --- | --- | --- |
 | A / consumer-link coverage | The CommonMark oracle now observes the rendered HTML surface rather than only `link_open` Markdown tokens, so active raw-HTML anchors and Markdown links share the same consumer check while fenced examples remain non-active. | rendered `<a href>` active + fenced raw HTML inactive |
-| B / discovery evidence composition | Constitutive discovery proof now composes active AGENTS link, actual rendered owner heading, uniqueness, and the explicit simple-ASCII fragment contract. A matching heading string inside fenced code cannot satisfy the proof. | real heading + fenced-heading decoy |
+| B / discovery evidence composition | Constitutive discovery proof now composes active AGENTS link, actual Markdown owner heading, uniqueness, and the explicit simple-ASCII fragment contract. A matching heading string inside fenced code cannot satisfy the proof. | real Markdown heading + fenced/raw-HTML-heading decoy |
 | C / oracle reproducibility | The test environment pins both `markdown-it-py==4.2.0` and the resolved `mdurl==0.1.2` dependency. | exact parser dependency pair |
 
 These changes strengthen existing oracle cases, so the suite remains **53
