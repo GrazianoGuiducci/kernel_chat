@@ -165,6 +165,43 @@ CommonMark oracle must:
 A future change that makes runtime regexes appear more complete is not a
 substitute for this independent consumer oracle.
 
+### Capability-relative onboarding and product fit
+
+Review the adoption surface from the position of an ordinary user who may have
+different host capabilities.
+
+The product should preserve:
+
+```text
+durable project filesystem + capable coder/terminal
+-> MAIOS Project Kernel is normally the more native carrier
+
+turn-reactive cloud chat without its own durable workspace
+-> kernel_chat + user-owned repository persistence
+```
+
+For `kernel_chat`, setup mechanics are receiver-relative:
+
+```text
+required adoption effect
++ actually available tool / permission
+-> perform effect directly when authorized
+-> otherwise surface the smallest missing operator action
+```
+
+Verify that Python/Git commands remain the supported reference implementation
+without becoming a claim that the human must personally execute every command.
+Repository access, repository-write authority, filesystem/terminal access,
+Python execution and ChatGPT account-setting authority must remain distinct.
+
+A local or remote filesystem (including a VPS) is usable only when the current
+host exposes an authorized execution route. If no execution surface can run the
+reference configurator, the assistant must not fabricate configured state or
+receipts.
+
+Custom Instructions installation remains an operator-owned host effect unless a
+future host explicitly exposes that authority.
+
 ### Support contract
 
 The public support claim is Python 3.11–3.14. Documentation, workflow matrix and

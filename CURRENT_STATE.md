@@ -71,6 +71,47 @@ that the repository is reachable from a host, or that later behavior assimilated
 the kernel relation. An installed bridge digest is explicitly operator-confirmed
 evidence, not direct host inspection.
 
+## Adoption and receiver fit
+
+The product now distinguishes the **semantic adoption contract** from one
+particular setup mechanic.
+
+```text
+user intent
++ receiver environment
++ available persistence
++ executable means
++ current authority
+-> receiver-relative onboarding
+```
+
+The supported reference path remains Git + Python 3.11–3.14 and
+`scripts/configure.py`. A capable model/coder may perform those effects for
+the operator through an authorized local or remote execution surface; an
+unavailable capability becomes an explicit operator step rather than a
+simulated success.
+
+`kernel_chat` remains aimed at cloud-chat continuity where the chat does not
+own a durable workspace. A receiving AI/coder already operating inside a
+persistent local or remote project filesystem is normally better matched by
+MAIOS Project Kernel. This is product fit, not a restriction on what filesystem
+can host the reference configurator.
+
+Keep these capabilities distinct:
+
+```text
+GitHub read
+!= GitHub repository creation / write
+!= filesystem / terminal access
+!= Python execution
+!= ChatGPT account-setting authority
+```
+
+The irreducible operator boundary for the current ChatGPT adapter remains
+saving the configured Custom Instructions and controlling account/credential
+consent. Repository-side automation does not upgrade itself into host-setting
+authority.
+
 ## Configuration and bridge
 
 The configurator supports both:

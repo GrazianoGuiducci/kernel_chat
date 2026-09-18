@@ -2,6 +2,16 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **Capability-relative onboarding (pre-release):** clarified that
+  `kernel_chat` is primarily the cloud-chat continuity carrier while MAIOS
+  Project Kernel is normally the more native fit for an AI/coder already living
+  inside a durable local or remote project filesystem. Python/Git remain the
+  supported reference mechanics, but an assisting model may perform authorized
+  repository/execution effects itself and should ask the operator only for the
+  missing capability or irreducible host-owned action. Repository access,
+  write authority, filesystem/terminal access, Python execution and ChatGPT
+  account-setting authority are kept distinct; VPS/remote workspaces are
+  execution surfaces when actually reachable, not assumed capabilities.
 - **Second rereview proof reconciliation (pre-release):** strengthened the
   test-only consumer oracle after the rereview of `82078ed2...`. Link
   observation now follows rendered HTML so raw `<a href>` navigation is not

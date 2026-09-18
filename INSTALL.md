@@ -1,15 +1,28 @@
 # Install kernel_chat in ChatGPT
 
-## Requirements
+## Adoption requirements and execution routes
 
-- Python 3.11–3.14;
-- a GitHub account;
-- a user-owned repository initialized from `kernel_chat`;
-- a ChatGPT account where repository access and Custom Instructions are
-  available.
+The resulting installation needs:
 
-Host features depend on the current account, plan, connector, and turn. Local
-setup cannot grant or prove them.
+- a user-controlled GitHub repository that can become the persistence surface;
+- a ChatGPT account where the intended repository access and Custom
+  Instructions are available;
+- an execution route capable of producing and verifying the configured instance.
+
+The **reference execution path** uses Python 3.11–3.14 plus Git. The operator
+does not need to personally run those tools when the assisting model/coder has
+an authorized local filesystem, remote workspace, VPS terminal or other
+execution surface that can run them.
+
+Host features depend on the current account, plan, connector, tool and turn.
+Repository access does not imply terminal access; terminal access does not imply
+GitHub authority; neither grants permission to change ChatGPT account settings.
+
+If the receiving AI already owns a durable project filesystem and is meant to
+operate there continuously, consider
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
+before installing `kernel_chat`. `kernel_chat` is optimized for cloud-chat
+continuity when the chat itself does not own that durable workspace.
 
 > [!IMPORTANT]
 > **Repository setup is not ChatGPT activation.** If a coder or agent is doing
@@ -22,6 +35,34 @@ setup cannot grant or prove them.
 If you only want to study or evaluate the package, stop here: configuration is
 not required. See [the adoption guide](docs/ADOPTION_GUIDE.md).
 
+### Assisted setup: use capabilities, do not simulate them
+
+An assisting model/coder should observe its real capabilities before asking the
+operator to perform work that it can already do.
+
+```text
+can create/write the destination repository?
+  yes -> do the authorized repository work
+  no  -> explain the exact GitHub step / permission needed
+
+can run the reference configurator in a local or remote execution surface?
+  yes -> run it and verify the result
+  no  -> establish an execution route or give the smallest exact command
+
+can change ChatGPT Custom Instructions directly?
+  normally no -> provide the complete text and exact operator UI action
+```
+
+If a GitHub account is absent, account creation and credential consent belong to
+the operator. If the filesystem is remote, such as a VPS, use it only when the
+current host has an authorized terminal/filesystem route; the location of the
+filesystem does not change the configuration semantics.
+
+Do not claim configuration merely because plausible files could be written by
+hand. The reference configurator is the supported implementation. An alternate
+route must reproduce and verify the same identities, receipts and preservation
+relations before it can claim the same state.
+
 ## 1. Create the user-owned instance
 
 Choose the persistence relation that matches the information you intend to
@@ -33,7 +74,11 @@ A public GitHub repository cannot become a private fork. For non-public
 continuity, create a **private standalone repository** and initialize it from an
 identified upstream source/release.
 
-One Git-based path that preserves history is:
+When the assisting environment can create the repository and perform Git effects,
+it should do so directly under the operator's authorization. Otherwise, guide
+the operator through repository creation and then continue.
+
+One Git-based reference path that preserves history is:
 
 ```bash
 git clone https://github.com/GrazianoGuiducci/kernel_chat.git YOUR_REPOSITORY

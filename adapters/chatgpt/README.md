@@ -30,6 +30,29 @@ reached only when pertinent.
 from the root package `VERSION`. A package update does not automatically require
 a new bridge or ChatGPT UI update.
 
+## Assisted host setup
+
+The adapter does not require the human operator to perform repository mechanics
+that the current model/coder can already perform. Before configuration, observe
+the actual host relation:
+
+```text
+repository access / write authority
+!= filesystem or terminal access
+!= Python execution
+!= ChatGPT account-setting authority
+```
+
+Use an authorized local or remote execution surface, including a reachable VPS
+or remote workspace, when available. If a required capability is missing,
+surface that boundary and the smallest operator action needed. Do not simulate
+a terminal, repository write or host-setting effect that the current environment
+does not expose.
+
+The supported reference configuration remains `scripts/configure.py`; another
+mechanism can claim equivalent configuration only when it preserves and
+verifies the same instance, bridge, provenance and receipt relations.
+
 ## Configure without a project
 
 ```bash
