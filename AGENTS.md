@@ -22,10 +22,40 @@ Keep distinguishable:
 Reading or evaluating this repository does not install `kernel_chat`, create a
 user instance, connect GitHub, or change ChatGPT settings.
 
-When adoption is selected, the user-owned persistence surface may be a public
-fork or a private standalone repository initialized from an identified
+When adoption is selected, first determine whether `kernel_chat` is the
+receiver-native carrier. A coder/agent already operating inside a durable local
+or remote project filesystem is normally better matched by
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel);
+`kernel_chat` is aimed at turn-reactive chat continuity when the chat itself
+does not own that durable workspace.
+
+If `kernel_chat` is selected, the user-owned persistence surface may be a
+public fork or a private standalone repository initialized from an identified
 upstream source. A project is optional; the instance can exist before any
 project is selected.
+
+Before prescribing setup commands, observe the actual capability/authority
+relation when the host exposes it:
+
+```text
+GitHub read
+!= repository create/write
+!= filesystem / terminal access
+!= Python execution
+!= ChatGPT account-setting authority
+```
+
+Perform an authorized effect directly when the current host can actually do it.
+When it cannot, surface the smallest missing capability or operator step and
+continue from the resulting state. Do not ask the operator to manually repeat a
+repository or execution action the current host can already perform. Do not
+simulate a capability that is absent.
+
+A local shell, a remote workspace, an authorized VPS terminal, a GitHub action
+surface or another future mechanism is a **means**, not the installation
+contract. The supported reference implementation is `scripts/configure.py`.
+An alternative route must preserve and verify the same instance/bridge/receipt
+relations before claiming equivalent configured state.
 
 See [the adoption guide](docs/ADOPTION_GUIDE.md) for the supported distinctions.
 
