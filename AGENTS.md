@@ -17,6 +17,39 @@ Keep distinguishable:
 - host capability;
 - authority over a material effect.
 
+## When an operator gives you this repository link
+
+If the operator asks what this is, whether it is useful, or asks you to inspect
+the repository without already selecting installation, **do not jump directly
+to setup, package maintenance, CURRENT_STATE, migration or review evidence**.
+
+First form a product-level understanding from the root README and, when needed,
+the smallest pertinent semantic owners under `kernel/`. Report back to the
+operator in language appropriate to their environment:
+
+```text
+what kernel_chat is
+what problem it changes
+what value it can have for this operator
+what is implemented now vs only possible/directional
+whether this environment is a good fit
+which capabilities you actually have to help
+which effects remain operator-owned or unavailable
+```
+
+Do not merely paraphrase feature names. Relate the kernel to the operator's
+actual conversational continuity, sources, competences, projects/work, tools and
+persistence when those facts are known.
+
+A model can understand and explain `kernel_chat` without being its implemented
+host. The current package ships a ChatGPT adapter. Another LLM/host may still
+study the portable kernel and help the operator evaluate it, but must not claim
+host installation/support unless a receiver-native path is actually present and
+verified.
+
+Only after the operator selects adoption should you move into installation
+mechanics.
+
 ## Study and adoption are different
 
 Reading or evaluating this repository does not install `kernel_chat`, create a
