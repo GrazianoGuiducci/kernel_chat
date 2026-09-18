@@ -2,19 +2,27 @@
 
 ```text
 source_version: 0.6.0
-review_state: external_rereview_pending
+review_state: external_rereview_complete_no_change
 canonical_repository: GrazianoGuiducci/kernel_chat
-review_target: exact current main commit checked out by the reviewer
+material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
+material_review_ci: 35390696891
+review_result: no_change
+release_promotion: selected_pending_tag_release
 latest_tagged_distribution: v0.5.0
-v0.6.0_release: intentionally not created before review
+v0.6.0_release: pending promotion effect
 ```
 
 ## Purpose
 
-Re-review the current canonical source of `kernel_chat 0.6.0` after reconciliation
-of the first external-review findings and before a numbered release is selected. Pin the exact revision you inspect with `git rev-parse HEAD`.
-Do not treat a later moving `main`, a development commit, or a future tag as
-equivalent to the revision actually reviewed.
+Record the completed external rereview of `kernel_chat 0.6.0`, its exact
+material review identity, and the boundary between that reviewed resultant and
+the later promotion-only release transition.
+
+The `no_change` result belongs to
+`2c111f2797a7ffe945067ac4b6eee8baace7c9c9`, proved by canonical CI
+`35390696891`. A later promotion commit or release tag is a distinct
+administrative/release identity and must not be narrated as though its metadata
+was part of the material rereview.
 
 This brief is a navigation/evidence surface. Product truth remains in the
 living owners and executable source.
@@ -389,11 +397,27 @@ The reviewer should preserve the closed F01–F05, M01, P01 and N01–N04 contro
 rerun the N05 counterexample on the exact resulting SHA, and move observation
 once more to a materially independent surface before returning `no_change`.
 
-## Intentionally deferred effects
-External review is selected before:
+## Review closure and separate effects
+
+External rereview is complete:
 
 ```text
-v0.6.0 tag / GitHub Release
+material review target:
+  2c111f2797a7ffe945067ac4b6eee8baace7c9c9
+
+result:
+  no_change
+
+canonical material-review CI:
+  35390696891
+  58/58 tests
+  8/8 matrix
+```
+
+Release promotion is selected, while these effects remain distinct:
+
+```text
+promotion-only metadata / release tag
 existing user-instance migration
 configured bridge replacement
 ChatGPT host bridge update
@@ -401,6 +425,6 @@ website / announcement
 behavioral-assimilation claim
 ```
 
-After review, reconcile only findings that materially change the source, run
-proof on the resulting canonical revision, and only then decide the immutable
-`v0.6.0` release.
+The promotion revision must receive its own canonical CI before an immutable
+`v0.6.0` tag/release is created. That CI proves the promotion revision as a
+release artifact; it does not rewrite the identity of the material rereview.

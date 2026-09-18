@@ -2,6 +2,14 @@
 
 ## 0.6.0 — 2026-09-18
 
+- **External rereview closure / release promotion:** external rereview reached
+  `no_change` on material resultant
+  `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`, with canonical CI
+  `35390696891` (validator clean, 58/58 tests, 8/8 Python/OS jobs). This
+  promotion-only metadata records that closure without changing runtime, state
+  model, kernel, tests or architecture. `v0.6.0` remains a separate release
+  effect until the promotion revision itself is green.
+
 - **Final rereview proof/wording convergence (pre-release):** the CommonMark
   oracle now preserves intervening rendered text and elements in its
   anchor-owner event stream, so an anchor separated from the intended heading

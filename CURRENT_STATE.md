@@ -5,7 +5,10 @@
 ```text
 version: 0.6.0
 status: canonical_kernel_chat_incarnation
-review_state: external_rereview_pending
+review_state: external_rereview_complete_no_change
+material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
+material_review_ci: 35390696891
+release_promotion: selected_pending_tag_release
 latest_tagged_distribution: v0.5.0
 owner: Graziano Guiducci
 ```
@@ -475,23 +478,31 @@ data and conservative custom-bridge attribution. Canonical proof must belong to 
 branch proof and prior reviewed SHAs remain genealogy/evidence for their own
 identities.
 
-## Current next
+## Review closure and release promotion
 
-Source **0.6.0** is now the canonical repository state. The latest tagged
-distribution remains **v0.5.0** until a separate release effect is selected.
-
-Canonical repository validation / CI must belong to the exact canonical
-revision carrying this source. Development-repository proof remains genealogy
-for the development candidate and is not substituted for canonical proof.
-
-The next effects remain separate:
+The external rereview reached `no_change` on the exact material resultant:
 
 ```text
-canonical source 0.6.0
--> canonical validation / CI on the resulting revision
--> external re-review on the exact canonical revision
--> reconcile material finding | no_change
--> only then decide v0.6.0 tag / release
+reviewed material SHA:
+  2c111f2797a7ffe945067ac4b6eee8baace7c9c9
+
+canonical CI:
+  35390696891
+  validator valid=true / errors=[] / warnings=[]
+  58/58 tests
+  8/8 Python 3.11–3.14 × Ubuntu/Windows
+```
+
+That review result belongs to the reviewed material SHA. The present
+promotion-only source transition records the closure; it does not retroactively
+claim that administrative metadata was part of the material rereview.
+
+Release promotion is now selected. The next release effect is:
+
+```text
+promotion-only canonical revision
+-> canonical CI on that revision
+-> v0.6.0 tag / GitHub Release
 
 canonical source / release
 != automatic user-instance migration
