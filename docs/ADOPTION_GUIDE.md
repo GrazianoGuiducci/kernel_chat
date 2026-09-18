@@ -17,6 +17,62 @@ study / evaluation
 
 ## Choose the relation you need
 
+### Choose the carrier before choosing the mechanics
+
+`kernel_chat` is for continuity across chat environments that do not own a
+durable workspace. When the receiving AI already works inside a persistent
+local or remote project filesystem with executable tooling, MAIOS Project
+Kernel is normally the more native carrier because the kernel can live with the
+project itself.
+
+```text
+persistent project workspace owned by the working agent/coder
+-> usually MAIOS Project Kernel
+
+turn-reactive cloud chat without its own durable workspace
+-> kernel_chat + user-owned repository persistence
+```
+
+This is a receiver-relative choice. Do not select a product merely because a
+particular setup command is familiar.
+
+### Capability-relative assisted adoption
+
+When an AI/coder assists adoption, treat setup as effects that may be satisfied
+through different receiver-native means:
+
+```text
+user intent
++ kernel_chat source
++ available persistence
++ actual tools / execution surface
++ current authority
+-> perform the effects that are really available
+-> expose only the missing capability or operator-owned effect
+```
+
+Examples:
+
+- if GitHub is connected and repository creation/write access is available, the
+  assistant can perform those repository effects directly;
+- if GitHub exists but is not connected or lacks required permission, explain
+  the exact connection/authorization step and continue after it becomes real;
+- if the operator has no GitHub account, account creation and credential/consent
+  remain operator-owned; explain what is needed rather than claiming it was
+  created;
+- if an authorized local or remote filesystem/terminal is available, including
+  a reachable VPS or remote workspace, the reference configurator can run
+  there;
+- if only repository access is available but no execution surface can run the
+  reference configurator, do not fabricate `INSTANCE`, bridge identity or
+  receipts. Establish an execution route or give the operator the smallest
+  exact command needed.
+
+`git clone`, a local shell, a remote workspace, an SSH/terminal connector or a
+future equivalent are **means**, not the semantic installation contract. Any
+alternative route must preserve the same instance identity, configured bridge,
+evidence and host boundaries established by the supported reference path.
+
 ### Study only
 
 Read the public package, architecture and kernel owners. No repository
