@@ -265,7 +265,7 @@ The current canonical source reconciles each finding in its owning seam:
 | F09 | Host confirmation docs require selected commit/push and remote readback before reentry. | documentation delivery contract test |
 | F10 | Existing instances preserve absent CURRENT/SOURCES until explicit state replacement/restoration. | refresh keeps missing state absent |
 
-The first rereview target `1a0720fa...` carried 54 native tests. The current canonical source carries **53 tests**: 33 configurator, 17
+The first rereview target `1a0720fa...` carried 54 native tests. A later reconciliation checkpoint in this review lineage carried **53 tests**: 33 configurator, 17
 structural/receipt/drift/provenance/delivery validator, and 3 independent
 CommonMark consumer-oracle cases. The count changed because Markdown parser
 behavior moved out of the dependency-free runtime validator into stronger
@@ -291,7 +291,7 @@ The runtime validator remains dependency-free. The full suite installs
 `requirements-test.txt` and uses the CommonMark dependency only as an
 independent test oracle.
 
-The current canonical proof target carries **53 tests** across all 8 Python 3.11–3.14 ×
+The proof target produced by that reconciliation carried **53 tests** across all 8 Python 3.11–3.14 ×
 Ubuntu/Windows jobs. Validator, suite and CI must belong to the exact canonical
 SHA being rereviewed; proof from the reconciliation branch remains genealogy.
 
