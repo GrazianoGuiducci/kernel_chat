@@ -59,8 +59,16 @@ it is not a substitute for current owners.
 
 Supported Python lines are **3.11–3.14**.
 
+The runtime validator remains dependency-free:
+
 ```bash
 python scripts/validate.py
+```
+
+For the complete regression suite, install the test-only consumer oracle:
+
+```bash
+python -m pip install -r requirements-test.txt
 python -B -m unittest discover -s tests -v
 ```
 
@@ -143,8 +151,19 @@ observation and Evolution closure convergence.
 
 ### Validation-frame fit
 
-The validator should reject malformed multiline Markdown links in active prose
-without treating the same syntax inside fenced or inline code as an active link.
+The dependency-free runtime validator intentionally does **not** parse arbitrary
+Markdown. It protects explicit structural discovery-route declarations and their
+living owner headings.
+
+Full Markdown consumer semantics belong to the test suite. The independent
+CommonMark oracle must:
+- find active package-local links and reject missing destinations;
+- confirm the constitutive AGENTS discovery links are active for the consumer;
+- reproduce the five R1/F06 counterexamples with the expected active/non-active
+  link relation.
+
+A future change that makes runtime regexes appear more complete is not a
+substitute for this independent consumer oracle.
 
 ### Support contract
 
