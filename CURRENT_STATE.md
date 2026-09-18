@@ -71,6 +71,28 @@ that the repository is reachable from a host, or that later behavior assimilated
 the kernel relation. An installed bridge digest is explicitly operator-confirmed
 evidence, not direct host inspection.
 
+## Temporal owner integrity
+
+`state/INSTANCE.json` is a single semantic owner even when several cooperating
+tools can reach the same filesystem. Mutating configurator commands therefore
+acquire a transient exclusive writer lock **before reading INSTANCE** and hold it
+through publication. The lock serializes cooperating local writers; it does not
+pretend to make every external repository/API writer transactional.
+
+```text
+single-file atomic replacement
+!= concurrent update preservation
+
+visible writer lock
+-> one cooperative INSTANCE writer at a time
+-> conflict is surfaced instead of silently losing a later observation
+```
+
+If a process stops unexpectedly, the lock may remain. Recovery is deliberately
+conservative: inspect the lock and current INSTANCE, establish that no writer
+still owns it, then remove the stale lock and continue from actual state. The
+kernel does not auto-delete evidence of uncertain ownership.
+
 ## Adoption and receiver fit
 
 The product now distinguishes the **semantic adoption contract** from one
@@ -178,11 +200,13 @@ from the current template, can therefore establish its configured-template
 provenance, and marks the local/host relation unconfirmed until the operator
 separately updates ChatGPT through the UI.
 
-After the operator actually copies/saves the current configured bridge,
-`--confirm-host-installation` mutates `INSTANCE` only and binds that operator
-report to the exact configured bridge SHA-256 digest. A later local bridge
-replacement preserves the previously confirmed installed digest/date so the
-old host incarnation remains reconstructible until a new confirmation occurs.
+When the configured bridge is delivered, the emitted
+`confirmation_bridge_sha256` identifies that handoff. After the operator
+copies/saves it, `--confirm-host-installation --expected-bridge-sha256 ...`
+mutates `INSTANCE` only if that delivered incarnation is still current. A late
+confirmation cannot promote a newer bridge. A later local replacement preserves
+the previously confirmed installed digest/date but does not resurrect a
+confirmation whose current host state was explicitly invalidated or unknown.
 
 ## Portable semantic deepening
 
