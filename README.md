@@ -143,6 +143,20 @@ when known. It does not inspect ChatGPT directly. If the local bridge has drifte
 from its persisted configured receipt, confirmation stops instead of silently
 accepting that drift.
 
+The confirmation changes `state/INSTANCE.json` locally. Publish that receipt
+before relying on a new remote conversation:
+
+```bash
+git add state/INSTANCE.json
+git commit -m "Record ChatGPT host installation receipt"
+git push
+```
+
+Read the pushed `state/INSTANCE.json` back from the remote repository (or with
+`git show @{upstream}:state/INSTANCE.json`) and confirm that it contains
+`installed_operator_confirmed` before treating the receipt as remotely
+available.
+
 Until the operator confirms the copy/save, the truthful state is:
 
 ```text
@@ -206,7 +220,9 @@ After a package update, `--refresh-instance` can refresh package identity and
 the bridge template currently available while preserving configured-bridge
 identity/provenance, source-contact and host observations. It observes local
 bridge drift but does not accept changed bytes as the new configured
-incarnation. Use `--preview-adapter` before any selected bridge replacement.
+incarnation. In an existing instance, missing `CURRENT` or `SOURCES` remain
+missing during refresh; use an explicit state replacement when restoration or
+re-initialization is actually selected. Use `--preview-adapter` before any selected bridge replacement.
 `--replace-adapter` regenerates the local configured file from the current
 template and can therefore establish its byte identity, target and provenance;
 for an existing INSTANCE it does **not** migrate `instance_repository`.
