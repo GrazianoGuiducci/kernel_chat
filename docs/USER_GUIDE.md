@@ -1,5 +1,40 @@
 # User guide
 
+## Your first conversation after adoption
+
+There is no required boot phrase and no need to ask the model to load the whole
+repository.
+
+Start with real work.
+
+For example:
+
+```text
+I want to continue working on [topic / project / research / recurring activity].
+Use kernel_chat only when durable context, a source, a competence or an unfinished
+relation can materially change the result. Otherwise work directly from this
+conversation.
+```
+
+Or simply ask the ordinary question you would have asked without
+`kernel_chat`.
+
+What should change is not the amount of ceremony. The host should be able to
+recover a missing durable relation when it matters, reach the pertinent kernel
+or competence owner when a way of working matters, and preserve a reusable
+difference when real work changes what should happen later.
+
+A useful first check, if you want one, is conversational rather than technical:
+
+```text
+Tell me what durable context you can actually reach for this work, what you are
+using from it, and what remains unavailable or uncertain. Do not load anything
+that does not change the task.
+```
+
+This checks the current relation without turning every new chat into a test
+sequence.
+
 ## Use the chat normally
 
 The kernel should be quiet when the conversation already contains what is
