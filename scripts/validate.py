@@ -40,6 +40,8 @@ REQUIRED = [
     "scripts/configure.py",
     "tests/test_configure.py",
     "tests/test_validate.py",
+    "tests/test_markdown_consumer.py",
+    "requirements-test.txt",
 ]
 
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
@@ -51,8 +53,14 @@ BRIDGE_REPOSITORY = re.compile(
 )
 
 AGENT_DISCOVERY_ROUTES = (
-    "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
-    "kernel/EVOLUTION.md#converge-the-changed-resultant",
+    (
+        "kernel/KERNEL.md#mobile-observation-without-losing-the-point",
+        "## Mobile observation without losing the point",
+    ),
+    (
+        "kernel/EVOLUTION.md#converge-the-changed-resultant",
+        "## Converge the changed resultant",
+    ),
 )
 
 
@@ -235,103 +243,13 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def _blank_markdown_region(text: str) -> str:
-    return "".join(char if char in "\r\n" else " " for char in text)
+def has_discovery_route_declaration(text: str, route: str) -> bool:
+    declaration = f"- `{route}`"
+    return any(line.strip() == declaration for line in text.splitlines())
 
 
-def markdown_link_surface(text: str) -> str:
-    """Return the navigation-active Markdown surface used by package checks."""
-    # HTML comments are not part of rendered navigation.
-    text = re.sub(
-        r"<!--.*?-->",
-        lambda match: _blank_markdown_region(match.group(0)),
-        text,
-        flags=re.DOTALL,
-    )
-
-    visible: list[str] = []
-    fence_char: str | None = None
-    fence_length = 0
-
-    for line in text.splitlines(keepends=True):
-        body = line.rstrip("\r\n")
-        ending = line[len(body):]
-
-        if fence_char is not None:
-            closing = re.match(
-                rf"^ {{0,3}}{re.escape(fence_char)}{{{fence_length},}}[ \t]*$",
-                body,
-            )
-            visible.append(_blank_markdown_region(body) + ending)
-            if closing:
-                fence_char = None
-                fence_length = 0
-            continue
-
-        opening = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", body)
-        if opening:
-            marker = opening.group(1)
-            fence_char = marker[0]
-            fence_length = len(marker)
-            visible.append(_blank_markdown_region(body) + ending)
-            continue
-
-        if body.startswith("    ") or body.startswith("\t"):
-            visible.append(_blank_markdown_region(body) + ending)
-            continue
-
-        visible.append(line)
-
-    surface = "".join(visible)
-
-    # CommonMark code spans may cross line boundaries. Hide complete spans
-    # before looking for active links, while preserving newlines for multiline
-    # malformed-link detection.
-    chars = list(surface)
-    i = 0
-    while i < len(surface):
-        if surface[i] != "`":
-            i += 1
-            continue
-        j = i
-        while j < len(surface) and surface[j] == "`":
-            j += 1
-        run_length = j - i
-        pattern = re.compile(
-            rf"(?<!`)`{{{run_length}}}(?!`)"
-        )
-        closing = pattern.search(surface, j)
-        if closing is None:
-            i = j
-            continue
-        end = closing.end()
-        for index in range(i, end):
-            if chars[index] not in "\r\n":
-                chars[index] = " "
-        i = end
-
-    return "".join(chars)
-
-
-def markdown_heading_anchors(text: str) -> set[str]:
-    anchors: set[str] = set()
-    counts: dict[str, int] = {}
-    surface = markdown_link_surface(text)
-    for line in surface.splitlines():
-        match = re.match(r"^ {0,3}#{1,6}[ \t]+(.+?)\s*#*\s*$", line)
-        if not match:
-            continue
-        heading = re.sub(r"<[^>]+>", "", match.group(1))
-        heading = heading.strip().lower()
-        heading = re.sub(r"[^\w\- ]", "", heading)
-        heading = re.sub(r"[ \t]+", "-", heading)
-        base = heading.strip("-")
-        if not base:
-            continue
-        index = counts.get(base, 0)
-        counts[base] = index + 1
-        anchors.add(base if index == 0 else f"{base}-{index}")
-    return anchors
+def has_owner_heading(text: str, heading: str) -> bool:
+    return any(line.strip() == heading for line in text.splitlines())
 
 
 def main() -> int:
@@ -528,49 +446,30 @@ def main() -> int:
 
     agents_path = ROOT / "AGENTS.md"
     if agents_path.is_file():
-        agents_surface = markdown_link_surface(
-            agents_path.read_text(encoding="utf-8")
-        )
-        for route in AGENT_DISCOVERY_ROUTES:
-            if f"]({route})" not in agents_surface:
-                errors.append(f"AGENTS.md missing operating discovery route: {route}")
+        agents_text = agents_path.read_text(encoding="utf-8")
+        for route, heading in AGENT_DISCOVERY_ROUTES:
+            if not has_discovery_route_declaration(agents_text, route):
+                errors.append(
+                    f"AGENTS.md missing structural discovery route: {route}"
+                )
                 continue
-            destination, anchor = route.split("#", 1)
+            destination = route.split("#", 1)[0]
             target = ROOT / destination
             if not target.is_file():
                 errors.append(
                     f"AGENTS.md discovery route target is missing: {route}"
                 )
                 continue
-            anchors = markdown_heading_anchors(
-                target.read_text(encoding="utf-8")
-            )
-            if anchor not in anchors:
+            if not has_owner_heading(
+                target.read_text(encoding="utf-8"), heading
+            ):
                 errors.append(
-                    f"AGENTS.md discovery route anchor is missing: {route}"
+                    f"AGENTS.md discovery route owner heading is missing: {route}"
                 )
 
-    # Package contract Markdown must lead to existing local owners.
-    # This checks reachability, not whether a model understands or uses them.
-    for relative in REQUIRED:
-        path = ROOT / relative
-        if path.suffix != ".md" or not path.is_file():
-            continue
-        markdown = markdown_link_surface(path.read_text(encoding="utf-8"))
-        if re.search(
-            r"\[[^\]\r\n]+\][ \t]*\r?\n[ \t]*\([^\r\n)]+\)",
-            markdown,
-        ):
-            errors.append(
-                f"malformed multiline Markdown inline link in {path.relative_to(ROOT)}"
-            )
-
-        for target in re.findall(r"\]\(([^\s)]+)\)", markdown):
-            if re.match(r"[a-zA-Z][a-zA-Z0-9+.-]*:", target) or target.startswith("#"):
-                continue
-            destination = target.split("#", 1)[0]
-            if destination and not (path.parent / destination).exists():
-                errors.append(f"broken local link in {path.relative_to(ROOT)}: {target}")
+    # Full Markdown consumer semantics are tested with an independent CommonMark
+    # oracle in the regression suite. The dependency-free runtime validator does
+    # not claim to parse arbitrary Markdown.
 
     result = {
         "valid": not errors,

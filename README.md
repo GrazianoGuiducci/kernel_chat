@@ -284,16 +284,27 @@ lives under [`adapters/chatgpt/`](adapters/chatgpt/). User state lives under
 
 ## Verification
 
-Run:
+Run the dependency-free structural validator directly:
 
 ```bash
 python scripts/validate.py
+```
+
+For the complete regression suite, install the **test-only** CommonMark oracle
+and then run all tests:
+
+```bash
+python -m pip install -r requirements-test.txt
 python -B -m unittest discover -s tests -v
 ```
 
-The validator checks package structure and configured artifacts. The current
-suite contains **54 regression cases**: 32 configurator cases and 22 validator /
-drift / provenance / reachability / delivery cases. It includes a source-bound real 0.5.3 migration shape,
+The runtime validator checks package structure, receipts, configured artifacts
+and explicit discovery-route contracts. Full Markdown consumer semantics are
+kept out of the runtime parser and are checked independently in the test suite
+with `markdown-it-py`. The current
+suite contains **53 regression cases**: 33 configurator cases, 17 structural /
+receipt / drift / provenance / delivery validator cases, and 3 independent
+CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
 compatibility, refresh/confirm/replacement effect boundaries, missing-local-
 bridge handling, configured/installed semantic identity and host-adoption
@@ -301,12 +312,13 @@ boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 
 availability, independently verify the UI copy/save, or establish behavioral
 assimilation.
 
-The external-review findings against `2c816975...` are reconciled in the current
-canonical source with native regressions for receipt persistence/coherence, unsupported
-schemas, bridge transition identity, no-write preview, Markdown consumer fit,
-discovery anchors, GitHub repository identity, remote receipt delivery and
-missing-state preservation. The external re-review belongs to the exact current
-canonical revision; any later source change forms a different review target.
+The first external-review findings against `2c816975...` and the later
+rereview findings against `1a0720fa...` are reconciled in the current canonical source.
+Runtime validation remains dependency-free and conservative; full Markdown
+consumer semantics now use an independent CommonMark oracle in the regression
+suite instead of extending a bespoke partial parser. Preview remains independent
+of unsupported INSTANCE schemas, and host-receipt delivery is protected as an
+ordered confirm → commit → push → remote-readback → reentry relation. Any later canonical source change forms a new review target.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by the current source.

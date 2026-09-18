@@ -357,6 +357,17 @@ def main() -> int:
     instance_template = ROOT / "templates/state/INSTANCE.json"
     instance_output = ROOT / "state/INSTANCE.json"
 
+    if args.preview_adapter:
+        adapter_candidate = render(
+            adapter_template,
+            {
+                "GITHUB_USER": args.github_user,
+                "REPOSITORY": args.repository,
+            },
+        )
+        print(adapter_candidate, end="")
+        return 0
+
     adapter_preexisting = adapter_output.exists()
     existing_instance = load_instance(instance_output) if instance_output.exists() else None
 
