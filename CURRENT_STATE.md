@@ -65,6 +65,12 @@ This is a documentation/self-representation correction. It does not change the
 portable kernel, runtime, state schema, bridge contract, release tag or the
 material-review identity.
 
+The public entry now also makes the receiving-model relation explicit: an
+arbitrary capable LLM can study the repository and explain the kernel/value to
+its operator without being an implemented host. Adoption remains
+receiver-relative; the current source ships the ChatGPT adapter, and first use
+begins from ordinary work rather than a mandatory boot ritual.
+
 ## Current package relation
 
 Keep these surfaces distinct:
