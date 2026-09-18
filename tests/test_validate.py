@@ -328,15 +328,15 @@ class ValidateTests(unittest.TestCase):
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         cases = {
             "README.md": (
-                "After the operator actually copied/saved the current configured bridge",
+                "confirmation_bridge_sha256",
                 "Then verify reachability in a new conversation",
             ),
             "INSTALL.md": (
-                "After the operator has actually copied and saved the **current configured",
+                "confirmation_bridge_sha256",
                 "## 5. Verify reachability",
             ),
             "adapters/chatgpt/README.md": (
-                "After the operator actually copies/saves the current configured bridge",
+                "confirmation_bridge_sha256",
                 "## Reachability and evidence",
             ),
         }
