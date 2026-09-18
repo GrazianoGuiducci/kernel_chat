@@ -23,6 +23,7 @@ class ConsumerSurfaceParser(HTMLParser):
         self.links: list[str] = []
         self.anchors: list[str] = []
         self.headings: list[str] = []
+        self.owner_events: list[tuple[str, str]] = []
         self._heading_tag: str | None = None
         self._heading_text: list[str] = []
 
@@ -40,6 +41,7 @@ class ConsumerSurfaceParser(HTMLParser):
             for name, value in attrs:
                 if name in ("name", "id") and value is not None:
                     self.anchors.append(value)
+                    self.owner_events.append(("anchor", value))
         if re.fullmatch(r"h[1-6]", tag):
             self._heading_tag = tag
             self._heading_text = []
@@ -49,6 +51,10 @@ class ConsumerSurfaceParser(HTMLParser):
     ) -> None:
         if tag == "a":
             self._capture_link(attrs)
+            for name, value in attrs:
+                if name in ("name", "id") and value is not None:
+                    self.anchors.append(value)
+                    self.owner_events.append(("anchor", value))
 
     def handle_data(self, data: str) -> None:
         if self._heading_tag is not None:
@@ -56,7 +62,9 @@ class ConsumerSurfaceParser(HTMLParser):
 
     def handle_endtag(self, tag: str) -> None:
         if self._heading_tag == tag:
-            self.headings.append("".join(self._heading_text).strip())
+            heading = "".join(self._heading_text).strip()
+            self.headings.append(heading)
+            self.owner_events.append(("heading", heading))
             self._heading_tag = None
             self._heading_text = []
 
@@ -75,6 +83,21 @@ def active_links(text: str) -> list[str]:
 def active_anchors(text: str) -> list[str]:
     return consumer_surface(text).anchors
 
+
+def active_anchor_owner_pairs(text: str) -> list[tuple[str, str]]:
+    """Observe active anchor -> next rendered heading on one consumer surface."""
+
+    events = consumer_surface(text).owner_events
+    pairs: list[tuple[str, str]] = []
+    for index, event in enumerate(events):
+        if event[0] != "anchor":
+            continue
+        if index + 1 >= len(events):
+            continue
+        next_event = events[index + 1]
+        if next_event[0] == "heading":
+            pairs.append((event[1], next_event[1]))
+    return pairs
 
 def active_headings(text: str) -> list[str]:
     """Return real Markdown headings that can own the constitutive fragment."""
@@ -177,6 +200,11 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-converge-resultant",
                 "Converge the changed resultant",
             ),
+            "INSTALL.md#receipt-publication-and-fresh-readback": (
+                ROOT / "INSTALL.md",
+                "receipt-publication-and-fresh-readback",
+                "Receipt publication and fresh remote readback",
+            ),
         }
 
         for route, (target, anchor, heading) in contracts.items():
@@ -189,22 +217,34 @@ class MarkdownConsumerTests(unittest.TestCase):
                     f"{route} must resolve to one explicit consumer anchor",
                 )
                 self.assertIn(
-                    f'<a name="{anchor}"></a>\n\n## {heading}',
-                    target_text,
-                    f"{route} anchor must belong to the intended owner heading",
+                    (anchor, heading),
+                    active_anchor_owner_pairs(target_text),
+                    f"{route} must reach the intended rendered owner heading",
                 )
 
-        collision_fixture = (
-            "## mobile observation without losing the point\n"
-            "Different section.\n\n"
+        wrong_active_with_fenced_decoy = (
+            '<a name="kernel-chat-mobile-observation"></a>\n\n'
+            "## Wrong owner\n\n"
+            "```markdown\n"
             '<a name="kernel-chat-mobile-observation"></a>\n\n'
             "## Mobile observation without losing the point\n"
+            "```\n"
         )
         self.assertEqual(
-            active_anchors(collision_fixture),
+            active_anchors(wrong_active_with_fenced_decoy),
             ["kernel-chat-mobile-observation"],
         )
-
+        self.assertNotIn(
+            (
+                "kernel-chat-mobile-observation",
+                "Mobile observation without losing the point",
+            ),
+            active_anchor_owner_pairs(wrong_active_with_fenced_decoy),
+        )
+        self.assertIn(
+            ("kernel-chat-mobile-observation", "Wrong owner"),
+            active_anchor_owner_pairs(wrong_active_with_fenced_decoy),
+        )
 
 if __name__ == "__main__":
     unittest.main()

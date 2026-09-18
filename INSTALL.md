@@ -274,6 +274,10 @@ older bridge cannot confirm a newer one. The command does not inspect the
 ChatGPT UI and therefore remains operator-confirmed evidence, not direct host
 proof.
 
+<a name="receipt-publication-and-fresh-readback"></a>
+
+### Receipt publication and fresh remote readback
+
 The confirmation receipt is still only local until it is committed, pushed and
 observed again from the selected remote branch:
 

@@ -348,8 +348,31 @@ explicit writer conflict, F02 must preserve the positive A→B→A control, and
 F05 should distinguish a fresh fetched remote ref from remembered tracking
 state.
 
-## Intentionally deferred effects
+## Reconciliation of the c7d2d9c rereview residuals
 
+The rereview of
+`c7d2d9c5e95fab61fea6323c0218d9947f991652` confirmed that the prior
+architecture and primary fixes hold, but returned four local
+`changes_required` residuals. The current source reconciles them at their first
+losing seams:
+
+| Residual | Reconciliation | Discriminant |
+| --- | --- | --- |
+| N01 / generated next action | `scripts/configure.py` emits the complete confirmation command including the exact delivery digest it just authorized. | generated command contains `--confirm-host-installation` plus `--expected-bridge-sha256 <current configured digest>` |
+| N02 / AGENTS delivery discovery | `AGENTS.md` routes confirmation to the stable `INSTALL.md#receipt-publication-and-fresh-readback` owner before suggesting remote reachability. | confirmation -> active owner route -> remote reentry; INSTALL retains commit/push/fetch/commit-identity/readback contract |
+| N03 / anchor-owner proof composition | The CommonMark consumer records ordered active anchor/heading events and proves the intended pair on one rendered surface. | wrong active anchor + fenced raw-source decoy cannot satisfy anchor->owner proof |
+| N04 / drift promoted to host delivery | `confirmation_bridge_sha256` is emitted only when local bytes equal `INSTANCE.configured_bridge_sha256`; drifted bytes are reported as `observed_local_bridge_sha256` and host delivery is explicitly blocked. | refresh preserves recorded configured digest while drifted local artifact cannot acquire delivery authority |
+
+These changes deliberately **do not** add a controller, transaction manager,
+host taxonomy or new state machine. They carry existing semantic relations into
+the consumer that needs them and leave visible conflicts to the present
+LLM/operator for situated reconciliation.
+
+The native suite remains **58 tests**. Rereview should rerun N01–N04 against
+the exact canonical SHA produced from this reconciliation and should continue
+to preserve the already-closed F01–F05, M01 and P01 controls.
+
+## Intentionally deferred effects
 External review is selected before:
 
 ```text

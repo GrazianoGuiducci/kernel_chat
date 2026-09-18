@@ -227,7 +227,19 @@ class ConfigureTests(unittest.TestCase):
 
         self.assertIn("HOST UI BOUNDARY", result.stdout)
         self.assertIn("NEXT OPERATOR ACTION FOR ADOPTION", result.stdout)
-        self.assertIn("--confirm-host-installation", result.stdout)
+        expected_confirmation_command = (
+            "After that UI action, run:\n"
+            "python scripts/configure.py \\\n"
+            "  --github-user example-user \\\n"
+            "  --repository my-kernel \\\n"
+            "  --confirm-host-installation \\\n"
+            f"  --expected-bridge-sha256 {instance['configured_bridge_sha256']}"
+        )
+        self.assertIn(expected_confirmation_command, result.stdout)
+        self.assertIn(
+            f"confirmation_bridge_sha256={instance['configured_bridge_sha256']}",
+            result.stdout,
+        )
         self.assertIn("repository configured / host activation pending", result.stdout)
 
     def test_no_project_configuration(self) -> None:
@@ -488,7 +500,19 @@ class ConfigureTests(unittest.TestCase):
         self.assertEqual(updated["extension_field"], {"keep": True})
         self.assertIn("NEXT OPERATOR ACTION FOR HOST UPDATE", result.stdout)
         self.assertIn("local adapter updated / host instructions unchanged", result.stdout)
-        self.assertIn("--confirm-host-installation", result.stdout)
+        expected_confirmation_command = (
+            "After that UI action, run:\n"
+            "python scripts/configure.py \\\n"
+            "  --github-user example-user \\\n"
+            "  --repository my-kernel \\\n"
+            "  --confirm-host-installation \\\n"
+            f"  --expected-bridge-sha256 {updated['configured_bridge_sha256']}"
+        )
+        self.assertIn(expected_confirmation_command, result.stdout)
+        self.assertIn(
+            f"confirmation_bridge_sha256={updated['configured_bridge_sha256']}",
+            result.stdout,
+        )
 
     def test_replace_adapter_no_change_preserves_confirmed_host_receipt(self) -> None:
         first = self.run_configure(with_project=False)
@@ -674,6 +698,15 @@ class ConfigureTests(unittest.TestCase):
             after["configured_bridge_repository"],
             before["configured_bridge_repository"],
         )
+        observed_digest = hashlib.sha256(adapter_path.read_bytes()).hexdigest()
+        self.assertIn(
+            f"observed_local_bridge_sha256={observed_digest}",
+            result.stdout,
+        )
+        self.assertNotIn("confirmation_bridge_sha256=", result.stdout)
+        self.assertIn("LOCAL BRIDGE DRIFT", result.stdout)
+        self.assertIn("HOST DELIVERY BLOCKED", result.stdout)
+        self.assertNotIn("may copy the reconciled", result.stdout)
 
     def test_host_confirmation_refuses_unreconciled_local_bridge_drift(self) -> None:
         first = self.run_configure(with_project=False)
