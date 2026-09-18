@@ -258,6 +258,27 @@ The current canonical proof target carries **53 tests** across all 8 Python 3.11
 Ubuntu/Windows jobs. Validator, suite and CI must belong to the exact canonical
 SHA being rereviewed; proof from the reconciliation branch remains genealogy.
 
+
+## Reconciliation of the 82078ed rereview findings
+
+The rereview of `82078ed26cb3b6bacee74951fb727e31adba0d16` confirmed the
+previous runtime/product seams remained closed, but exposed three proof
+relations in the new consumer oracle:
+
+| Rereview finding | Reconciliation | Discriminant |
+| --- | --- | --- |
+| A / consumer-link coverage | The CommonMark oracle now observes the rendered HTML surface rather than only `link_open` Markdown tokens, so active raw-HTML anchors and Markdown links share the same consumer check while fenced examples remain non-active. | rendered `<a href>` active + fenced raw HTML inactive |
+| B / discovery evidence composition | Constitutive discovery proof now composes active AGENTS link, actual rendered owner heading, uniqueness, and the explicit simple-ASCII fragment contract. A matching heading string inside fenced code cannot satisfy the proof. | real heading + fenced-heading decoy |
+| C / oracle reproducibility | The test environment pins both `markdown-it-py==4.2.0` and the resolved `mdurl==0.1.2` dependency. | exact parser dependency pair |
+
+These changes strengthen existing oracle cases, so the suite remains **53
+tests** rather than increasing its count. The important delta is proof depth:
+individually true observations no longer stand in for the composed relation
+they are meant to establish.
+
+The next reviewer should falsify the composed consumer/discovery relation
+directly, not infer closure from the unchanged test count.
+
 ## Intentionally deferred effects
 
 External review is selected before:
