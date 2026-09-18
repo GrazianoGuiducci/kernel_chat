@@ -2,7 +2,7 @@
 
 ```text
 source_version: 0.6.0
-review_state: external_rereview_pending
+review_state: rereview_findings_reconciliation_candidate
 canonical_repository: GrazianoGuiducci/kernel_chat
 review_target: exact current main commit checked out by the reviewer
 latest_tagged_distribution: v0.5.0
@@ -68,7 +68,7 @@ For a clean checkout the expected repository-level relation is:
 
 ```text
 validator: valid=true, errors=[], warnings=[]
-tests: 32 configurator + 22 validator/drift/provenance/reachability/delivery = 54
+tests: 33 configurator + 17 structural/receipt/drift/provenance/delivery + 3 CommonMark oracle = 53
 CI: Python 3.11 / 3.12 / 3.13 / 3.14 x Ubuntu / Windows = 8 jobs
 ```
 
@@ -209,14 +209,36 @@ The current canonical source reconciles each finding in its owning seam:
 | F09 | Host confirmation docs require selected commit/push and remote readback before reentry. | documentation delivery contract test |
 | F10 | Existing instances preserve absent CURRENT/SOURCES until explicit state replacement/restoration. | refresh keeps missing state absent |
 
-The current canonical suite contains **54 native tests**: 32 configurator and 22
-validator/drift/provenance/reachability/delivery cases. Confirm that validator,
-suite and CI all belong to the exact SHA being re-reviewed; proof from the
-reconciliation branch or the earlier reviewed revision must not be inherited.
+The first rereview target `1a0720fa...` carried 54 native tests. The current
+rereview-reconciliation candidate carries **53 tests**: 33 configurator, 17
+structural/receipt/drift/provenance/delivery validator, and 3 independent
+CommonMark consumer-oracle cases. The count changed because Markdown parser
+behavior moved out of the dependency-free runtime validator into stronger
+consumer-relative tests; removed runtime-parser tests are not silently counted
+as preserved proof.
 
 For re-review, repeat the original probes where applicable and use the same
 finding discipline: a changed implementation is not proof until the external
 counterexample no longer reproduces on the reviewed revision.
+
+## Reconciliation of the 1a0720 rereview findings
+
+The rereview of `1a0720fad51c0e5057020b71dbc0ab4711f4d8ff` reported three
+remaining relations:
+
+| Rereview finding | Reconciliation | New discriminant |
+| --- | --- | --- |
+| R1 / F06 | Removed arbitrary Markdown parsing from the dependency-free runtime validator. Constitutive discovery routes are explicit structural owner paths; a test-only `markdown-it-py` CommonMark oracle now validates active package-local links, active discovery links and the five rereview counterexamples. | independent consumer parser, not another runtime regex layer |
+| N1 | `--preview-adapter` renders and returns before loading/interpreting `state/INSTANCE.json`. Mutation paths still reject unsupported schema/host owners. | future/foreign INSTANCE + preview another target succeeds with no writes |
+| N2 | Delivery regression now checks strict ordering of confirmation, add, commit, push, remote readback and reentry markers on README, INSTALL and adapter README. | causal order rather than substring presence |
+
+The runtime validator remains dependency-free. The full suite installs
+`requirements-test.txt` and uses the CommonMark dependency only as an
+independent test oracle.
+
+The candidate proof is **53 tests** across all 8 Python 3.11–3.14 ×
+Ubuntu/Windows jobs. This branch proof must be repeated on the exact canonical
+SHA before another external rereview.
 
 ## Intentionally deferred effects
 
