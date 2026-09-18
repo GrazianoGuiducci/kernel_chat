@@ -4,13 +4,17 @@
 
 - **Post-release public self-representation correction:** reframed the root
   README around the kernel's semantic operating identity before its current
-  persistence/bridge mechanics. Detailed host-confirmation, receipt publication,
-  migration and review evidence remain in their owner documents rather than
-  defining the product's first public encounter. The documentation regression
-  now verifies that the README reaches those owners while INSTALL and the
-  ChatGPT adapter continue to prove the exact confirmation -> publish -> fresh
-  readback sequence. No portable-kernel, runtime, state-schema, bridge-contract
-  or release-tag change.
+  persistence/bridge mechanics. The public entry now also defines the
+  receiving-model relation: any capable LLM can study/explain the source and
+  report value/fit to its operator without being an implemented host; current
+  host adoption remains ChatGPT-specific until another receiver-native adapter
+  exists. The User Guide now starts from ordinary real work rather than a boot
+  ritual. Detailed host-confirmation, receipt publication, migration and review
+  evidence remain in their owner documents rather than defining the product's
+  first public encounter. The documentation regression verifies that the README
+  reaches those owners while INSTALL and the ChatGPT adapter continue to prove
+  the exact confirmation -> publish -> fresh readback sequence. No
+  portable-kernel, runtime, state-schema, bridge-contract or release-tag change.
 
 - **External rereview closure / release promotion:** external rereview reached
   `no_change` on material resultant
