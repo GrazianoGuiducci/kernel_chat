@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = re.compile(r"^[A-Za-z0-9_.-]+$")
 SHA256_HEX = re.compile(r"^[0-9a-f]{64}$")
-TEMPLATE_FIELD = re.compile(r"\{\{([A-Z_]+)\}\}")
+TEMPLATE_FIELD = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
 BRIDGE_IDENTITY_HEADER = re.compile(
     r"\AWork from the present\. Act directly when the conversation and working set "
     r"suffice; a new chat alone does not require a boot\.\r?\n\r?\n"
