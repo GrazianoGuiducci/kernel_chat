@@ -15,6 +15,9 @@
   reaches those owners while INSTALL and the ChatGPT adapter continue to prove
   the exact confirmation -> publish -> fresh readback sequence. No
   portable-kernel, runtime, state-schema, bridge-contract or release-tag change.
+  A source-only regression protects the public LLM-evaluation/adoption/first-use
+  routes, bringing current main to 59 tests while the immutable v0.6.0 release
+  evidence correctly remains 58.
 
 - **External rereview closure / release promotion:** external rereview reached
   `no_change` on material resultant
