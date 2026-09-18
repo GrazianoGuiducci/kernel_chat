@@ -350,7 +350,7 @@ The runtime validator checks package structure, receipts, configured artifacts
 and explicit discovery-route contracts. Full Markdown consumer semantics are
 kept out of the runtime parser and are checked independently in the test suite
 with `markdown-it-py`. The current
-suite contains **53 regression cases**: 33 configurator cases, 17 structural /
+suite contains **58 regression cases**: 38 configurator cases, 17 structural /
 receipt / drift / provenance / delivery validator cases, and 3 independent
 CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3 migration shape,
 legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
@@ -360,17 +360,14 @@ boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 
 availability, independently verify the UI copy/save, or establish behavioral
 assimilation.
 
-The first external-review findings against `2c816975...`, the rereview
-findings against `1a0720fa...`, and the later proof gaps exposed on
-`82078ed2...` are reconciled in the current source. Runtime validation remains
-dependency-free and conservative; richer consumer semantics stay in an
-independent CommonMark oracle. That oracle now observes rendered links including
-raw-HTML anchors, binds constitutive discovery to a real Markdown owner heading
-rather than a matching string, and runs with the exact
-`markdown-it-py 4.2.0 + mdurl 0.1.2` dependency pair. Preview remains
-independent of unsupported INSTANCE schemas, and host-receipt delivery is
-protected as an ordered confirm → commit → push → remote-readback → reentry
-relation. Any later canonical source change forms a new review target.
+The current source keeps runtime validation dependency-free and conservative.
+Richer Markdown consumer semantics remain in the independent test oracle;
+constitutive discovery now uses explicit stable anchors rather than depending
+on automatic heading-slug identity. INSTANCE writer conflicts, bridge-delivery
+identity and fresh remote receipt readback are explicit parts of the current
+pre-release proof. Detailed review genealogy and counterexamples live in
+[the external review brief](docs/EXTERNAL_REVIEW_0_6_0.md), so the product
+narrative does not require the reader to reconstruct every audit cycle.
 
 ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
 possible but are not claimed by the current source.
