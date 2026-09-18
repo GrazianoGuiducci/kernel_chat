@@ -199,17 +199,21 @@ Preview a bridge before replacement. `--replace-adapter` changes only the local
 configured bridge and preserves the previous confirmed host digest as evidence
 until the operator updates ChatGPT.
 
-After the operator copies/saves the current configured bridge in ChatGPT, bind
-that report to the exact bridge digest:
+When the bridge is shown to the operator, retain the emitted
+`confirmation_bridge_sha256`. After the operator copies/saves that delivered
+bridge in ChatGPT, bind the report to that exact delivery digest:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
-This receipt remains operator-confirmed evidence. Reachability and behavioral
+If the current configured bridge no longer matches the delivered digest, the
+confirmation is rejected and the current bridge must be delivered again. This
+receipt remains operator-confirmed evidence. Reachability and behavioral
 assimilation still require their own observations.
 
 ## Source contact
