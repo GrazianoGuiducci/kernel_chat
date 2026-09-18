@@ -208,8 +208,38 @@ confirmation cannot promote a newer bridge. A later local replacement preserves
 the previously confirmed installed digest/date but does not resurrect a
 confirmation whose current host state was explicitly invalidated or unknown.
 
-## Portable semantic deepening
+## Rereview consumer convergence
 
+The rereview of the previous canonical resultant found four local seams rather
+than a new architectural problem. The current source carries the already-known
+relations through the consumers that had not yet inherited them:
+
+```text
+generated onboarding action
+-> includes the exact delivered bridge digest required by the confirmation API
+
+AGENTS adoption path
+-> receipt publication + fresh remote readback owner
+-> only then remote/new-chat reachability
+
+active discovery route
+-> active explicit anchor
+-> intended rendered owner heading
+  all observed on one consumer surface
+
+local bridge drift
+-> diagnostic local digest
+!= delivery-authoritative confirmation digest
+-> host copy/save remains blocked until reconciliation
+```
+
+The reference implementation therefore exposes unresolved local drift **before**
+the host effect instead of offering an artifact that the same configurator
+would later refuse to confirm. This adds no new state machine or controller;
+it lets the present model/operator resolve the visible conflict at the seam
+where it exists.
+
+## Portable semantic deepening
 The package preserves a deeper distinction across sources and incarnations:
 
 ```text
