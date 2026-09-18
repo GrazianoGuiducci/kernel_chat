@@ -5,7 +5,7 @@
 ```text
 version: 0.6.0
 status: canonical_kernel_chat_incarnation
-review_state: external_review_pending
+review_state: findings_reconciliation_candidate
 latest_tagged_distribution: v0.5.0
 owner: Graziano Guiducci
 ```
@@ -294,8 +294,8 @@ not establish:
 - later non-identical assimilation;
 - autonomous self-evolution or AGI.
 
-The current regression suite contains **38 cases**: 25 configurator cases and
-13 validator/drift/provenance/reachability cases. It includes a source-bound real 0.5.3
+The current regression suite contains **54 cases**: 32 configurator cases and
+22 validator/drift/provenance/reachability/delivery cases. It includes a source-bound real 0.5.3
 migration shape, custom/unknown legacy identity, repository-target match and
 mismatch, raw-byte LF/CRLF discrimination, additive v1 receipt compatibility,
 refresh/replace/confirm effect separation, missing-local-bridge preservation,
@@ -315,17 +315,30 @@ See `docs/LINEAGE.md` and `docs/EVOLUTION_GUIDE.md`.
 
 ## External review before release
 
-Canonical source **0.6.0** is ready for an external repository review before a
-numbered `v0.6.0` tag/release is selected.
+The external review of canonical revision
+`2c81697595baf4a330f99f6a9e96d799dac4370e` produced ten material findings.
+This branch reconciles all ten findings and adds native regressions for their
+failure shapes. It is not yet the new canonical review target.
 
-The reviewer should pin the exact `main` commit being reviewed rather than
-treating moving `main`, this state file, or a later release as interchangeable.
-The dedicated [external review brief](docs/EXTERNAL_REVIEW_0_6_0.md) identifies
-the product relations, reproducible checks and evidence boundaries that matter.
+The reconciliation preserves the existing architecture and deepens the seams
+that carry it:
 
-A review finding can reopen only the relation it materially changes. The review
-does not by itself authorize a tag/release, user-instance migration, bridge
-replacement or host update.
+```text
+receipt persistence / recovery
+schema and mutation authority
+persisted receipt coherence
+bridge resultant identity
+preview as no-write observation
+Markdown consumer-surface fit
+discovery anchor reachability
+GitHub repository identity semantics
+remote delivery of host-confirmation receipt
+missing user-state preservation
+```
+
+Before release, reconstruct the accepted net result on current canonical main,
+run canonical validator/tests/CI on that exact revision, update this state to
+`external_rereview_pending`, and ask the external reviewer to verify the new SHA.
 
 ## Current next
 
