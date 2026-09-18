@@ -77,14 +77,17 @@ that UI action, report the state as `repository configured / host activation
 pending`. Do not report `kernel_chat` as installed or active in ChatGPT merely
 because the repository, configurator, tests, or connector setup succeeded.
 
-When the operator confirms the UI copy/save and repository writing is available,
-record that exact observation with:
+When the configured bridge is delivered, retain the
+`confirmation_bridge_sha256` printed by the configurator. When the operator
+confirms the UI copy/save and repository writing is available, record that
+observation only against the digest of the bridge actually delivered:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 This receipt does **not** perform or independently verify the host action. It
