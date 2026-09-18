@@ -8,8 +8,11 @@ status: canonical_kernel_chat_incarnation
 review_state: external_rereview_complete_no_change
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
 material_review_ci: 35390696891
-release_promotion: selected_pending_tag_release
-latest_tagged_distribution: v0.5.0
+release_promotion: published
+release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
+latest_tagged_distribution: v0.6.0
+release_url: https://github.com/GrazianoGuiducci/kernel_chat/releases/tag/v0.6.0
+release_readback_date: 2026-09-18
 owner: Graziano Guiducci
 ```
 
@@ -497,12 +500,18 @@ That review result belongs to the reviewed material SHA. The present
 promotion-only source transition records the closure; it does not retroactively
 claim that administrative metadata was part of the material rereview.
 
-Release promotion is now selected. The next release effect is:
+Release promotion was published and read back through the GitHub UI on
+2026-09-18. `kernel_chat v0.6.0` is the latest release, not a prerelease; its
+tag resolves exactly to `d2c94ca4e4523f1f7a343601d6beec1e84031fac`.
+The release notes preserve the material-review and promotion identities.
+This post-release state update is administrative evidence of publication,
+not a transfer of review or CI proof to a later source revision.
 
 ```text
-promotion-only canonical revision
--> canonical CI on that revision
--> v0.6.0 tag / GitHub Release
+promotion-only canonical revision:
+  d2c94ca4e4523f1f7a343601d6beec1e84031fac
+-> v0.6.0 tag / GitHub Release published
+-> fresh GitHub UI readback confirms exact tag target and Latest label
 
 canonical source / release
 != automatic user-instance migration
