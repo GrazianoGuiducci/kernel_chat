@@ -69,7 +69,16 @@ def active_links(text: str) -> list[str]:
 
 
 def active_headings(text: str) -> list[str]:
-    return consumer_surface(text).headings
+    """Return real Markdown headings that can own the constitutive fragment."""
+    tokens = MARKDOWN.parse(text)
+    headings: list[str] = []
+    for index, token in enumerate(tokens):
+        if token.type != "heading_open":
+            continue
+        if index + 1 >= len(tokens) or tokens[index + 1].type != "inline":
+            continue
+        headings.append(tokens[index + 1].content.strip())
+    return headings
 
 
 def constitutive_fragment(heading: str) -> str:
@@ -183,6 +192,13 @@ class MarkdownConsumerTests(unittest.TestCase):
         self.assertNotIn(
             "Mobile observation without losing the point",
             active_headings(decoy),
+        )
+        raw_html_decoy = (
+            "<h2>Mobile observation without losing the point</h2>\n"
+        )
+        self.assertNotIn(
+            "Mobile observation without losing the point",
+            active_headings(raw_html_decoy),
         )
 
 
