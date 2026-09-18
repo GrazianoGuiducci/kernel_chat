@@ -1,84 +1,258 @@
 # Architecture
 
-`kernel_chat` separates the portable relation from its current delivery and
-persistence mechanisms.
+`kernel_chat` separates the portable semantic relation from user-owned
+continuity, host delivery and actual host behavior.
 
 ```text
-portable kernel
-  present-first work
-  source distinction
-  situated competence and metacompetence
-  FDLA self-observation
-  revisable evolution
+canonical package
+  portable kernel owners + adapters + templates + configurator + validation
 
-host adapter
-  translates the kernel into a host-native entry
-  states only capabilities the host can actually expose
+user-owned instance
+  INSTANCE identity/bridge/source-contact observation
+  CURRENT relation/context
+  SOURCES owner-native pointers
+  optional local competences and knowledge
 
-user-owned state
-  current point, source pointers, corrections, open work, next movement
+host bridge
+  source template available in the package
+  -> configured local projection with its own provenance / repository target
+  -> operator-confirmed installed bridge incarnation receipt
+  -> instructions actually installed in ChatGPT
+
+actual host
+  available connector/tool/capability reality
+  -> situated conversation
+  -> effects and consequences
 
 operational continuity
-  optional flows, requests/results, receipts, replay protection, recovery
-
-persistence adapter
-  makes state inspectable and reachable across conversations
+  optional unfinished flows, requests/results, receipts and recovery
 ```
 
-Version `0.5.0` uses ChatGPT Custom Instructions as the host adapter and a
-GitHub repository as the persistence adapter.
+These layers are related but not interchangeable.
 
-## Reentry
+## Canonical package and user-owned instance
+
+The public upstream owns the distributable package. A user-owned instance owns
+its continuity state and local evolution.
+
+A private instance can be a standalone private repository initialized from an
+identified upstream revision/release. A public fork is valid when its state is
+intentionally public. The package is not a living user node merely because its
+source exists.
+
+A project is optional. It can become one current context/source without becoming
+the identity of the instance.
+
+## State owners
+
+### `state/INSTANCE.json`
+
+Owns the smallest durable package/incarnation metadata that should not be mixed
+with domain state:
+
+```text
+instance repository
+canonical upstream
+package source version
+host adapter
+bridge template currently available in the package
+configured bridge template provenance, when known
+configured bridge repository target, when known
+configured bridge raw-byte digest
+operator-reported host-installation state
+operator-confirmed installed bridge raw-byte digest + target/provenance snapshot, when known
+source-contact observation
+```
+
+Its bridge-template relations are intentionally split:
+
+```text
+available_bridge_template_version
+  what the current package offers
+
+configured_bridge_template_version
+  what template is known to have produced the preserved configured bridge
+```
+
+A legacy configured bridge can predate the receipt that records this relation.
+When its template origin cannot be established from evidence, the configured
+provenance is `unknown`. That state is valid: it makes uncertainty visible
+instead of assigning the current package template retroactively.
+
+A standard configured bridge also carries the user-owned repository it reaches.
+That bridge target and `INSTANCE.instance_repository` should describe the same
+continuity owner. Ordinary migration refuses a known mismatch before writes;
+validation can expose one created later by manual/customized drift.
+
+`host_installation.installed_bridge_sha256` is different again. It records the
+raw-byte digest of the configured bridge that the operator last confirmed as
+copied and saved in ChatGPT; repository target and template provenance are
+snapshotted alongside it when known. The repository cannot inspect the host
+directly, so this remains an attributable operator report, not independent host
+proof.
+
+Its presence proves configured/persisted instance metadata only. It does not
+prove connector reachability, host behavior or assimilation.
+
+### `state/CURRENT.md`
+
+Owns the user's current relation/context and the smallest causal margin needed
+for reentry. It does not own reusable kernel methods or package-installation
+metadata.
+
+### `state/SOURCES.md`
+
+Owns owner-native source pointers and why they may change the result. It is not
+an activation registry.
+
+## Selective reentry
 
 The default relation is direct work. Reentry begins only when a missing durable
 relation can change the result.
 
 ```text
 conversation
--> missing project context: state/CURRENT.md and pertinent source pointers
--> missing operating method: AGENTS.md and the relevant kernel/competence owner
+-> missing user/context relation:
+   state/CURRENT.md + pertinent source pointer
+
+-> missing kernel/method/maintenance relation:
+   AGENTS.md + pertinent owner
+
+-> unfinished causal/effect relation:
+   operations/ when material
+
+-> package/bridge/source-contact question:
+   state/INSTANCE.json when material
+
 -> current result
 ```
 
-State remains a compact index. Owner-native project sources remain the truth
-owners. The kernel repository does not become a copy of every connected
-project.
+These are alternatives made pertinent by the work, not a required boot
+sequence. Reading a representation first can frame interpretation without
+making it authority.
 
-The two retrieval paths are alternatives made pertinent by the work, not a
-sequence. Reading a state representation first does not give it authority,
-but can frame interpretation; the acting competence understands its function
-before letting it prescribe the method. Kernel knowledge remains outside
-project state, and no central catalogue is required.
+## Host bridge
 
-## Unfinished work
+The ChatGPT adapter is intentionally a **stable, small bridge**. It should carry
+only enough constitutive relation to reach user continuity and the pertinent
+kernel owners without copying the whole kernel into Custom Instructions.
 
-When losing a cursor, pending relation, result, or effect receipt would change
-continuation, the optional [`operations/`](../operations/) organ preserves the
-smallest causal state needed to resume. It does not create a worker, scheduler,
-daemon, or permission to repeat an historical effect.
+The following are distinct incarnations/evidence states:
+
+```text
+portable semantic owner
+!= bridge template currently available
+!= configured local bridge + known/unknown template provenance + repository target
+!= operator-confirmed installed bridge incarnation receipt
+!= instructions actually present in ChatGPT
+!= observed host behavior
+```
+
+The package exposes a bridge-template version because package evolution does not
+always change the host entry contract. The configured bridge has a separate
+provenance relation because preserving an existing local bridge does not prove
+that it was generated from the currently available template.
+
+A package/instance refresh may advance the available template identity while
+leaving configured-bridge byte identity and provenance untouched. It can observe
+drift without accepting it. An explicit bridge replacement uses the current
+template and can therefore establish configured byte identity, target and
+provenance; for an existing instance it does not migrate the instance repository.
+It still does not change the installed ChatGPT instructions.
+
+When the operator later confirms that the current configured bridge was
+copied/saved in ChatGPT, `--confirm-host-installation` snapshots the
+already-reconciled configured byte identity and semantic target/provenance. It
+does not repair a drifted local bridge. If the local bridge changes again, the
+last confirmed host incarnation remains distinct until another operator
+confirmation.
+
+## Semantic relation and operational incarnation
+
+A semantic relation can be made persistent through a bridge, state object,
+guard or another receiver-native mechanism. The mechanism is not the semantic
+owner and does not inherit authority over effects.
+
+```text
+semantic relation
+-> receiver-native representation/incarnation
+-> actual authorized effect when selected
+-> observed consequence
+-> readback can preserve / revise / retire the incarnation
+```
+
+Enough source identity, transformation lineage and consequence should remain
+reachable to notice when a persistent projection has become stale relative to
+its living owner.
+
+## Situated observation
+
+Source observation, transformed representation and situated semantic relation
+are not interchangeable. When the distinction can change meaning, preserve the
+minimum observation frame needed to avoid false co-reference: relevant source
+or observer, time/locality, medium/representation, transformation, uncertainty
+and ownership.
+
+This is a semantic relation, not a required universal metadata schema.
+
+## Mobile observation and proof relation
+
+The kernel can preserve the point being understood while moving observation
+through another material relation when the current frame may itself be the
+limit. The alternative observation can be source-, scale-, owner-,
+representation-, consumer-, transformation- or consequence-relative; no
+fixed set is required.
+
+```text
+stable point
++ materially different observation
+-> return to the same point
+-> changed relation | no_change
+```
+
+Evolution applies the same principle to proof. A claim and the evidence used
+to support it remain distinct; implementation, validator and tests can agree
+because they inherited the same assumption. When that difference matters,
+owner-native identity or execution surfaces supply a falsifiable observation.
+
+This is a distributed semantic faculty, not an additional runtime component or
+review controller.
 
 ## Competence field
 
-The kernel does not ship a closed capability taxonomy. A configured fork may
-point to competences, metacompetences, guides, or project-specific methods.
-They become active when the present relation makes them useful and the current
-host can actually reach them.
+The kernel does not ship a closed capability taxonomy. A user-owned instance
+may point to competences, metacompetences, guides or context-specific methods.
+They participate when the present relation makes them useful and the host can
+actually reach them.
 
-Results can make another competence pertinent, form a temporary composition
-or expose a consequence that revises an earlier contributing method. Reusable
-learning lives in the affected owner; state preserves its reentry implication
-and location. The concrete cultivation path is in the user guide.
+Results can make another competence pertinent, form a temporary composition or
+expose a consequence that revises an earlier method. Reusable learning lives in
+the affected owner; CURRENT/SOURCES preserve the current reentry implication
+and pointer when needed.
 
-## Choice and self-observation
+## Situated movement, choice and self-observation
 
-FDLA gives the core a way to notice when its own form is acting as an
+The Core can recognize a situated movement from the present relation, still-
+valid determinations, materially pertinent possibilities, reachable means and
+enough consequence awareness to distinguish alternatives. Competence supplies
+capability-specific resultants such as use/preserve, compose, adapt/deepen,
+form, defer/unknown and `no_change` without a central chooser or fixed ranking.
+
+FDLA lets the system notice when its own interpretation is acting as an
 unjustified limit. It preserves real invariants and present limits while
-removing closures introduced by the interpretation. This function changes the
-formation of the result; it is not a second workflow before the work.
+revising closures introduced by the acting interpretation. It is not a second
+workflow before ordinary work.
+
+## Operational continuity
+
+When losing a cursor, pending relation, result or effect receipt would change
+continuation, the optional [`operations/`](../operations/) organ preserves the
+smallest causal state needed to resume. It does not create a worker, scheduler,
+daemon or permission to repeat a historical effect.
 
 ## Effects
 
-The following facts are orthogonal:
+The following facts remain orthogonal:
 
 ```text
 useful action

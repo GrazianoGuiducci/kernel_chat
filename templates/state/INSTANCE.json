@@ -1,0 +1,23 @@
+{
+  "schema": "kernel_chat.instance.v1",
+  "instance_repository": "{{GITHUB_USER}}/{{REPOSITORY}}",
+  "canonical_upstream": "https://github.com/GrazianoGuiducci/kernel_chat",
+  "package_source_version": "{{PACKAGE_SOURCE_VERSION}}",
+  "host_adapter": "chatgpt",
+  "available_bridge_template_version": "{{BRIDGE_TEMPLATE_VERSION}}",
+  "configured_bridge_template_version": "{{CONFIGURED_BRIDGE_TEMPLATE_VERSION}}",
+  "configured_bridge_repository": "{{CONFIGURED_BRIDGE_REPOSITORY}}",
+  "configured_bridge_sha256": "{{CONFIGURED_BRIDGE_SHA256}}",
+  "host_installation": {
+    "state": "{{HOST_INSTALLATION_STATE}}",
+    "confirmed_at": null,
+    "installed_bridge_sha256": null,
+    "installed_bridge_repository": null,
+    "installed_bridge_template_version": null
+  },
+  "source_contact": {
+    "last_observed_revision": null,
+    "last_observed_at": null,
+    "material_delta": null
+  }
+}

@@ -1,15 +1,14 @@
-# Current relation / context
+# Current project state
 
 ```text
-updated: {{DATE}}
-context_kind: {{CONTEXT_KIND}}
-context_name: {{CONTEXT_NAME}}
-context_source: {{CONTEXT_SOURCE}}
+updated: 2026-09-10
+active_project: Research
+project_source: https://example.org/project
 ```
 
 ## Current point
 
-Describe where the work or relation is now in the smallest form that changes reentry.
+Describe where the work is now in the smallest form that changes reentry.
 
 ## Why it matters
 

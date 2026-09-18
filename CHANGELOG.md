@@ -1,5 +1,114 @@
 # Changelog
 
+## 0.6.0 — 2026-09-18
+
+- Reframed the package around a **user-owned continuity kernel** rather than a
+  mandatory project-first harness. A kernel instance can now be configured
+  without an active project; a project remains an optional current context.
+- Added `state/INSTANCE.json` as the bounded owner of instance/package/bridge
+  identity, operator-confirmed installed-bridge observation and source-contact
+  observations, keeping those facts distinct from `CURRENT` user context,
+  `SOURCES` owner-native knowledge and optional operational continuity.
+- Added separate ChatGPT bridge-template versioning under
+  `adapters/chatgpt/VERSION`. Package updates, bridge-template availability,
+  configured-bridge provenance/repository/bytes, operator-confirmed installed
+  bridge digest and actual host behavior are explicitly separate relations.
+- Legacy pre-0.6 instances can preserve an existing configured bridge while
+  creating `INSTANCE.json`. When the historical template origin of that bridge
+  cannot be established, the receipt records
+  `configured_bridge_template_version = unknown` instead of assigning the
+  current package template retroactively.
+- Standard legacy bridges are checked against `INSTANCE.instance_repository`
+  before migration writes. A known bridge/instance repository mismatch is
+  rejected rather than silently creating a continuity receipt whose configured
+  bridge would reenter another repository.
+- Added `--confirm-host-installation`: after the operator actually copies/saves
+  the current configured bridge in ChatGPT, the command persists that operator
+  report and binds it to the exact configured bridge SHA-256 digest. The
+  repository still does not independently inspect the ChatGPT UI.
+- A later local bridge replacement preserves the previous operator-confirmed
+  installed digest/date while marking the local/host relation unconfirmed, so
+  host drift remains reconstructible until the replacement is confirmed.
+- Reduced the ChatGPT Custom Instructions template to a stable entry bridge.
+  Source-contact cadence, Evolution Feedback mechanics and deeper competence /
+  evolution methods remain in their repository owners and are reached only
+  when pertinent.
+- Extended configuration with valid no-project and project-pair modes,
+  `--refresh-instance`, bounded bridge replacement and preservation of
+  user-owned state / source-contact observations across reruns and updates.
+  `--refresh-instance` advances package/available-template identity without
+  falsifying configured-bridge provenance; `--replace-adapter` can establish
+  provenance because it generates the local bridge from the current template.
+- Corrected privacy/adoption guidance: non-public continuity uses a private
+  standalone repository initialized from the public distribution; a normal
+  fork of a public GitHub repository is treated as public.
+- Deepened the portable core with situated observation-frame and transformation
+  lineage, semantic determinacy without forced reopening, and explicit
+  distinction among semantic relation, persistent operational incarnation,
+  effect authority, actual effect and observed consequence.
+- Made **situated movement** explicit across Core, Competence and AGENTS: the
+  present field can resolve to use/preserve, compose, adapt/deepen, form,
+  preserve unknown/defer, or `no_change` without adding a central chooser or a
+  mandatory decision pipeline. Operator preference and exact effect authority
+  remain outside the kernel when they own the selection.
+- Added **closure convergence** to Evolution: a material correction creates a
+  new resultant whose causally dependent proof, consumer, state and descriptive
+  surfaces must converge before closure; prior green evidence remains evidence
+  for its own revision rather than automatically proving the new one.
+- Deepened evolution with first-losing-transformation diagnosis and
+  owner/incarnation drift: persistent projections can be reconsidered when
+  their living semantic owner or relevant conditions change, without creating
+  automatic synchronization.
+- Added **mobile observation without losing the point** to the portable Core:
+  the object can remain stable while observation moves through another material
+  source/scale/owner/representation/consumer/transformation/consequence relation
+  and then returns to the same point as changed resultant or `no_change`, without
+  creating a mandatory multi-view workflow.
+- Deepened Evolution with **pre-closure incongruence sensing**: claim strength
+  is kept distinct from proof strength; common-mode agreement between
+  implementation, validator, tests or documentation is not treated as
+  independent falsification.
+- Let competences exercise the same mobile observation when their own method
+  becomes the limiting frame, returning reusable learning to the owner that
+  must behave differently in later non-identical cases.
+- Refined package Markdown reachability validation so malformed prose links are visible while fenced/inline code examples remain outside the active link consumer surface.
+- Added explicit AGENTS discovery routes for Core mobile observation and Evolution closure convergence; validator/tests preserve those owner-native routes without freezing explanatory wording.
+- Added package-level claim/proof integrity in `AGENTS.md`: human version labels,
+  owner-native tag/refs, immutable revisions, runtime artifact identity,
+  discovered tests and actual CI jobs remain distinct evidence surfaces.
+- Corrected `actions/setup-python` v7.0.0 provenance to the owner-native commit
+  `5fda3b95a4ea91299a34e894583c3862153e4b97`; both pinned GitHub Actions now
+  resolve exactly from their declared tags and use Node 24.
+
+- Added an adoption guide and aligned README, INSTALL, architecture, user guide,
+  AGENTS, adapter guidance and state documentation to the same instance-first
+  product relation.
+- Extended validation to make package/bridge/instance drift visible as
+  reconciliation warnings rather than conflating it with structural invalidity.
+- Reopened and completed the pre-canonical technical evidence closure with a
+  source-bound full 0.5.3 migration fixture, raw-byte bridge SHA-256 identity,
+  deterministic LF/CRLF byte discriminants, durable configured/installed
+  repository-target and template-provenance receipts, and backward-compatible
+  optional identity fields under `kernel_chat.instance.v1`.
+- Separated configurator effects: `--refresh-instance` does not accept local
+  bridge drift, `--confirm-host-installation` refuses unreconciled local bytes,
+  and `--replace-adapter` does not migrate an existing instance repository.
+  Missing local bridges remain visible without being regenerated implicitly.
+  A requested replacement that produces the already-confirmed incarnation
+  remains a legitimate `no_change` for host synchronization.
+- Declared Python **3.11–3.14** support and expanded CI across every declared
+  Python line (3.11, 3.12, 3.13, 3.14) on Ubuntu and Windows. GitHub Actions are
+  pinned to immutable current Node-24 action revisions.
+- The current regression suite contains **38 cases** (25 configurator + 13
+  validator/drift/provenance/reachability), including malformed multiline Markdown-link detection, code-example exclusion, and AGENTS discovery-route preservation. CI exercises all **8 Python/OS matrix jobs**. Canonical proof belongs to the
+  exact canonical revision that runs validator + full tests; repository proof
+  does not claim host behavior.
+
+Canonical source **0.6.0** does not by itself create a `v0.6.0` tag or release,
+update user-owned instances, install/update ChatGPT Custom Instructions, prove
+connector reachability, or establish behavioral assimilation. Those remain
+separate selected effects.
+
 ## 0.5.3 — 2026-09-11
 
 - Distinguish the user-owned fork from the canonical upstream for source contact
@@ -85,8 +194,7 @@ Canonical `kernel_chat` incarnation and continuation of the `0.3.0` lineage.
 
 ## 0.3.0 — 2026-08-20
 
-First integrated all-in-one incarnation, originally released as Meta Semantic
-Kernel. It assembled the ChatGPT adapter, semantic routing, competence organs,
+First integrated all-in-one incarnation, originally released as Meta Semantic Kernel. It assembled the ChatGPT adapter, semantic routing, competence organs,
 durable state, operational continuity, reversible evolution, documentation,
 and structural validation. The original release and commits remain reachable
 in this repository's Git history.
