@@ -325,6 +325,23 @@ class ValidateTests(unittest.TestCase):
             payload["errors"],
         )
 
+    def test_public_readme_routes_llm_evaluation_adoption_and_first_use(self) -> None:
+        readme = (self.root / "README.md").read_text(encoding="utf-8")
+        required = (
+            "## If an AI / LLM received this link",
+            "[Install / adopt](INSTALL.md)",
+            "[Adoption model](docs/ADOPTION_GUIDE.md)",
+            "[User guide](docs/USER_GUIDE.md)",
+            "[Core](kernel/KERNEL.md)",
+            "## Start using it",
+        )
+        for marker in required:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, readme)
+
+        user_guide = (self.root / "docs/USER_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn("## Your first conversation after adoption", user_guide)
+
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         readme = (self.root / "README.md").read_text(encoding="utf-8")
         self.assertIn("[Install / adopt](INSTALL.md)", readme)
