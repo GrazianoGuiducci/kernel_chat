@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -11,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -638,6 +640,169 @@ class ConfigureTests(unittest.TestCase):
         result = self.run_configure("--replace-adapter", "--replace-state")
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.owned_bytes(), before)
+
+
+    def configure_module(self):
+        spec = importlib.util.spec_from_file_location(
+            "kernel_chat_configure_under_test",
+            self.root / "scripts/configure.py",
+        )
+        assert spec is not None and spec.loader is not None
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_atomic_write_replace_failure_preserves_existing_file(self) -> None:
+        module = self.configure_module()
+        target = self.root / INSTANCE
+        target.parent.mkdir(parents=True, exist_ok=True)
+        original = b'{"receipt":"preserve-me"}\n'
+        target.write_bytes(original)
+
+        with mock.patch.object(module.os, "replace", side_effect=OSError("replace failed")):
+            with self.assertRaises(OSError):
+                module.atomic_write_text(target, '{"receipt":"new"}\n')
+
+        self.assertEqual(target.read_bytes(), original)
+        leftovers = list(target.parent.glob(f".{target.name}.*.tmp"))
+        self.assertEqual(leftovers, [])
+
+    def test_refresh_rejects_unsupported_instance_schema_before_writes(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        instance_path = self.root / INSTANCE
+        instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        instance["schema"] = "kernel_chat.instance.v2"
+        instance["host_adapter"] = "future-host"
+        instance["host_installation"] = ["opaque-future-shape"]
+        instance["source_contact"] = "opaque-future-shape"
+        instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
+        before = self.owned_bytes()
+
+        result = self.run_configure("--refresh-instance", with_project=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Unsupported instance schema", result.stderr)
+        self.assertEqual(self.owned_bytes(), before)
+
+    def test_replace_adapter_return_to_confirmed_identity_restores_confirmation(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+        confirmed = self.run_configure("--confirm-host-installation", with_project=False)
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+        instance_path = self.root / INSTANCE
+        confirmed_instance = json.loads(instance_path.read_text(encoding="utf-8"))
+        confirmed_at = confirmed_instance["host_installation"]["confirmed_at"]
+        installed_digest = confirmed_instance["host_installation"]["installed_bridge_sha256"]
+
+        template_path = self.root / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
+        version_path = self.root / "adapters/chatgpt/VERSION"
+        template_a = template_path.read_bytes()
+        version_a = version_path.read_bytes()
+
+        template_path.write_bytes(template_a + b"\nTemporary B relation.\n")
+        version_path.write_text("1.0.1\n", encoding="utf-8")
+        to_b = self.run_configure("--replace-adapter", with_project=False)
+        self.assertEqual(to_b.returncode, 0, to_b.stderr)
+        middle = json.loads(instance_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            middle["host_installation"]["state"],
+            "local_adapter_updated_host_unconfirmed",
+        )
+
+        template_path.write_bytes(template_a)
+        version_path.write_bytes(version_a)
+        back_to_a = self.run_configure("--replace-adapter", with_project=False)
+        self.assertEqual(back_to_a.returncode, 0, back_to_a.stderr)
+
+        final = json.loads(instance_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            final["configured_bridge_sha256"],
+            installed_digest,
+        )
+        self.assertEqual(
+            final["host_installation"]["state"],
+            "installed_operator_confirmed",
+        )
+        self.assertEqual(
+            final["host_installation"]["confirmed_at"],
+            confirmed_at,
+        )
+        self.assertIn("No ChatGPT UI update is required.", back_to_a.stdout)
+        self.assertNotIn("NEXT OPERATOR ACTION FOR HOST UPDATE", back_to_a.stdout)
+
+    def test_preview_is_not_blocked_by_mismatched_existing_bridge(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        adapter = self.root / ADAPTER
+        adapter.write_text(
+            adapter.read_text(encoding="utf-8").replace(
+                "example-user/my-kernel",
+                "other-user/other-kernel",
+            ),
+            encoding="utf-8",
+        )
+        before = self.owned_bytes()
+
+        result = self.run_configure("--preview-adapter", with_project=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("example-user/my-kernel", result.stdout)
+        self.assertEqual(self.owned_bytes(), before)
+
+    def test_preview_is_not_blocked_by_non_utf8_existing_bridge(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        adapter = self.root / ADAPTER
+        adapter.write_bytes(b"\xff\xfeinvalid legacy bytes")
+        before = self.owned_bytes()
+
+        result = self.run_configure("--preview-adapter", with_project=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("example-user/my-kernel", result.stdout)
+        self.assertEqual(self.owned_bytes(), before)
+
+    def test_github_repository_identity_is_case_insensitive(self) -> None:
+        first = self.run_configure(with_project=False)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        refreshed = self.run_configure(
+            "--refresh-instance",
+            "--github-user", "Example-User",
+            "--repository", "My-Kernel",
+            with_project=False,
+        )
+        self.assertEqual(refreshed.returncode, 0, refreshed.stderr)
+
+        confirmed = self.run_configure(
+            "--confirm-host-installation",
+            "--github-user", "EXAMPLE-USER",
+            "--repository", "MY-KERNEL",
+            with_project=False,
+        )
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+    def test_refresh_preserves_missing_user_state_until_explicit_replacement(self) -> None:
+        first = self.run_configure()
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        (self.root / CURRENT).unlink()
+        (self.root / SOURCES).unlink()
+
+        refreshed = self.run_configure("--refresh-instance", with_project=False)
+        self.assertEqual(refreshed.returncode, 0, refreshed.stderr)
+        self.assertFalse((self.root / CURRENT).exists())
+        self.assertFalse((self.root / SOURCES).exists())
+        self.assertIn("state/CURRENT.md=missing-preserved", refreshed.stdout)
+        self.assertIn("state/SOURCES.md=missing-preserved", refreshed.stdout)
+
+        restored = self.run_configure("--replace-state", with_project=False)
+        self.assertEqual(restored.returncode, 0, restored.stderr)
+        self.assertTrue((self.root / CURRENT).exists())
+        self.assertTrue((self.root / SOURCES).exists())
+        self.assertIn("context_kind: none_selected", (self.root / CURRENT).read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
