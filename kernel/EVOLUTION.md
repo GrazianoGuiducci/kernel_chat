@@ -82,7 +82,9 @@ where being wrong would change the result and the new position can add
 information. A `no_change` after such a movement is stronger than another
 pass that repeats the same assumptions.
 
-<a name="kernel-chat-converge-resultant"></a>\n\n## Converge the changed resultant
+<a name="kernel-chat-converge-resultant"></a>
+
+## Converge the changed resultant
 
 A material correction changes the result being proved. Do not treat proof,
 state or descriptive surfaces from the previous result as current merely
