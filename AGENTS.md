@@ -190,6 +190,12 @@ If a material correction creates a new resultant, use [Evolution closure converg
 proof, consumer/reachability, state and descriptive surfaces whose truth changed
 with it. The previous green result remains evidence for its own revision.
 
+Constitutive discovery routes are also stated as stable owner paths so runtime
+validation does not need to emulate a full Markdown renderer:
+
+- `kernel/KERNEL.md#mobile-observation-without-losing-the-point`
+- `kernel/EVOLUTION.md#converge-the-changed-resultant`
+
 When repository/package work forms a stronger claim, keep claim identity and
 proof identity joined before calling the result closed. Human labels and
 comments are representations, not authority.
