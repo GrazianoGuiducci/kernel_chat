@@ -244,7 +244,7 @@ def sha256_bytes(data: bytes) -> str:
 
 
 def has_discovery_route_declaration(text: str, route: str) -> bool:
-    declaration = f"- \`{route}\`"
+    declaration = f"- `{route}`"
     return any(line.strip() == declaration for line in text.splitlines())
 
 
