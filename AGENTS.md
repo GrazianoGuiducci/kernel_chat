@@ -98,11 +98,17 @@ configured receipt, confirmation stops instead of accepting the drift. If the
 receipt cannot be persisted, keep the host confirmation as an operator report
 and do not claim that `INSTANCE` records it.
 
-After operator confirmation, verify host reachability when that verification is
-selected: a new chat should be able to reach the configured user state and,
-when needed, the pertinent kernel owner. Reachability is evidence of access,
-not proof of behavioral assimilation. Never simulate or claim a host UI action
-the current tool surface cannot perform.
+Before a remote/new-chat consumer is expected to rely on that receipt, follow
+the living [receipt publication and fresh remote readback contract](INSTALL.md#receipt-publication-and-fresh-readback):
+the local confirmation must become durable in the selected remote branch and be
+freshly observed there before remote reentry. Do not treat local confirmation
+as remote availability.
+
+After that delivery/readback relation is satisfied, verify host reachability
+when that verification is selected: a new chat should be able to reach the
+configured user state and, when needed, the pertinent kernel owner. Reachability
+is evidence of access, not proof of behavioral assimilation. Never simulate or
+claim a host UI action the current tool surface cannot perform.
 
 This boundary applies when adoption or host update is actually selected; it is
 not a mandatory interruption of ordinary kernel work.
