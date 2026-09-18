@@ -1,405 +1,241 @@
 # kernel_chat
 
-**Give a cloud chat a user-owned continuity kernel: durable context, source-aware
-reentry, situated competences, and revisable learning across conversations.**
+**A user-owned semantic operating kernel for conversational AI.**
 
-`kernel_chat` extends the continuity normally available to a local application
-or agentic system into chat environments that do not own a durable workspace.
-The chat stays direct when the current conversation is sufficient. When a
-missing durable relation can change the result, the host can selectively reach
-a user-owned instance, recover only the state or owner-native source that
-matters, and continue without turning the whole repository into permanent
-prompt context.
+`kernel_chat` lets a conversational AI continue as part of an evolving
+relation with the user instead of treating every conversation as an isolated
+surface.
 
-A project is optional. The kernel instance can exist before any project is
-selected, and later projects become contexts and sources of the user-owned
-continuity rather than the identity of the kernel itself.
+It is not only a memory layer. The kernel can selectively recover the context,
+sources, competences, reasons and consequences that matter to the present
+movement; let new knowledge or a changed result alter what becomes pertinent
+next; and revise a closure introduced by its own interpretation rather than
+turning the current representation into the boundary of the object.
+
+The current **0.6.0** incarnation uses GitHub as its first persistence surface
+and ChatGPT as its first host adapter. Those mechanisms make the kernel usable
+today; they are not its identity or its future limit.
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Adapter](https://img.shields.io/badge/adapter-ChatGPT-10a37f.svg)](adapters/chatgpt/)
 
 [Source version](VERSION) · [Install / adopt](INSTALL.md) ·
 [Adoption model](docs/ADOPTION_GUIDE.md) · [User guide](docs/USER_GUIDE.md) ·
-[Architecture](docs/ARCHITECTURE.md) · [External review brief](docs/EXTERNAL_REVIEW_0_6_0.md) · [Contributing](CONTRIBUTING.md)
+[Core](kernel/KERNEL.md) · [Architecture](docs/ARCHITECTURE.md)
 
-`VERSION` identifies the current source package. Tagged releases, a configured
-user instance, an operator-confirmed installed bridge, repository reachability
-and behavioral assimilation are distinct facts.
+## What the kernel is
 
-## What changes
+The kernel is a portable operating relation through which a conversational
+system can work from the present without being confined to the present
+conversation.
 
-A long-running relation should not become a transcript that every new chat must
-reload. It needs a small current state, pointers to sources that own the truth,
-reachable ways of working, and a place for useful changes to survive.
-
-```mermaid
-flowchart LR
-    A[Current conversation] -->|sufficient| B[Work]
-    A -->|missing durable user relation| C[CURRENT + pertinent owner-native source]
-    C --> B
-    A -->|missing kernel / method relation| D[AGENTS + pertinent kernel owner]
-    D --> B
-    B -->|reusable material difference| E[Closest living owner / user-owned persistence]
+```text
+present relation
++ still-valid determinations
++ materially pertinent possibilities
++ owner-native knowledge and sources
++ competences that can participate
++ means that are actually available
++ enough consequence awareness to distinguish movements
+-> situated movement
+-> result / genuine non-collapse
+-> causal readback
+-> revisable continuation
 ```
 
-The repository is the first persistence adapter. It is not the identity of the
-kernel, and its contents are not automatic authority. Connected project/domain
-sources continue to own their truth; the user continues to own external
-effects.
+These are causal relations, not mandatory stages.
 
-## Choose the carrier that matches the environment
+If the current conversation is sufficient, the system should simply work. If a
+durable relation can materially change the result, it can be recovered
+selectively. If real use produces a reusable difference, that difference can be
+preserved at the closest truthful owner so that later work can continue
+differently.
 
-`kernel_chat` is primarily for conversational hosts that do **not** own a
-durable project workspace. If the receiving AI/coder already operates inside a
-persistent local or remote filesystem and can work directly on the project,
+A project is optional. The kernel can exist before any project is selected; a
+project can later become one context and source relation without becoming the
+identity of the kernel itself.
+
+## What changes in practice
+
+With `kernel_chat`, a conversational AI can:
+
+- **continue without replaying the whole past** — recover only the durable
+  relation that can change the work now;
+- **stay source-aware** — reach owner-native sources instead of treating copied
+  summaries as permanent truth;
+- **work with situated competences** — use, compose, deepen or form capabilities
+  when the present relation makes them pertinent;
+- **preserve reasons and consequences** — not only what was decided, but enough
+  of why and what changed for later work to re-enter coherently;
+- **learn from success, failure, correction or new possibility** — a reusable
+  difference does not require a defect first;
+- **revisit its own framing** — when the acting interpretation has narrowed the
+  object, that closure can become part of what is examined and revised;
+- **continue unfinished operational relations** when losing a cursor, receipt or
+  pending result would materially change continuation;
+- **keep cognition and effect authority distinct** — the system can understand,
+  compare and propose beyond the effects it is currently authorized to execute.
+
+The result is not a fixed workflow or a closed capability catalogue. A movement
+may preserve what already fits, compose existing capacities, deepen an owner,
+form something genuinely missing, keep an unknown open, or return
+`no_change`.
+
+## Open by design
+
+The kernel does not assume that what is currently represented is the whole
+field of what can become relevant.
+
+Its operating logic preserves two complementary relations:
+
+```text
+current representation
+!= limit of the object
+
+real invariant / observed limit
+!= permission to invent or preserve an unnecessary closure
+```
+
+The first relation keeps possibility open rather than mistaking today's schema,
+tooling, vocabulary or first interpretation for the horizon. The second lets the
+system detect when its own interpretation has changed the object it is trying to
+understand and correct that distortion while the work is still forming.
+
+The current portable owners for these relations include
+[Core](kernel/KERNEL.md), [Competence](kernel/COMPETENCE.md),
+[Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md). Their names and
+current forms are implementations of a living relation, not a claim that the
+kernel can only ever contain the capabilities already named today.
+
+## The current 0.6.0 incarnation
+
+The current package makes the portable relation usable through a small set of
+separable surfaces:
+
+```text
+portable kernel
+  kernel/
+
+user-owned continuity
+  state/CURRENT.md
+  state/SOURCES.md
+  state/INSTANCE.json
+
+host entry
+  adapters/chatgpt/
+
+optional unfinished operational continuity
+  operations/
+```
+
+GitHub is the first persistence adapter. ChatGPT is the first implemented host
+adapter. The bridge is intentionally smaller and more stable than the kernel it
+reaches.
+
+The repository, the configured bridge, the instructions installed in a host,
+repository reachability and later behavior are different facts. Keeping those
+facts distinct protects the user's continuity without making implementation
+mechanics the semantic owner of the kernel.
+
+## Start using it
+
+The simplest entry is to give the repository or release to a capable AI/coder
+and ask it to help adopt `kernel_chat` using the means it actually has.
+
+For example:
+
+```text
+Help me adopt kernel_chat in a user-owned repository and configure it for this
+chat environment. Use the capabilities you actually have, preserve the
+user-owned state, and ask me only for effects you cannot perform or authorize.
+```
+
+The receiving system should distinguish repository access, repository-write
+authority, filesystem/terminal access, executable setup mechanics and
+account-level host settings. It should perform authorized effects it can really
+perform and surface only the missing operator action.
+
+For the current ChatGPT adapter, saving Custom Instructions and controlling
+account/repository consent remain operator-owned host effects unless the host
+explicitly exposes that authority.
+
+Detailed setup, receipt publication, recovery, legacy migration and update
+mechanics live in [INSTALL.md](INSTALL.md), the
+[Adoption guide](docs/ADOPTION_GUIDE.md) and the
+[ChatGPT adapter guide](adapters/chatgpt/README.md). They are deliberately not
+the definition of the kernel.
+
+### Which carrier?
+
+`kernel_chat` is designed for turn-reactive conversational hosts that do not
+own a durable project workspace.
+
+If an AI/coder already operates inside a persistent local or remote project
+filesystem, a project-local carrier such as
 [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
-is normally the more native fit: it installs into that workspace and lets the
-project-owned kernel evolve there.
+may be the more native form. This is a receiver-fit distinction, not a boundary
+on the semantic kernel itself.
 
-A useful first distinction is:
+## What it is not
 
-```text
-durable local / remote project filesystem + coder / terminal
--> usually MAIOS Project Kernel
+`kernel_chat` is not:
 
-cloud chat + no durable workspace owned by the chat
-+ reachable user-owned repository
--> kernel_chat
-```
+- a transcript archive that must be replayed before useful work;
+- a closed taxonomy of skills or roles;
+- GitHub itself, or a repository mistaken for the kernel;
+- a background daemon, scheduler or autonomous agent runtime;
+- a project identity;
+- permission to perform external effects without the user's authority;
+- proof that a host has assimilated a method merely because files are present;
+- a claim of consciousness, AGI or autonomous self-evolution.
 
-This is product fit, not a prohibition. The actual host, tools, persistence and
-operator intent determine the useful carrier.
+The package provides observable mechanisms for continuity, competence,
+self-correction and evolution. What later behavior actually assimilates remains
+an empirical question.
 
-## Three ways to approach the package
+## Understand it more deeply
 
-### Study it
+Start with the semantic owners, then move to implementation when needed:
 
-You can inspect the public package, architecture and kernel owners without
-configuring anything. Reading the repository does not install `kernel_chat` or
-change a ChatGPT account.
+- [Core — what remains portable](kernel/KERNEL.md)
+- [Competence — how capabilities participate, form and evolve](kernel/COMPETENCE.md)
+- [Evolution — how resultants can change future operation](kernel/EVOLUTION.md)
+- [FDLA — correction of interpretation-introduced closure](kernel/FDLA.md)
+- [Architecture — how the current incarnation separates semantic owners, state,
+  bridge and host effects](docs/ARCHITECTURE.md)
+- [User guide — ordinary use and reentry](docs/USER_GUIDE.md)
 
-### Create a private user-owned instance
+`AGENTS.md` is the repository entry for a model/coder that needs to discover
+the pertinent owner while working. It is not a second copy of the kernel.
 
-When continuity state should not be public, create a **private standalone
-repository** initialized from an identified `kernel_chat` source/release. A
-public GitHub repository cannot become a private fork.
+## Maintainers, evidence and contribution
 
-### Create a public user-owned instance
+The public README describes the product. Maintenance, verification and review
+evidence remain available without occupying that first encounter:
 
-When its state is deliberately public, a normal public fork is valid.
-
-See [the adoption guide](docs/ADOPTION_GUIDE.md) for the distinction between
-package, user instance, configured bridge and installed host.
-
-## Quick start — let the host use the means it actually has
-
-An assisted installation should begin from the repository URL and the receiving
-environment, not from an assumption that the operator must manually run every
-command.
-
-A capable model/coder should first determine what it can actually do: read
-GitHub, create or write a user-owned repository, use a local or remote
-filesystem/terminal, and run the reference configurator. It should perform the
-effects it is authorized and equipped to perform, and explain only the missing
-operator-owned step.
-
-The reference implementation uses Python 3.11–3.14 and Git. Those are the
-supported mechanics for the commands below; they are not a requirement that the
-human personally type them. If no available execution surface can run the
-reference configurator or an equivalently verified transformation, setup
-remains pending rather than inventing configured state.
-
-After the user-owned repository exists, configure the ChatGPT bridge and
-continuity state **without requiring a project**:
-
-```bash
-python scripts/configure.py \
-  --github-user YOUR_GITHUB_USER \
-  --repository YOUR_REPOSITORY
-```
-
-To select an initial project/context, provide both optional arguments:
-
-```bash
-python scripts/configure.py \
-  --github-user YOUR_GITHUB_USER \
-  --repository YOUR_REPOSITORY \
-  --project-name "YOUR PROJECT" \
-  --project-source "https://github.com/YOU/YOUR_PROJECT"
-```
-
-The command prepares:
-
-```text
-state/INSTANCE.json
-  instance/package/bridge identity and source-contact observation
-
-state/CURRENT.md
-  current relation/context
-
-state/SOURCES.md
-  owner-native sources and their role
-
-adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md
-  local generated bridge; intentionally ignored by Git
-```
-
-Commit the user-owned state you intend to persist:
-
-```bash
-git add state/INSTANCE.json state/CURRENT.md state/SOURCES.md
-git commit -m "Initialize kernel_chat continuity"
-git push
-```
-
-### Operator action — activate ChatGPT
-
-Repository configuration does **not** install anything in ChatGPT. This remains
-an operator-owned boundary even when an AI performed all repository-side work.
-The assistant should provide the complete configured Custom Instructions text
-and the exact UI step instead of claiming it changed account settings.
-
-1. Open `adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`.
-2. Copy its complete text into ChatGPT Custom Instructions.
-3. Save it.
-4. Connect the same ChatGPT account to the user-owned repository with only the
-   access you intend.
-5. Confirm that the UI step was completed.
-
-When the configured bridge is shown to the operator, retain the
-`confirmation_bridge_sha256` printed by the configurator as the identity of
-that delivery. After the operator actually copied/saved **that delivered
-incarnation**, persist the operator-reported receipt:
-
-```bash
-python scripts/configure.py \
-  --github-user YOUR_GITHUB_USER \
-  --repository YOUR_REPOSITORY \
-  --confirm-host-installation \
-  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
-```
-
-This snapshots the SHA-256 digest of the **raw configured bridge bytes**, the
-bridge repository target when observable, and configured-template provenance
-when known. It does not inspect ChatGPT directly. If the configured bridge has
-changed since the delivered digest, a late confirmation is rejected; re-deliver
-the current bridge rather than transferring confirmation across incarnations.
-
-The confirmation changes `state/INSTANCE.json` locally. Publish that receipt
-and make a **fresh remote observation** before relying on a new conversation:
-
-```bash
-git add state/INSTANCE.json
-git commit -m "Record ChatGPT host installation receipt"
-git rev-parse HEAD
-git push
-git branch --show-current
-git fetch --no-tags origin <BRANCH>
-git rev-parse FETCH_HEAD
-git show FETCH_HEAD:state/INSTANCE.json
-```
-
-Record the commit from `git rev-parse HEAD`. After the fetch, `FETCH_HEAD`
-must resolve to that same commit; if it does not, the remote branch advanced and
-must be reconciled before reentry. Then verify that the fetched receipt contains
-`installed_operator_confirmed`. A remote-tracking ref remembered locally is
-not itself a new observation of the server.
-
-Until the operator confirms the copy/save, the truthful state is:
-
-```text
-repository configured / host activation pending
-```
-
-Then verify reachability in a new conversation. The host should be able to
-reach `state/CURRENT.md` when durable context matters and `AGENTS.md` plus the
-pertinent kernel owner when operating knowledge matters. Reachability is not
-proof of later assimilation.
-
-## State is separated by function
-
-```text
-INSTANCE
-  which package / bridge relation this user-owned instance currently records
-  + source-contact observations
-  + configured bridge byte identity / semantic target when known
-  + the last operator-confirmed installed bridge identity/target, when known
-
-CURRENT
-  where the user's current relation/context is now
-
-SOURCES
-  which owner-native sources can change the result
-
-operations/
-  optional unfinished causal/effect continuity
-```
-
-Within `INSTANCE`, the bridge template currently available from the package is
-kept distinct from the provenance of the preserved configured bridge. A legacy
-bridge can therefore be retained with `configured_bridge_template_version =
-unknown` instead of being retroactively relabelled as current.
-
-A standard configured bridge also embeds the user-owned repository it reaches.
-Legacy migration refuses a known repository mismatch before writes rather than
-creating an instance receipt that points somewhere different from the preserved
-bridge.
-
-The operator-confirmed installed identity is separate again. It preserves the
-confirmed raw-byte digest plus the bridge target/provenance snapshot when
-available. If the local configured bridge changes later, validation can expose
-that difference without rewriting the last host confirmation.
-
-## Package updates do not imply host updates
-
-The ChatGPT bridge has its own template version. A package update can leave the
-configured and installed bridge unchanged.
-
-```text
-package source update
-!= bridge template currently available in the package
-!= configured bridge template provenance
-!= configured bridge repository / bytes
-!= operator-confirmed installed bridge incarnation receipt
-!= actual host behavior
-```
-
-After a package update, `--refresh-instance` can refresh package identity and
-the bridge template currently available while preserving configured-bridge
-identity/provenance, source-contact and host observations. It observes local
-bridge drift but does not accept changed bytes as the new configured
-incarnation. In an existing instance, missing `CURRENT` or `SOURCES` remain
-missing during refresh; use an explicit state replacement when restoration or
-re-initialization is actually selected. Use `--preview-adapter` before any selected bridge replacement.
-`--replace-adapter` regenerates the local configured file from the current
-template and can therefore establish its byte identity, target and provenance;
-for an existing INSTANCE it does **not** migrate `instance_repository`.
-The operator must still copy/save a selected replacement in ChatGPT, then run
-the generated host-confirmation command again: `--confirm-host-installation`
-plus the delivered bridge digest required by `--expected-bridge-sha256`.
-
-User-owned `CURRENT`, `SOURCES`, competences and local learning are preserved by
-default. See [the adoption guide](docs/ADOPTION_GUIDE.md) for legacy migration
-and evidence-state details.
-
-## Feedback and source contact
-
-`state/INSTANCE.json` can remember the last observed upstream revision/time and
-whether a material delta was seen. `AGENTS.md` owns the light policy for when a
-source check is useful. No timer, daemon or automatic update is created.
-
-When real use produces informative friction, failure, unexpected success or a
-new possibility, a coder can prepare compact **Evolution Feedback**. Public
-submission always requires operator consent. Use a GitHub Issue for observed
-feedback; use a focused fork + Pull Request for a concrete public-source change.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## What the kernel carries
-
-- **Present-first work.** A bounded request remains bounded; repository reentry
-  is selective, not ceremonial.
-- **Source-aware continuity.** Current state points to owner-native sources
-  instead of copying whole histories.
-- **Situated competence.** Competences can participate, compose and develop from
-  intent, knowledge, memory, success, possibility or a gap.
-- **Situated movement.** The present field can resolve to use/preserve, compose,
-  adapt/deepen, form, defer/preserve unknown, or `no_change` without a central
-  chooser or mandatory decision pipeline.
-- **Mobile observation.** When the current frame may itself hide a material
-  relation, the kernel can keep the object fixed, move observation through a
-  different pertinent causal position, and return with a changed resultant or
-  `no_change` without imposing a mandatory multi-view pass.
-- **Claim/proof integrity.** Stronger claims such as exact identity, support,
-  immutable provenance or completion remain distinct from the evidence that
-  proves them; common-mode agreement is not automatically independent proof.
-- **Semantic comprehension.** Stored representations are understood through
-  source, function, observation frame, transformation and still-valid reasons.
-- **Semantic / operational distinction.** A relation, its persistent
-  incarnation, effect authority, actual effect and observed consequence remain
-  distinguishable.
-- **Self-observation.** FDLA can correct a closure introduced by the acting
-  interpretation without turning into a mandatory preliminary workflow.
-- **Revisable evolution.** Real use can change the closest owner and later
-  readback can revise or retire a stale incarnation.
-- **Operational continuity.** Unfinished flows, requests/results, receipts and
-  recovery can remain continuable without implying a background runtime.
-- **Exact effect boundaries.** Capability, access, ownership and authorization
-  remain distinct.
-
-The portable relations live under [`kernel/`](kernel/). The first host adapter
-lives under [`adapters/chatgpt/`](adapters/chatgpt/). User state lives under
-[`state/`](state/).
-
-## Verification
-
-Run the dependency-free structural validator directly:
-
-```bash
-python scripts/validate.py
-```
-
-For the complete regression suite, install the **test-only** CommonMark oracle
-and then run all tests:
-
-```bash
-python -m pip install -r requirements-test.txt
-python -B -m unittest discover -s tests -v
-```
-
-The runtime validator checks package structure, receipts, configured artifacts
-and explicit discovery-route contracts. Full Markdown consumer semantics are
-kept out of the runtime parser and are checked independently in the test suite
-with `markdown-it-py`. The current
-suite contains **58 regression cases**: 38 configurator cases, 17 structural /
-receipt / drift / provenance / delivery validator cases, and 3 independent
-CommonMark consumer-oracle cases. It includes a source-bound real 0.5.3 migration shape,
-legacy/custom target handling, raw-byte LF/CRLF identity, additive v1 receipt
-compatibility, refresh/confirm/replacement effect boundaries, missing-local-
-bridge handling, configured/installed semantic identity and host-adoption
-boundaries. CI exercises every declared supported line — Python **3.11, 3.12, 3.13 and 3.14** — on both Ubuntu and Windows. These checks do not simulate ChatGPT, prove connector
-availability, independently verify the UI copy/save, or establish behavioral
-assimilation.
-
-The current source keeps runtime validation dependency-free and conservative.
-Richer Markdown consumer semantics remain in the independent test oracle;
-constitutive discovery now uses explicit stable anchors rather than depending
-on automatic heading-slug identity. INSTANCE writer conflicts, bridge-delivery
-identity and fresh remote receipt readback are explicit parts of the current
-pre-release proof. Detailed review genealogy and counterexamples live in
-[the external review brief](docs/EXTERNAL_REVIEW_0_6_0.md), so the product
-narrative does not require the reader to reconstruct every audit cycle.
-
-ChatGPT is the first implemented adapter. Other cloud-chat adapters remain
-possible but are not claimed by the current source.
-
-## Development direction
-
-`kernel_chat` is a practical continuity kernel and an evolving logical harness.
-Its longer direction is an autopoietic AI architecture able to retain
-operational identity, observe its own functioning, integrate useful
-competences, and revise its organization without losing provenance,
-reversibility, or human authority over effects.
-
-That direction is not a claim that the current source is autonomous or
-generally intelligent. It describes what the present foundation is intended to
-make increasingly possible through observable use and continued development.
-
-## Documentation
-
-- [Installation](INSTALL.md)
-- [Adoption guide](docs/ADOPTION_GUIDE.md)
-- [User guide](docs/USER_GUIDE.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [External review brief — 0.6.0](docs/EXTERNAL_REVIEW_0_6_0.md)
-- [ChatGPT adapter](adapters/chatgpt/README.md)
+- [Install / adoption mechanics](INSTALL.md)
+- [Current source state](CURRENT_STATE.md)
+- [External review evidence](docs/EXTERNAL_REVIEW_0_6_0.md)
+- [Evolution / maintenance guide](docs/EVOLUTION_GUIDE.md)
 - [Contributing](CONTRIBUTING.md)
-- [Evolution Feedback template](.github/ISSUE_TEMPLATE/evolution-feedback.md)
-- [Operational continuity](operations/CURRENT.md)
-- [Lineage](docs/LINEAGE.md)
-- [Package current state](CURRENT_STATE.md)
-- [Package evolution guide](docs/EVOLUTION_GUIDE.md)
 - [Changelog](CHANGELOG.md)
+- [Lineage](docs/LINEAGE.md)
+
+The dependency-free structural validator and the full regression suite remain
+available for repository maintenance. Their results establish package mechanics
+and evidence boundaries; they do not by themselves establish host behavior or
+later assimilation.
+
+## Direction
+
+The current implementation is one observable incarnation of a broader
+direction: a conversational AI able to sustain a user-owned operating relation
+across changing conversations, sources, competences, contexts and carriers,
+while remaining able to revise the forms through which it understands and
+continues.
+
+No present repository structure, adapter, capability list or vocabulary is
+intended to define the final horizon of that direction.
 
 ## License
 
