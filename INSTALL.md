@@ -253,34 +253,46 @@ This step belongs to the operator through the ChatGPT UI.
 The configurator and repository cannot perform or independently verify step 2
 or step 3.
 
-After the operator has actually copied and saved the **current configured
-bridge**, persist the operator-reported receipt:
+When the configured bridge is delivered to the operator, retain the
+`confirmation_bridge_sha256` emitted by the configurator. After the operator
+has actually copied and saved **that delivered bridge incarnation**, persist the
+operator-reported receipt:
 
 ```bash
 python scripts/configure.py \
   --github-user YOUR_GITHUB_USER \
   --repository YOUR_REPOSITORY \
-  --confirm-host-installation
+  --confirm-host-installation \
+  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
 This snapshots the SHA-256 digest of the raw configured bridge bytes, the
 configured bridge repository target when observable and its template provenance
-when known. If the local configured bridge differs from the persisted configured
-receipt, confirmation stops rather than reconciling that drift. The command does
-not inspect the ChatGPT UI and therefore remains operator-confirmed evidence,
-not direct host proof.
+when known. If the current bridge differs from
+`DELIVERED_BRIDGE_SHA256`, confirmation stops: a delayed response about an
+older bridge cannot confirm a newer one. The command does not inspect the
+ChatGPT UI and therefore remains operator-confirmed evidence, not direct host
+proof.
 
-The confirmation receipt is still only local until it is committed and pushed:
+The confirmation receipt is still only local until it is committed, pushed and
+observed again from the selected remote branch:
 
 ```bash
 git add state/INSTANCE.json
 git commit -m "Record ChatGPT host installation receipt"
+git rev-parse HEAD
 git push
+git branch --show-current
+git fetch --no-tags origin <BRANCH>
+git rev-parse FETCH_HEAD
+git show FETCH_HEAD:state/INSTANCE.json
 ```
 
-Before starting the new chat in step 5, read the remote receipt back — for
-example with `git show @{upstream}:state/INSTANCE.json` — and verify that the
-published state records `installed_operator_confirmed`.
+Retain the commit printed before the push. The freshly fetched `FETCH_HEAD`
+must resolve to that same commit; if the remote advanced, stop and reconcile the
+new owner state instead of treating an older local tracking ref as remote
+readback. Only then verify `installed_operator_confirmed` and continue to the
+new chat.
 
 Keep the states separate:
 
