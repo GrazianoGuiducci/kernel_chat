@@ -351,7 +351,7 @@ rendered consumer HTML
 constitutive discovery
 -> active AGENTS link
 + destination
-+ exactly one rendered owner heading
++ exactly one Markdown owner heading
 + explicit simple-ASCII fragment contract
 
 test oracle identity
