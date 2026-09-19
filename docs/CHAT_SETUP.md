@@ -13,13 +13,17 @@ belong to you.
 ## 1. Make the working knowledge available
 
 Use a private project or knowledge area in your chat app, or a user-controlled
-repository that the app can actually read. Place the following source files
-from the same revision there, preserving their names:
+repository that the app can actually read. Place the following source owners from the same revision there:
 
+- [AGENTS.md](../AGENTS.md)
 - [KERNEL.md](../kernel/KERNEL.md)
 - [COMPETENCE.md](../kernel/COMPETENCE.md)
 - [EVOLUTION.md](../kernel/EVOLUTION.md)
 - [FDLA.md](../kernel/FDLA.md)
+
+Preserve the canonical paths when the receiving source surface supports them.
+If it exposes only flat filenames, keep the owner identities and render the
+backend entry with the actual references available in that surface.
 
 These files carry the methods, not just the description on the public README.
 For linked files, check access from the destination chat. When a link cannot
