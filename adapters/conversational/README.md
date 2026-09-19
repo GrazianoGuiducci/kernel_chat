@@ -36,3 +36,8 @@ mechanism changes; the kernel relation does not.
 
 `VERSION` identifies this portable instruction contract. Host-adapter
 mechanics have their own identity and must not redefine the kernel.
+
+The owner references in the canonical template use the package layout. A host
+adapter may translate those references when its knowledge surface does not
+preserve directories. Translation must preserve the same owner mapping; it does
+not rewrite or duplicate the kernel logic.
