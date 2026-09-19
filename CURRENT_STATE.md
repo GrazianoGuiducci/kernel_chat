@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: final public README: observable system-level learning + plain-language first encounter + carrier kept downstream of the phenomenon
+current_change: public README reorganized for normal users: value -> observable example -> evidence-derived Q&A -> setup -> deep study
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -43,51 +43,39 @@ instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
-The public README is now converged around the phenomenon the receiver must be
-able to see before implementation vocabulary becomes relevant.
+Fresh receiver tests showed a stable distinction between what ordinary users
+need first and what belongs to the study surface. The public README now starts
+from the result available to the user, then gives one observable before/after
+case, answers recurrent adoption questions, exposes setup, and only afterward
+routes into the internal kernel sources.
 
-Its first relation is:
-
-```text
-present work
-+ relevant owner-native sources
-+ relevant competences
--> work
--> result
--> observe what changed
--> preserve a reusable difference in the owner that should act differently
--> later non-identical work can begin differently
-```
-
-The README defines a competence in plain language, then makes system-level
-learning explicit: the user-owned operating layer changes through use; its
-persistent representation carries that change across conversations; the
-observable readback is later work being understood or handled differently.
-
-The end-to-end task A / task B example preserves this distinction without
-requiring the reader to know internal vocabulary. A deeper sentence also makes
-visible that the same mechanism can change the competence that forms the
-question or selects what becomes relevant, not only retain a task correction.
-
-Technical terms and owner-specific depth now descend into Core, Competence,
-Evolution and FDLA links rather than carrying the first encounter. The
-capability-relative receiver relation and setup follow only after the operating
-effect has formed.
-
-The current public order is therefore:
+The public progression is now:
 
 ```text
-object
--> observable operating change
--> later changed behavior
--> persistent carrier
--> receiver relation
--> owner/source depth
--> setup
+user result
+-> observable later-work difference
+-> recurrent questions answered in place
+-> source/setup path
+-> ready-made integrations
+-> deep kernel / research surface
 ```
 
-This is the current causal arrangement of the public surface, not a permanent
-page template.
+The Q&A is evidence-derived rather than objection-generating. It answers
+questions repeatedly produced by first encounters: what learning means, how the
+kernel differs from memory/instruction carriers, portability beyond ChatGPT,
+source and write requirements, selective context use, revision of stale
+competences, the competence trace, and how to observe whether later work has
+actually changed.
+
+Answers state the operating relation positively and then give the action or
+source path that matters. Conceptual terms and deeper architecture remain
+reachable in Core, Competence, Evolution, FDLA, Architecture and the SSK paper;
+normal adoption does not require reading them first.
+
+The public surface therefore no longer uses internal conceptual depth as the
+entry cost for understanding the product. It also avoids a defensive "what this
+is not" perimeter: receiver-added categories are answered only when an observed
+question makes that distinction useful.
 
 ## GitHub first-encounter metadata
 
