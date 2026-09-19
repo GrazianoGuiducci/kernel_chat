@@ -1,5 +1,10 @@
 # Install kernel_chat in ChatGPT
 
+This guide is the ChatGPT-specific installation of the provider-neutral
+[conversational instruction source](adapters/conversational/INSTRUCTIONS.template.md).
+The kernel entry is shared across conversational receivers; this guide owns the
+GitHub/configurator/Custom Instructions mechanics and receipts for ChatGPT.
+
 ## Adoption requirements and execution routes
 
 The resulting installation needs:
