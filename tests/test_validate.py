@@ -347,14 +347,36 @@ class ValidateTests(unittest.TestCase):
                 if child.type == "link_open"
             }
 
-        readme_links = links((self.root / "README.md").read_text(encoding="utf-8"))
+        readme = (self.root / "README.md").read_text(encoding="utf-8")
+        readme_links = links(readme)
         for target in (
             "docs/CHAT_SETUP.md", "docs/ADOPTION_GUIDE.md", "docs/USER_GUIDE.md",
             "kernel/KERNEL.md", "INSTALL.md", "adapters/chatgpt/README.md",
+            "adapters/conversational/INSTRUCTIONS.template.md",
             "https://github.com/GrazianoGuiducci/maios-project-kernel",
         ):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
+
+        object_position = readme.index("## What is here")
+        receiver_position = readme.index("## When this is the receiving relation")
+        setup_position = readme.index("## Set it up")
+        self.assertLess(object_position, receiver_position)
+        self.assertLess(receiver_position, setup_position)
+
+        first_encounter = readme[:setup_position]
+        self.assertIn("conversational AI environment", first_encounter)
+        self.assertIn(
+            "persistent/custom operating instructions or an equivalent entry",
+            first_encounter,
+        )
+        self.assertIn(
+            "a persistent kernel source the conversation can reach",
+            first_encounter,
+        )
+        for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
+            with self.subTest(provider_name=provider_name):
+                self.assertNotIn(provider_name, first_encounter)
 
         setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
         setup_links = links(setup)
