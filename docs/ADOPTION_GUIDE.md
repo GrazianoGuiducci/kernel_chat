@@ -23,6 +23,9 @@ do not. A project or knowledge area can be the persistent source of a
 conversation without turning that conversation into a project-native agent
 harness.
 
+When that relation is `kernel_chat`, continue with the
+[chat setup guide](CHAT_SETUP.md).
+
 ### Use the app's actual means
 
 The shared chat route uses kernel files, persistent instructions and a place
