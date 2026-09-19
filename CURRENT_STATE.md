@@ -112,33 +112,36 @@ conversation in an already-incarnated scope, which does not reload the whole
 kernel merely because a new chat began. Provider-specific mechanics appear only
 after the portable relation has formed.
 
-## Remaining public-surface reconciliation
+## GitHub first-encounter metadata
 
-The repository content is reconciled at the current source result. GitHub's
-repository-level About metadata remains a separate public surface and is not
-writable through the current connected repository interface.
+The repository-level GitHub About surface has been reconciled and re-read after
+the README rewrite.
 
-Target description:
+Current public description:
 
 ```text
 A user-owned semantic operating kernel for conversational AI, where situated competences learn from use and change how later work is carried out.
 ```
 
-Target topics:
+Current public topics:
 
 ```text
-conversational-ai
 ai-architecture
-situated-competence
-competence-evolution
 causal-learning
+competence-evolution
+context-engineering
+context-management
+conversational-ai
+human-ai-collaboration
+llm
+semantic-kernel
+situated-competence
 ```
 
-Replace the current About description/topics rather than adding these to the
-existing AGI/autopoiesis/persistence/provider framing. The linked homepage is
-also part of the first-encounter field; its current public bytes were not
-reachable from this environment and are therefore not treated as reconciled
-evidence here.
+The previous AGI/autopoiesis/provider/persistent-awareness framing is no longer
+present in the GitHub About topics. The repository homepage field is currently
+empty, so the unreconciled historical `maios.it/conversation-kernel.html`
+surface does not participate in this first-encounter path.
 
 ## Preserved mechanics and knowledge
 
