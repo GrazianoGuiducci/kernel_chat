@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-09-19
 
+- **Portable competence trace and adoption simplification:** Core now defines a
+  response-closing competence trace; conversational instructions `2.1.0`
+  activate it without turning the prior trace into a mandatory next stack.
+  README ordering is object -> receiver relation -> operating dynamics ->
+  source map -> setup. CHAT_SETUP branches on the receiver's actual source
+  route instead of copying kernel files by default. AGENTS routes ChatGPT
+  configuration/receipt mechanics to INSTALL and the ChatGPT adapter, and
+  package proof mechanics to the evolution guide. The generic adoption guide
+  now states portable effects instead of duplicating one host's CLI procedure.
 - **Object-first public entry / receiver recognition:** the README now presents
   the kernel's constitutive operating relation and owners before benefits,
   provider examples or evaluative framing. Receiver fit is expressed through
@@ -24,8 +33,10 @@
   path is retained only as a compatibility pointer.
 - Validator and tests distinguish portable instruction identity from ChatGPT
   adapter mechanics and exercise the new rendered source route.
-- No portable kernel-body or INSTANCE-schema change is introduced by this
-  carrier reconciliation.
+- The later 2026-09-19 portability pass changes the portable Core only by
+  adding the competence-trace response closure and neutralizing a
+  ChatGPT/GitHub-specific persistence sentence. The INSTANCE schema remains
+  unchanged.
 
 ## 0.6.0 — 2026-09-18
 
