@@ -59,17 +59,20 @@ For the Git/Python ChatGPT helper, use the configuration and receipt contract in
 
 ## Host-specific setup
 
-The portable entry and operating relation remain provider-neutral. When setup,
-update, receipt or account mechanics are selected, route to the adapter that
-owns that host.
+The portable entry and operating relation remain provider-neutral. Use the
+receiver's native persistent-instruction and source mechanisms directly when
+they already satisfy the adoption relation.
+
+When a host-specific adapter exists and its packaged setup, translation,
+receipt or recovery mechanics are useful, route those mechanics to that
+adapter.
 
 For the current ChatGPT implementation use [INSTALL.md](INSTALL.md) and the
 [ChatGPT adapter guide](adapters/chatgpt/README.md). Their repository, digest,
-receipt and account-setting mechanics do not become general kernel rules.
+receipt and account-setting mechanics remain specific to that integration.
 
-Other conversational receivers use their actual persistent-instruction and
-source mechanisms. Do not import ChatGPT-specific receipts or CLI transitions
-into those routes.
+Other conversational receivers preserve the same kernel owners through their
+actual persistent-instruction and source mechanisms.
 
 ## Instance, state and sources
 
