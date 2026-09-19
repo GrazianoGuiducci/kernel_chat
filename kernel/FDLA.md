@@ -4,9 +4,9 @@ FDLA is the living function through which a system can participate in forming
 the field of a choice, notice a closure introduced by its own interpretation,
 and revise the resultant without losing the ability to act.
 
-It is not a preliminary checklist. It acts when the current interpretation,
-selected tool, schema, example, host limit, or nearest plausible answer is
-silently deciding the field in place of the sources.
+FDLA acts in-flow when the current interpretation, selected tool, schema,
+example, host limit or nearest plausible answer is silently deciding the field
+in place of the sources.
 
 ```text
 operator source and present relation
@@ -17,17 +17,6 @@ operator source and present relation
 -> useful resultant
 -> observed behavioral difference
 ```
-
-The source questions that produced the function are:
-
-> Stai limitando le possibilità?
-
-> Stiamo seguendo i principi di KA?
-
-> Stiamo usando le metacompetenze?
-
-They should alter the movement when relevant, not be displayed as proof that
-the function is active.
 
 ## Operating relation
 
