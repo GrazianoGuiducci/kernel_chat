@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Kernel relation / carrier distinction:** the public README now states that
+  files, state objects and instructions are persistent incarnations of the
+  operating relation rather than the kernel reduced to storage. Its causal
+  example continues into a materially different later task, where changed
+  handling becomes the observable readback that the competence participated.
+  This addresses the first fresh-receiver compression of the new README into a
+  memory/file-editing pattern without adding defensive comparison or benchmark
+  framing.
 - **Projective-regressive first encounter:** README now exposes the operating
   transformation before receiver/persistence mechanics, including one compact
   causal example showing how reusable learning changes a later non-identical
