@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: public README reorganized for normal users: value -> observable example -> evidence-derived Q&A -> setup -> deep study
+current_change: public README adds mixed human/AI reading path and doubt-driven routes to optional deeper sources
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -71,6 +71,18 @@ Answers state the operating relation positively and then give the action or
 source path that matters. Conceptual terms and deeper architecture remain
 reachable in Core, Competence, Evolution, FDLA, Architecture and the SSK paper;
 normal adoption does not require reading them first.
+
+The README now also makes the mixed reading role explicit: it is a shared entry
+surface for people and AI assistants. A normal user can stop at the Q&A and
+start path; an AI assistant can continue through the linked owners when deeper
+knowledge becomes relevant. A dedicated reading path at the footer routes
+technical/conceptual study into the kernel owners and SSK paper without making
+that depth a prerequisite for use.
+
+Recurring doubts can become focus attractors: resolve the practical uncertainty,
+then expose the deeper source for readers or systems that want to continue.
+This uses curiosity as a path to discovery instead of expanding the first
+surface with all conceptual detail.
 
 The public surface therefore no longer uses internal conceptual depth as the
 entry cost for understanding the product. It also avoids a defensive "what this
