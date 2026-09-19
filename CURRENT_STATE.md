@@ -4,8 +4,8 @@ Updated: 2026-09-19
 
 ```text
 source_version: 0.6.0
-current_work: portable conversational kernel entry
-current_change: provider-neutral backend instruction source + ChatGPT host projection
+current_work: public receiver recognition from the kernel's actual relation
+current_change: object-first README + capability-relative carrier recognition + entry/boot convergence
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -38,21 +38,26 @@ their own persistent/custom instruction and source mechanisms.
 
 ## Current communication correction
 
-The operator supplied a Claude readback in which the prior README was reduced
-to memory/context, its unsolicited denials became prominent, and its commands
-to an evaluating LLM were treated as hidden instructions. The response is one
-reported encounter, not a benchmark across models.
+The current public entry now begins from the object itself rather than from
+benefit framing, provider examples or an external evaluation frame. It exposes
+the operating relation, its owners and the receiver conditions from which an AI
+or operator can recognize whether the kernel belongs in the present environment.
 
-The public entry now explains the kernel's practical and generative value,
-uses a concrete example and leads directly to setup. Generalized denials,
-review genealogy and model-directed evaluation instructions no longer shape
-the README. AGENTS and the adoption/user guides carry the corresponding route.
+The reusable editorial relation is:
 
-The current source change moves the conversational backend entry out of the
-ChatGPT-specific adapter. It changes the instruction template consumed by the
-ChatGPT configurator, its validator/parser and discriminating tests, while
-preserving the portable kernel bodies and `kernel_chat.instance.v1` state
-schema. Legacy configured ChatGPT bridges remain recognizable.
+```text
+make the object and its constitutive relations present
+-> let the receiver's own context meet that object
+-> pertinence / usefulness / non-usefulness emerges from the relation
+```
+
+This does not remove material setup conditions. It places them where they change
+the receiving relation or an actual effect.
+
+The conversational backend entry remains provider-neutral. AGENTS now
+distinguishes a new kernel instance, which must enter through the installed
+entry, from a later conversation in an already-incarnated scope, which does not
+reload the whole kernel merely because a new chat began.
 
 ## Preserved mechanics and knowledge
 
@@ -72,10 +77,11 @@ and optional unfinished operations keep their distinct purposes.
 
 ## Evidence and released identity
 
-The previous source checkpoint carried 59 tests. This change adds direct
-coverage for the portable conversational instruction source and its ChatGPT
-rendering. CI remains configured for Python 3.11–3.14 on Ubuntu and Windows;
-read the actual run on the resulting commit before attributing proof to it.
+The portable carrier checkpoint at
+`0742d6022c7cfa6e78917ae522d479747e2a8a1e` has CI
+`35435223430`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
+Ubuntu/Windows. The present public-entry correction is a new resultant and
+requires its own CI before that proof can be transferred.
 
 The material review result belongs to `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`.
 Release `v0.6.0` remains on `d2c94ca4e4523f1f7a343601d6beec1e84031fac` with
