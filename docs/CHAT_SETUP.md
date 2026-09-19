@@ -31,35 +31,45 @@ original sources and reusable methods. The existing
 [source template](../templates/state/SOURCES.md) provide starting forms; replace
 placeholders with your own situation. An initial project is optional.
 
-## 2. Save a short entry in the app's instructions
+## 2. Install the conversational entry
 
-The assistant prepares the complete text with the actual source location. For
-a project containing the files above, this is a starting entry:
+Use the canonical provider-neutral instruction source:
+
+[Conversational instructions](../adapters/conversational/INSTRUCTIONS.template.md)
+
+Replace `{{KERNEL_SOURCE}}` with the source relation the receiving app can
+actually reach.
+
+Examples:
 
 ```text
-Use the kernel_chat working knowledge supplied in this project: KERNEL.md,
-COMPETENCE.md, EVOLUTION.md and FDLA.md. Let its principles and relevant methods
-shape how we understand and carry out the work.
+github:YOUR_GITHUB_USER/YOUR_REPOSITORY
 
-CURRENT.md holds the context we are continuing. SOURCES.md points to original
-sources and reusable methods. Reach the knowledge needed for the present work;
-keep valid decisions and their reasons connected to what has changed.
+project knowledge in this project
 
-Use, combine, develop or form useful competences as the work calls for them.
-A result may also teach us how to improve those methods. Preserve reusable
-learning in the method that will use it, with a short pointer in current state
-when needed. Keep unexpected relevant possibilities open.
-
-Use the tools and permissions actually available here. Save selected changes
-when writing is available; otherwise give me the complete updated file to save.
-Say which changes were saved and which still need my action. Work directly
-when the present context is sufficient.
+a receiver-native persistent source that contains the same kernel paths
 ```
 
-For repository access, replace the project-file location with the actual
-user-owned repository and paths. Preserve existing useful instructions when
-combining the entry with them. Avoid copying private credentials into either
-instructions or knowledge files.
+The installed entry points to the kernel owners:
+
+```text
+AGENTS.md
+kernel/KERNEL.md
+kernel/COMPETENCE.md
+kernel/FDLA.md
+kernel/EVOLUTION.md
+state/CURRENT.md
+state/SOURCES.md
+```
+
+Do not rewrite those methods into provider-specific instructions. The backend
+instructions establish the entry; the repository or supplied knowledge carries
+the kernel.
+
+For ChatGPT, the existing configurator renders this source automatically with
+the selected GitHub instance and records the configured/installed bridge
+identity. Other conversational apps install the same semantic entry through
+their own persistent/custom instruction surface.
 
 ## 3. Begin a real task
 
@@ -73,9 +83,10 @@ The [User guide](USER_GUIDE.md) explains this continuing work.
 
 ## Claude Projects: file-based setup
 
-In Claude's conversational app, create or open a project. Add the four kernel
-files and your context files to **project knowledge**. Save the entry above
-under **project instructions**, then start a chat inside that project.
+In Claude's conversational app, create or open a project. Add the kernel files
+and your context files to **project knowledge**. Render the same conversational
+instruction template with `KERNEL_SOURCE` identifying that project knowledge,
+save it under **project instructions**, then start a chat inside that project.
 
 Project knowledge and project instructions are the shared sources for chats in
 that project. When the assistant provides an improved method or updated context,
