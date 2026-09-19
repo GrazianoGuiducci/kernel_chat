@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public product and receiver-relative adoption convergence
-current_change: portable adoption clarified: host-specific adapter is optional when persistent instruction + persistent source already exist
+current_change: public-source hygiene reconciled: private topology removed, adapter optionality preserved, evidence scoped without future capability ceilings
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -86,6 +86,17 @@ README, conversational-entry guidance, CHAT_SETUP, ADOPTION_GUIDE, AGENTS and
 Architecture all preserve the same result. A host-specific adapter is optional;
 when present, it packages receiver-specific setup, translation, receipt or
 recovery mechanics.
+
+A public-source hygiene pass also removed private source topology from the
+portable entry, Competence, FDLA, Lineage and package-evolution narrative.
+Historical review evidence now states only the scope of what that review
+observed: it neither establishes nor rules out capabilities outside its evidence
+surface. Core and host-adapter documentation describe runtime means as
+receiver-relative rather than as a permanent capability ceiling.
+
+Exact current-effect boundaries remain explicit where they are evidence-bearing
+(for example read != write, configured != installed, operator report != direct
+host inspection).
 
 ## GitHub first-encounter metadata
 
