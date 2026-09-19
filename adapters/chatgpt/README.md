@@ -8,10 +8,10 @@ The semantic instruction source is:
 `../conversational/INSTRUCTIONS.template.md`
 
 It is designed to remain usable by conversational receivers other than ChatGPT.
-This adapter owns only ChatGPT configuration, delivery and receipt mechanics.
-
-It does not simulate an agent runtime, filesystem, hook, background process,
-scheduler or autonomous continuation.
+This adapter owns ChatGPT configuration, delivery and receipt mechanics.
+Runtime facilities remain those actually exposed by the current host; when a
+capability is available and authorized it can participate without becoming part
+of the adapter's semantic contract.
 
 ## Bridge contract
 
