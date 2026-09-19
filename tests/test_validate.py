@@ -231,8 +231,8 @@ class ValidateTests(unittest.TestCase):
         adapter = self.root / "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md"
         text = adapter.read_text(encoding="utf-8")
         text = text.replace(
-            "User-owned kernel instance: example-user/example-kernel.",
-            "User-owned kernel instance: other-user/other-kernel.",
+            "Kernel source: github:example-user/example-kernel.",
+            "Kernel source: github:other-user/other-kernel.",
         )
         adapter.write_text(text, encoding="utf-8")
 
