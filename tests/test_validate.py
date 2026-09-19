@@ -404,7 +404,11 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker, verification_surface)
 
+        conversational = (self.root / "adapters/conversational/README.md").read_text(encoding="utf-8")
+        self.assertIn("it is\nnot required when the host already exposes", conversational)
+
         setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
+        self.assertIn("A host-specific adapter is optional.", setup)
         setup_links = links(setup)
         for target in (
             "../AGENTS.md", "../kernel/KERNEL.md", "../kernel/COMPETENCE.md",
@@ -419,9 +423,12 @@ class ValidateTests(unittest.TestCase):
 
         agents_links = links((self.root / "AGENTS.md").read_text(encoding="utf-8"))
         self.assertIn("docs/CHAT_SETUP.md", agents_links)
-        adoption_links = links(
-            (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
+        adoption_text = (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "does not require a host-specific adapter",
+            adoption_text,
         )
+        adoption_links = links(adoption_text)
         self.assertIn("CHAT_SETUP.md", adoption_links)
         # Text examples or comments are not discoverable navigation.
         self.assertNotIn("docs/CHAT_SETUP.md", links(
