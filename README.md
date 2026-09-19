@@ -192,6 +192,46 @@ The deeper kernel documents explain how source distinction, competence
 formation, evolution and in-flow correction work for people who want to study
 or extend the system.
 
+### Who is this README for?
+
+It is a shared entry surface for **people and AI assistants**.
+
+A person can use the Q&A and the start path to understand what changes and what
+to do next. In assisted adoption, an AI can use the same README to follow the
+kernel owners, inspect the relevant source and carry out the parts of setup or
+use that its environment actually supports.
+
+### Why do some terms sound more abstract than the setup itself?
+
+The public surface has two depths.
+
+The first depth is operational: what changes for the user, what the host needs,
+how learning is carried forward and how to start.
+
+The second depth names the deeper relations that make the kernel portable and
+evolvable. Those terms live in the kernel sources and in the
+[System Semantic Kernel working paper](https://github.com/GrazianoGuiducci/maios-ssk-paper).
+
+Normal use can begin from the operational depth. The deeper language is there
+for people or systems that want to study, extend or reason about the
+architecture itself.
+
+### What is the fastest way to understand how it works?
+
+Follow the smallest live path:
+
+```text
+README
+-> AGENTS.md
+-> Core / Competence only where the question makes them relevant
+-> one real task
+-> preserve one reusable difference
+-> observe a later, different task
+```
+
+Reading the sources shows how the relations are formed. Using the kernel on
+real work shows whether they actually change later behavior.
+
 ## Start using it
 
 ### 1. Choose the persistent source already natural to your environment
@@ -270,6 +310,18 @@ documents are the study and extension surface:
 
 For the broader research corpus and theoretical development, see the
 [System Semantic Kernel working paper](https://github.com/GrazianoGuiducci/maios-ssk-paper).
+
+## Reading path
+
+This README is the shared entry surface.
+
+For ordinary use, **Questions and answers** plus **Start using it** are enough
+to begin. An AI assistant can continue through the linked owners when deeper
+knowledge becomes relevant.
+
+For technical or conceptual study, continue through **Go deeper** and the
+System Semantic Kernel working paper. That depth explains the architecture and
+research language; it is not the entry cost for using the kernel.
 
 ## Source
 
