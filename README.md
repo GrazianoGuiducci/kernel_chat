@@ -1,120 +1,120 @@
 # kernel_chat
 
-**An evolving way of working for conversational AI.**
+`kernel_chat` is a user-owned semantic operating kernel for conversational AI.
 
-`kernel_chat` is a user-owned semantic kernel: working knowledge that helps an
-AI understand your situation, develop useful methods, connect skills and
-sources, and learn from what happens. You keep that knowledge so it can grow
-with your work and remain available across conversations and models.
-
-A useful result can improve both what you are doing and how the AI approaches
-what comes next. A discovery can become a method; methods can combine into a
-new capability; experience can improve the way those capabilities are formed.
-This capacity to develop its own working organization is the kernel's
-autopoietic dimension.
-
-## Choose your environment
-
-| Where you work | Kernel to use |
-| --- | --- |
-| A conversational AI app, such as ChatGPT, Claude or another chat | **kernel_chat** — [set it up in your chat](docs/CHAT_SETUP.md). |
-| An agent harness, agentic app or IDE, such as Codex, Claude Code or OpenCode | **[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)** — install it in the agent's workspace. |
-
-Choose by how the application works, rather than by the model's name. Claude
-chat and Claude Code, for example, use different forms of the kernel. A project
-space inside a chat app can hold `kernel_chat` knowledge and instructions.
-
-## What you gain
-
-### Working knowledge that develops with you
-
-A competence is knowledge the AI can use: what matters in a field, why a method
-works, how to adapt it, and what experience has taught. The kernel helps the AI
-find, combine, deepen and form competences as the situation develops. Research,
-writing, planning, design and everyday work are possible starting points; the
-methods and combinations can extend beyond these examples.
-
-### More continuity, less reconstruction
-
-Your decisions, their reasons, relevant sources and unfinished work can remain
-available together. A later conversation can recover the part that matters and
-continue from the situation as it is now. You retain the knowledge in sources
-you can inspect, edit and carry into another setting.
-
-### Learning that changes the next attempt
-
-Imagine researching a topic with your AI. Together you discover that a familiar
-way of comparing sources misses an important distinction. You preserve the
-improved method and its reason. On a different question, the AI can reach that
-method, adapt it and develop it further. The learning can also change how the
-AI builds future research methods.
-
-The same relation applies to a writing practice, a design method, a decision
-process or a capability that emerges during work.
-
-### Room for the unexpected
-
-A new source, a useful result or a different perspective can change the question
-and the methods that fit it. The kernel carries reasons and ways of learning,
-rather than prescribing every future answer. It helps the AI notice when its
-first interpretation has made the problem smaller than it really is.
-
-## Start using it
-
-Give this repository link to your AI and ask:
+It gives a conversational AI a persistent operating source: kernel logic,
+competences and metacompetences, current context, source relations and the
+learning that changes how later work is understood and carried out.
 
 ```text
-Set up kernel_chat for this chat, using the instructions and knowledge storage
-available here. Keep my existing work. Help me complete the setup and then
-use it with me on [what I want to work on].
+persistent/custom instructions or equivalent entry
++ a kernel source the conversation can reach
++ current context and owner-native sources
++ competences and metacompetences
+-> the conversational AI enters kernel_chat
+-> pertinent competences participate in the work
+-> reusable learning returns to the owner that must act differently later
 ```
 
-[**Chat setup**](docs/CHAT_SETUP.md) provides a shared route through project
-instructions and knowledge files, a concrete Claude Projects example, and the
-existing ChatGPT configuration helper. It also explains how to keep useful
-changes when the app can read files but cannot save them directly.
+The model or provider is not the kernel. The repository, project knowledge,
+connector, filesystem or other persistence mechanism is not the kernel either.
+They are means through which the same semantic operating relation can be
+incarnated.
 
-The installation work follows the tools available in your app. The assistant
-handles the steps it can perform and gives you the exact text or file for any
-step that needs your action. Private work stays in a private destination you
-choose.
+## What is here
 
-After setup, bring your real work:
+[AGENTS.md](AGENTS.md) is the entry and routing surface.
+
+[Core](kernel/KERNEL.md) carries the operating relation: present context,
+source distinction, situated movement, selective reentry and observation.
+
+[Competence](kernel/COMPETENCE.md) carries how usable knowledge participates,
+combines, deepens, forms and learns.
+
+[FDLA](kernel/FDLA.md) corrects an interpretation when the acting system has
+narrowed or substituted the relation it is trying to understand.
+
+[Evolution](kernel/EVOLUTION.md) returns material consequences and reusable
+learning to the owner that should behave differently next time.
+
+`state/CURRENT.md` carries the current relation needed for continuation.
+`state/SOURCES.md` points to owner-native sources and reusable knowledge.
+
+The persistent conversational entry is
+[adapters/conversational/INSTRUCTIONS.template.md](adapters/conversational/INSTRUCTIONS.template.md).
+It points the receiving chat into these owners without copying the whole kernel
+into provider settings.
+
+## When this is the receiving relation
 
 ```text
-Let's work on [topic]. Use the relevant sources and methods. When we learn
-something reusable, help me preserve it where our next conversation can use it.
+conversational AI environment
++ persistent/custom operating instructions or an equivalent entry
++ a persistent kernel source the conversation can reach
+-> kernel_chat can be incarnated in that environment
 ```
 
-The [User guide](docs/USER_GUIDE.md) covers everyday use, continuing a topic,
-forming competences and keeping what you learn. You can begin with an idea,
-a question, an ongoing activity or a project.
+The environment supplies its own means. It may expose project knowledge,
+repository access, files, connectors or another persistent source. The source
+references can be translated to that environment while preserving the same
+owners and relations.
 
-## How it fits together
+When the AI instead operates as an agent inside a durable project
+workspace/filesystem that it owns as its continuing work surface, the
+project-native carrier is
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel).
 
-The [Core](kernel/KERNEL.md) carries the operating principles. The
-[competence method](kernel/COMPETENCE.md) develops ways of working;
-[evolution](kernel/EVOLUTION.md) returns useful experience to those methods;
-[self-correction](kernel/FDLA.md) helps revise an interpretation when it
-obscures the actual situation.
+## What happens in use
 
-The model puts that knowledge to work with the sources, tools and instructions
-available in its application. Saved files and the entry instructions make the
-knowledge reachable again. The same core can therefore be used through
-different conversational environments.
+Work begins from the present relation rather than from a fixed workflow.
 
-## Guides and source
+```text
+present relation
++ still-valid determinations
++ pertinent owner-native sources
++ competences that can materially change the movement
++ actual means and authority
+-> situated movement
+-> resultant
+-> causal readback and reusable learning
+```
 
-[Chat setup](docs/CHAT_SETUP.md) ·
-[Adoption model](docs/ADOPTION_GUIDE.md) ·
-[User guide](docs/USER_GUIDE.md) ·
-[ChatGPT helper](INSTALL.md) ·
-[ChatGPT adapter guide](adapters/chatgpt/README.md) ·
-[Architecture](docs/ARCHITECTURE.md)
+A competence can make another competence pertinent. Several competences can
+participate together without becoming one controller. A result can improve the
+current work, change an existing competence, form a capability that did not
+previously exist, or produce `no_change`.
 
-For source work: [AGENTS.md](AGENTS.md), [Contributing](CONTRIBUTING.md),
-[Changelog](CHANGELOG.md) and [Current source state](CURRENT_STATE.md).
+Continuity is part of this relation but is not its whole identity. Decisions,
+reasons, sources, unfinished relations and learned methods can remain reachable
+across conversations without forcing every previous representation back into
+the present.
 
-[Source version](VERSION) · [Apache License 2.0](LICENSE)
+## Set it up
+
+The [chat setup guide](docs/CHAT_SETUP.md) maps the same conversational entry
+onto the instruction and source mechanisms that actually exist in the receiving
+environment.
+
+For the current ChatGPT repository implementation, [INSTALL.md](INSTALL.md)
+and the [ChatGPT adapter](adapters/chatgpt/README.md) provide the
+Git/Python/configuration and host-receipt mechanics. Those mechanics are one
+host incarnation, not the identity of `kernel_chat`.
+
+After installation, bring the actual work. The kernel reaches additional
+knowledge only when it can change the present movement, and reusable learning
+returns to the competence or owner that should use it later.
+
+The [User guide](docs/USER_GUIDE.md) covers continuation, sources, competences
+and evolution in ordinary use. The [Adoption guide](docs/ADOPTION_GUIDE.md)
+covers the receiving relation and setup effects.
+
+## Source
+
+[Architecture](docs/ARCHITECTURE.md) ·
+[Current source state](CURRENT_STATE.md) ·
+[Contributing](CONTRIBUTING.md) ·
+[Changelog](CHANGELOG.md) ·
+[Source version](VERSION) ·
+[Apache License 2.0](LICENSE)
 
 Copyright 2026 Graziano Guiducci.
