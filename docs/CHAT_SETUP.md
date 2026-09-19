@@ -91,8 +91,13 @@ SOURCES
 Do not rewrite the kernel into provider-specific instructions. Translate source
 references only as needed to reach the same owners.
 
-Host-specific installation mechanics belong to the corresponding adapter. For
-the current ChatGPT repository helper use [INSTALL.md](../INSTALL.md) and the
+A host-specific adapter is optional. If the receiver already exposes a
+persistent instruction surface and a persistent source route, install this
+portable entry directly through those native mechanisms.
+
+When host-specific setup, translation, receipts or recovery mechanics need a
+ready-made implementation, use the corresponding adapter. For the current
+ChatGPT repository helper use [INSTALL.md](../INSTALL.md) and the
 [ChatGPT adapter guide](../adapters/chatgpt/README.md).
 
 ## 3. Begin real work
