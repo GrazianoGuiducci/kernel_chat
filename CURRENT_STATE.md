@@ -4,7 +4,7 @@ Updated: 2026-09-19
 
 ```text
 source_version: 0.6.0
-current_work: public first-encounter and receiver-relative adoption convergence
+current_work: public product and receiver-relative adoption convergence
 current_change: portable adoption clarified: host-specific adapter is optional when persistent instruction + persistent source already exist
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
@@ -74,20 +74,18 @@ The README remains a shared entry for people and AI assistants: humans can
 inspect the capability map and start path; AI assistants can follow the same
 owner links when deeper knowledge becomes relevant.
 
-A fresh receiver attempt exposed one material adoption ambiguity: it treated the
-absence of a dedicated host adapter as evidence that only a reduced/manual use
-was possible. The portable contract already allowed direct adoption through any
-receiver that provides both:
+Portable adoption is defined by the receiver relation:
 
 ```text
 persistent/custom instruction entry
 + persistent source reachable by the conversation
+-> kernel_chat adoption
 ```
 
-README, conversational-entry guidance, CHAT_SETUP and ADOPTION_GUIDE now state
-explicitly that a host-specific adapter is optional in that relation. An adapter
-packages host-specific setup, translation, receipts or recovery mechanics; it
-does not determine whether the portable kernel relation can be adopted.
+README, conversational-entry guidance, CHAT_SETUP, ADOPTION_GUIDE, AGENTS and
+Architecture all preserve the same result. A host-specific adapter is optional;
+when present, it packages receiver-specific setup, translation, receipt or
+recovery mechanics.
 
 ## GitHub first-encounter metadata
 
