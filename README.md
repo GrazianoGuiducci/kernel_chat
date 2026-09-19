@@ -2,11 +2,11 @@
 
 `kernel_chat` is a user-owned semantic operating kernel for conversational AI.
 
-It gives a conversation a persistent, user-controlled operating layer made of
-sources, competences, current context and reusable learning. That layer can
-change through real work, so a later conversation can begin from what the
-system has learned instead of reconstructing the same understanding from
-scratch.
+It gives a conversation a user-owned operating layer made of sources,
+competences, current context and reusable learning. That layer can change
+through real work, so later work can begin from what the system has learned
+instead of reconstructing the same understanding from scratch. A persistent
+source keeps that changed layer reachable across conversations.
 
 A **competence** is reusable operating knowledge: a way of understanding,
 deciding or doing something that becomes relevant when the present work calls
@@ -20,14 +20,13 @@ The kernel keeps the present work, its sources and the competences acting on it
 in one causal relation:
 
 ```text
-present relation
-+ relevant owner-native sources
+current work
++ relevant sources
 + relevant competences
--> work
--> result
+-> useful result
 -> observe what changed
--> preserve the reusable difference in the owner that should act differently
--> later non-identical work can begin differently
+-> preserve the reusable difference where it should act again
+-> later, different work can begin differently
 ```
 
 Learning in `kernel_chat` happens at the **system level**: the user-owned
@@ -66,19 +65,19 @@ competence owners that materially formed the response and any possibilities
 that materially emerged. The trace makes recent competence participation
 visible to the next conversational turn without turning it into a fixed stack.
 
-## When this is the receiving relation
+## Where it can operate
 
 ```text
 conversational AI environment
 + persistent/custom operating instructions or an equivalent entry
 + a persistent kernel source the conversation can reach
--> kernel_chat can be incarnated in that environment
+-> kernel_chat can operate in that environment
 ```
 
 The receiving environment supplies its own means. A persistent source may be a
 repository, a project or knowledge surface, files, or another durable source
-the conversation can reach. The kernel supplies the operating relation and the
-owner map; the host supplies the mechanism through which those owners become
+the conversation can reach. The kernel keeps the operating knowledge and its
+sources connected; the host supplies the mechanism through which they become
 reachable.
 
 When the AI instead operates as an agent inside a durable project
@@ -122,7 +121,7 @@ reachable persistent source already exists
 -> use it in place
 
 project / knowledge surface is the persistent source
--> place the constitutive owners there and preserve their mapping
+-> place the kernel sources there and preserve their relations
 
 attachments only
 -> use the kernel in the current conversation; persistence is not established yet
