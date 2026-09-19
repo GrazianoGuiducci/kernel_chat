@@ -16,8 +16,10 @@ user-owned instance
 conversational entry
   provider-neutral instruction template
   -> kernel source identity + constitutive owner paths
+  -> direct installation through receiver-native persistent mechanisms
+  -> optional host adapter when packaged receiver-specific mechanics are useful
 
-host adapter
+host adapter, when present
   receiver-specific rendering / delivery mechanics
   -> configured local projection with its own provenance / source target
   -> operator-confirmed installed incarnation receipt when that host supports it
@@ -257,8 +259,8 @@ workflow before ordinary work.
 
 When losing a cursor, pending relation, result or effect receipt would change
 continuation, the optional [`operations/`](../operations/) organ preserves the
-smallest causal state needed to resume. It does not create a worker, scheduler,
-daemon or permission to repeat a historical effect.
+smallest causal state needed to resume. Execution facilities remain those
+actually exposed and authorized by the receiving environment.
 
 ## Effects
 
@@ -272,17 +274,22 @@ target ownership
 current authorization
 ```
 
-An adapter can help distinguish them. It cannot manufacture any of them.
+An adapter can represent these distinctions; actual capability, access,
+ownership and authorization come from the receiving environment and operator
+relation.
 
 ## Extension
 
-A new provider adapter should define:
+A receiver can adopt the portable conversational entry directly through its
+native persistent-instruction and source mechanisms.
+
+When a host-specific adapter is useful, it should define:
 
 - the host's real persistent-instruction surface;
 - how the host reaches user-owned state;
 - what it can read or write in the current interaction;
 - how a user verifies reentry;
-- which local mechanisms must not be simulated.
+- which receiver-specific mechanics it packages.
 
-The core may evolve when another host exposes a relation that the current form
-cannot represent without loss.
+The core remains open to evolution when another host exposes a relation that
+the current form cannot yet represent without loss.
