@@ -1,60 +1,82 @@
-# Set up kernel_chat in a conversational app
+# Set up kernel_chat in a conversational environment
 
-Use this guide for a chat app. For an agent harness, agentic app or IDE, use
-[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
-in the agent's workspace. A project area in a conversational app is still a
-chat setting.
+A persistent `kernel_chat` adoption needs two things:
 
-Setup connects the kernel's working knowledge, the app's instructions and a
-place to keep your evolving context. The assistant uses the tools already
-available; you complete account settings and file placement when those actions
-belong to you.
+```text
+persistent/custom operating instructions or equivalent entry
++ a persistent kernel source the conversation can reach
+```
 
-## 1. Make the working knowledge available
+Current context and reusable learning then live in that reachable source.
 
-Use a private project or knowledge area in your chat app, or a user-controlled
-repository that the app can actually read. Place the following source owners from the same revision there:
+If the receiving AI instead owns a durable project workspace/filesystem as its
+continuing work surface, use
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel).
+
+## 1. Choose the source route that actually exists
+
+### A. A persistent source is already reachable
+
+If the conversation can already read the user-controlled repository, knowledge
+space, filesystem, connector or equivalent source that contains the kernel,
+use it in place.
+
+Do not copy the kernel merely because another setup example used files.
+
+Keep these owner paths reachable from one source revision:
 
 - [AGENTS.md](../AGENTS.md)
 - [KERNEL.md](../kernel/KERNEL.md)
 - [COMPETENCE.md](../kernel/COMPETENCE.md)
-- [EVOLUTION.md](../kernel/EVOLUTION.md)
 - [FDLA.md](../kernel/FDLA.md)
+- [EVOLUTION.md](../kernel/EVOLUTION.md)
+- [CURRENT template](../templates/state/CURRENT.md)
+- [SOURCES template](../templates/state/SOURCES.md)
 
-Preserve the canonical paths when the receiving source surface supports them.
-If it exposes only flat filenames, keep the owner identities and render the
-backend entry with the actual references available in that surface.
+Use or create the user-owned `CURRENT` and `SOURCES` forms only when
+continuity or source relations need them.
 
-These files carry the methods, not just the description on the public README.
-For linked files, check access from the destination chat. When a link cannot
-be read there, use the app's file-upload or knowledge feature.
+### B. Project / knowledge storage is the persistent source
 
-Keep a `CURRENT.md` for the context you want to continue and a `SOURCES.md` for
-original sources and reusable methods. The existing
-[current-context template](../templates/state/CURRENT.md) and
-[source template](../templates/state/SOURCES.md) provide starting forms; replace
-placeholders with your own situation. An initial project is optional.
+Place the same constitutive owners in the environment's persistent
+project/knowledge surface and keep the source revision attributable.
 
-## 2. Install the conversational entry
+Preserve the canonical paths when that surface supports them. If it exposes
+only flat filenames, preserve the same owner identities and render the
+conversational entry with the actual references available there.
 
-Use the canonical provider-neutral instruction source:
+The project/knowledge surface is now the kernel source for that conversational
+scope.
+
+### C. Only current-session attachments are available
+
+The supplied kernel sources can participate in the current conversation, but
+this is not yet persistent adoption.
+
+Use them now if useful. When continuity across conversations is wanted, place
+the kernel and user-owned context in a source that the later conversation can
+reach, then install the persistent entry there.
+
+## 2. Install the same conversational entry
+
+Use the provider-neutral source:
 
 [Conversational instructions](../adapters/conversational/INSTRUCTIONS.template.md)
 
-Replace `{{KERNEL_SOURCE}}` with the source relation the receiving app can
-actually reach.
+Replace `{{KERNEL_SOURCE}}` with the actual source relation the receiver can
+reach.
 
 Examples:
 
 ```text
 github:YOUR_GITHUB_USER/YOUR_REPOSITORY
 
-project knowledge in this project
+project knowledge in this conversational scope
 
-a receiver-native persistent source that contains the same kernel paths
+another receiver-native persistent source containing the same owners
 ```
 
-The installed entry points to the kernel owners:
+The entry reaches:
 
 ```text
 AGENTS.md
@@ -62,74 +84,44 @@ kernel/KERNEL.md
 kernel/COMPETENCE.md
 kernel/FDLA.md
 kernel/EVOLUTION.md
-state/CURRENT.md
-state/SOURCES.md
+CURRENT
+SOURCES
 ```
 
-Do not rewrite those methods into provider-specific instructions. The backend
-instructions establish the entry; the repository or supplied knowledge carries
-the kernel.
+Do not rewrite the kernel into provider-specific instructions. Translate source
+references only as needed to reach the same owners.
 
-For ChatGPT, the existing configurator renders this source automatically with
-the selected GitHub instance and records the configured/installed bridge
-identity. Other conversational apps install the same semantic entry through
-their own persistent/custom instruction surface.
+Host-specific installation mechanics belong to the corresponding adapter. For
+the current ChatGPT repository helper use [INSTALL.md](../INSTALL.md) and the
+[ChatGPT adapter guide](../adapters/chatgpt/README.md).
 
-## 3. Begin a real task
+## 3. Begin real work
 
-Ask an ordinary question or start the work you brought. During setup, have the
-assistant read one supplied method and explain briefly how it applies to that
-work. This confirms the source is usable in the current chat.
+Start the actual question, activity or project.
 
-After a useful change, save the context or method that should continue. Start a
-new chat in the same scope when you need to resume, and use the saved source.
-The [User guide](USER_GUIDE.md) explains this continuing work.
+The new kernel instance enters through the installed conversational entry and
+reaches only the owners that can change the movement. Do not add a separate
+review or demonstration task merely to prove setup.
 
-## Claude Projects: file-based setup
+Every final response should now carry the compact competence trace defined by
+the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is one
+observable sign of which competences materially participated; it is not proof
+of full assimilation.
 
-In Claude's conversational app, create or open a project. Add the kernel files
-and your context files to **project knowledge**. Render the same conversational
-instruction template with `KERNEL_SOURCE` identifying that project knowledge,
-save it under **project instructions**, then start a chat inside that project.
+If a required source cannot be reached, reconnect or supply that source rather
+than reconstructing unavailable contents.
 
-Project knowledge and project instructions are the shared sources for chats in
-that project. When the assistant provides an improved method or updated context,
-replace the saved file in project knowledge, or use a connected writing tool
-when one is available. A discussion in one chat is not itself a saved update to
-project knowledge.
+## 4. Continue and learn
 
-This route uses project files and instructions; it does not require running the
-ChatGPT configurator. Anthropic documents the two features in its
-[project setup guide](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
-This is a documented setup route; an individual account's file access and
-continuation are checked during its setup.
+When current context must survive, keep the smallest useful relation in
+`CURRENT`. Keep original/reusable knowledge in `SOURCES` or its owner-native
+source. Return reusable learning to the competence that should behave
+differently later.
 
-## ChatGPT: repository setup with the existing helper
+A later conversation in the same already-incarnated scope does not reload the
+whole kernel merely because it is new. It reenters from the present and reaches
+additional owners only when they can change the result.
 
-Use [INSTALL.md](../INSTALL.md) for the Git/Python configuration path and the
-[ChatGPT adapter guide](../adapters/chatgpt/README.md). It generates the entry
-text and records that specific repository/ChatGPT setup.
-
-Follow its complete host-confirmation and remote-readback procedure before
-relying on the configured repository in a later chat. Those receipts describe
-the ChatGPT helper's installation; they are not used to label a Claude project.
-
-OpenAI documents the account instruction surface in
-[Custom Instructions](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt).
-
-## Other conversational apps
-
-Use the same working files with the app's actual persistent instructions and
-knowledge or connector features. The assistant identifies the relevant setting
-and prepares the entry for that location. When a chat only accepts attachments,
-the files can support that conversation; keep the updated files yourself for
-later sessions. Persistent configuration is complete when the chosen app scope
-can reach the saved entry and knowledge again.
-
-## Keep the setup and learning yours
-
-Choose a private destination for private work. Keep the source revision with
-the copied kernel files, and distinguish it from changes made through your use.
-A future upstream update is compared with those local methods so useful learning
-survives. Existing source/update guidance is in the
-[Adoption model](ADOPTION_GUIDE.md).
+The [User guide](USER_GUIDE.md) continues from here. The
+[Adoption guide](ADOPTION_GUIDE.md) preserves the receiver and effect
+boundaries.
