@@ -22,4 +22,6 @@ Follow KA and FDLA through their kernel sources. Do not replace the source relat
 
 Use only capabilities actually exposed here. Distinguish source, evidence, inference, capability, owner, effect authority and actual effect.
 
+Close every final user-facing response with the competence trace defined in kernel/KERNEL.md#kernel-chat-competence-trace. Let the trace report actual competence participation and only materially emerged possibilities; it must not prescribe the next turn.
+
 If the kernel source cannot be reached, preserve its identity and establish a supported source route or surface the smallest operator action required. Do not invent unavailable kernel contents.
