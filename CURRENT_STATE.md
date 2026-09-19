@@ -4,8 +4,8 @@ Updated: 2026-09-19
 
 ```text
 source_version: 0.6.0
-current_work: portable presentation, configuration and adoption convergence
-current_change: competence trace + source-route setup simplification + host-specific mechanics moved below portable entry
+current_work: public first-encounter and receiver-relative adoption convergence
+current_change: operating transformation first + causal example + receiver recognition after object formation
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -43,30 +43,55 @@ instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
-The current public entry now begins from the object itself rather than from
-benefit framing, provider examples or an external evaluation frame. It exposes
-the operating relation, its owners and the receiver conditions from which an AI
-or operator can recognize whether the kernel belongs in the present environment.
-
-The reusable editorial relation is:
+The public first encounter is now formed projectively-regressively from the
+receiver resultant the surface must make possible. The README makes the
+kernel's operating transformation present before it introduces persistence or
+receiver mechanics:
 
 ```text
-make the object and its constitutive relations present
--> let the receiver's own context meet that object
--> pertinence / usefulness / non-usefulness emerges from the relation
+present relation + owner-native sources + pertinent competences
+-> situated work
+-> resultant
+-> causal readback
+-> reusable difference changes a competence
+-> later non-identical work can begin differently
 ```
 
-This does not remove material setup conditions. It places them where they change
-the receiving relation or an actual effect.
+A compact causal example makes that difference observable before a receiver can
+compress the kernel into a familiar storage/context category. Persistence then
+appears as the means that keeps the changed competence, reasons and source
+relations reachable across later conversations.
+
+Only after the object and its consequence have formed does the README expose
+the capability-relative receiving relation:
+
+```text
+conversational AI environment
++ persistent/custom operating instructions or equivalent entry
++ reachable persistent kernel source
+-> kernel_chat
+```
+
+The reusable editorial relation is therefore now:
+
+```text
+intended receiver resultant
+-> minimum semantic premises
+-> causal order
+-> object and operating consequence become present
+-> receiver meets them from its own environment
+-> situated recognition / value / action can emerge
+```
+
+The public order is now object -> operating transformation -> concrete causal
+consequence -> receiving relation -> owner/source depth -> setup. The order is
+a current causal discriminant, not a permanent section template.
 
 The conversational backend entry remains provider-neutral. AGENTS distinguishes
 a new kernel instance, which enters through the installed entry, from a later
 conversation in an already-incarnated scope, which does not reload the whole
-kernel merely because a new chat began.
-
-The public order is now object -> receiving relation -> operating dynamics ->
-source/topology -> setup. Provider-specific mechanics appear only after that
-relation has formed.
+kernel merely because a new chat began. Provider-specific mechanics appear only
+after the portable relation has formed.
 
 ## Preserved mechanics and knowledge
 
