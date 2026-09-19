@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-09-19
 
+- **Final public README convergence:** the first encounter now uses plain
+  language to make the operating phenomenon visible before internal vocabulary:
+  a user-owned operating layer of sources, competences, context and reusable
+  learning can change through real work, persist across conversations, and
+  alter how later non-identical work begins. The task A / task B example
+  continues to observable later behavior; a second-order sentence shows that a
+  reusable change can also affect how the system forms the question or selects
+  what becomes relevant. Technical vocabulary and implementation mechanics
+  descend into their owner documents and setup surfaces.
 - **Kernel relation / carrier distinction:** the public README now states that
   files, state objects and instructions are persistent incarnations of the
   operating relation rather than the kernel reduced to storage. Its causal
