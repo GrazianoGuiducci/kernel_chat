@@ -20,21 +20,17 @@ latest tagged distribution:
   v0.5.0
 ```
 
-The development reconciliation was performed in an isolated private copy so
-the canonical public repository could remain unchanged while source, package,
-bridge, state and documentation relations were reread as one system.
+The reconciliation reread source, package, bridge, state and
+documentation relations as one system while preserving the canonical
+repository as the publication owner.
 
-The main source inputs were:
+Source selection followed causal relevance to the target. Current public owners
+and accepted product determinations remained authoritative; later source work
+contributed only when its relation could survive receiver change and become
+owned coherently by `kernel_chat`.
 
-- current `kernel_chat` owners and existing 0.5.x behavior;
-- the previously selected 15 September target design;
-- the evolved ChatGPT kernel only where a relation was actually portable;
-- MPK/SSK work only where it had already changed the ChatGPT kernel or exposed
-  a receiver-relevant causal distinction.
-
-Recency and sophistication were not treated as target authority. Bestiary,
-morphogenesis terminology, semantic hooks, MAIOS-specific topology and other
-research forms were not imported merely because they were newer.
+Recency, naming or source sophistication did not confer authority by
+themselves.
 
 ### First pass — what was actually missing
 
