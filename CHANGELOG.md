@@ -4,6 +4,16 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-19
 
+- **Public-source hygiene / open horizon:** removed private source topology and
+  formative internal references from the conversational entry, Competence,
+  FDLA, Lineage and package-evolution narrative. Reframed Core and ChatGPT
+  adapter host boundaries around capabilities actually exposed by the receiver
+  instead of enumerating a permanent negative capability perimeter. The 0.6.0
+  review brief now records its evidence scope without establishing or ruling out
+  capabilities outside that observation surface. Architecture and AGENTS also
+  preserve direct provider-neutral adoption as distinct from optional
+  host-specific adapter mechanics. Added a regression against reintroducing
+  these stale/private frames.
 - **Direct portable adoption without host adapter:** README, conversational
   entry guidance, CHAT_SETUP and ADOPTION_GUIDE now state explicitly that a
   dedicated host-specific adapter is optional when the receiving conversational
