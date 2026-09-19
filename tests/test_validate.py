@@ -358,11 +358,13 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        object_position = readme.index("## What is here")
         receiver_position = readme.index("## When this is the receiving relation")
+        use_position = readme.index("## What happens in use")
+        source_map_position = readme.index("## What is here")
         setup_position = readme.index("## Set it up")
-        self.assertLess(object_position, receiver_position)
-        self.assertLess(receiver_position, setup_position)
+        self.assertLess(receiver_position, use_position)
+        self.assertLess(use_position, source_map_position)
+        self.assertLess(source_map_position, setup_position)
 
         first_encounter = readme[:setup_position]
         self.assertIn("conversational AI environment", first_encounter)
@@ -374,6 +376,8 @@ class ValidateTests(unittest.TestCase):
             "a persistent kernel source the conversation can reach",
             first_encounter,
         )
+        self.assertIn("competence trace", first_encounter)
+        self.assertIn("kernel/KERNEL.md#kernel-chat-competence-trace", first_encounter)
         for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
             with self.subTest(provider_name=provider_name):
                 self.assertNotIn(provider_name, first_encounter)
@@ -381,10 +385,11 @@ class ValidateTests(unittest.TestCase):
         setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
         setup_links = links(setup)
         for target in (
-            "../kernel/KERNEL.md", "../kernel/COMPETENCE.md",
+            "../AGENTS.md", "../kernel/KERNEL.md", "../kernel/COMPETENCE.md",
             "../kernel/EVOLUTION.md", "../kernel/FDLA.md", "../INSTALL.md",
+            "../adapters/conversational/INSTRUCTIONS.template.md",
             "../templates/state/CURRENT.md", "../templates/state/SOURCES.md",
-            "USER_GUIDE.md",
+            "USER_GUIDE.md", "ADOPTION_GUIDE.md",
         ):
             with self.subTest(setup_target=target):
                 self.assertIn(target, setup_links)
@@ -440,16 +445,13 @@ class ValidateTests(unittest.TestCase):
                 self.assertEqual(positions, sorted(positions), relative)
 
         agents = (self.root / "AGENTS.md").read_text(encoding="utf-8")
-        route = (
-            "[receipt publication and fresh remote readback contract]"
-            "(INSTALL.md#receipt-publication-and-fresh-readback)"
+        self.assertIn("[INSTALL.md](INSTALL.md)", agents)
+        self.assertIn(
+            "[ChatGPT adapter guide](adapters/chatgpt/README.md)",
+            agents,
         )
-        confirm = agents.find("--confirm-host-installation")
-        delivery_route = agents.find(route, confirm)
-        reentry = agents.find("verify host reachability", delivery_route)
-        self.assertGreaterEqual(confirm, 0, "AGENTS confirmation")
-        self.assertGreater(delivery_route, confirm, "AGENTS delivery route")
-        self.assertGreater(reentry, delivery_route, "AGENTS remote reentry")
+        self.assertNotIn("--confirm-host-installation", agents)
+        self.assertNotIn("confirmation_bridge_sha256", agents)
         install = (self.root / "INSTALL.md").read_text(encoding="utf-8")
         self.assertIn(
             '<a name="receipt-publication-and-fresh-readback"></a>',
