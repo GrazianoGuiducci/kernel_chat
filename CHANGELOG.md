@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Object-first public entry / receiver recognition:** the README now presents
+  the kernel's constitutive operating relation and owners before benefits,
+  provider examples or evaluative framing. Receiver fit is expressed through
+  actual capabilities: conversational instruction entry + reachable persistent
+  kernel source -> kernel_chat; durable project-native agent workspace -> MPK.
+  AGENTS carries the same relation and distinguishes first kernel incarnation
+  from a later chat inside an already-incarnated scope. Adoption no longer
+  describes the portable source through a stale fixed body count.
 - **Portable conversational backend entry:** added
   `adapters/conversational/INSTRUCTIONS.template.md` as the provider-neutral
   instruction source. It names the kernel source, constitutive owner paths,
