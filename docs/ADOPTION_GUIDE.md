@@ -72,8 +72,12 @@ kernel works, not the identity of the kernel.
 
 ## Host-specific mechanics
 
-The portable adoption contract does not require one provider's installation
-procedure.
+The portable adoption contract does not require a host-specific adapter when
+the receiving environment already provides the persistent instruction and
+source mechanisms needed by the conversational entry.
+
+A host adapter packages receiver-specific setup or verification mechanics; it
+does not define whether the portable kernel relation can be adopted.
 
 For the current ChatGPT Git/Python implementation use
 [INSTALL.md](../INSTALL.md) and the
