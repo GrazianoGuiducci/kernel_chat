@@ -5,17 +5,23 @@ keeps useful changes available for later work.
 
 ## Choose the relation you need
 
-### Choose the carrier before choosing the mechanics
+### Recognize the receiving relation before choosing the mechanics
 
-For a **conversational app**, use `kernel_chat` through the
-[chat setup guide](CHAT_SETUP.md). For an **agent harness, agentic application
-or IDE**, use [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
-in the agent's workspace.
+```text
+conversational AI
++ persistent/custom operating instructions or equivalent entry
++ reachable persistent kernel source
+-> kernel_chat
 
-A project knowledge area inside a chat app remains a conversational setting.
-An IDE or coding agent using the same model is a different receiving environment.
-A coding agent can also help configure a separate chat without becoming the
-destination of that chat setup.
+AI agent / harness
++ durable project workspace/filesystem as its continuing work surface
+-> MAIOS Project Kernel
+```
+
+The receiver's actual relation determines the carrier. Provider and model names
+do not. A project or knowledge area can be the persistent source of a
+conversation without turning that conversation into a project-native agent
+harness.
 
 ### Use the app's actual means
 
@@ -55,9 +61,10 @@ the kernel works, rather than a prerequisite for the kernel.
 
 ## What configuration creates
 
-The shared chat route makes the four portable kernel bodies available, saves
-an entry at the app's instruction surface, and gives continuing context and
-methods a location that later chats can reach.
+The shared chat route makes the constitutive kernel owners reachable, saves the
+portable conversational entry at the app's instruction surface, and gives
+current context, source relations and evolving competences a location that later
+conversations can reach.
 
 The Git/Python ChatGPT helper additionally manages:
 
