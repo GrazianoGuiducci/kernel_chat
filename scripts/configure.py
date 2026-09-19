@@ -19,10 +19,13 @@ SLUG = re.compile(r"^[A-Za-z0-9_.-]+$")
 SHA256_HEX = re.compile(r"^[0-9a-f]{64}$")
 TEMPLATE_FIELD = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
 BRIDGE_IDENTITY_HEADER = re.compile(
-    r"\AWork from the present\. Act directly when the conversation and working set "
+    r"\A(?:"
+    r"Kernel source:\s*github:([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
+    r"|Work from the present\. Act directly when the conversation and working set "
     r"suffice; a new chat alone does not require a boot\.\r?\n\r?\n"
     r"User-owned kernel (?:repository|instance):\s*"
     r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
+    r")"
 )
 INSTANCE_LOCK_NAME = ".INSTANCE.write.lock"
 CANONICAL_UPSTREAM = "https://github.com/GrazianoGuiducci/kernel_chat"
@@ -209,7 +212,9 @@ def configured_bridge_repository(text: str) -> str | None:
     """Return a repository only for the recognized constitutive bridge header."""
 
     match = BRIDGE_IDENTITY_HEADER.match(text)
-    return match.group(1) if match is not None else None
+    if match is None:
+        return None
+    return next((group for group in match.groups() if group is not None), None)
 
 
 def load_instance(path: Path) -> dict[str, object]:
@@ -435,10 +440,11 @@ def main() -> int:
     instance_repository = f"{args.github_user}/{args.repository}"
     package_source_version = read_semver(ROOT / "VERSION", "VERSION")
     bridge_template_version = read_semver(
-        ROOT / "adapters/chatgpt/VERSION", "ChatGPT bridge VERSION"
+        ROOT / "adapters/conversational/VERSION",
+        "conversational instructions VERSION",
     )
 
-    adapter_template = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
+    adapter_template = ROOT / "adapters/conversational/INSTRUCTIONS.template.md"
     adapter_output = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md"
     current_template = ROOT / "templates/state/CURRENT.md"
     sources_template = ROOT / "templates/state/SOURCES.md"
@@ -449,8 +455,7 @@ def main() -> int:
         adapter_candidate = render(
             adapter_template,
             {
-                "GITHUB_USER": args.github_user,
-                "REPOSITORY": args.repository,
+                "KERNEL_SOURCE": f"github:{instance_repository}",
             },
         )
         print(adapter_candidate, end="")
