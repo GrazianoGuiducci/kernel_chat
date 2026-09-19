@@ -436,6 +436,58 @@ class ValidateTests(unittest.TestCase):
             "```markdown\n[setup](docs/CHAT_SETUP.md)\n```\n"
         ))
 
+    def test_public_kernel_does_not_reintroduce_private_or_future_ceiling_frames(self) -> None:
+        public_owners = {
+            "adapters/conversational/INSTRUCTIONS.template.md": (
+                "Follow KA",
+                "Meta_Skill",
+            ),
+            "kernel/COMPETENCE.md": (
+                "Meta_Skill",
+                "private repositories",
+            ),
+            "kernel/FDLA.md": (
+                "Stiamo seguendo i principi di KA",
+            ),
+            "docs/LINEAGE.md": (
+                "private ChatGPT host kernel",
+                "Deliberately not inherited",
+                "support for providers without an implemented adapter",
+            ),
+            "docs/EXTERNAL_REVIEW_0_6_0.md": (
+                "autonomous self-evolution",
+                "subjective awareness",
+            ),
+            "kernel/KERNEL.md": (
+                "does not assume shell access",
+                "autonomous continuation",
+            ),
+            "adapters/chatgpt/README.md": (
+                "does not simulate an agent runtime",
+                "autonomous continuation",
+            ),
+        }
+        for relative, stale_markers in public_owners.items():
+            with self.subTest(relative=relative):
+                text_value = (self.root / relative).read_text(encoding="utf-8")
+                for marker in stale_markers:
+                    self.assertNotIn(marker, text_value)
+
+        lineage = (self.root / "docs/LINEAGE.md").read_text(encoding="utf-8")
+        self.assertIn("The capability field remains open.", lineage)
+
+        review = (self.root / "docs/EXTERNAL_REVIEW_0_6_0.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "it neither establishes nor rules\nout capabilities outside that surface",
+            review,
+        )
+
+        core = (self.root / "kernel/KERNEL.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "one host's current topology does not\nbecome a permanent requirement or ceiling",
+            core,
+        )
+
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         cases = {
             "INSTALL.md": (
