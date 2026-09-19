@@ -22,6 +22,10 @@ work that becomes pertinent when the present situation calls for it. Several
 competences can participate together, one can make another pertinent, an
 existing competence can deepen, and a genuinely missing capability can form.
 
+Files, state objects and instructions are persistent incarnations of this
+operating relation. They make the kernel reachable again; they are not the
+kernel reduced to storage.
+
 ## What changes when it operates
 
 The kernel keeps the work, its sources and the competences acting on it in one
@@ -31,17 +35,22 @@ answer.
 For example:
 
 ```text
-a user correction during one task
--> exposes a reusable distinction between source fact and inference
--> that difference returns to the competence that must use it
--> the competence is preserved in the user-owned kernel source
--> a later, different task makes that competence pertinent
--> the new work begins from the learned distinction
+task A:
+a user corrects the system for mixing a source fact with its own inference
+-> the reusable distinction changes the source-discrimination competence
+-> that changed competence is preserved in the user-owned kernel source
+
+task B, later and materially different:
+the same distinction becomes pertinent
+-> the AI keeps source fact and its own inference separate
+-> the user does not have to reconstruct the earlier correction
+-> the changed handling of task B is the observable result
 ```
 
-The persistent source makes this operating relation reachable again. It keeps
-the current relation, owner-native sources, reasons and reusable methods
-available so later conversations can recover only what the present work needs.
+The persistent source carries the competence between conversations. The stored
+representation is the carrier; the later changed handling is the readback that
+shows the competence participated. Later use can preserve, refine or revise it
+again.
 
 Each final user-facing response closes with a compact
 [competence trace](kernel/KERNEL.md#kernel-chat-competence-trace): the
