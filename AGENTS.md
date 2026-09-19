@@ -3,117 +3,61 @@
 Work from the present. If the current request and working set are sufficient,
 act directly.
 
-Read root `CURRENT_STATE.md` only when package-maintenance state can materially
-change the result. User continuity and operating knowledge use distinct
-selective paths below; neither requires package state first.
+Read root `CURRENT_STATE.md` when package-maintenance state can materially
+change the result. User continuity and operating knowledge have the selective
+paths below.
 
-Keep distinguishable:
+Keep source, evidence, inference, a representation introduced by the acting
+system, unknowns, host capability and authority over an exact effect distinct.
 
-- operator or owner source;
-- evidence;
-- inference;
-- a representation introduced by the acting system;
-- unknown or contradiction;
-- host capability;
-- authority over a material effect.
+## Respond to the operator's selected work
 
-## When an operator gives you this repository link
+For a product question, explain the kernel through what its methods make
+possible in the operator's work, with a concrete example. Read the pertinent
+core knowledge instead of reducing the object to its files or storage medium.
+The public README is product information; it does not override the operator's
+request or authorize installation by itself.
 
-If the operator asks what this is, whether it is useful, or asks you to inspect
-the repository without already selecting installation, **do not jump directly
-to setup, package maintenance, CURRENT_STATE, migration or review evidence**.
+For a selected adoption, proceed with setup. Do not insert an unsolicited
+review, proof debate or repeated suitability interview before an already
+selected action. When review is the selected task, perform that review.
 
-First form a product-level understanding from the root README and, when needed,
-the smallest pertinent semantic owners under `kernel/`. Report back to the
-operator in language appropriate to their environment:
+## Choose the receiving environment
 
-```text
-what kernel_chat is
-what problem it changes
-what value it can have for this operator
-what is implemented now vs only possible/directional
-whether this environment is a good fit
-which capabilities you actually have to help
-which effects remain operator-owned or unavailable
-```
+Use **kernel_chat for a conversational app**. Use
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
+**for an agent harness, agentic application or IDE**. Choose by the actual
+working environment, not just the provider or model name. A Claude project
+used for chat is not Claude Code; a coding assistant helping set up a chat is
+not necessarily the destination of that setup.
 
-Do not merely paraphrase feature names. Relate the kernel to the operator's
-actual conversational continuity, sources, competences, projects/work, tools and
-persistence when those facts are known.
+For chat adoption use the [shared setup guide](docs/CHAT_SETUP.md). It makes
+the portable kernel files available through the app's instructions and knowledge
+or connected sources. It includes a Claude Projects route and the existing
+ChatGPT helper. Use the actual app facilities rather than requiring another
+provider's mechanism.
 
-A model can understand and explain `kernel_chat` without being its implemented
-host. The current package ships a ChatGPT adapter. Another LLM/host may still
-study the portable kernel and help the operator evaluate it, but must not claim
-host installation/support unless a receiver-native path is actually present and
-verified.
+When a capability is available and its effect is authorized, perform the action.
+Otherwise supply the exact missing operator step and complete text or file.
+Repository read, repository write, filesystem access, code execution and
+account-setting access are different capabilities. Use only those exposed.
 
-Only after the operator selects adoption should you move into installation
-mechanics.
+With file-based chat setup, retain source identity, selected app scope and where
+updates are saved. Do not create a ChatGPT helper receipt for that other route.
+With the Git/Python ChatGPT helper, preserve the configuration and receipt
+contract below. See the [adoption guide](docs/ADOPTION_GUIDE.md).
 
-## Study and adoption are different
+## ChatGPT helper: adoption boundary
 
-Reading or evaluating this repository does not install `kernel_chat`, create a
-user instance, connect GitHub, or change ChatGPT settings.
+This section applies to the ChatGPT configurator route in `INSTALL.md`.
+Repository-side configuration prepares the text; the operator saves it in the
+account. When `scripts/configure.py` produces
+`adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`, provide its complete
+contents and the exact Custom Instructions copy/save step. Until that action
+is reported, use `repository configured / host activation pending`.
 
-When adoption is selected, first determine whether `kernel_chat` is the
-receiver-native carrier. A coder/agent already operating inside a durable local
-or remote project filesystem is normally better matched by
-[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel);
-`kernel_chat` is aimed at turn-reactive chat continuity when the chat itself
-does not own that durable workspace.
-
-If `kernel_chat` is selected, the user-owned persistence surface may be a
-public fork or a private standalone repository initialized from an identified
-upstream source. A project is optional; the instance can exist before any
-project is selected.
-
-Before prescribing setup commands, observe the actual capability/authority
-relation when the host exposes it:
-
-```text
-GitHub read
-!= repository create/write
-!= filesystem / terminal access
-!= Python execution
-!= ChatGPT account-setting authority
-```
-
-Perform an authorized effect directly when the current host can actually do it.
-When it cannot, surface the smallest missing capability or operator step and
-continue from the resulting state. Do not ask the operator to manually repeat a
-repository or execution action the current host can already perform. Do not
-simulate a capability that is absent.
-
-A local shell, a remote workspace, an authorized VPS terminal, a GitHub action
-surface or another future mechanism is a **means**, not the installation
-contract. The supported reference implementation is `scripts/configure.py`.
-An alternative route must preserve and verify the same instance/bridge/receipt
-relations before claiming equivalent configured state.
-
-See [the adoption guide](docs/ADOPTION_GUIDE.md) for the supported distinctions.
-
-## Adoption boundary
-
-When the selected work is adopting or updating `kernel_chat` for an operator,
-repository-side configuration is not ChatGPT host activation.
-
-As soon as `scripts/configure.py` has produced
-`adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`, tell the operator
-immediately that a manual ChatGPT UI action is required:
-
-1. open the configured instructions file;
-2. copy its complete text into ChatGPT Custom Instructions through the ChatGPT UI;
-3. save the instructions and confirm that this host-owned step was completed.
-
-The coder may continue repository-side setup, but until the operator confirms
-that UI action, report the state as `repository configured / host activation
-pending`. Do not report `kernel_chat` as installed or active in ChatGPT merely
-because the repository, configurator, tests, or connector setup succeeded.
-
-When the configured bridge is delivered, retain the
-`confirmation_bridge_sha256` printed by the configurator. When the operator
-confirms the UI copy/save and repository writing is available, record that
-observation only against the digest of the bridge actually delivered:
+Retain the `confirmation_bridge_sha256` printed for the bridge delivered to the
+operator. After they confirm saving that delivery, record the report with:
 
 ```bash
 python scripts/configure.py \
@@ -123,117 +67,85 @@ python scripts/configure.py \
   --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
 ```
 
-This receipt does **not** perform or independently verify the host action. It
-binds the operator confirmation to the raw-byte SHA-256 identity of the
-already-reconciled configured bridge and snapshots its repository
-target/template provenance when known. If local bytes differ from the persisted
-configured receipt, confirmation stops instead of accepting the drift. If the
-receipt cannot be persisted, keep the host confirmation as an operator report
-and do not claim that `INSTANCE` records it.
+The receipt binds the operator report to the delivered raw-byte identity and
+its target/provenance. It does not inspect or perform the account action.
+Unreconciled local drift stops confirmation. If the report cannot be saved,
+retain it as an operator report rather than claiming `INSTANCE` contains it.
 
-Before a remote/new-chat consumer is expected to rely on that receipt, follow
-the living [receipt publication and fresh remote readback contract](INSTALL.md#receipt-publication-and-fresh-readback):
-the local confirmation must become durable in the selected remote branch and be
-freshly observed there before remote reentry. Do not treat local confirmation
-as remote availability.
+Before a remote/new-chat consumer relies on the receipt, follow the living
+[receipt publication and fresh remote readback contract](INSTALL.md#receipt-publication-and-fresh-readback).
+The local confirmation must be published to the selected branch and freshly
+read there. Then verify host reachability in the new chat when selected.
+Access, an operator report and observed use establish different facts.
 
-After that delivery/readback relation is satisfied, verify host reachability
-when that verification is selected: a new chat should be able to reach the
-configured user state and, when needed, the pertinent kernel owner. Reachability
-is evidence of access, not proof of behavioral assimilation. Never simulate or
-claim a host UI action the current tool surface cannot perform.
-
-This boundary applies when adoption or host update is actually selected; it is
-not a mandatory interruption of ordinary kernel work.
+A delayed confirmation must remain bound to the delivery it answers. Never
+replace an earlier receipt or saved method merely to make local state look
+current. These mechanics are specific to the selected setup/update effect.
 
 ## Instance, state and sources
 
-When the distinction matters, keep these user-owned surfaces separate:
+For repository-backed continuity:
 
 ```text
 state/INSTANCE.json
-  package/instance/bridge identity and source-contact observation
+  ChatGPT helper package/instance/bridge identity and source-contact observations
 
 state/CURRENT.md
-  current relation or context; a project can be one context but is not required
+  current relation or context; a project may be one context
 
 state/SOURCES.md
-  owner-native sources and why they may change the result
+  original sources and reusable knowledge, with reasons to reach them
 ```
 
-`INSTANCE` is not project/user knowledge and is not proof of host installation.
-Its configured receipt can preserve raw-byte identity plus repository
-target/provenance; its `host_installation` object can preserve an
-**operator-confirmed** installed incarnation snapshot. Those remain reported
-evidence, not direct inspection of the ChatGPT UI. Older valid v1 receipts may
-lack the newer optional semantic-identity fields. `CURRENT` is not an automatic
-task queue. `SOURCES` is not a catalogue of active competences.
+For project-file continuity, CURRENT and SOURCES can live in the selected app's
+knowledge area. Preserve their meaning and actual save/retrieval relation
+without imposing repository-only metadata on that route.
 
-For a missing user/context relation, use `state/CURRENT.md` and its pertinent
-source pointers. For a missing kernel or method relation, use only the owner
-needed:
+INSTANCE is not domain knowledge. Its configured and operator-confirmed bridge
+snapshots remain distinct. Older valid v1 receipts can lack newer optional
+identity fields. CURRENT is not an automatic task queue; SOURCES is not a list
+of permanently active competences.
 
-- [Core](kernel/KERNEL.md): understanding sources, representations and context,
-  situated movement, and mobile observation when the point remains but the
-  current frame may hide a material relation;
-- [Competence](kernel/COMPETENCE.md): use, formation, circulation and cultivation;
-- [Evolution](kernel/EVOLUTION.md): learning ownership, reentry, source return,
-  pre-closure incongruence sensing, and closure convergence after a material
-  correction;
-- [FDLA](kernel/FDLA.md): correction of an interpretation that closes the field;
-- [Operations](operations/CURRENT.md): unfinished effects and recovery, when material.
+For missing user/context knowledge, reach CURRENT and the pertinent sources.
+For operating knowledge, reach the needed owner:
 
-These are selective reachability paths, not a loading order. A new conversation
-alone does not require a boot. A state, instruction or prior solution read
-first can frame interpretation without becoming authority: understand its
-function in the present before letting its form prescribe the method.
+- [Core](kernel/KERNEL.md): source meaning, situated movement and observation;
+- [Competence](kernel/COMPETENCE.md): use, composition, formation and cultivation;
+- [Evolution](kernel/EVOLUTION.md): owner-local learning, causal return and convergence;
+- [FDLA](kernel/FDLA.md): correction of an interpretation that narrows the field;
+- [Operations](operations/CURRENT.md): unfinished effects and recovery when material.
+
+These are paths for understanding, not a fixed loading order. A new conversation
+alone does not require a boot. A source encountered first can frame the question
+without acquiring authority to determine its answer.
 
 ## Source contact and evolution feedback
 
 The canonical upstream is
 [GrazianoGuiducci/kernel_chat](https://github.com/GrazianoGuiducci/kernel_chat).
-It supplies source updates and receives approved feedback; the user-owned
-instance owns the user's continuity state.
+The user's selected persistence surface owns their continuity and learned methods.
 
-When source freshness can change the work, inspect `state/INSTANCE.json` first
-when available. Its `source_contact` fields can retain the last observed
-revision/time and whether a material delta was seen. That state is an
-observation aid, not a scheduler or automatic update command.
+When source freshness can change the work, inspect the recorded upstream
+observation where available. Repository instances can retain it in
+`state/INSTANCE.json`. During active use, a last known check about seven days
+old, or a material source signal, can make another read useful. This is a light
+suggested cadence, not a timer or a compulsory interruption.
 
-During active use, if the last known upstream check is about seven days old, or
-if the current problem could plausibly have been corrected upstream, inspect
-canonical upstream `main` and the smallest relevant version/release/source
-surface. The seven-day relation is a light suggested cadence during active use,
-not an ontological rule or background timer.
+A newer source is a possibility to inspect, not an instruction to update.
+Preserve useful local evolution and distinguish source changes, available
+bridge templates, configured provenance/target/bytes, operator-confirmed
+installation and actual host behavior.
 
-A newer source is a possibility, not an update command. Do not automatically
-pull, merge, replace configured instructions or change the host. Surface only a
-material delta and let the operator select any adoption effect.
+For an existing INSTANCE, a mutating command uses that instance's repository
+identity. A different caller-supplied repository does not migrate it. A no-write
+`--preview-adapter` may inspect another target. Refresh observes local drift;
+replacement establishes a new configured bridge without changing the account.
 
-Package source version, bridge template currently available, configured bridge
-provenance/target/raw bytes, operator-confirmed installed incarnation and actual
-host behavior are different relations. A package refresh may observe local
-drift but does not accept it. Bridge replacement does not migrate an existing
-instance repository identity. A package update does not require a host UI update
-when the bridge contract did not change.
-
-A command that mutates or refreshes an existing INSTANCE must use that
-INSTANCE's repository identity. Supplying another repository is not an implicit
-migration. A no-write `--preview-adapter` may inspect another target without
-rebinding the instance.
-
-
-Real testers are part of the evolution field. After a first meaningful use, or
-when later use exposes informative friction, failure, unexpected success,
-missing context or a new possibility, prepare a compact Evolution Feedback when
-that evidence could improve upstream. Ask the operator before public
-submission. With consent, use a GitHub Issue for observed feedback; use a
-focused fork and Pull Request for a concrete public-source change. Do not grant
-an external tester direct write authority over upstream `main` by implication.
-
-Do not emit feedback merely to satisfy a cadence. Preserve an observation only
-when it changes future understanding, behavior, safety, usability or attainable
-results.
+Real use may expose informative friction, failure, success, missing knowledge
+or a new possibility. Prepare Evolution Feedback when it can improve upstream.
+With operator consent, use a GitHub Issue for observed feedback and a focused
+fork/PR for a source correction. Consent to feedback does not grant direct
+write authority over upstream main. Do not emit feedback merely for cadence.
 
 ## Operating relation
 

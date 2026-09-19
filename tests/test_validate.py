@@ -325,29 +325,53 @@ class ValidateTests(unittest.TestCase):
             payload["errors"],
         )
 
-    def test_public_readme_routes_llm_evaluation_adoption_and_first_use(self) -> None:
-        readme = (self.root / "README.md").read_text(encoding="utf-8")
-        required = (
-            "## If an AI / LLM received this link",
-            "[Install / adopt](INSTALL.md)",
-            "[Adoption model](docs/ADOPTION_GUIDE.md)",
-            "[User guide](docs/USER_GUIDE.md)",
-            "[Core](kernel/KERNEL.md)",
-            "## Start using it",
-        )
-        for marker in required:
-            with self.subTest(marker=marker):
-                self.assertIn(marker, readme)
+    def test_public_readme_routes_chat_setup_and_first_use(self) -> None:
+        # Public navigation is checked on active Markdown links. Headings and
+        # explanatory wording can evolve without becoming product invariants.
+        from markdown_it import MarkdownIt
 
-        user_guide = (self.root / "docs/USER_GUIDE.md").read_text(encoding="utf-8")
-        self.assertIn("## Your first conversation after adoption", user_guide)
+        def links(text: str) -> set[str]:
+            return {
+                str(child.attrGet("href"))
+                for token in MarkdownIt("commonmark").parse(text)
+                for child in (token.children or [])
+                if child.type == "link_open"
+            }
+
+        readme_links = links((self.root / "README.md").read_text(encoding="utf-8"))
+        for target in (
+            "docs/CHAT_SETUP.md", "docs/ADOPTION_GUIDE.md", "docs/USER_GUIDE.md",
+            "kernel/KERNEL.md", "INSTALL.md", "adapters/chatgpt/README.md",
+            "https://github.com/GrazianoGuiducci/maios-project-kernel",
+        ):
+            with self.subTest(target=target):
+                self.assertIn(target, readme_links)
+
+        setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
+        setup_links = links(setup)
+        for target in (
+            "../kernel/KERNEL.md", "../kernel/COMPETENCE.md",
+            "../kernel/EVOLUTION.md", "../kernel/FDLA.md", "../INSTALL.md",
+            "../templates/state/CURRENT.md", "../templates/state/SOURCES.md",
+            "USER_GUIDE.md",
+        ):
+            with self.subTest(setup_target=target):
+                self.assertIn(target, setup_links)
+                self.assertTrue((self.root / "docs" / target).is_file())
+
+        agents_links = links((self.root / "AGENTS.md").read_text(encoding="utf-8"))
+        self.assertIn("docs/CHAT_SETUP.md", agents_links)
+        adoption_links = links(
+            (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
+        )
+        self.assertIn("CHAT_SETUP.md", adoption_links)
+        # Text examples or comments are not discoverable navigation.
+        self.assertNotIn("docs/CHAT_SETUP.md", links(
+            "<!-- [setup](docs/CHAT_SETUP.md) -->\n"
+            "```markdown\n[setup](docs/CHAT_SETUP.md)\n```\n"
+        ))
 
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
-        readme = (self.root / "README.md").read_text(encoding="utf-8")
-        self.assertIn("[Install / adopt](INSTALL.md)", readme)
-        self.assertIn("[Adoption model](docs/ADOPTION_GUIDE.md)", readme)
-        self.assertIn("[ChatGPT adapter guide](adapters/chatgpt/README.md)", readme)
-
         cases = {
             "INSTALL.md": (
                 "confirmation_bridge_sha256",

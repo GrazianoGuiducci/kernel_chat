@@ -2,272 +2,154 @@
 
 ## Your first conversation after adoption
 
-There is no required boot phrase and no need to ask the model to load the whole
-repository.
-
-Start with real work.
+Start with your real work. The kernel's working knowledge participates through
+the instructions and sources saved in your chat environment. You can ask a
+normal question, continue a topic or begin a new activity.
 
 For example:
 
 ```text
-I want to continue working on [topic / project / research / recurring activity].
-Use kernel_chat only when durable context, a source, a competence or an unfinished
-relation can materially change the result. Otherwise work directly from this
-conversation.
+Let's work on [topic]. Use the relevant sources and methods. When we learn
+something reusable, help me preserve it where our next conversation can use it.
 ```
 
-Or simply ask the ordinary question you would have asked without
-`kernel_chat`.
-
-What should change is not the amount of ceremony. The host should be able to
-recover a missing durable relation when it matters, reach the pertinent kernel
-or competence owner when a way of working matters, and preserve a reusable
-difference when real work changes what should happen later.
-
-A useful first check, if you want one, is conversational rather than technical:
-
-```text
-Tell me what durable context you can actually reach for this work, what you are
-using from it, and what remains unavailable or uncertain. Do not load anything
-that does not change the task.
-```
-
-This checks the current relation without turning every new chat into a test
-sequence.
+During initial setup, have the assistant reach one supplied method and connect
+it to the work you are starting. The [chat setup guide](CHAT_SETUP.md) explains
+file-based project setup and the existing ChatGPT repository route.
 
 ## Use the chat normally
 
-The kernel should be quiet when the conversation already contains what is
-needed. Ask ordinary questions normally. You do not need to mention the
-repository on every turn.
-
-A new chat alone does not require a boot.
+You do not need to repeat a boot phrase or request a full repository load on
+every turn. Use the principles already available and reach additional knowledge
+when it can change the question, method or result. The conversation stays direct.
 
 ## Continue a relation in a new chat
 
-When durable continuity matters and repository access is real, the bridge can
-lead the host to `state/CURRENT.md`. That state should point toward only the
-source or owner needed for the present question.
+Use the same project or connected source where you saved the kernel and current
+context. Ask to continue the topic. The assistant uses `CURRENT.md` and the
+relevant sources to recover the still-valid reasons and what has changed.
 
-The current relation can be:
+The topic may be research, a project, a recurring activity, a business question
+or another context worth continuing. A project is optional.
 
-```text
-no selected project yet
-a project
-a research object
-a business/problem context
-a recurring activity
-another user-owned relation worth continuing
-```
+In a repository-backed setup, these files live under `state/`. In a file-based
+chat setup, they live in the selected knowledge area. Use the location that
+actually exists. When a source is unavailable, supply or reconnect that source
+rather than reconstructing its contents from a guess.
 
-A project is therefore one possible context, not a prerequisite for the
-kernel instance.
+## Know the user-owned state surfaces
 
-If the chat cannot reach the file, treat continuity as unavailable in that
-turn. Do not invent repository contents or claim connector access.
+### `state/CURRENT.md` or the saved `CURRENT.md`
 
-For a missing way of understanding or working, the bridge instead reaches
-`AGENTS.md` and the pertinent kernel owner. User state does not have to carry
-the kernel's constitutive methods. These are selective paths, not boot stages.
+Keep the current point, why it matters, relevant changes, unfinished work and
+any next action that has actually been decided. It is a reentry margin, not the
+whole history or an instruction to execute an old plan automatically.
 
-## Know the three user-owned state surfaces
+### `state/SOURCES.md` or the saved `SOURCES.md`
 
-### `state/INSTANCE.json`
+Point to original information and reusable methods with a reason to reach each
+one. Availability does not mean every source must be loaded for every task.
 
-Carries instance/package/bridge identity and source-contact observation. Read it
-when installation/update/source freshness can change the work.
+### `state/INSTANCE.json` in the ChatGPT helper route
 
-It can distinguish:
-
-```text
-bridge template currently available
-configured bridge provenance and bytes
-repository targeted by a standard configured bridge
-operator-confirmed installed bridge byte identity + target/provenance when known
-```
-
-The installed digest is an operator-reported receipt, not direct inspection of
-ChatGPT. It does not own project/domain facts and does not prove connector
-reachability or behavioral assimilation.
-
-### `state/CURRENT.md`
-
-Carries the smallest current relation/context that can change reentry:
-
-- current point;
-- why it matters;
-- active relations;
-- open causal work;
-- accepted corrections;
-- next movement when actually determined;
-- relevant boundaries.
-
-It is not an automatic task queue.
-
-### `state/SOURCES.md`
-
-Carries owner-native sources and the condition that makes each source useful.
-Availability does not mean activation or authority.
+The Git/Python helper records package, repository, bridge and reported
+installation identity here. It is setup metadata rather than project knowledge.
+A file-based project in another chat app does not need this ChatGPT receipt.
+The [adoption guide](ADOPTION_GUIDE.md) explains the distinction.
 
 ## Maintain continuity
 
-Update CURRENT/SOURCES when one of these changes materially:
+When the work changes, preserve the knowledge that lets it continue: an accepted
+correction, an important source, a changed direction, an unfinished relation or
+the reason a method should now work differently.
 
-- the current point or direction;
-- an accepted correction;
-- an owner-native source;
-- unfinished work that should remain visible;
-- a verified boundary;
-- the pointer/reentry reason for a reusable way of understanding or working.
+With authorized writing access, the assistant updates the selected source and
+reports what was saved. Otherwise it provides the complete updated file for you
+to save in project knowledge or your repository. A response in one chat is not
+by itself a saved update to the source used by the next chat.
 
-Do not store ordinary chat, duplicate summaries, credentials, or whole
-histories. A short state with accurate pointers is more useful than a large
-memory dump.
-
-Keep reusable methods in the competence or kernel owner that uses them. State
-may say what changed, why it matters now and where to recover that knowledge.
-When resuming, check whether the reason is still valid instead of executing an
-old next action automatically.
+Keep original facts in their own sources, reusable methods in their competence
+and the current reentry margin in CURRENT. Avoid duplicate histories and never
+put credentials in these files.
 
 ## Add a project or context later
 
-Starting without a project does not lock the instance into an empty context.
-When a project becomes material, update `state/CURRENT.md` and
-`state/SOURCES.md` with the selected context and owner-native source.
-
-This normally does **not** require changing the ChatGPT bridge, because context
-and host entry are intentionally separate.
+Add the new context and its sources to CURRENT and SOURCES. The app's entry
+usually stays the same: it connects the kernel to the knowledge location,
+rather than hard-coding the first project as the kernel's identity.
 
 ## Add competences and metacompetences
 
-Link a competence from `state/SOURCES.md` when it owns a way of working that can
-change the current result. Do not copy it into the kernel merely to make it
-visible.
-
-A metacompetence carries comprehension developed through experience so it can
-be operated, integrated, and evolved in another situation. Its instruction
-file can be an operating representation; later changed behavior is stronger
-evidence that the comprehension was assimilated.
+A competence carries a usable way of understanding and working. It can combine
+with others, adapt to a different situation or improve through experience.
+A metacompetence helps form, combine or evolve those capabilities.
 
 ### Grow a competence in your instance
 
-A useful continuing ability may emerge from intent, knowledge, memory,
-successful work, a new possibility or a gap. Locate the owner that already
-carries it; enrich that method or compose existing competences first when that
-is the useful form. A distinct continuing function can have its own body.
+Begin with knowledge useful to your work. It may come from a successful result,
+a source, an intention, a new possibility or a correction. Improve an existing
+method when it owns that knowledge; give a distinct continuing capability its
+own body when that is the useful form.
 
-For example, reusable source-comparison knowledge can live in
-`knowledge/source-comparison.md`, or in an existing domain guide that already
-owns it. The path is optional. Preserve what it makes possible, when it matters,
-the sources/reasons behind it, how to adapt the method, what experience changed
-it and what could invalidate it.
+For example, a research method can live in `knowledge/source-comparison.md`
+or a saved `source-comparison.md` in project knowledge. Preserve what it makes
+possible, when it matters, the sources and reasons behind it, how to adapt it,
+and what experience could change it. A short entry can reach a deeper guide.
 
-Add its real location to `state/SOURCES.md`, with its owner and the condition
-that makes it useful. If current continuation depends on a correction, put a
-short reason and pointer in CURRENT. Do not copy the whole method into state or
-register every available competence as active.
+Point to its actual location from SOURCES. Put a short pointer in CURRENT when
+the current continuation depends on a correction. Keep the method itself in its
+own file rather than replacing it with a summary in current state.
 
-On a later relevant task, the chat reaches the method, understands its reasons
-and adapts it to the new object. Its result can call another competence or form
-a temporary composition. If a later consequence changes an earlier method,
-return that learning to the earlier owner. Preserve uncertainty when the
-relationship is not established. No central orchestrator is required.
-
-With real authorized repository writing, update that owner directly. With
-read-only access, prepare the exact proposed change; do not claim it was saved.
-A new file is availability, one use is exercise, and changed behavior on a
-later non-identical task is stronger assimilation evidence.
+On a different task, use the method through its reasons and adapt it to the new
+case. A result can make another competence useful or improve how future methods
+are formed. Save that reusable difference in the competence that will use it.
+The [competence source](../kernel/COMPETENCE.md) explains the deeper relation.
 
 ## Preserve unfinished work
 
-Use `Open work` in `state/CURRENT.md` for the causal remainder that should
-survive the conversation. Describe what is unfinished and what evidence exists.
-Do not turn it into automatic execution.
-
-If work would lose a material cursor, pending relation, result or effect receipt
-between conversations, use the optional [`operations/`](../operations/) organ.
-Keep it cold when nothing there changes continuation. No scheduler, daemon or
-executor is implied.
+Keep what remains to be done and the evidence already available. When a pending
+request, result or receipt needs deeper continuity, use the optional
+[operations knowledge](../operations/CURRENT.md) and its relevant files.
+Retrieve or add those files to your knowledge area when that work needs them.
+A saved next action is reconsidered from the present, not replayed automatically.
 
 ## Evolve the kernel
 
-When a real situation is handled differently because of a reusable observation,
-decide where the change belongs:
+Work can improve a domain method and also the way the kernel understands,
+forms or connects methods. Return reusable learning to the knowledge that will
+participate next, preserving source, reason and what could change the conclusion.
 
-- user/domain truth goes to its owner-native source;
-- current continuity goes to CURRENT/SOURCES;
-- instance/package/bridge observation goes to INSTANCE;
-- ChatGPT-specific friction goes to the ChatGPT adapter;
-- reusable comprehension goes to a competence/metacompetence;
-- a change to portable operating relations goes to `kernel/`.
-
-Keep source, reason and an invalidating condition close to consequential
-changes. Prefer small reversible edits over accumulated doctrine.
-
-When a capability is present upstream in the reasoning but disappears later,
-trace where it is first lost — representation, delivery, consumer, exercise —
-instead of patching the nearest visible symptom.
+When a useful relation is lost in a later result, trace where it was first lost:
+source interpretation, saved method, entry, delivery or use. Correct that point
+rather than adding another explanation downstream. The
+[evolution source](../kernel/EVOLUTION.md) carries this method.
 
 ## Update package and bridge separately
 
-A package update may not require a bridge update.
+A new upstream source is compared with your saved methods so local learning
+survives. A source update does not require replacing app instructions when the
+entry relation still fits.
 
-```text
-package source
-!= bridge template currently available
-!= configured bridge template provenance
-!= configured bridge repository/bytes
-!= operator-confirmed installed bridge incarnation
-!= actual host behavior
-```
+For the ChatGPT repository helper, use the complete
+[installation and update procedure](../INSTALL.md) and
+[adapter guide](../adapters/chatgpt/README.md). Preview a selected bridge change,
+keep its delivery digest, obtain the operator's copy/save report for that exact
+text, publish the receipt and freshly read it before remote reentry.
 
-Use `--refresh-instance` after adopting package changes when package/available-
-template identity in INSTANCE should be refreshed. It does not rewrite the
-configured bridge's historical template provenance.
-
-A standard configured bridge contains the user-owned repository it reaches. If
-a preserved legacy bridge names a different repository from the instance, do
-not silently continue: use the matching instance identity or deliberately
-replace the bridge.
-
-Preview a bridge before replacement. `--replace-adapter` changes only the local
-configured bridge and preserves the previous confirmed host digest as evidence
-until the operator updates ChatGPT.
-
-When the bridge is shown to the operator, retain the emitted
-`confirmation_bridge_sha256`. After the operator copies/saves that delivered
-bridge in ChatGPT, bind the report to that exact delivery digest:
-
-```bash
-python scripts/configure.py \
-  --github-user YOUR_GITHUB_USER \
-  --repository YOUR_REPOSITORY \
-  --confirm-host-installation \
-  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
-```
-
-If the current configured bridge no longer matches the delivered digest, the
-confirmation is rejected and the current bridge must be delivered again. This
-receipt remains operator-confirmed evidence. Reachability and behavioral
-assimilation still require their own observations.
+For project knowledge, replace the selected files in the app and preserve their
+source revision and useful local changes. Keep account settings and saved file
+updates explicit so the next chat reaches the intended form.
 
 ## Source contact
 
-During active use, `AGENTS.md` may make a light upstream check pertinent.
-`state/INSTANCE.json` can preserve the last observed revision/time and material
-delta so the next conversation need not reconstruct that observation.
-
-This is not a background monitor. A newer upstream source does not automatically
-replace local state, competences, bridge or installed instructions.
+Check upstream when a relevant change can improve the work. Preserve useful
+observations without making every conversation a maintenance session. Updates
+and public feedback are deliberate actions; the current source-contact method
+is in [AGENTS.md](../AGENTS.md).
 
 ## Privacy and control
 
-For non-public continuity, use a **private standalone repository** initialized
-from the public source. Do not rely on the idea of a private fork of a public
-GitHub repository.
-
-A deliberately public fork is valid when public continuity is intended.
-
-Never store tokens, passwords, private keys, secret logs or unapproved
-sensitive material in the repository or Custom Instructions. Grant connectors
-only the access you intend.
+Use a private knowledge space or private standalone repository for private work.
+A public fork is suitable for deliberately public contents. Keep passwords,
+tokens and private keys out of knowledge files and account instructions. Grant
+only the access intended for the work.
