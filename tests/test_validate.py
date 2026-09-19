@@ -361,7 +361,7 @@ class ValidateTests(unittest.TestCase):
         # The public first encounter must make the operating transformation
         # available before receiver mechanics, then descend into owner topology
         # and setup. Protect the causal order without freezing section titles.
-        use_position = readme.index("present relation")
+        use_position = readme.index("current work")
         receiver_position = readme.index("conversational AI environment")
         source_map_position = readme.index("[AGENTS.md](AGENTS.md)")
         setup_position = readme.index("## Set it up")
