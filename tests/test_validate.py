@@ -358,32 +358,41 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        # The public first encounter must make the operating transformation
-        # available before receiver mechanics, then descend into owner topology
-        # and setup. Protect the causal order without freezing section titles.
-        use_position = readme.index("current work")
-        receiver_position = readme.index("conversational AI environment")
-        source_map_position = readme.index("[AGENTS.md](AGENTS.md)")
-        setup_position = readme.index("## Set it up")
-        self.assertLess(use_position, receiver_position)
-        self.assertLess(receiver_position, source_map_position)
-        self.assertLess(source_map_position, setup_position)
+        # The public surface should give a normal user the result and one
+        # observable example first, answer recurrent adoption questions next,
+        # then expose setup and only afterward the deeper study surface.
+        value_position = readme.index("## What you get")
+        example_position = readme.index("## A small before / after")
+        qa_position = readme.index("## Questions and answers")
+        setup_position = readme.index("## Start using it")
+        deep_position = readme.index("## Go deeper")
+        self.assertLess(value_position, example_position)
+        self.assertLess(example_position, qa_position)
+        self.assertLess(qa_position, setup_position)
+        self.assertLess(setup_position, deep_position)
 
-        first_encounter = readme[:setup_position]
-        self.assertIn("conversational AI environment", first_encounter)
+        opening = readme[:qa_position]
+        self.assertIn("carry forward the ways of working it", opening)
+        self.assertIn("changed handling of task B", opening)
+        for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
+            with self.subTest(provider_name=provider_name):
+                self.assertNotIn(provider_name, opening)
+
+        qa = readme[qa_position:setup_position]
+        self.assertIn("What does “learning” mean here?", qa)
+        self.assertIn("Does it work beyond ChatGPT?", qa)
+        self.assertIn("Do I need GitHub or Python?", qa)
+        self.assertIn("How do I know whether it is actually helping?", qa)
+        self.assertIn("conversational AI environment", qa)
         self.assertIn(
             "persistent/custom operating instructions or an equivalent entry",
-            first_encounter,
+            qa,
         )
         self.assertIn(
             "a persistent kernel source the conversation can reach",
-            first_encounter,
+            qa,
         )
-        self.assertIn("competence trace", first_encounter)
-        self.assertIn("kernel/KERNEL.md#kernel-chat-competence-trace", first_encounter)
-        for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
-            with self.subTest(provider_name=provider_name):
-                self.assertNotIn(provider_name, first_encounter)
+        self.assertIn("competence trace", qa)
 
         setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
         setup_links = links(setup)
