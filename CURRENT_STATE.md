@@ -4,8 +4,8 @@ Updated: 2026-09-19
 
 ```text
 source_version: 0.6.0
-current_work: conversational adoption and public communication
-current_change: shared chat setup, reader-facing explanation and source-route tests
+current_work: portable conversational kernel entry
+current_change: provider-neutral backend instruction source + ChatGPT host projection
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -26,16 +26,15 @@ Use kernel_chat for a conversational app. Use MAIOS Project Kernel for an
 agent harness, agentic application or IDE. The destination's working mode, not
 the model name, determines this product choice.
 
-[Chat setup](docs/CHAT_SETUP.md) now supplies a shared instructions-and-knowledge
-route, including a concrete Claude Projects configuration. Other chat apps use
-their actual instruction, file or connector facilities. The existing
-[ChatGPT helper](INSTALL.md) remains the Git/Python implementation with its own
-configured-bridge and operator-report receipts.
+[Chat setup](docs/CHAT_SETUP.md) now uses one provider-neutral conversational
+instruction source under `adapters/conversational/`. The backend entry names
+the kernel source and constitutive owner paths; it does not reproduce the kernel
+inside provider instructions.
 
-The shared file route does not fabricate a ChatGPT `INSTANCE` receipt. It keeps
-source identity, saved knowledge and the chosen app scope explicit. When the
-assistant cannot save an updated method, the user receives the complete file
-to place in that scope.
+The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
+with a GitHub instance and retains its configured-bridge and operator-report
+receipts. Other conversational receivers install the same semantic entry through
+their own persistent/custom instruction and source mechanisms.
 
 ## Current communication correction
 
@@ -49,10 +48,11 @@ uses a concrete example and leads directly to setup. Generalized denials,
 review genealogy and model-directed evaluation instructions no longer shape
 the README. AGENTS and the adoption/user guides carry the corresponding route.
 
-This source change adds a documented chat setup path. It does not change the
-portable kernel bodies, configurator, runtime validator, state schema or
-existing ChatGPT bridge. The documentation test observes active navigation
-rather than freezing an editorial heading or requiring a duplicated procedure.
+The current source change moves the conversational backend entry out of the
+ChatGPT-specific adapter. It changes the instruction template consumed by the
+ChatGPT configurator, its validator/parser and discriminating tests, while
+preserving the portable kernel bodies and `kernel_chat.instance.v1` state
+schema. Legacy configured ChatGPT bridges remain recognizable.
 
 ## Preserved mechanics and knowledge
 
@@ -64,7 +64,7 @@ drift handling, exact-delivery confirmation, and fresh remote receipt readback
 remain implemented by their existing owners and tests.
 
 [Architecture](docs/ARCHITECTURE.md), [installation](INSTALL.md),
-[adoption](docs/ADOPTION_GUIDE.md), the [adapter](adapters/chatgpt/README.md),
+[adoption](docs/ADOPTION_GUIDE.md), the [conversational entry](adapters/conversational/README.md), the [ChatGPT adapter](adapters/chatgpt/README.md),
 [Core](kernel/KERNEL.md), [Competence](kernel/COMPETENCE.md),
 [Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md) retain the deeper
 operating and mechanical relations. Ordinary user context, reusable methods
@@ -72,10 +72,10 @@ and optional unfinished operations keep their distinct purposes.
 
 ## Evidence and released identity
 
-The current source suite contains 59 tests: 38 configurator, 18 validation and
-public-route cases, and 3 CommonMark consumer cases. CI is configured for
-Python 3.11–3.14 on Ubuntu and Windows. Read the actual run for the exact
-commit before attributing a result to this source.
+The previous source checkpoint carried 59 tests. This change adds direct
+coverage for the portable conversational instruction source and its ChatGPT
+rendering. CI remains configured for Python 3.11–3.14 on Ubuntu and Windows;
+read the actual run on the resulting commit before attributing proof to it.
 
 The material review result belongs to `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`.
 Release `v0.6.0` remains on `d2c94ca4e4523f1f7a343601d6beec1e84031fac` with
