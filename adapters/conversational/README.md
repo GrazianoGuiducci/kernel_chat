@@ -23,8 +23,12 @@ The placeholder is:
 {{KERNEL_SOURCE}}
 ```
 
-A host adapter renders it with the source relation that host can actually
-reach. The current ChatGPT helper renders a GitHub source such as:
+Install it with the source relation that the receiving environment can
+actually reach. A host-specific adapter may render this automatically; it is
+not required when the host already exposes a usable persistent instruction
+surface and persistent source.
+
+The current ChatGPT helper renders a GitHub source such as:
 
 ```text
 github:owner/repository
@@ -37,7 +41,8 @@ mechanism changes; the kernel relation does not.
 `VERSION` identifies this portable instruction contract. Host-adapter
 mechanics have their own identity and must not redefine the kernel.
 
-The owner references in the canonical template use the package layout. A host
-adapter may translate those references when its knowledge surface does not
-preserve directories. Translation must preserve the same owner mapping; it does
-not rewrite or duplicate the kernel logic.
+The owner references in the canonical template use the package layout. When a
+receiver's knowledge surface does not preserve directories, either the
+installation step or a host adapter may translate those references. Translation
+must preserve the same owner mapping; it does not rewrite or duplicate the
+kernel logic.
