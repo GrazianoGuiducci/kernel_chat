@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: operating transformation first + causal example + receiver recognition after object formation
+current_change: kernel relation != persistent carrier + end-to-end causal example through later changed behavior
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -58,9 +58,28 @@ present relation + owner-native sources + pertinent competences
 ```
 
 A compact causal example makes that difference observable before a receiver can
-compress the kernel into a familiar storage/context category. Persistence then
-appears as the means that keeps the changed competence, reasons and source
-relations reachable across later conversations.
+compress the kernel into a familiar storage/context category. The current
+example now continues through a materially different later task and makes the
+observable difference explicit: the user does not have to reconstruct the
+earlier correction, because the changed competence participates and changes how
+the later task is handled.
+
+The README also now makes the carrier distinction explicit:
+
+```text
+living kernel relation / competence
+!= persistent representation
+
+persistent representation
+-> makes the relation reachable again
+
+later changed handling
+-> observable readback that the competence participated
+```
+
+Persistence therefore appears as the means that keeps the changed competence,
+reasons and source relations reachable across later conversations, rather than
+as the kernel's identity.
 
 Only after the object and its consequence have formed does the README expose
 the capability-relative receiving relation:
