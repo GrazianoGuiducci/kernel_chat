@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Capability/source verification map:** replaced the expanding first-encounter
+  Q&A with a direct map from capability to operating effect and owner/source to
+  inspect. Added only the clarifications still required for correct use:
+  system-level learning, provider-neutral portability, the current ChatGPT
+  helper relation, and optional research depth. A short direct-check path now
+  routes readers from source inspection to one real task and later non-identical
+  behavioral readback. Receiver doubts remain diagnostic evidence rather than a
+  standing public-content backlog.
 - **Shared human/AI reading path:** the README now states its mixed role as a
   shared entry surface for people and AI assistants. Normal users can begin from
   Q&A + setup; AI assistants can follow owner/source links when deeper knowledge
