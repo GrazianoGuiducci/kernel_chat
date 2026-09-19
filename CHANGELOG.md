@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Shared human/AI reading path:** the README now states its mixed role as a
+  shared entry surface for people and AI assistants. Normal users can begin from
+  Q&A + setup; AI assistants can follow owner/source links when deeper knowledge
+  becomes relevant. Added Q&A routes for audience, abstract terminology and the
+  fastest way to understand the live mechanism, plus a footer reading path into
+  Core/Competence/Evolution/FDLA and the SSK paper. Recurring doubts are used as
+  focus paths toward optional depth rather than expanded into defensive
+  objection handling.
 - **User-path README and evidence-derived Q&A:** the root README now separates
   normal use from study depth. It presents user value, one observable
   before/after case, a Q&A formed from repeated first-encounter questions,
