@@ -370,6 +370,8 @@ class ValidateTests(unittest.TestCase):
         self.assertLess(example_position, qa_position)
         self.assertLess(qa_position, setup_position)
         self.assertLess(setup_position, deep_position)
+        reading_position = readme.index("## Reading path")
+        self.assertLess(deep_position, reading_position)
 
         opening = readme[:qa_position]
         self.assertIn("carry forward the ways of working it", opening)
@@ -383,6 +385,9 @@ class ValidateTests(unittest.TestCase):
         self.assertIn("Does it work beyond ChatGPT?", qa)
         self.assertIn("Do I need GitHub or Python?", qa)
         self.assertIn("How do I know whether it is actually helping?", qa)
+        self.assertIn("Who is this README for?", qa)
+        self.assertIn("Why do some terms sound more abstract than the setup itself?", qa)
+        self.assertIn("What is the fastest way to understand how it works?", qa)
         self.assertIn("conversational AI environment", qa)
         self.assertIn(
             "persistent/custom operating instructions or an equivalent entry",
