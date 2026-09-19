@@ -32,6 +32,9 @@ REQUIRED = [
     "operations/FLOWS.md",
     "operations/REQUESTS_RESULTS.md",
     "operations/RECEIPTS_RECOVERY.md",
+    "adapters/conversational/VERSION",
+    "adapters/conversational/INSTRUCTIONS.template.md",
+    "adapters/conversational/README.md",
     "adapters/chatgpt/VERSION",
     "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md",
     "templates/state/INSTANCE.json",
@@ -47,10 +50,13 @@ REQUIRED = [
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 BRIDGE_IDENTITY_HEADER = re.compile(
-    r"\AWork from the present\. Act directly when the conversation and working set "
+    r"\A(?:"
+    r"Kernel source:\s*github:([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
+    r"|Work from the present\. Act directly when the conversation and working set "
     r"suffice; a new chat alone does not require a boot\.\r?\n\r?\n"
     r"User-owned kernel (?:repository|instance):\s*"
     r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\.\s*(?:\r?\n|$)"
+    r")"
 )
 
 AGENT_DISCOVERY_ROUTES = (
@@ -76,7 +82,9 @@ def read_semver(path: Path, label: str, errors: list[str]) -> str | None:
 
 def bridge_repositories(text: str) -> set[str]:
     match = BRIDGE_IDENTITY_HEADER.match(text)
-    return {match.group(1)} if match is not None else set()
+    if match is None:
+        return set()
+    return {group for group in match.groups() if group is not None}
 
 
 def normalized_github_repository(value: object) -> str | None:
@@ -264,20 +272,45 @@ def main() -> int:
 
     version = read_semver(ROOT / "VERSION", "VERSION", errors)
     bridge_version = read_semver(
-        ROOT / "adapters/chatgpt/VERSION", "ChatGPT bridge VERSION", errors
+        ROOT / "adapters/conversational/VERSION",
+        "conversational instructions VERSION",
+        errors,
     )
 
-    adapter_template = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
+    adapter_template = ROOT / "adapters/conversational/INSTRUCTIONS.template.md"
     if adapter_template.is_file():
         template = adapter_template.read_text(encoding="utf-8")
-        for marker in ("{{GITHUB_USER}}", "{{REPOSITORY}}"):
-            if template.count(marker) != 1:
-                errors.append(f"adapter template must contain {marker} once")
-        for relation in ("state/CURRENT.md", "AGENTS.md", "effect authority"):
+        if template.count("{{KERNEL_SOURCE}}") != 1:
+            errors.append(
+                "conversational instructions template must contain {{KERNEL_SOURCE}} once"
+            )
+        for relation in (
+            "AGENTS.md",
+            "state/CURRENT.md",
+            "state/SOURCES.md",
+            "kernel/KERNEL.md",
+            "kernel/COMPETENCE.md",
+            "kernel/FDLA.md",
+            "kernel/EVOLUTION.md",
+            "A competence can make another competence pertinent",
+            "reusable learning",
+        ):
             if relation not in template:
-                errors.append(f"adapter template missing bridge relation: {relation}")
-        if re.search(r"{{PROJECT_[A-Z_]+}}", template):
-            errors.append("adapter template must not require project-specific fields")
+                errors.append(
+                    f"conversational instructions template missing relation: {relation}"
+                )
+        if re.search(r"{{(?:GITHUB|PROJECT|CHATGPT)_[A-Z_]+}}", template):
+            errors.append(
+                "conversational instructions template must remain provider/source neutral"
+            )
+
+    chatgpt_compat = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
+    if chatgpt_compat.is_file():
+        compatibility = chatgpt_compat.read_text(encoding="utf-8")
+        if "../conversational/INSTRUCTIONS.template.md" not in compatibility:
+            errors.append(
+                "ChatGPT compatibility template must point to the conversational instruction source"
+            )
 
     instance_template = ROOT / "templates/state/INSTANCE.json"
     if instance_template.is_file():
