@@ -1,34 +1,35 @@
 # ChatGPT adapter
 
-The ChatGPT adapter translates the portable kernel into a small host-native
-Custom Instructions bridge and a repository reentry path.
+The ChatGPT adapter installs the provider-neutral conversational entry in
+ChatGPT and records the host-specific configured/installed relation.
 
-It is designed for ChatGPT's turn-reactive conversational surface. It does not
-simulate an agent runtime, filesystem, hook, background process, scheduler or
-autonomous continuation.
+The semantic instruction source is:
+
+`../conversational/INSTRUCTIONS.template.md`
+
+It is designed to remain usable by conversational receivers other than ChatGPT.
+This adapter owns only ChatGPT configuration, delivery and receipt mechanics.
+
+It does not simulate an agent runtime, filesystem, hook, background process,
+scheduler or autonomous continuation.
 
 ## Bridge contract
 
-The bridge should stay shorter and more stable than the package it reaches.
-Its job is to preserve only the constitutive entry relation:
+The configured ChatGPT bridge is rendered from the conversational instruction
+source with:
 
 ```text
-work directly when the present is sufficient
-user-owned instance identity
-CURRENT for missing durable user/context relation
-AGENTS for missing kernel/method/maintenance relation
-source/evidence/inference/capability/effect boundaries
-no simulated host mechanisms
-package / configured bridge / installed instructions kept distinct
+KERNEL_SOURCE = github:<instance repository>
 ```
 
-Competence composition, FDLA, source contact, Evolution Feedback and deeper
-maintenance knowledge remain in their owner-native repository bodies and are
-reached only when pertinent.
+The installed instructions then enter the repository through `AGENTS.md`,
+reach `CURRENT` when continuity matters, and let the pertinent kernel and
+competence owners participate.
 
-`adapters/chatgpt/VERSION` identifies the bridge-template contract separately
-from the root package `VERSION`. A package update does not automatically require
-a new bridge or ChatGPT UI update.
+`adapters/conversational/VERSION` identifies the portable instruction contract.
+`adapters/chatgpt/VERSION` identifies ChatGPT adapter mechanics. Neither is the
+root package `VERSION`, and a package update does not automatically require a
+new host-instruction update.
 
 ## Assisted host setup
 
