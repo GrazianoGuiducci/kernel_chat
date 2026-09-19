@@ -86,6 +86,15 @@ class ValidateTests(unittest.TestCase):
         self.assertTrue(payload["valid"])
         self.assertEqual(payload["errors"], [])
 
+    def test_portable_conversational_instruction_source_is_required(self) -> None:
+        (self.root / "adapters/conversational/INSTRUCTIONS.template.md").unlink()
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "missing required file: adapters/conversational/INSTRUCTIONS.template.md",
+            payload["errors"],
+        )
+
     def test_adoption_guide_is_part_of_package_contract(self) -> None:
         (self.root / "docs/ADOPTION_GUIDE.md").unlink()
         result, payload = self.validate()
