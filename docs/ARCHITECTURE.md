@@ -13,11 +13,15 @@ user-owned instance
   SOURCES owner-native pointers
   optional local competences and knowledge
 
-host bridge
-  source template available in the package
-  -> configured local projection with its own provenance / repository target
-  -> operator-confirmed installed bridge incarnation receipt
-  -> instructions actually installed in ChatGPT
+conversational entry
+  provider-neutral instruction template
+  -> kernel source identity + constitutive owner paths
+
+host adapter
+  receiver-specific rendering / delivery mechanics
+  -> configured local projection with its own provenance / source target
+  -> operator-confirmed installed incarnation receipt when that host supports it
+  -> instructions actually installed in the host
 
 actual host
   available connector/tool/capability reality
@@ -131,20 +135,25 @@ These are alternatives made pertinent by the work, not a required boot
 sequence. Reading a representation first can frame interpretation without
 making it authority.
 
-## Host bridge
+## Conversational entry and host adapter
 
-The ChatGPT adapter is intentionally a **stable, small bridge**. It should carry
-only enough constitutive relation to reach user continuity and the pertinent
-kernel owners without copying the whole kernel into Custom Instructions.
+The provider-neutral conversational template is the constitutive backend entry.
+It carries kernel-source identity, the owner paths needed to enter the kernel,
+competence participation and learning return without copying the whole kernel
+into backend instructions.
+
+The ChatGPT adapter renders that same source into a host-specific configured
+artifact and owns only ChatGPT delivery/receipt mechanics.
 
 The following are distinct incarnations/evidence states:
 
 ```text
 portable semantic owner
-!= bridge template currently available
-!= configured local bridge + known/unknown template provenance + repository target
+!= conversational instruction template currently available
+!= host adapter mechanics
+!= configured local bridge + known/unknown template provenance + source target
 != operator-confirmed installed bridge incarnation receipt
-!= instructions actually present in ChatGPT
+!= instructions actually present in the host
 != observed host behavior
 ```
 
