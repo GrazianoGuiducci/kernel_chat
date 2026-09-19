@@ -596,6 +596,7 @@ def main() -> int:
         initial_source_row = ""
 
     replacements = {
+        "KERNEL_SOURCE": f"github:{instance_repository}",
         "GITHUB_USER": args.github_user,
         "REPOSITORY": args.repository,
         "CONTEXT_KIND": context_kind,
