@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: public README replaces objection-oriented Q&A with capability -> source verification map and minimal clarifications
+current_change: portable adoption clarified: host-specific adapter is optional when persistent instruction + persistent source already exist
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -73,6 +73,21 @@ kernel owners and SSK paper. They are depth, not prerequisite explanation.
 The README remains a shared entry for people and AI assistants: humans can
 inspect the capability map and start path; AI assistants can follow the same
 owner links when deeper knowledge becomes relevant.
+
+A fresh receiver attempt exposed one material adoption ambiguity: it treated the
+absence of a dedicated host adapter as evidence that only a reduced/manual use
+was possible. The portable contract already allowed direct adoption through any
+receiver that provides both:
+
+```text
+persistent/custom instruction entry
++ persistent source reachable by the conversation
+```
+
+README, conversational-entry guidance, CHAT_SETUP and ADOPTION_GUIDE now state
+explicitly that a host-specific adapter is optional in that relation. An adapter
+packages host-specific setup, translation, receipts or recovery mechanics; it
+does not determine whether the portable kernel relation can be adopted.
 
 ## GitHub first-encounter metadata
 
