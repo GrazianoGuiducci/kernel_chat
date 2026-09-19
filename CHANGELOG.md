@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Projective-regressive first encounter:** README now exposes the operating
+  transformation before receiver/persistence mechanics, including one compact
+  causal example showing how reusable learning changes a later non-identical
+  task. Receiver fit follows only after the object and consequence have formed;
+  source topology and setup descend afterward. The public regression protects
+  this causal order without freezing section titles. The System Semantic Kernel
+  working paper is now reachable as the deeper research source rather than
+  being implied through product-level vocabulary alone.
 - **Portable competence trace and adoption simplification:** Core now defines a
   response-closing competence trace; conversational instructions `2.1.0`
   activate it without turning the prior trace into a mandatory next stack.
