@@ -58,179 +58,64 @@ itself. Later work can then begin from a different operating relation.
 The persistent files, state objects or knowledge surfaces carry this operating
 layer between conversations and environments.
 
-## Questions and answers
+## Capabilities and where to verify them
 
-### What does “learning” mean here?
+The README summarizes the operating result. The linked owners carry the exact
+relations behind each capability.
 
-The changing object is the **user-owned operating layer**: competences, current
-relations, source distinctions and reusable ways of working can change through
-use.
+| Capability | What it does | Inspect |
+| --- | --- | --- |
+| **Present-first continuity** | Recovers only the durable relation that can change the work now. | [Core](kernel/KERNEL.md) · [User guide](docs/USER_GUIDE.md) |
+| **Selective source reentry** | Reaches owner-native sources when they become relevant instead of replaying a whole history. | [Core](kernel/KERNEL.md) · [SOURCES template](templates/state/SOURCES.md) |
+| **Situated competences** | Lets reusable ways of understanding and working participate, combine, deepen or form when needed. | [Competence](kernel/COMPETENCE.md) |
+| **Learning return** | Returns a reusable difference to the competence or owner that should behave differently later. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
+| **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |
+| **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
+| **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
+| **Competence trace** | Exposes which competence owners materially participated in a final response. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
+| **Provider-neutral conversational entry** | Carries the same kernel relation into compatible conversational environments. | [Conversational entry](adapters/conversational/README.md) · [Instruction source](adapters/conversational/INSTRUCTIONS.template.md) |
+| **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Chat setup](docs/CHAT_SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
+| **ChatGPT reference integration** | Provides the current ready-made Git/Python configuration and receipt mechanics. | [ChatGPT adapter](adapters/chatgpt/README.md) · [Install](INSTALL.md) |
+| **Current package evidence** | Records current source state, release identity and repository proof boundaries. | [Current state](CURRENT_STATE.md) · [Tests](tests/) |
 
-Learning becomes observable when a later, different situation is understood or
-handled differently because that changed operating knowledge participates.
+## Useful clarifications
 
-### How is this different from a memory file, native memory, AGENTS.md, CLAUDE.md or custom instructions?
+**Learning** refers to change in the user-owned operating layer: competences,
+source distinctions, current relations and reusable ways of working can change
+through use. The persistent representation carries that change; later,
+different work is where its effect becomes observable. See
+[Competence](kernel/COMPETENCE.md) and [Evolution](kernel/EVOLUTION.md).
 
-Those can all be useful carriers or entry surfaces.
+**The kernel is portable across compatible conversational hosts.** The common
+entry is under [adapters/conversational/](adapters/conversational/README.md).
+ChatGPT is the first ready-made host-specific integration; another receiver can
+use the same kernel relation through its own persistent instruction and source
+mechanisms.
 
-`kernel_chat` adds a shared operating relation around them: selective reentry,
-source ownership, competence participation and composition, learning returned
-to the competence that should behave differently, and evolution when later
-experience changes an earlier method.
+**GitHub and Python belong to the current ChatGPT reference helper**, not to the
+portable semantic relation. The [chat setup guide](docs/CHAT_SETUP.md) starts
+from the source route the receiving environment actually exposes.
 
-A memory can preserve information. A competence also preserves **how to
-understand or work when that knowledge becomes relevant**.
+**The deeper terminology is optional for normal use.** Core, Competence,
+Evolution, FDLA and the
+[System Semantic Kernel working paper](https://github.com/GrazianoGuiducci/maios-ssk-paper)
+are available for technical or conceptual study. They are not prerequisites for
+starting to use the kernel.
 
-### Does it work beyond ChatGPT?
+## Check it directly
 
-Yes. The portable conversational entry is provider-neutral:
-
-```text
-conversational AI environment
-+ persistent/custom operating instructions or an equivalent entry
-+ a persistent kernel source the conversation can reach
--> kernel_chat can operate in that environment
-```
-
-The receiving host supplies its own mechanism. The kernel source can be a
-repository, project/knowledge space, filesystem, connector or another durable
-source the conversation can reach.
-
-ChatGPT currently has the first ready-made host-specific adapter. Other
-compatible conversational environments can use the same kernel relation through
-their own persistent instruction and source mechanisms.
-
-### Do I need GitHub or Python?
-
-The portable kernel relation can use the persistent source and instruction
-mechanisms already available in the receiving environment.
-
-GitHub and Python are used by the current ChatGPT reference helper. A receiver
-that already has project knowledge, persistent files, a repository connection
-or another durable knowledge surface can use that route instead.
-
-### What does the host need?
-
-For persistent use, the conversational environment needs:
+The shortest useful verification path is:
 
 ```text
-a persistent instruction / entry mechanism
-+ a persistent source it can reach
+1. read the capability you care about
+2. follow its owner/source link above
+3. use the kernel on one real task
+4. preserve one reusable difference
+5. observe a later, different task
 ```
 
-Read access lets the conversation use existing kernel knowledge. Write access
-lets it preserve new learning directly. When the host cannot write the source,
-the assistant can produce the complete update for the user to save.
-
-### How does it avoid loading an ever-growing history?
-
-The current conversation remains the starting point. It reaches deeper state,
-sources and competences only when they can materially change the work.
-
-`CURRENT` keeps a small reentry margin. `SOURCES` points to the sources that
-own useful knowledge. Reusable methods stay in their own competence owners
-instead of accumulating in one transcript or prompt.
-
-### What happens when a competence becomes wrong or stale?
-
-Later results can change the knowledge that should act next time.
-
-Reusable differences return to the closest owner, with enough source and reason
-to understand why the method changed. A persistent form can be refined, revised
-or retired when later work changes the relation it was carrying.
-
-### What is the competence trace for?
-
-Every final user-facing response closes with two compact functions:
-
-```text
-Competences: <owners that materially formed this response | —>
-Emergent possibilities: <possibilities that materially emerged | —>
-```
-
-The trace makes recent competence participation visible. The next turn
-recomputes what is relevant from the changed situation; the trace is an
-observation of the completed work.
-
-### How much context does this consume?
-
-The design is selective rather than preload-oriented. The active conversation
-uses its present context first and reaches additional knowledge only when it can
-change the question, method or result.
-
-This is also why the kernel source can grow in depth without requiring every
-conversation to carry the whole source in its prompt.
-
-### How do I know whether it is actually helping?
-
-Look at **later non-identical work**.
-
-A useful test is:
-
-```text
-experience or correction in task A
--> reusable change is preserved
--> task B later makes that competence relevant
--> task B is handled differently without rebuilding the same correction
-```
-
-Repository validation and regression tests verify package structure, source
-routes and adapter mechanics. Behavioral evidence comes from observing whether
-later work actually changes in the intended way.
-
-### What does a normal user need to understand?
-
-Only the operating result:
-
-```text
-work with the AI normally
--> useful reusable learning is preserved
--> later work can begin from it
-```
-
-The deeper kernel documents explain how source distinction, competence
-formation, evolution and in-flow correction work for people who want to study
-or extend the system.
-
-### Who is this README for?
-
-It is a shared entry surface for **people and AI assistants**.
-
-A person can use the Q&A and the start path to understand what changes and what
-to do next. In assisted adoption, an AI can use the same README to follow the
-kernel owners, inspect the relevant source and carry out the parts of setup or
-use that its environment actually supports.
-
-### Why do some terms sound more abstract than the setup itself?
-
-The public surface has two depths.
-
-The first depth is operational: what changes for the user, what the host needs,
-how learning is carried forward and how to start.
-
-The second depth names the deeper relations that make the kernel portable and
-evolvable. Those terms live in the kernel sources and in the
-[System Semantic Kernel working paper](https://github.com/GrazianoGuiducci/maios-ssk-paper).
-
-Normal use can begin from the operational depth. The deeper language is there
-for people or systems that want to study, extend or reason about the
-architecture itself.
-
-### What is the fastest way to understand how it works?
-
-Follow the smallest live path:
-
-```text
-README
--> AGENTS.md
--> Core / Competence only where the question makes them relevant
--> one real task
--> preserve one reusable difference
--> observe a later, different task
-```
-
-Reading the sources shows how the relations are formed. Using the kernel on
-real work shows whether they actually change later behavior.
+The repository shows how the relation is formed. The later task shows whether
+that relation actually changed the work.
 
 ## Start using it
 
