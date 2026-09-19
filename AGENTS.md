@@ -56,40 +56,19 @@ updates are saved. Do not create a ChatGPT helper receipt for that other route.
 With the Git/Python ChatGPT helper, preserve the configuration and receipt
 contract below. See the [adoption guide](docs/ADOPTION_GUIDE.md).
 
-## ChatGPT helper: adoption boundary
+## Host-specific setup
 
-This section applies to the ChatGPT configurator route in `INSTALL.md`.
-Repository-side configuration prepares the text; the operator saves it in the
-account. When `scripts/configure.py` produces
-`adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md`, provide its complete
-contents and the exact Custom Instructions copy/save step. Until that action
-is reported, use `repository configured / host activation pending`.
+The portable entry and operating relation remain provider-neutral. When setup,
+update, receipt or account mechanics are selected, route to the adapter that
+owns that host.
 
-Retain the `confirmation_bridge_sha256` printed for the bridge delivered to the
-operator. After they confirm saving that delivery, record the report with:
+For the current ChatGPT implementation use [INSTALL.md](INSTALL.md) and the
+[ChatGPT adapter guide](adapters/chatgpt/README.md). Their repository, digest,
+receipt and account-setting mechanics do not become general kernel rules.
 
-```bash
-python scripts/configure.py \
-  --github-user YOUR_GITHUB_USER \
-  --repository YOUR_REPOSITORY \
-  --confirm-host-installation \
-  --expected-bridge-sha256 DELIVERED_BRIDGE_SHA256
-```
-
-The receipt binds the operator report to the delivered raw-byte identity and
-its target/provenance. It does not inspect or perform the account action.
-Unreconciled local drift stops confirmation. If the report cannot be saved,
-retain it as an operator report rather than claiming `INSTANCE` contains it.
-
-Before a remote/new-chat consumer relies on the receipt, follow the living
-[receipt publication and fresh remote readback contract](INSTALL.md#receipt-publication-and-fresh-readback).
-The local confirmation must be published to the selected branch and freshly
-read there. Then verify host reachability in the new chat when selected.
-Access, an operator report and observed use establish different facts.
-
-A delayed confirmation must remain bound to the delivery it answers. Never
-replace an earlier receipt or saved method merely to make local state look
-current. These mechanics are specific to the selected setup/update effect.
+Other conversational receivers use their actual persistent-instruction and
+source mechanisms. Do not import ChatGPT-specific receipts or CLI transitions
+into those routes.
 
 ## Instance, state and sources
 
@@ -135,29 +114,23 @@ frame the question without acquiring authority to determine its answer.
 
 The canonical upstream is
 [GrazianoGuiducci/kernel_chat](https://github.com/GrazianoGuiducci/kernel_chat).
-The user's selected persistence surface owns their continuity and learned methods.
+The user's selected persistence surface owns their continuity and learned
+methods.
 
-When source freshness can change the work, inspect the recorded upstream
-observation where available. Repository instances can retain it in
-`state/INSTANCE.json`. During active use, a last known check about seven days
-old, or a material source signal, can make another read useful. This is a light
-suggested cadence, not a timer or a compulsory interruption.
+Inspect upstream when a material source difference can change the present work.
+A newer source is a possibility to understand, not an automatic instruction to
+update. Preserve useful local evolution and keep source revision, configured
+entry, installed host instructions and actual behavior distinguishable.
 
-A newer source is a possibility to inspect, not an instruction to update.
-Preserve useful local evolution and distinguish source changes, available
-bridge templates, configured provenance/target/bytes, operator-confirmed
-installation and actual host behavior.
+When package/repository maintenance itself is selected, use the
+[package evolution guide](docs/EVOLUTION_GUIDE.md) and the relevant host adapter
+for exact migration, provenance, validation, receipt and recovery mechanics.
+Do not keep those mechanics hot during ordinary conversational work.
 
-For an existing INSTANCE, a mutating command uses that instance's repository
-identity. A different caller-supplied repository does not migrate it. A no-write
-`--preview-adapter` may inspect another target. Refresh observes local drift;
-replacement establishes a new configured bridge without changing the account.
-
-Real use may expose informative friction, failure, success, missing knowledge
-or a new possibility. Prepare Evolution Feedback when it can improve upstream.
-With operator consent, use a GitHub Issue for observed feedback and a focused
-fork/PR for a source correction. Consent to feedback does not grant direct
-write authority over upstream main. Do not emit feedback merely for cadence.
+Real use may expose friction, failure, success, missing knowledge or a new
+possibility. Preserve feedback when it can improve the appropriate owner.
+Publication of feedback, an issue or a pull request remains a separately
+authorized effect.
 
 ## Operating relation
 
@@ -192,36 +165,10 @@ validation does not need to emulate a full Markdown renderer:
 - `kernel/KERNEL.md#kernel-chat-mobile-observation`
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
 
-When repository/package work forms a stronger claim, keep claim identity and
-proof identity joined before calling the result closed. Human labels and
-comments are representations, not authority.
-
-```text
-local version/comment
-!= owner-native tag/ref
-
-immutable revision
-!= correctly attributed version provenance
-
-green CI
-!= proof that a dependency label names the executed revision
-
-documented test count
-!= discovered / executed tests
-
-declared matrix
-!= jobs actually created and completed
-```
-
-For an external dependency pinned by SHA and annotated with a version/tag,
-resolve the dependency owner's native ref and verify that it reaches the
-pinned revision. Follow an annotated tag to its commit when necessary. Inspect
-the artifact/action at that exact revision when runtime compatibility is part
-of the claim. For current package counts or status, prefer native execution
-evidence over copied prose.
-
-This is an instance of [Evolution's pre-closure incongruence sensing](kernel/EVOLUTION.md#sense-incongruence-before-closure), not a mandatory
-preflight for unrelated work.
+When repository/package work forms a stronger claim, route to the
+[package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and
+proof identity joined, and validate on the actual consumer/execution surface
+without importing that maintenance procedure into ordinary kernel use.
 
 Never simulate a filesystem, hook, background process, scheduler, connector,
 or authority that the current host does not expose. Resolve authority only for
@@ -230,6 +177,12 @@ an exact material effect, when that effect appears.
 Preserve a change only when it improves future behavior, proof, recovery, or
 reentry. Prefer the smallest truthful owner. Storage alone is not evidence of
 assimilation.
+
+Close every final user-facing response with the
+[Core competence trace](kernel/KERNEL.md#kernel-chat-competence-trace). The
+trace reports the competences that materially formed the completed movement and
+only the possibilities that actually emerged; it does not prescribe the next
+turn.
 
 Do not manufacture test environments or fixed taxonomies before real use
 exposes a discriminant that matters. Structural validation supports the
