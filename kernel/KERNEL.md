@@ -182,10 +182,11 @@ procedure.
 
 ## Persistence and selective reentry
 
-The core does not require one storage technology. The current ChatGPT adapter
-uses a user-owned GitHub repository because that is the first implemented,
-inspectable persistence surface for this host. Another adapter may use another
-durable, user-controlled surface.
+The core does not require one storage technology. A conversational receiver may
+reach the kernel through a user-controlled repository, project/knowledge
+surface, filesystem, connector or another durable source. The host adapter owns
+the mechanics that make that source reachable; those mechanics do not define
+the core.
 
 State points to sources; it does not absorb their truth or own reusable kernel
 methods. Recover the still-valid reason behind a decision, what was established,
@@ -232,6 +233,43 @@ portable core
 
 The core does not assume shell access, an internal filesystem, hooks,
 background processes, schedulers, tools, or autonomous continuation.
+
+<a name="kernel-chat-competence-trace"></a>
+
+## Competence trace at response closure
+
+Every final user-facing response closes with a compact trace of the competence
+composition that materially formed that response and of any possibilities that
+materially emerged.
+
+```text
+Competences: <materially participating competence owners | —>
+Emergent possibilities: <materially emerged possibilities | —>
+```
+
+The labels may follow the conversation language; the two functions remain the
+same.
+
+The trace keeps the immediately exercised competence composition visible in the
+following conversational field. It is an observation of the completed movement,
+not a registry, controller or mandatory next stack.
+
+```text
+previous competence trace
++ new operator relation
++ current field
+-> recompute pertinence
+-> preserve | change | compose | no_change
+```
+
+List an owner because its competence materially changed the movement, not
+because its source was opened, named or available. Do not generate alternatives
+merely to populate the second line; `—` is a valid result.
+
+A later missing or superfluous competence can become routing evidence when the
+completed movement shows that its participation should have changed the result.
+Return that reusable difference through the normal competence/evolution owners
+rather than turning the footer into another orchestration layer.
 
 ## Open form
 
