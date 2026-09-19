@@ -225,14 +225,14 @@ a relation; it does not become authority over the field that formed it.
 
 ```text
 portable core
-!= host adapter
-!= current connector access
-!= write capability
-!= authority
++ capabilities actually exposed by the receiver
++ authority for the selected effect
+-> means available to the present movement
 ```
 
-The core does not assume shell access, an internal filesystem, hooks,
-background processes, schedulers, tools, or autonomous continuation.
+Runtime facilities belong to the receiving environment. Any actually exposed
+and authorized means can participate; one host's current topology does not
+become a permanent requirement or ceiling for the kernel.
 
 <a name="kernel-chat-competence-trace"></a>
 
