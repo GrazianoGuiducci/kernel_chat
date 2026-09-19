@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-09-19
 
+- **User-path README and evidence-derived Q&A:** the root README now separates
+  normal use from study depth. It presents user value, one observable
+  before/after case, a Q&A formed from repeated first-encounter questions,
+  setup, ready-made integrations, and only then the internal kernel/research
+  sources. The Q&A clarifies system-level learning, carrier vs operating
+  relation, portability beyond ChatGPT, source/write requirements, selective
+  context use, competence revision, competence trace purpose and behavioral
+  readback. Defensive "what it is not" framing is not used as a public entry
+  device.
 - **Final public README convergence:** the first encounter now uses plain
   language to make the operating phenomenon visible before internal vocabulary:
   a user-owned operating layer of sources, competences, context and reusable
