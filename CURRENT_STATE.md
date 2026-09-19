@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: public README adds mixed human/AI reading path and doubt-driven routes to optional deeper sources
+current_change: public README replaces objection-oriented Q&A with capability -> source verification map and minimal clarifications
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -43,51 +43,36 @@ instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
-Fresh receiver tests showed a stable distinction between what ordinary users
-need first and what belongs to the study surface. The public README now starts
-from the result available to the user, then gives one observable before/after
-case, answers recurrent adoption questions, exposes setup, and only afterward
-routes into the internal kernel sources.
+Receiver tests were useful for locating ambiguity, but their doubts are no
+longer treated as a content backlog. The README now makes the product inspectable
+through direct capability-to-source routes.
 
-The public progression is now:
+The public progression is:
 
 ```text
 user result
--> observable later-work difference
--> recurrent questions answered in place
--> source/setup path
--> ready-made integrations
--> deep kernel / research surface
+-> observable before / after
+-> capability + what it changes + source to inspect
+-> minimal clarifications where a material ambiguity remains
+-> direct verification path
+-> setup / integrations
+-> optional deep study
 ```
 
-The Q&A is evidence-derived rather than objection-generating. It answers
-questions repeatedly produced by first encounters: what learning means, how the
-kernel differs from memory/instruction carriers, portability beyond ChatGPT,
-source and write requirements, selective context use, revision of stale
-competences, the competence trace, and how to observe whether later work has
-actually changed.
+The capability map points directly to Core, Competence, Evolution, FDLA,
+SOURCES, the provider-neutral conversational entry, adoption/setup sources,
+the ChatGPT adapter and current package evidence.
 
-Answers state the operating relation positively and then give the action or
-source path that matters. Conceptual terms and deeper architecture remain
-reachable in Core, Competence, Evolution, FDLA, Architecture and the SSK paper;
-normal adoption does not require reading them first.
+The public surface therefore answers uncertainty primarily by exposing the owner
+that determines the relation. Clarification is added only when a source link
+alone would leave a material ambiguity for correct use.
 
-The README now also makes the mixed reading role explicit: it is a shared entry
-surface for people and AI assistants. A normal user can stop at the Q&A and
-start path; an AI assistant can continue through the linked owners when deeper
-knowledge becomes relevant. A dedicated reading path at the footer routes
-technical/conceptual study into the kernel owners and SSK paper without making
-that depth a prerequisite for use.
+Complex architecture and research terminology remain available through the
+kernel owners and SSK paper. They are depth, not prerequisite explanation.
 
-Recurring doubts can become focus attractors: resolve the practical uncertainty,
-then expose the deeper source for readers or systems that want to continue.
-This uses curiosity as a path to discovery instead of expanding the first
-surface with all conceptual detail.
-
-The public surface therefore no longer uses internal conceptual depth as the
-entry cost for understanding the product. It also avoids a defensive "what this
-is not" perimeter: receiver-added categories are answered only when an observed
-question makes that distinction useful.
+The README remains a shared entry for people and AI assistants: humans can
+inspect the capability map and start path; AI assistants can follow the same
+owner links when deeper knowledge becomes relevant.
 
 ## GitHub first-encounter metadata
 
