@@ -53,8 +53,9 @@ account-setting access are different capabilities. Use only those exposed.
 
 With file-based chat setup, retain source identity, selected app scope and where
 updates are saved. Do not create a ChatGPT helper receipt for that other route.
-With the Git/Python ChatGPT helper, preserve the configuration and receipt
-contract below. See the [adoption guide](docs/ADOPTION_GUIDE.md).
+For the Git/Python ChatGPT helper, use the configuration and receipt contract in
+[INSTALL.md](INSTALL.md) and the
+[ChatGPT adapter guide](adapters/chatgpt/README.md).
 
 ## Host-specific setup
 
