@@ -23,6 +23,24 @@ You do not need to repeat a boot phrase or request a full repository load on
 every turn. Use the principles already available and reach additional knowledge
 when it can change the question, method or result. The conversation stays direct.
 
+### Read the competence trace
+
+Every final response closes with two compact functions, localized to the
+conversation language:
+
+```text
+Competences: <owners that materially formed this response | —>
+Emergent possibilities: <possibilities that materially emerged | —>
+```
+
+The trace keeps the recently exercised competence composition visible. It is
+not a command to use the same competences again. The next turn recomputes
+pertinence from the new relation.
+
+A competence is listed because its knowledge materially changed the movement,
+not merely because its file was opened. The possibilities line may be `—`;
+the kernel does not generate alternatives simply to populate the footer.
+
 ## Continue a relation in a new chat
 
 Use the same project or connected source where you saved the kernel and current
