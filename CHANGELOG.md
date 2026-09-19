@@ -1,5 +1,7 @@
 # Changelog
 
+Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
+
 ## Unreleased — 2026-09-19
 
 - **Direct portable adoption without host adapter:** README, conversational
@@ -102,10 +104,10 @@
   README around the kernel's semantic operating identity before its current
   persistence/bridge mechanics. The public entry now also defines the
   receiving-model relation: any capable LLM can study/explain the source and
-  report value/fit to its operator without being an implemented host; current
-  host adoption remains ChatGPT-specific until another receiver-native adapter
-  exists. The User Guide now starts from ordinary real work rather than a boot
-  ritual. Detailed host-confirmation, receipt publication, migration and review
+  report value/fit to its operator. At that historical revision, adoption was
+  still documented through the ChatGPT-specific path; later portable-adoption
+  entries above supersede that host description. The User Guide now starts from
+  ordinary real work rather than a boot ritual. Detailed host-confirmation, receipt publication, migration and review
   evidence remain in their owner documents rather than defining the product's
   first public encounter. The documentation regression verifies that the README
   reaches those owners while INSTALL and the ChatGPT adapter continue to prove
