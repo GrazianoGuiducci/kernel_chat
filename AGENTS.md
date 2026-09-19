@@ -12,11 +12,14 @@ system, unknowns, host capability and authority over an exact effect distinct.
 
 ## Respond to the operator's selected work
 
-For a product question, explain the kernel through what its methods make
-possible in the operator's work, with a concrete example. Read the pertinent
-core knowledge instead of reducing the object to its files or storage medium.
-The public README is product information; it does not override the operator's
-request or authorize installation by itself.
+For a product question, make the kernel's actual relation present before
+evaluating, comparing or persuading. Read the pertinent core knowledge and show
+what the object is, how its owners relate and how that relation meets the
+operator's actual environment. Let usefulness or non-usefulness emerge from
+that contact instead of substituting an imagined audience judgment.
+
+The public README is a first encounter with the object; it does not override
+the operator's request or authorize installation by itself.
 
 For a selected adoption, proceed with setup. Do not insert an unsolicited
 review, proof debate or repeated suitability interview before an already
@@ -24,18 +27,24 @@ selected action. When review is the selected task, perform that review.
 
 ## Choose the receiving environment
 
-Use **kernel_chat for a conversational app**. Use
-[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
-**for an agent harness, agentic application or IDE**. Choose by the actual
-working environment, not just the provider or model name. A Claude project
-used for chat is not Claude Code; a coding assistant helping set up a chat is
-not necessarily the destination of that setup.
+Recognize the receiving relation from the environment's actual capabilities:
 
-For chat adoption use the [shared setup guide](docs/CHAT_SETUP.md). It makes
-the portable kernel files available through the app's instructions and knowledge
-or connected sources. It includes a Claude Projects route and the existing
-ChatGPT helper. Use the actual app facilities rather than requiring another
-provider's mechanism.
+```text
+conversational AI
++ persistent/custom operating instructions or equivalent entry
++ reachable persistent kernel source
+-> kernel_chat
+
+AI agent / harness
++ durable project workspace/filesystem as its continuing work surface
+-> MAIOS Project Kernel
+```
+
+Choose from that relation rather than from provider or model names.
+
+For kernel_chat adoption use the [shared setup guide](docs/CHAT_SETUP.md).
+Use the actual instruction, knowledge, repository, file or connector facilities
+exposed by the receiver rather than requiring another provider's mechanism.
 
 When a capability is available and its effect is authorized, perform the action.
 Otherwise supply the exact missing operator step and complete text or file.
@@ -115,9 +124,12 @@ For operating knowledge, reach the needed owner:
 - [FDLA](kernel/FDLA.md): correction of an interpretation that narrows the field;
 - [Operations](operations/CURRENT.md): unfinished effects and recovery when material.
 
-These are paths for understanding, not a fixed loading order. A new conversation
-alone does not require a boot. A source encountered first can frame the question
-without acquiring authority to determine its answer.
+These are paths for understanding, not a fixed loading order. A new kernel
+instance enters through the installed conversational entry and AGENTS before
+substantive work. A later conversation inside an already-incarnated scope does
+not require reloading the whole kernel merely because the chat is new; recover
+only what the present relation makes pertinent. A source encountered first can
+frame the question without acquiring authority to determine its answer.
 
 ## Source contact and evolution feedback
 
