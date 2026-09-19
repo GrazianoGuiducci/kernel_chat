@@ -149,6 +149,7 @@ topology. When a competence crosses hosts, transfer the relation that survives
 the change of host. Do not transfer credentials, hidden state, unsupported
 mechanisms, or inherited authority.
 
-KA and Meta_Skill contributed source distinction, open-horizon reasoning,
-competence composition, and evolution to this core. `kernel_chat` carries the
-portable relations; it does not require access to their private repositories.
+Earlier source work contributed source distinction, open-horizon reasoning,
+competence composition and evolution. Those portable relations are now owned by
+the public kernel sources here; earlier source topology remains lineage rather
+than an operating dependency.
