@@ -358,12 +358,15 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        receiver_position = readme.index("## When this is the receiving relation")
-        use_position = readme.index("## What happens in use")
-        source_map_position = readme.index("## What is here")
+        # The public first encounter must make the operating transformation
+        # available before receiver mechanics, then descend into owner topology
+        # and setup. Protect the causal order without freezing section titles.
+        use_position = readme.index("present relation")
+        receiver_position = readme.index("conversational AI environment")
+        source_map_position = readme.index("[AGENTS.md](AGENTS.md)")
         setup_position = readme.index("## Set it up")
-        self.assertLess(receiver_position, use_position)
-        self.assertLess(use_position, source_map_position)
+        self.assertLess(use_position, receiver_position)
+        self.assertLess(receiver_position, source_map_position)
         self.assertLess(source_map_position, setup_position)
 
         first_encounter = readme[:setup_position]
