@@ -5,7 +5,7 @@ Updated: 2026-09-19
 ```text
 source_version: 0.6.0
 current_work: public first-encounter and receiver-relative adoption convergence
-current_change: kernel relation != persistent carrier + end-to-end causal example through later changed behavior
+current_change: final public README: observable system-level learning + plain-language first encounter + carrier kept downstream of the phenomenon
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -43,74 +43,51 @@ instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
-The public first encounter is now formed projectively-regressively from the
-receiver resultant the surface must make possible. The README makes the
-kernel's operating transformation present before it introduces persistence or
-receiver mechanics:
+The public README is now converged around the phenomenon the receiver must be
+able to see before implementation vocabulary becomes relevant.
+
+Its first relation is:
 
 ```text
-present relation + owner-native sources + pertinent competences
--> situated work
--> resultant
--> causal readback
--> reusable difference changes a competence
+present work
++ relevant owner-native sources
++ relevant competences
+-> work
+-> result
+-> observe what changed
+-> preserve a reusable difference in the owner that should act differently
 -> later non-identical work can begin differently
 ```
 
-A compact causal example makes that difference observable before a receiver can
-compress the kernel into a familiar storage/context category. The current
-example now continues through a materially different later task and makes the
-observable difference explicit: the user does not have to reconstruct the
-earlier correction, because the changed competence participates and changes how
-the later task is handled.
+The README defines a competence in plain language, then makes system-level
+learning explicit: the user-owned operating layer changes through use; its
+persistent representation carries that change across conversations; the
+observable readback is later work being understood or handled differently.
 
-The README also now makes the carrier distinction explicit:
+The end-to-end task A / task B example preserves this distinction without
+requiring the reader to know internal vocabulary. A deeper sentence also makes
+visible that the same mechanism can change the competence that forms the
+question or selects what becomes relevant, not only retain a task correction.
 
-```text
-living kernel relation / competence
-!= persistent representation
+Technical terms and owner-specific depth now descend into Core, Competence,
+Evolution and FDLA links rather than carrying the first encounter. The
+capability-relative receiver relation and setup follow only after the operating
+effect has formed.
 
-persistent representation
--> makes the relation reachable again
-
-later changed handling
--> observable readback that the competence participated
-```
-
-Persistence therefore appears as the means that keeps the changed competence,
-reasons and source relations reachable across later conversations, rather than
-as the kernel's identity.
-
-Only after the object and its consequence have formed does the README expose
-the capability-relative receiving relation:
+The current public order is therefore:
 
 ```text
-conversational AI environment
-+ persistent/custom operating instructions or equivalent entry
-+ reachable persistent kernel source
--> kernel_chat
+object
+-> observable operating change
+-> later changed behavior
+-> persistent carrier
+-> receiver relation
+-> owner/source depth
+-> setup
 ```
 
-The reusable editorial relation is therefore now:
-
-```text
-intended receiver resultant
--> minimum semantic premises
--> causal order
--> object and operating consequence become present
--> receiver meets them from its own environment
--> situated recognition / value / action can emerge
-```
-
-The public order is now object -> operating transformation -> concrete causal
-consequence -> receiving relation -> owner/source depth -> setup. The order is
-a current causal discriminant, not a permanent section template.
-
-The conversational backend entry remains provider-neutral. AGENTS distinguishes
-a new kernel instance, which enters through the installed entry, from a later
-conversation in an already-incarnated scope, which does not reload the whole
-kernel merely because a new chat began. Provider-specific mechanics appear only
-after the portable relation has formed.
+This is the current causal arrangement of the public surface, not a permanent
+page template.
 
 ## GitHub first-encounter metadata
 
