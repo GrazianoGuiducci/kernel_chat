@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased — 2026-09-19
+
+- **Portable conversational backend entry:** added
+  `adapters/conversational/INSTRUCTIONS.template.md` as the provider-neutral
+  instruction source. It names the kernel source, constitutive owner paths,
+  competence participation and learning return without embedding one provider's
+  mechanics.
+- The ChatGPT configurator now renders that shared source with
+  `KERNEL_SOURCE=github:<owner>/<repository>` into the existing configured
+  Custom Instructions artifact. ChatGPT delivery/receipt mechanics remain
+  host-specific.
+- Added a separate conversational-instruction version. Legacy ChatGPT bridge
+  headers remain readable for migration/provenance; the old ChatGPT template
+  path is retained only as a compatibility pointer.
+- Validator and tests distinguish portable instruction identity from ChatGPT
+  adapter mechanics and exercise the new rendered source route.
+- No portable kernel-body or INSTANCE-schema change is introduced by this
+  carrier reconciliation.
+
 ## 0.6.0 — 2026-09-18
 
 - **Post-release public self-representation correction:** reframed the root
