@@ -88,9 +88,11 @@ different work is where its effect becomes observable. See
 
 **The kernel is portable across compatible conversational hosts.** The common
 entry is under [adapters/conversational/](adapters/conversational/README.md).
-ChatGPT is the first ready-made host-specific integration; another receiver can
-use the same kernel relation through its own persistent instruction and source
-mechanisms.
+A host-specific adapter is a ready-made integration layer, not a requirement
+for adoption. If a conversational environment already provides a persistent
+instruction entry and a persistent source it can reach, the portable entry can
+be installed directly there. ChatGPT currently has the first ready-made
+host-specific helper.
 
 **GitHub and Python belong to the current ChatGPT reference helper**, not to the
 portable semantic relation. The [chat setup guide](docs/CHAT_SETUP.md) starts
@@ -166,9 +168,13 @@ repository-backed setup.
 ### Other conversational hosts
 
 The portable entry lives under
-[adapters/conversational/](adapters/conversational/README.md). A host-specific
-adapter translates the same kernel relation into that host's real instruction,
-persistence and source mechanisms.
+[adapters/conversational/](adapters/conversational/README.md).
+
+A dedicated host adapter is optional. When the host already exposes persistent
+instructions and a persistent project/knowledge/repository source, install the
+portable entry through those native mechanisms. A host-specific adapter is
+useful when setup, translation, receipts or other host mechanics benefit from a
+ready-made implementation.
 
 When an AI operates instead inside a durable project workspace/filesystem that
 it owns as its continuing work surface, use the project-native
@@ -200,9 +206,9 @@ For the broader research corpus and theoretical development, see the
 
 This README is the shared entry surface.
 
-For ordinary use, **Questions and answers** plus **Start using it** are enough
-to begin. An AI assistant can continue through the linked owners when deeper
-knowledge becomes relevant.
+For ordinary use, **What you get**, the capability/source map and **Start using
+it** are enough to begin. An AI assistant can continue through the linked
+owners when deeper knowledge becomes relevant.
 
 For technical or conceptual study, continue through **Go deeper** and the
 System Semantic Kernel working paper. That depth explains the architecture and
