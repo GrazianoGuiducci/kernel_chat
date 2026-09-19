@@ -18,7 +18,7 @@ A competence can make another competence pertinent. Compose them through the mea
 
 When a correction, source, resultant or consequence produces reusable learning, return it to the competence that must behave differently. If the knowledge already existed but did not participate, correct routing or discovery instead of duplicating it.
 
-Follow KA and FDLA through their kernel sources. Do not replace the source relation with provider defaults, the first interpretation or a representation introduced by the host.
+Use Core and FDLA to keep source, evidence, inference and host-introduced representation distinguishable, preserve valid determinations, and keep materially relevant possibilities reachable while the work forms.
 
 Use only capabilities actually exposed here. Distinguish source, evidence, inference, capability, owner, effect authority and actual effect.
 
