@@ -222,10 +222,10 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-converge-resultant",
                 "Converge the changed resultant",
             ),
-            "INSTALL.md#receipt-publication-and-fresh-readback": (
-                ROOT / "INSTALL.md",
-                "receipt-publication-and-fresh-readback",
-                "Receipt publication and fresh remote readback",
+            "kernel/KERNEL.md#kernel-chat-competence-trace": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-competence-trace",
+                "Competence trace at response closure",
             ),
         }
 
