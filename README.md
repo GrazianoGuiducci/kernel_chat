@@ -2,23 +2,52 @@
 
 `kernel_chat` is a user-owned semantic operating kernel for conversational AI.
 
-It gives a conversation a persistent operating source: kernel logic,
-competences and metacompetences, current context, source relations and reusable
-learning that can change how later work is understood and carried out.
+It lets a conversation work through owner-native sources, competences and
+metacompetences that can change through use and participate differently in
+later work.
 
 ```text
-persistent/custom instructions or equivalent entry
-+ a kernel source the conversation can reach
-+ current context and owner-native sources
-+ competences and metacompetences
--> the conversational AI enters kernel_chat
--> pertinent competences participate in the work
--> reusable learning returns to the owner that must act differently later
+present relation
++ owner-native sources
++ pertinent competences
+-> situated work
+-> resultant
+-> causal readback
+-> reusable difference changes the competence that should act differently
+-> later non-identical work can begin from that changed competence
 ```
 
-The same semantic operating relation can be incarnated through different
-models, providers and persistence mechanisms. The receiving environment
-supplies the means; the kernel supplies the operating relation.
+A competence is reusable operating knowledge: a way of understanding or doing
+work that becomes pertinent when the present situation calls for it. Several
+competences can participate together, one can make another pertinent, an
+existing competence can deepen, and a genuinely missing capability can form.
+
+## What changes when it operates
+
+The kernel keeps the work, its sources and the competences acting on it in one
+causal relation. A useful result can therefore change more than the current
+answer.
+
+For example:
+
+```text
+a user correction during one task
+-> exposes a reusable distinction between source fact and inference
+-> that difference returns to the competence that must use it
+-> the competence is preserved in the user-owned kernel source
+-> a later, different task makes that competence pertinent
+-> the new work begins from the learned distinction
+```
+
+The persistent source makes this operating relation reachable again. It keeps
+the current relation, owner-native sources, reasons and reusable methods
+available so later conversations can recover only what the present work needs.
+
+Each final user-facing response closes with a compact
+[competence trace](kernel/KERNEL.md#kernel-chat-competence-trace): the
+competence owners that materially formed the response and any possibilities
+that materially emerged. The next turn recomputes pertinence from the changed
+field.
 
 ## When this is the receiving relation
 
@@ -29,70 +58,44 @@ conversational AI environment
 -> kernel_chat can be incarnated in that environment
 ```
 
-The environment may expose project knowledge, repository access, files,
-connectors or another persistent source. Source references can be translated to
-that environment while preserving the same owners and relations.
+The receiving environment supplies its own means. A persistent source may be a
+repository, project/knowledge surface, files or another durable source the
+conversation can reach. The kernel supplies the operating relation and the
+owner map; the host supplies the mechanism through which those owners become
+reachable.
 
 When the AI instead operates as an agent inside a durable project
 workspace/filesystem that it owns as its continuing work surface, the
 project-native carrier is
 [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel).
 
-## What happens in use
-
-Work begins from the present relation rather than from a fixed workflow.
-
-```text
-present relation
-+ still-valid determinations
-+ pertinent owner-native sources
-+ competences that can materially change the movement
-+ actual means and authority
--> situated movement
--> resultant
--> causal readback and reusable learning
-```
-
-A competence can make another competence pertinent. Several competences can
-participate together without becoming one controller. A result can improve the
-current work, change an existing competence, form a capability that did not
-previously exist, or produce `no_change`.
-
-Each final response closes with a compact
-[competence trace](kernel/KERNEL.md#kernel-chat-competence-trace): the
-competence owners that materially formed the response and any possibilities
-that materially emerged. The next turn recomputes pertinence from the new
-field; the trace is continuity and observation, not a permanent stack.
-
-Continuity is part of this relation but is not its whole identity. Decisions,
-reasons, sources, unfinished relations and learned methods can remain reachable
-across conversations without forcing every previous representation back into
-the present.
-
-## What is here
+## Follow the operating sources
 
 [AGENTS.md](AGENTS.md) is the portable entry and routing surface.
 
-[Core](kernel/KERNEL.md) carries the operating relation: present context,
-source distinction, situated movement, selective reentry, observation and
-response-closing competence trace.
+[Core](kernel/KERNEL.md) carries the present relation, source distinction,
+situated movement, selective reentry, mobile observation and competence trace.
 
 [Competence](kernel/COMPETENCE.md) carries how usable knowledge participates,
 combines, deepens, forms and learns.
 
-[FDLA](kernel/FDLA.md) corrects an interpretation when the acting system has
-narrowed or substituted the relation it is trying to understand.
+[FDLA](kernel/FDLA.md) corrects the movement when the acting system has replaced
+or narrowed the source relation through its own interpretation.
 
 [Evolution](kernel/EVOLUTION.md) returns material consequences and reusable
-learning to the owner that should behave differently next time.
+learning to the owner that should behave differently in later work.
 
 `state/CURRENT.md` carries the current relation needed for continuation.
 `state/SOURCES.md` points to owner-native sources and reusable knowledge.
 
 The persistent conversational entry is
 [adapters/conversational/INSTRUCTIONS.template.md](adapters/conversational/INSTRUCTIONS.template.md).
-It points the receiving conversation into these owners without copying the
-whole kernel into provider settings.
+It points a receiving conversation into these owners without copying the whole
+kernel into host settings.
+
+For the broader System Semantic Kernel research corpus and theoretical
+development, see the
+[System Semantic Kernel working paper](https://github.com/GrazianoGuiducci/maios-ssk-paper).
 
 ## Set it up
 
@@ -107,15 +110,17 @@ project / knowledge surface is the persistent source
 -> place the constitutive owners there and preserve their mapping
 
 attachments only
--> usable for the current conversation, not persistent adoption yet
+-> use the kernel in the current conversation; persistence is not established yet
 ```
 
-Then install the same conversational entry and begin real work.
+Install the same conversational entry through the host's available instruction
+mechanism, then begin real work. The kernel reaches deeper state and knowledge
+only when the present relation makes them pertinent.
 
 For the current ChatGPT repository implementation, [INSTALL.md](INSTALL.md)
 and the [ChatGPT adapter](adapters/chatgpt/README.md) own the
 Git/Python/configuration and host-receipt mechanics. Those mechanics are one
-host incarnation.
+host incarnation of the portable conversational relation.
 
 The [User guide](docs/USER_GUIDE.md) covers continuation, sources, competences,
 the competence trace and evolution in ordinary use. The
