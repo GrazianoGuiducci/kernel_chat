@@ -358,46 +358,51 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        # The public surface should give a normal user the result and one
-        # observable example first, answer recurrent adoption questions next,
-        # then expose setup and only afterward the deeper study surface.
+        # The public surface should show the user result and one observable
+        # example first, then provide a capability -> source verification map,
+        # setup, and finally the deeper study surface.
         value_position = readme.index("## What you get")
         example_position = readme.index("## A small before / after")
-        qa_position = readme.index("## Questions and answers")
+        capability_position = readme.index("## Capabilities and where to verify them")
+        clarification_position = readme.index("## Useful clarifications")
+        check_position = readme.index("## Check it directly")
         setup_position = readme.index("## Start using it")
         deep_position = readme.index("## Go deeper")
-        self.assertLess(value_position, example_position)
-        self.assertLess(example_position, qa_position)
-        self.assertLess(qa_position, setup_position)
-        self.assertLess(setup_position, deep_position)
         reading_position = readme.index("## Reading path")
+
+        self.assertLess(value_position, example_position)
+        self.assertLess(example_position, capability_position)
+        self.assertLess(capability_position, clarification_position)
+        self.assertLess(clarification_position, check_position)
+        self.assertLess(check_position, setup_position)
+        self.assertLess(setup_position, deep_position)
         self.assertLess(deep_position, reading_position)
 
-        opening = readme[:qa_position]
+        opening = readme[:capability_position]
         self.assertIn("carry forward the ways of working it", opening)
         self.assertIn("changed handling of task B", opening)
         for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
             with self.subTest(provider_name=provider_name):
                 self.assertNotIn(provider_name, opening)
 
-        qa = readme[qa_position:setup_position]
-        self.assertIn("What does “learning” mean here?", qa)
-        self.assertIn("Does it work beyond ChatGPT?", qa)
-        self.assertIn("Do I need GitHub or Python?", qa)
-        self.assertIn("How do I know whether it is actually helping?", qa)
-        self.assertIn("Who is this README for?", qa)
-        self.assertIn("Why do some terms sound more abstract than the setup itself?", qa)
-        self.assertIn("What is the fastest way to understand how it works?", qa)
-        self.assertIn("conversational AI environment", qa)
-        self.assertIn(
-            "persistent/custom operating instructions or an equivalent entry",
-            qa,
-        )
-        self.assertIn(
-            "a persistent kernel source the conversation can reach",
-            qa,
-        )
-        self.assertIn("competence trace", qa)
+        verification_surface = readme[capability_position:setup_position]
+        for marker in (
+            "Present-first continuity",
+            "Selective source reentry",
+            "Situated competences",
+            "Learning return",
+            "Revision through later use",
+            "Source / inference distinction",
+            "In-flow correction",
+            "Competence trace",
+            "Provider-neutral conversational entry",
+            "Receiver-relative adoption",
+            "Current package evidence",
+            "The deeper terminology is optional for normal use",
+            "## Check it directly",
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, verification_surface)
 
         setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
         setup_links = links(setup)
