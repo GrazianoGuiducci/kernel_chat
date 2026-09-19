@@ -228,12 +228,16 @@ v0.6.0 tag/release = intentionally pending external review
 Source publication must remain distinct from release, user-instance migration,
 bridge replacement, host update and announcement.
 
-## Evidence limits / non-claims
+## Evidence scope
 
-Repository tests and CI do not establish installation in a specific ChatGPT
-account, connector availability in a turn, real conversational behavior, later
-assimilation, background autonomy, autonomous self-evolution, AGI or subjective
-awareness.
+At the reviewed revision, repository tests and CI establish only the
+repository/package mechanics they directly exercise. Host installation,
+connector reachability, longitudinal behavior, later assimilation and any
+capabilities that may emerge through future use require evidence from those
+situations.
+
+This review records its observation surface; it neither establishes nor rules
+out capabilities outside that surface.
 
 ## Useful finding format
 
