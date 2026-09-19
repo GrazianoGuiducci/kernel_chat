@@ -292,6 +292,7 @@ def main() -> int:
             "kernel/COMPETENCE.md",
             "kernel/FDLA.md",
             "kernel/EVOLUTION.md",
+            "kernel/KERNEL.md#kernel-chat-competence-trace",
             "A competence can make another competence pertinent",
             "reusable learning",
         ):
