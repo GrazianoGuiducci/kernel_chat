@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-09-19
 
+- **Direct portable adoption without host adapter:** README, conversational
+  entry guidance, CHAT_SETUP and ADOPTION_GUIDE now state explicitly that a
+  dedicated host-specific adapter is optional when the receiving conversational
+  environment already exposes both a persistent instruction entry and a
+  persistent source the conversation can reach. Host adapters package
+  receiver-specific setup, translation, receipt or recovery mechanics; they do
+  not define whether the portable kernel relation can be adopted. Added a
+  regression protecting this distinction.
 - **Capability/source verification map:** replaced the expanding first-encounter
   Q&A with a direct map from capability to operating effect and owner/source to
   inspect. Added only the clarifications still required for correct use:
