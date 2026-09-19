@@ -4,8 +4,8 @@ Updated: 2026-09-19
 
 ```text
 source_version: 0.6.0
-current_work: public receiver recognition from the kernel's actual relation
-current_change: object-first README + capability-relative carrier recognition + entry/boot convergence
+current_work: portable presentation, configuration and adoption convergence
+current_change: competence trace + source-route setup simplification + host-specific mechanics moved below portable entry
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -26,15 +26,20 @@ Use kernel_chat for a conversational app. Use MAIOS Project Kernel for an
 agent harness, agentic application or IDE. The destination's working mode, not
 the model name, determines this product choice.
 
-[Chat setup](docs/CHAT_SETUP.md) now uses one provider-neutral conversational
-instruction source under `adapters/conversational/`. The backend entry names
-the kernel source and constitutive owner paths; it does not reproduce the kernel
-inside provider instructions.
+[Chat setup](docs/CHAT_SETUP.md) now starts from the source route the
+receiver actually exposes: use an already-reachable persistent source in place,
+use project/knowledge storage as the persistent source when that is the native
+mechanism, or treat attachments as session-only until persistence exists.
+
+The provider-neutral conversational entry is now version `2.1.0`. It also
+activates the Core competence trace. Host-specific configuration, provenance,
+receipt and recovery mechanics are routed downward to their adapters instead of
+remaining constitutive content in `AGENTS.md`.
 
 The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
 with a GitHub instance and retains its configured-bridge and operator-report
-receipts. Other conversational receivers install the same semantic entry through
-their own persistent/custom instruction and source mechanisms.
+receipts. Other conversational receivers use their own persistent/custom
+instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
@@ -54,10 +59,14 @@ make the object and its constitutive relations present
 This does not remove material setup conditions. It places them where they change
 the receiving relation or an actual effect.
 
-The conversational backend entry remains provider-neutral. AGENTS now
-distinguishes a new kernel instance, which must enter through the installed
-entry, from a later conversation in an already-incarnated scope, which does not
-reload the whole kernel merely because a new chat began.
+The conversational backend entry remains provider-neutral. AGENTS distinguishes
+a new kernel instance, which enters through the installed entry, from a later
+conversation in an already-incarnated scope, which does not reload the whole
+kernel merely because a new chat began.
+
+The public order is now object -> receiving relation -> operating dynamics ->
+source/topology -> setup. Provider-specific mechanics appear only after that
+relation has formed.
 
 ## Preserved mechanics and knowledge
 
@@ -81,11 +90,15 @@ The portable carrier checkpoint at
 `0742d6022c7cfa6e78917ae522d479747e2a8a1e` remains its own proof identity.
 
 The object-first public-entry resultant at
-`908732a560aef7896c2696fc7907a822c2583644` has CI
-`35436080650`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
-Ubuntu/Windows. Its public-route test now protects both active navigation and
-the receiver relation: object and capability conditions appear before
-host-specific setup, and the first encounter does not depend on provider names.
+`908732a560aef7896c2696fc7907a822c2583644` retains its own CI
+`35436080650` evidence.
+
+The current portability/setup resultant before this state readback is
+`077e2a54c3ae14e34f3f0be97e66e17bd497610e`, CI
+`35439455922`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
+Ubuntu/Windows. It adds conversational instructions `2.1.0`, the portable
+competence trace, source-route setup branching and removal of ChatGPT receipt
+mechanics from the constitutive AGENTS discovery contract.
 
 The material review result belongs to `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`.
 Release `v0.6.0` remains on `d2c94ca4e4523f1f7a343601d6beec1e84031fac` with
@@ -93,10 +106,10 @@ promotion CI `35391971484` and 58 tests. Initial publication readback was
 `159590474f46509296ba3fc3634f1e4bb3edf9d3`, CI `35392846944`.
 Those historical identities do not move with subsequent source documentation.
 
-The shared Claude route is documented from the app's project features. Live
-adoption and a new reader test on this revised source have not been performed
-in this maintenance turn. Repository tests establish their tested mechanics
-and routes, not a result from a different model or account.
+Live adoption and fresh-receiver behavioral readback remain separate from
+repository proof. The suite establishes the package, navigation, source-route
+and configured-entry relations at the tested revision; it does not certify
+behavior in every conversational host.
 
 ## Continuity
 
