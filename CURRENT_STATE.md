@@ -115,10 +115,9 @@ semantic-kernel
 situated-competence
 ```
 
-The previous AGI/autopoiesis/provider/persistent-awareness framing is no longer
-present in the GitHub About topics. The repository homepage field is currently
-empty, so the unreconciled historical `maios.it/conversation-kernel.html`
-surface does not participate in this first-encounter path.
+The GitHub About surface is reconciled to the current product relation. The
+repository homepage field is currently empty, so no separate homepage
+representation participates in this first-encounter path.
 
 ## Preserved mechanics and knowledge
 
@@ -165,9 +164,9 @@ behavior in every conversational host.
 
 ## Continuity
 
-The complete preceding state and review genealogy remain available at
-[the pre-correction source checkpoint](https://github.com/GrazianoGuiducci/kernel_chat/blob/6bbfa868ecfaa8e5806d703fe68f81efa3f9a044/CURRENT_STATE.md),
-in the [review record](docs/EXTERNAL_REVIEW_0_6_0.md) and
-[evolution guide](docs/EVOLUTION_GUIDE.md). They are historical evidence, not a
-second current onboarding instruction. Product releases, installed instances,
-account settings and downstream publications remain separately selected work.
+Preceding state and review genealogy remain available through Git history, the
+[review record](docs/EXTERNAL_REVIEW_0_6_0.md) and
+[evolution guide](docs/EVOLUTION_GUIDE.md). They are historical evidence; the
+current README and living owners define the present product relation. Product
+releases, installed instances, account settings and downstream publications
+remain separately selected work.
