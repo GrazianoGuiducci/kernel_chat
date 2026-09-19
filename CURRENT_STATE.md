@@ -78,10 +78,14 @@ and optional unfinished operations keep their distinct purposes.
 ## Evidence and released identity
 
 The portable carrier checkpoint at
-`0742d6022c7cfa6e78917ae522d479747e2a8a1e` has CI
-`35435223430`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
-Ubuntu/Windows. The present public-entry correction is a new resultant and
-requires its own CI before that proof can be transferred.
+`0742d6022c7cfa6e78917ae522d479747e2a8a1e` remains its own proof identity.
+
+The object-first public-entry resultant at
+`908732a560aef7896c2696fc7907a822c2583644` has CI
+`35436080650`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
+Ubuntu/Windows. Its public-route test now protects both active navigation and
+the receiver relation: object and capability conditions appear before
+host-specific setup, and the first encounter does not depend on provider names.
 
 The material review result belongs to `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`.
 Release `v0.6.0` remains on `d2c94ca4e4523f1f7a343601d6beec1e84031fac` with
