@@ -13,7 +13,7 @@ user-owned instance
   SOURCES owner-native pointers
   optional local competences and knowledge
 
-conversational entry
+portable entry
   provider-neutral instruction template
   -> kernel source identity + constitutive owner paths
   -> direct installation through receiver-native persistent mechanisms
@@ -27,7 +27,7 @@ host adapter, when present
 
 actual host
   available connector/tool/capability reality
-  -> situated conversation
+  -> situated work
   -> effects and consequences
 
 operational continuity
@@ -117,7 +117,7 @@ The default relation is direct work. Reentry begins only when a missing durable
 relation can change the result.
 
 ```text
-conversation
+current work
 -> missing user/context relation:
    state/CURRENT.md + pertinent source pointer
 
@@ -137,12 +137,18 @@ These are alternatives made pertinent by the work, not a required boot
 sequence. Reading a representation first can frame interpretation without
 making it authority.
 
-## Conversational entry and host adapter
+## Portable entry and host adapter
 
-The provider-neutral conversational template is the constitutive backend entry.
-It carries kernel-source identity, the owner paths needed to enter the kernel,
+The provider-neutral portable template is the constitutive host entry. It
+carries kernel-source identity, the owner paths needed to enter the kernel,
 competence participation and learning return without copying the whole kernel
-into backend instructions.
+into host instructions.
+
+The entry does not classify the receiving AI by modality. A chat, voice or
+multimodal interface, tool-using host or another future surface can carry the
+same kernel relation when it can retain the operating entry and reach the
+persistent kernel source. The modality is an incarnation of the carrier, not
+its identity.
 
 The ChatGPT adapter renders that same source into a host-specific configured
 artifact and owns only ChatGPT delivery/receipt mechanics.
@@ -151,7 +157,7 @@ The following are distinct incarnations/evidence states:
 
 ```text
 portable semantic owner
-!= conversational instruction template currently available
+!= portable instruction template currently available
 != host adapter mechanics
 != configured local bridge + known/unknown template provenance + source target
 != operator-confirmed installed bridge incarnation receipt
@@ -280,7 +286,7 @@ relation.
 
 ## Extension
 
-A receiver can adopt the portable conversational entry directly through its
+A receiving environment can adopt the portable entry directly through its
 native persistent-instruction and source mechanisms.
 
 When a host-specific adapter is useful, it should define:
