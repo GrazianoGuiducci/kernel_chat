@@ -154,23 +154,15 @@ host inspection).
 
 ## GitHub first-encounter metadata
 
-The repository source now carries the modality-neutral product relation, but the
-separate GitHub About metadata has not yet been mutated through the available
-repository connector.
-
-Target description:
+Reconciled and read back from GitHub on 2026-09-20. The About description is:
 
 ```text
 A user-owned semantic operating kernel for AI, where experience becomes situated competence and changes how later work is understood and carried out.
 ```
 
-Target topics replace `conversational-ai` with `human-ai-interaction` while
-preserving the other current product topics.
-
-Observed GitHub About still carries the preceding conversational description and
-topic. This is an external metadata reconciliation effect, not a source defect
-or permission to rewrite the kernel around that stale label. The repository
-homepage field remains empty.
+The `human-ai-interaction` topic replaces `conversational-ai`; all other
+product topics are preserved. The homepage field remains empty. This records
+the completed external metadata effect, separately from package behavior.
 
 ## Post-resultant consumer convergence
 
@@ -202,16 +194,37 @@ action dependencies:
 test dependencies:
   exact package versions in requirements-test.txt
 
-repository rulesets:
-  none observed through the public repository API
+repository rulesets (authenticated readback, 2026-09-20):
+  Preserve main history — active, id 23728483
+    refs/heads/main: deletion + non_fast_forward
+  Preserve version tags — active, id 23728484
+    refs/tags/v*: deletion + update
+  no bypass actors; normal fast-forward main pushes and new tags remain possible
 
 classic branch protection:
-  not inspectable through the current GitHub integration
+  absent at this observation (endpoint 404 with repository admin access)
+  main is protected by the active ruleset above
+
+release immutability repository setting:
+  enabled for future releases
+  existing v0.6.0 still reports immutable=false
 ```
 
-The absence of observable rulesets is a repository-administration hardening
-opportunity, not evidence that classic branch protection is absent. Current
-release/tag identities remain separately observable.
+These are repository-administration effects, verified through the rulesets,
+effective main-branch rules and release-setting endpoints. They do not establish
+mandatory review or CI gates, content correctness, or receiver behavior.
+The existing v0.6.0 tag remains on its release promotion commit and is now
+protected from update/deletion by the tag ruleset; old release assets do not
+become immutable retroactively.
+
+For a future release, create a draft, upload and verify all intended assets,
+then publish. Publication locks that release's assets and tag. See
+[GitHub immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases).
+
+The source change in this readback only updates CURRENT_STATE. Earlier suite
+and CI results below remain evidence for their named source identities. VERSION
+0.6.0 and released v0.6.0 remain distinct from subsequent main commits; this
+administrative reconciliation does not choose a new product version.
 
 ## Preserved mechanics and knowledge
 
