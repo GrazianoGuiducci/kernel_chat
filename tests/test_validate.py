@@ -406,7 +406,7 @@ class ValidateTests(unittest.TestCase):
                 self.assertIn(marker, verification_surface)
 
         portable = (self.root / "adapters/portable/README.md").read_text(encoding="utf-8")
-        self.assertIn("A chat is one possible receiving AI environment", portable)
+        self.assertIn("A chat is one possible receiving environment", portable)
         self.assertIn("GitHub, MCP", portable)
 
         setup = (self.root / "docs/SETUP.md").read_text(encoding="utf-8")
