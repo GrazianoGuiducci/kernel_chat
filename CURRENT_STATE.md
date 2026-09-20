@@ -3,14 +3,15 @@
 Updated: 2026-09-20
 
 ```text
-source_version: 0.6.0
-current_work: modality-neutral portable carrier + semantic-continuity/reentry convergence
-current_change: semantic continuity across reentry is explicit in Core/Evolution/AGENTS and structurally discoverable; public narrative/carrier convergence preserved; portable entry 3.0.0 unchanged
+source_version: 0.7.0
+current_work: 0.7.0 release promotion candidate after semantic/product convergence
+current_change: source-side material review closed with no material blocker; 0.7.0 selected for the accumulated backward-compatible carrier/competence/security/reentry resultant; portable entry 3.0.0 unchanged
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
-material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
-material_review_result: no_change
-material_review_ci: 35390696891
+material_review_target: 10755f36a7764b8694e73a35e022efa69368e961
+material_review_result: no_material_blocker
+material_review_ci: 35519877372
+release_candidate: v0.7.0 / tag-release pending green CI on exact promotion candidate
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
@@ -176,9 +177,46 @@ condition to its Evolution owner, and validator + independent CommonMark
 consumer proof preserve that owner path. No new controller, runtime, state
 schema or adapter mechanism is introduced. Portable entry `3.0.0` is unchanged.
 
-Source `VERSION` remains `0.6.0` and the published `v0.6.0` remains its own
-historical release identity. This source delta does not pre-decide the version
-or release selected by the next publication pass.
+Source `VERSION` is now `0.7.0` by the publication decision recorded in the
+material review. The published `v0.6.0` remains the latest tagged distribution
+until the separate tag/release effect is completed. Portable entry `3.0.0`
+remains unchanged because the receiving-entry contract did not change.
+
+## 0.7.0 material review and publication decision
+
+A fresh source-side material review was performed on:
+
+```text
+semantic review target:
+  10755f36a7764b8694e73a35e022efa69368e961
+  tree baac361fb194c10cffafbd9163758dd9f125ec98
+
+proof:
+  CI 35519877372 / success
+  validator valid=true / errors=[] / warnings=[]
+  62 tests
+  8/8 Python 3.11-3.14 x Ubuntu/Windows
+
+review result:
+  no_material_blocker
+```
+
+The version decision is **0.7.0**. The delta from the released `v0.6.0` is
+materially larger than a patch: the current product has a modality-neutral
+portable carrier, direct receiver-relative adoption, clearer
+experience-to-competence learning, semantic continuity across reentry,
+security/reporting hardening, stronger discovery/proof relations and
+substantially reconciled public documentation. These changes extend the
+existing line rather than intentionally breaking the instance schema or
+portable adoption relation, so a pre-1.0 minor release is the coherent form.
+
+`1.0.0` is not selected by this movement: no separate stable-contract/maturity
+milestone or deliberate compatibility boundary has been established.
+
+The source version change does not by itself create the `v0.7.0` tag/release,
+migrate user-owned instances or update installed host instructions. The tag
+must target the exact green promotion candidate; post-release current-state
+readback is a later source effect.
 
 ## GitHub first-encounter metadata
 
@@ -257,9 +295,10 @@ verified through the exact administrative readback above. A residual private
 editorial-source path/name was also removed from current state and changelog;
 this current-source correction does not erase earlier Git history.
 
-Earlier suite and CI results below remain evidence for their named source identities. VERSION
-0.6.0 and released v0.6.0 remain distinct from subsequent main commits; this
-administrative reconciliation does not choose a new product version.
+Earlier suite and CI results below remain evidence for their named source
+identities. The historical `0.6.0` source/release relation remains attributable
+to its own revisions; the current source version is `0.7.0` and its tag/release
+remains a separate pending publication effect.
 
 ## Preserved mechanics and knowledge
 

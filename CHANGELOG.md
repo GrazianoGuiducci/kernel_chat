@@ -2,7 +2,18 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## Unreleased — 2026-09-20
+## Unreleased
+
+_No unreleased changes._
+
+## 0.7.0 — 2026-09-20
+
+- **Release/version decision:** selected source version `0.7.0` after a fresh
+  source-side material review of `10755f36a7764b8694e73a35e022efa69368e961`
+  (`CI 35519877372`, validator clean, 62 tests, 8/8 matrix jobs). The minor
+  version represents the accumulated backward-compatible carrier, competence,
+  security and reentry evolution since `v0.6.0`; tag/release publication and
+  user/host migration remain separate effects.
 
 
 - **Historical-state hygiene:** clarified that the `0.6.0` external review brief

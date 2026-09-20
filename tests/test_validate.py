@@ -86,6 +86,13 @@ class ValidateTests(unittest.TestCase):
         self.assertTrue(payload["valid"])
         self.assertEqual(payload["errors"], [])
 
+    def test_current_source_version_surfaces_converge(self) -> None:
+        version = (self.root / "VERSION").read_text(encoding="utf-8").strip()
+        current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
+        changelog = (self.root / "CHANGELOG.md").read_text(encoding="utf-8")
+        self.assertIn(f"source_version: {version}", current_state)
+        self.assertIn(f"## {version} —", changelog)
+
     def test_portable_instruction_source_is_required(self) -> None:
         (self.root / "adapters/portable/INSTRUCTIONS.template.md").unlink()
         result, payload = self.validate()
