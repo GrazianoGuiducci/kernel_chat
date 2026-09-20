@@ -150,6 +150,13 @@ same kernel relation when it can retain the operating entry and reach the
 persistent kernel source. The modality is an incarnation of the carrier, not
 its identity.
 
+The kernel therefore does not need every evolving process relation to be
+hard-coded as an external workflow. Competence formation/composition,
+source-aware understanding, in-flow correction, learning return and parts of
+process evolution can live in semantic owners and be re-formed in the present.
+Actual execution facilities remain receiver-native means and preserve their own
+authority and evidence boundaries.
+
 The ChatGPT adapter renders that same source into a host-specific configured
 artifact and owns only ChatGPT delivery/receipt mechanics.
 
