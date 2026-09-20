@@ -11,7 +11,7 @@ release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
 material_review_result: no_change
 material_review_ci: 35390696891
-current_proof_owner: GitHub Actions on validated PR tree + post-merge tree-identity verification
+current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
 
