@@ -39,6 +39,10 @@ not approved for public disclosure.
 Feedback is evidence, not authority. One report can expose a useful direction
 without automatically changing the kernel.
 
+Security vulnerabilities are a separate reporting path. Do not publish
+exploitable details or sensitive material as Evolution Feedback; follow
+[SECURITY.md](SECURITY.md) instead.
+
 ## Concrete changes
 
 If you already have a concrete source change, fork the repository, create a
