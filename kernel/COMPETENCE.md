@@ -2,6 +2,12 @@
 
 ## Competence in the present
 
+A competence is a reusable capacity to understand and do, shaped by experience
+and capable of changing later non-identical work. A file, instruction or state
+entry can carry that learning, but the persistent representation is not the
+competence itself. Exercise becomes visible when later work is formed or
+performed differently.
+
 A competence participates because the current relation makes it useful, not
 because a fixed workflow preselected it.
 
