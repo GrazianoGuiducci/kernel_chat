@@ -24,9 +24,9 @@ Historical entries describe the contract of their own revision. For the current 
   offers, and what it does in use. The change does not introduce a fixed
   marketing template: these are causal narrative functions. Hosting conditions
   now descend after the operating phenomenon, preserving the modality-neutral
-  carrier relation. Tests protect the narrative dependency order. The reusable
-  communication method is owned by Editoriali's Product Semantic Narrative
-  faculty for later MPK and other product surfaces.
+  carrier relation. Tests protect the narrative dependency order. The narrative
+  functions remain reusable in other product contexts without imposing this
+  README's sequence on them.
 
 
 - **Post-public carrier audit:** generalized the remaining live `conversation`

@@ -76,8 +76,7 @@ what it does:
 
 Carrier, provider, setup and implementation mechanics now descend after these
 relations are formed. The narrative functions are not mandatory README section
-names for other products; the reusable editorial owner is
-`Editoriali/skills/editorial-semantic-kernel/references/product-semantic-narrative.md`.
+names for other products; their current public expression is the README above.
 
 ## Current communication correction
 
@@ -221,8 +220,15 @@ For a future release, create a draft, upload and verify all intended assets,
 then publish. Publication locks that release's assets and tag. See
 [GitHub immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases).
 
-The source change in this readback only updates CURRENT_STATE. Earlier suite
-and CI results below remain evidence for their named source identities. VERSION
+The initial readback updated CURRENT_STATE. Its CI exposed a portability test
+that required the old pending About status and one current proof method as
+permanent prose. Those two volatile-state assertions were removed from the
+portability test; its checks on the portable owners remain. Host metadata is
+verified through the exact administrative readback above. A residual private
+editorial-source path/name was also removed from current state and changelog;
+this current-source correction does not erase earlier Git history.
+
+Earlier suite and CI results below remain evidence for their named source identities. VERSION
 0.6.0 and released v0.6.0 remain distinct from subsequent main commits; this
 administrative reconciliation does not choose a new product version.
 

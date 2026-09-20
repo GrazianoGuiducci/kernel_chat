@@ -547,9 +547,9 @@ class ValidateTests(unittest.TestCase):
         evolution_guide = (self.root / "docs/EVOLUTION_GUIDE.md").read_text(encoding="utf-8")
         self.assertNotIn("conversation behavior and later assimilation", evolution_guide)
 
-        current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
-        self.assertIn("post-merge tree-identity verification", current_state)
-        self.assertIn("Observed GitHub About still carries", current_state)
+        # Repository-host metadata and the current proof method can change.
+        # Their observed status is not a portable-kernel invariant; verify an
+        # administrative change against the host effect it actually claims.
 
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         cases = {
