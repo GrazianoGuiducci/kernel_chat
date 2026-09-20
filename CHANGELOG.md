@@ -4,6 +4,13 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+- **Security policy / reporting hardening:** added a public `SECURITY.md`,
+  routed vulnerability reports away from public Evolution Feedback, made
+  credential/private-source boundaries explicit, and documented the distinction
+  between semantic instructions and actual connector/repository/runtime/account
+  authority. Validator/tests now require the policy and its public route.
+
+
 - **User-guide carrier convergence:** generalized the live user guide from
   chat/new-chat defaults to receiving-environment/session language wherever the
   modality does not change meaning. ChatGPT remains explicit only in its
