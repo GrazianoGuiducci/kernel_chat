@@ -37,19 +37,19 @@ selected action. When review is the selected task, perform that review.
 Recognize the receiving relation from the environment's actual capabilities:
 
 ```text
-conversational AI
+receiving AI environment
 + persistent/custom operating instructions or equivalent entry
 + reachable persistent kernel source
 -> kernel_chat
 
-AI agent / harness
-+ durable project workspace/filesystem as its continuing work surface
+AI actor / harness
++ durable project workspace/filesystem as its continuing operating surface
 -> MAIOS Project Kernel
 ```
 
 Choose from that relation rather than from provider or model names.
 
-For kernel_chat adoption use the [shared setup guide](docs/CHAT_SETUP.md).
+For kernel_chat adoption use the [shared setup guide](docs/SETUP.md).
 Use the actual instruction, knowledge, repository, file or connector facilities
 exposed by the receiver rather than requiring another provider's mechanism.
 
@@ -58,7 +58,7 @@ Otherwise supply the exact missing operator step and complete text or file.
 Repository read, repository write, filesystem access, code execution and
 account-setting access are different capabilities. Use only those exposed.
 
-With file-based chat setup, retain source identity, selected app scope and where
+With file-based host setup, retain source identity, selected app scope and where
 updates are saved. Do not create a ChatGPT helper receipt for that other route.
 For the Git/Python ChatGPT helper, use the configuration and receipt contract in
 [INSTALL.md](INSTALL.md) and the
@@ -78,7 +78,7 @@ For the current ChatGPT implementation use [INSTALL.md](INSTALL.md) and the
 [ChatGPT adapter guide](adapters/chatgpt/README.md). Their repository, digest,
 receipt and account-setting mechanics remain specific to that integration.
 
-Other conversational receivers preserve the same kernel owners through their
+Other receiving environments preserve the same kernel owners through their
 actual persistent-instruction and source mechanisms.
 
 ## Instance, state and sources
@@ -115,8 +115,8 @@ For operating knowledge, reach the needed owner:
 - [Operations](operations/CURRENT.md): unfinished effects and recovery when material.
 
 These are paths for understanding, not a fixed loading order. A new kernel
-instance enters through the installed conversational entry and AGENTS before
-substantive work. A later conversation inside an already-incarnated scope does
+instance enters through the installed portable entry and AGENTS before
+substantive work. A later session inside an already-incarnated scope does
 not require reloading the whole kernel merely because the chat is new; recover
 only what the present relation makes pertinent. A source encountered first can
 frame the question without acquiring authority to determine its answer.
@@ -136,7 +136,7 @@ entry, installed host instructions and actual behavior distinguishable.
 When package/repository maintenance itself is selected, use the
 [package evolution guide](docs/EVOLUTION_GUIDE.md) and the relevant host adapter
 for exact migration, provenance, validation, receipt and recovery mechanics.
-Do not keep those mechanics hot during ordinary conversational work.
+Do not keep those mechanics hot during ordinary work.
 
 Real use may expose friction, failure, success, missing knowledge or a new
 possibility. Preserve feedback when it can improve the appropriate owner.

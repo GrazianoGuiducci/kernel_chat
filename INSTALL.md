@@ -1,8 +1,8 @@
 # Install kernel_chat in ChatGPT
 
 This guide is the ChatGPT-specific installation of the provider-neutral
-[conversational instruction source](adapters/conversational/INSTRUCTIONS.template.md).
-The kernel entry is shared across conversational receivers; this guide owns the
+[portable instruction source](adapters/portable/INSTRUCTIONS.template.md).
+The kernel entry is shared across compatible receiving environments; this guide owns the
 GitHub/configurator/Custom Instructions mechanics and receipts for ChatGPT.
 
 ## Adoption requirements and execution routes
@@ -26,8 +26,9 @@ GitHub authority; neither grants permission to change ChatGPT account settings.
 If the receiving AI already owns a durable project filesystem and is meant to
 operate there continuously, consider
 [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel)
-before installing `kernel_chat`. `kernel_chat` is optimized for cloud-chat
-continuity when the chat itself does not own that durable workspace.
+before installing `kernel_chat`. `kernel_chat` uses a host-carried semantic operating layer when the receiving
+environment does not itself own the durable workspace that defines continuing
+work. ChatGPT is one current incarnation of that relation.
 
 > [!IMPORTANT]
 > **Repository setup is not ChatGPT activation.** If a coder or agent is doing

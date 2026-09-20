@@ -87,10 +87,10 @@ class ConfigureTests(unittest.TestCase):
 
     def bridge_version(self) -> str:
         return (
-            self.root / "adapters/conversational/VERSION"
+            self.root / "adapters/portable/VERSION"
         ).read_text(encoding="utf-8").strip()
 
-    def test_configured_bridge_uses_portable_conversational_entry(self) -> None:
+    def test_configured_bridge_uses_portable_entry(self) -> None:
         result = self.run_configure(with_project=False)
         self.assertEqual(result.returncode, 0, result.stderr)
         configured = (self.root / ADAPTER).read_text(encoding="utf-8")
@@ -152,12 +152,12 @@ class ConfigureTests(unittest.TestCase):
         original = json.loads(instance_path.read_text(encoding="utf-8"))
         delivered_digest = original["configured_bridge_sha256"]
 
-        template = self.root / "adapters/conversational/INSTRUCTIONS.template.md"
+        template = self.root / "adapters/portable/INSTRUCTIONS.template.md"
         template.write_text(
             template.read_text(encoding="utf-8") + "\nNew delivered relation.\n",
             encoding="utf-8",
         )
-        (self.root / "adapters/conversational/VERSION").write_text("1.0.1\n", encoding="utf-8")
+        (self.root / "adapters/portable/VERSION").write_text("1.0.1\n", encoding="utf-8")
         replaced = self.run_configure("--replace-adapter", with_project=False)
         self.assertEqual(replaced.returncode, 0, replaced.stderr)
 
@@ -465,12 +465,12 @@ class ConfigureTests(unittest.TestCase):
         instance["extension_field"] = {"keep": True}
         instance_path.write_text(json.dumps(instance, indent=2) + "\n", encoding="utf-8")
 
-        template_path = self.root / "adapters/conversational/INSTRUCTIONS.template.md"
+        template_path = self.root / "adapters/portable/INSTRUCTIONS.template.md"
         template_path.write_text(
             template_path.read_text(encoding="utf-8") + "\nNew bridge-template relation.\n",
             encoding="utf-8",
         )
-        (self.root / "adapters/conversational/VERSION").write_text("1.0.1\n", encoding="utf-8")
+        (self.root / "adapters/portable/VERSION").write_text("1.0.1\n", encoding="utf-8")
 
         result = self.run_configure(
             "--replace-adapter",
@@ -854,8 +854,8 @@ class ConfigureTests(unittest.TestCase):
         confirmed_at = confirmed_instance["host_installation"]["confirmed_at"]
         installed_digest = confirmed_instance["host_installation"]["installed_bridge_sha256"]
 
-        template_path = self.root / "adapters/conversational/INSTRUCTIONS.template.md"
-        version_path = self.root / "adapters/conversational/VERSION"
+        template_path = self.root / "adapters/portable/INSTRUCTIONS.template.md"
+        version_path = self.root / "adapters/portable/VERSION"
         template_a = template_path.read_bytes()
         version_a = version_path.read_bytes()
 

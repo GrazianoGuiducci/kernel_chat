@@ -1,32 +1,32 @@
 # User guide
 
-## Your first conversation after adoption
+## Your first session after adoption
 
 Start with your real work. The kernel's working knowledge participates through
-the instructions and sources saved in your chat environment. You can ask a
+the instructions and sources saved in your receiving environment. You can ask a
 normal question, continue a topic or begin a new activity.
 
 For example:
 
 ```text
 Let's work on [topic]. Use the relevant sources and methods. When we learn
-something reusable, help me preserve it where our next conversation can use it.
+something reusable, help me preserve it where our next session can use it.
 ```
 
 During initial setup, have the assistant reach one supplied method and connect
-it to the work you are starting. The [chat setup guide](CHAT_SETUP.md) explains
+it to the work you are starting. The [setup guide](SETUP.md) explains
 file-based project setup and the existing ChatGPT repository route.
 
 ## Use the chat normally
 
 You do not need to repeat a boot phrase or request a full repository load on
 every turn. Use the principles already available and reach additional knowledge
-when it can change the question, method or result. The conversation stays direct.
+when it can change the question, method or result. The interaction stays direct.
 
 ### Read the competence trace
 
 Every final response closes with two compact functions, localized to the
-conversation language:
+current interaction language:
 
 ```text
 Competences: <owners that materially formed this response | —>
@@ -72,7 +72,7 @@ one. Availability does not mean every source must be loaded for every task.
 
 The Git/Python helper records package, repository, bridge and reported
 installation identity here. It is setup metadata rather than project knowledge.
-A file-based project in another chat app does not need this ChatGPT receipt.
+A file-based project in another receiving environment does not need this ChatGPT receipt.
 The [adoption guide](ADOPTION_GUIDE.md) explains the distinction.
 
 ## Maintain continuity
@@ -166,7 +166,7 @@ updates explicit so the next chat reaches the intended form.
 ## Source contact
 
 Check upstream when a relevant change can improve the work. Preserve useful
-observations without making every conversation a maintenance session. Updates
+observations without making every interaction a maintenance session. Updates
 and public feedback are deliberate actions; the current source-contact method
 is in [AGENTS.md](../AGENTS.md).
 

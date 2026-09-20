@@ -86,12 +86,12 @@ class ValidateTests(unittest.TestCase):
         self.assertTrue(payload["valid"])
         self.assertEqual(payload["errors"], [])
 
-    def test_portable_conversational_instruction_source_is_required(self) -> None:
-        (self.root / "adapters/conversational/INSTRUCTIONS.template.md").unlink()
+    def test_portable_instruction_source_is_required(self) -> None:
+        (self.root / "adapters/portable/INSTRUCTIONS.template.md").unlink()
         result, payload = self.validate()
         self.assertNotEqual(result.returncode, 0)
         self.assertIn(
-            "missing required file: adapters/conversational/INSTRUCTIONS.template.md",
+            "missing required file: adapters/portable/INSTRUCTIONS.template.md",
             payload["errors"],
         )
 
@@ -334,7 +334,7 @@ class ValidateTests(unittest.TestCase):
             payload["errors"],
         )
 
-    def test_public_readme_routes_chat_setup_and_first_use(self) -> None:
+    def test_public_readme_routes_setup_and_first_use(self) -> None:
         # Public navigation is checked on active Markdown links. Headings and
         # explanatory wording can evolve without becoming product invariants.
         from markdown_it import MarkdownIt
@@ -350,17 +350,14 @@ class ValidateTests(unittest.TestCase):
         readme = (self.root / "README.md").read_text(encoding="utf-8")
         readme_links = links(readme)
         for target in (
-            "docs/CHAT_SETUP.md", "docs/ADOPTION_GUIDE.md", "docs/USER_GUIDE.md",
+            "docs/SETUP.md", "docs/ADOPTION_GUIDE.md", "docs/USER_GUIDE.md",
             "kernel/KERNEL.md", "INSTALL.md", "adapters/chatgpt/README.md",
-            "adapters/conversational/INSTRUCTIONS.template.md",
+            "adapters/portable/INSTRUCTIONS.template.md",
             "https://github.com/GrazianoGuiducci/maios-project-kernel",
         ):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        # The public surface should show the user result and one observable
-        # example first, then provide a capability -> source verification map,
-        # setup, and finally the deeper study surface.
         value_position = readme.index("## What you get")
         example_position = readme.index("## A small before / after")
         capability_position = readme.index("## Capabilities and where to verify them")
@@ -381,7 +378,9 @@ class ValidateTests(unittest.TestCase):
         opening = readme[:capability_position]
         self.assertIn("carry forward the ways of working it", opening)
         self.assertIn("Experience can become capability.", opening)
-        self.assertIn("A dedicated host-specific\nadapter is optional.", opening)
+        self.assertIn("including a chat", opening)
+        self.assertIn("GitHub, MCP", opening)
+        self.assertIn("system-level properties often implemented in agentic", opening)
         self.assertIn("changed handling of task B", opening)
         for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
             with self.subTest(provider_name=provider_name):
@@ -397,7 +396,7 @@ class ValidateTests(unittest.TestCase):
             "Source / inference distinction",
             "In-flow correction",
             "Competence trace",
-            "Provider-neutral conversational entry",
+            "Provider-neutral portable entry",
             "Receiver-relative adoption",
             "Current package evidence",
             "The deeper terminology is optional for normal use",
@@ -406,16 +405,17 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker, verification_surface)
 
-        conversational = (self.root / "adapters/conversational/README.md").read_text(encoding="utf-8")
-        self.assertIn("it is\nnot required when the host already exposes", conversational)
+        portable = (self.root / "adapters/portable/README.md").read_text(encoding="utf-8")
+        self.assertIn("A chat is one possible receiving environment", portable)
+        self.assertIn("GitHub, MCP", portable)
 
-        setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
+        setup = (self.root / "docs/SETUP.md").read_text(encoding="utf-8")
         self.assertIn("A host-specific adapter is optional.", setup)
         setup_links = links(setup)
         for target in (
             "../AGENTS.md", "../kernel/KERNEL.md", "../kernel/COMPETENCE.md",
             "../kernel/EVOLUTION.md", "../kernel/FDLA.md", "../INSTALL.md",
-            "../adapters/conversational/INSTRUCTIONS.template.md",
+            "../adapters/portable/INSTRUCTIONS.template.md",
             "../templates/state/CURRENT.md", "../templates/state/SOURCES.md",
             "USER_GUIDE.md", "ADOPTION_GUIDE.md",
         ):
@@ -425,12 +425,12 @@ class ValidateTests(unittest.TestCase):
 
         agents_text = (self.root / "AGENTS.md").read_text(encoding="utf-8")
         agents_links = links(agents_text)
-        self.assertIn("docs/CHAT_SETUP.md", agents_links)
+        self.assertIn("docs/SETUP.md", agents_links)
 
-        conversational_entry = (
-            self.root / "adapters/conversational/INSTRUCTIONS.template.md"
+        portable_entry = (
+            self.root / "adapters/portable/INSTRUCTIONS.template.md"
         ).read_text(encoding="utf-8")
-        for surface in (readme, agents_text, conversational_entry):
+        for surface in (readme, agents_text, portable_entry):
             self.assertIn("Do not presume", surface)
             self.assertIn("without narrowing the field", surface)
 
@@ -445,16 +445,18 @@ class ValidateTests(unittest.TestCase):
             adoption_text,
         )
         adoption_links = links(adoption_text)
-        self.assertIn("CHAT_SETUP.md", adoption_links)
-        # Text examples or comments are not discoverable navigation.
-        self.assertNotIn("docs/CHAT_SETUP.md", links(
-            "<!-- [setup](docs/CHAT_SETUP.md) -->\n"
-            "```markdown\n[setup](docs/CHAT_SETUP.md)\n```\n"
-        ))
+        self.assertIn("SETUP.md", adoption_links)
+
+        legacy_chat_setup = (self.root / "docs/CHAT_SETUP.md").read_text(encoding="utf-8")
+        self.assertIn("[Portable setup](SETUP.md)", legacy_chat_setup)
+        legacy_conversational = (
+            self.root / "adapters/conversational/README.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("../portable/README.md", legacy_conversational)
 
     def test_public_kernel_does_not_reintroduce_nonportable_or_future_ceiling_frames(self) -> None:
         public_owners = {
-            "adapters/conversational/INSTRUCTIONS.template.md": (
+            "adapters/portable/INSTRUCTIONS.template.md": (
                 "Follow KA",
                 "Meta_Skill",
             ),
@@ -495,12 +497,12 @@ class ValidateTests(unittest.TestCase):
             "Those relations are now owned\nby the public kernel sources in this repository.",
             evolution_guide,
         )
-        conversational_readme = (
-            self.root / "adapters/conversational/README.md"
+        portable_readme = (
+            self.root / "adapters/portable/README.md"
         ).read_text(encoding="utf-8")
         self.assertIn(
             "constitutive operating owners named by the entry live in the selected\nkernel source",
-            conversational_readme,
+            portable_readme,
         )
 
         review = (self.root / "docs/EXTERNAL_REVIEW_0_6_0.md").read_text(encoding="utf-8")
