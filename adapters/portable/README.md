@@ -49,7 +49,7 @@ Another receiving AI environment may use project knowledge, a filesystem,
 another repository service, MCP or another persistent source. The receiving
 mechanism changes; the kernel relation does not.
 
-`VERSION` identifies this portable portable-entry contract. Host-adapter
+`VERSION` identifies this portable-entry contract. Host-adapter
 mechanics have their own identity and must not redefine the kernel.
 
 The owner references in the canonical template use the package layout. When a
