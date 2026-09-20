@@ -18,7 +18,7 @@ Historical entries describe the contract of their own revision. For the current 
   protect the entry principle, experience-to-capability representation and
   adapter-optional first-contact path.
 
-- **Public-source hygiene / open horizon:** removed private source topology and
+- **Public-source hygiene / open horizon:** removed non-portable development-source topology and
   formative internal references from the conversational entry, Competence,
   FDLA, Lineage and package-evolution narrative. Reframed Core and ChatGPT
   adapter host boundaries around capabilities actually exposed by the receiver
