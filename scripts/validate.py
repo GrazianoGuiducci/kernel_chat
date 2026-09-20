@@ -32,6 +32,9 @@ REQUIRED = [
     "operations/FLOWS.md",
     "operations/REQUESTS_RESULTS.md",
     "operations/RECEIPTS_RECOVERY.md",
+    "adapters/portable/VERSION",
+    "adapters/portable/INSTRUCTIONS.template.md",
+    "adapters/portable/README.md",
     "adapters/conversational/VERSION",
     "adapters/conversational/INSTRUCTIONS.template.md",
     "adapters/conversational/README.md",
@@ -272,17 +275,17 @@ def main() -> int:
 
     version = read_semver(ROOT / "VERSION", "VERSION", errors)
     bridge_version = read_semver(
-        ROOT / "adapters/conversational/VERSION",
-        "conversational instructions VERSION",
+        ROOT / "adapters/portable/VERSION",
+        "portable entry VERSION",
         errors,
     )
 
-    adapter_template = ROOT / "adapters/conversational/INSTRUCTIONS.template.md"
+    adapter_template = ROOT / "adapters/portable/INSTRUCTIONS.template.md"
     if adapter_template.is_file():
         template = adapter_template.read_text(encoding="utf-8")
         if template.count("{{KERNEL_SOURCE}}") != 1:
             errors.append(
-                "conversational instructions template must contain {{KERNEL_SOURCE}} once"
+                "portable entry template must contain {{KERNEL_SOURCE}} once"
             )
         for relation in (
             "AGENTS.md",
@@ -300,19 +303,27 @@ def main() -> int:
         ):
             if relation not in template:
                 errors.append(
-                    f"conversational instructions template missing relation: {relation}"
+                    f"portable entry template missing relation: {relation}"
                 )
         if re.search(r"{{(?:GITHUB|PROJECT|CHATGPT)_[A-Z_]+}}", template):
             errors.append(
-                "conversational instructions template must remain provider/source neutral"
+                "portable entry template must remain provider/source neutral"
+            )
+
+    legacy_conversational = ROOT / "adapters/conversational/README.md"
+    if legacy_conversational.is_file():
+        legacy_text = legacy_conversational.read_text(encoding="utf-8")
+        if "../portable/README.md" not in legacy_text:
+            errors.append(
+                "legacy conversational compatibility path must point to the portable entry"
             )
 
     chatgpt_compat = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS.template.md"
     if chatgpt_compat.is_file():
         compatibility = chatgpt_compat.read_text(encoding="utf-8")
-        if "../conversational/INSTRUCTIONS.template.md" not in compatibility:
+        if "../portable/INSTRUCTIONS.template.md" not in compatibility:
             errors.append(
-                "ChatGPT compatibility template must point to the conversational instruction source"
+                "ChatGPT compatibility template must point to the portable instruction source"
             )
 
     instance_template = ROOT / "templates/state/INSTANCE.json"
