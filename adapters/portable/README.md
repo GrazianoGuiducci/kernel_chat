@@ -9,7 +9,7 @@ enter it, which constitutive owners remain reachable, how competences
 participate and how reusable learning returns.
 
 ```text
-backend instructions
+host instructions
 -> kernel source identity
 -> AGENTS / CURRENT
 -> pertinent kernel and competence owners
@@ -26,6 +26,14 @@ A chat that can retain persistent/custom operating instructions and reach a
 durable source through GitHub, MCP, project knowledge, a filesystem, a
 connector or equivalent means can host this kernel relation. The same semantic
 entry can inhabit other receiving surfaces exposing equivalent capabilities.
+
+This carrier can move part of what an agentic harness often externalizes as
+fixed orchestration into the semantic operating layer: competence formation and
+composition, source/owner relations, in-flow correction, continuity and
+evolution through consequences can be represented and exercised as living
+semantic capabilities. This does not turn semantic description into executable
+runtime. Tools, scheduling, filesystem access, network access and material
+effects remain the capabilities and authorities actually exposed by the host.
 
 The placeholder is:
 
