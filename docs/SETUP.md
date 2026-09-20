@@ -1,6 +1,6 @@
 # Set up kernel_chat in a receiving AI environment
 
-`kernel_chat` uses an portable host carrier. A chat is one common case,
+`kernel_chat` uses a portable host carrier. A chat is one common case,
 but not the defining parameter.
 
 A persistent adoption needs two things:
@@ -48,7 +48,7 @@ Preserve the canonical paths when that surface supports them. If it exposes
 only flat filenames, preserve the same owner identities and render the
 portable entry with the actual references available there.
 
-The project/knowledge surface is now the kernel source for that interaction
+The project/knowledge surface is now the kernel source for that host scope
 scope.
 
 ### C. Only current-session attachments are available
@@ -64,7 +64,7 @@ reach, then install the persistent entry there.
 
 Use the provider-neutral source:
 
-[Portable instructions](../adapters/interaction/INSTRUCTIONS.template.md)
+[Portable instructions](../adapters/portable/INSTRUCTIONS.template.md)
 
 Replace `{{KERNEL_SOURCE}}` with the actual source relation the receiver can
 reach.
