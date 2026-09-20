@@ -9,7 +9,7 @@
 
 In practical terms, it lets an AI **carry forward the ways of working it
 develops with you**: relevant sources, current context, reusable competences and
-learning from real work remain available across later conversations.
+learning from real work remain available across later sessions and interactions.
 
 **Experience can become capability.** When real work teaches a better way to
 understand, decide or do something, that reusable difference returns to the
@@ -37,7 +37,7 @@ A dedicated host-specific adapter is optional.
 
 ## What you get
 
-- **Continuity from the present** — later conversations can recover the current
+- **Continuity from the present** — later sessions can recover the current
   point, relevant sources and still-useful reasons without replaying the whole
   history.
 - **Reusable competences** — a useful way of understanding, deciding or doing
@@ -160,7 +160,7 @@ reachable repository or filesystem
 
 session-only attachments
 -> use the kernel in the current conversation
--> add a persistent source when you want cross-conversation continuity
+-> add a persistent source when you want cross-session continuity
 ```
 
 ### 2. Install the portable entry
