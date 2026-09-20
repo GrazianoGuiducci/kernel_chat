@@ -1,18 +1,18 @@
 # Adoption guide
 
-Adoption makes the kernel's operating relation reachable in a conversational
+Adoption makes the kernel's operating relation reachable in a receiving AI
 environment and keeps useful context and learning available for later work.
 
 ## Recognize the receiving relation
 
 ```text
-conversational AI
+receiving AI environment
 + persistent/custom operating instructions or equivalent entry
 + reachable persistent kernel source
 -> kernel_chat
 
-AI agent / harness
-+ durable project workspace/filesystem as its continuing work surface
+AI actor / harness
++ durable project workspace/filesystem as its continuing operating surface
 -> MAIOS Project Kernel
 ```
 
@@ -20,15 +20,15 @@ The receiver's actual relation determines the carrier. Provider and model names
 do not.
 
 When the relation is `kernel_chat`, continue with the
-[chat setup guide](CHAT_SETUP.md).
+[setup guide](SETUP.md).
 
 ## What complete adoption makes true
 
-A persistent conversational adoption establishes:
+A persistent adoption establishes:
 
 ```text
 one reachable kernel source
-+ one installed conversational entry pointing to that source
++ one installed portable entry pointing to that source
 + a place for current context and source relations when they are needed
 + a way for reusable competence learning to remain reachable later
 ```
@@ -74,7 +74,7 @@ kernel works, not the identity of the kernel.
 
 The portable adoption contract does not require a host-specific adapter when
 the receiving environment already provides the persistent instruction and
-source mechanisms needed by the conversational entry.
+source mechanisms needed by the portable entry.
 
 A host adapter packages receiver-specific setup or verification mechanics; it
 does not define whether the portable kernel relation can be adopted.
@@ -85,7 +85,7 @@ For the current ChatGPT Git/Python implementation use
 configured-entry provenance, host confirmation, receipt publication, update and
 recovery mechanics.
 
-Another conversational host uses its own persistent-instruction and source
+Another receiving environment uses its own persistent-instruction and source
 mechanisms while preserving the same kernel owners and effect distinctions.
 
 ## Package source and installed entry evolve separately
@@ -98,11 +98,11 @@ Therefore keep separate:
 
 ```text
 upstream/source revision
-available conversational-entry version
+available portable-entry version
 configured entry
 installed host instructions
 reachable user state
-observed conversational behavior
+observed host behavior
 ```
 
 Inspect or update only the relation that can materially change the present
