@@ -517,6 +517,17 @@ class ValidateTests(unittest.TestCase):
             core,
         )
 
+        evolution = (self.root / "kernel/EVOLUTION.md").read_text(encoding="utf-8")
+        self.assertNotIn("turn every conversation into memory", evolution)
+        current_template = (self.root / "templates/state/CURRENT.md").read_text(encoding="utf-8")
+        self.assertNotIn("survive the conversation", current_template)
+        evolution_guide = (self.root / "docs/EVOLUTION_GUIDE.md").read_text(encoding="utf-8")
+        self.assertNotIn("conversation behavior and later assimilation", evolution_guide)
+
+        current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
+        self.assertIn("post-merge tree-identity verification", current_state)
+        self.assertIn("Observed GitHub About still carries", current_state)
+
     def test_host_confirmation_docs_publish_receipt_before_remote_reentry(self) -> None:
         cases = {
             "INSTALL.md": (
