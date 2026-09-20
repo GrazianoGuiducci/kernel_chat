@@ -4,14 +4,14 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.7.0
-current_work: 0.7.0 release promotion candidate after semantic/product convergence
-current_change: source-side material review closed with no material blocker; 0.7.0 selected for the accumulated backward-compatible carrier/competence/security/reentry resultant; portable entry 3.0.0 unchanged
-latest_tagged_distribution: v0.6.0
-release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
+current_work: 0.7.0 publication closed; post-release readback recorded separately from released product identity
+current_change: v0.7.0 published immutably from exact green promotion commit; post-release source change is metadata/readback only; portable entry 3.0.0 unchanged
+latest_tagged_distribution: v0.7.0
+release_promotion_commit: 93c1688ab23d699915e5ec3f407bdadda79ce12d
 material_review_target: 10755f36a7764b8694e73a35e022efa69368e961
 material_review_result: no_material_blocker
 material_review_ci: 35519877372
-release_candidate: v0.7.0 / tag-release pending green CI on exact promotion candidate
+release_identity: v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
@@ -177,10 +177,10 @@ condition to its Evolution owner, and validator + independent CommonMark
 consumer proof preserve that owner path. No new controller, runtime, state
 schema or adapter mechanism is introduced. Portable entry `3.0.0` is unchanged.
 
-Source `VERSION` is now `0.7.0` by the publication decision recorded in the
-material review. The published `v0.6.0` remains the latest tagged distribution
-until the separate tag/release effect is completed. Portable entry `3.0.0`
-remains unchanged because the receiving-entry contract did not change.
+Source `VERSION` is `0.7.0`, and `v0.7.0` is now the Latest published release
+on exact promotion commit `93c1688ab23d699915e5ec3f407bdadda79ce12d`.
+The release is immutable. Portable entry `3.0.0` remains unchanged because the
+receiving-entry contract did not change.
 
 ## 0.7.0 material review and publication decision
 
@@ -213,10 +213,44 @@ portable adoption relation, so a pre-1.0 minor release is the coherent form.
 `1.0.0` is not selected by this movement: no separate stable-contract/maturity
 milestone or deliberate compatibility boundary has been established.
 
-The source version change does not by itself create the `v0.7.0` tag/release,
-migrate user-owned instances or update installed host instructions. The tag
-must target the exact green promotion candidate; post-release current-state
-readback is a later source effect.
+The separate release effect is now closed: `v0.7.0` resolves exactly to the
+green promotion candidate `93c1688ab23d699915e5ec3f407bdadda79ce12d`,
+is Latest, non-draft, non-prerelease and immutable. User-owned instances,
+configured adapters and installed host instructions remain separate unselected
+effects. This post-release current-state readback is a later metadata-only
+source effect and does not redefine the released product identity.
+
+## 0.7.0 publication readback
+
+Authenticated GitHub readback after publication:
+
+```text
+released product source:
+  93c1688ab23d699915e5ec3f407bdadda79ce12d
+  tree b91de95fc570def7650cacb5fc51124918181260
+  VERSION 0.7.0
+  promotion CI 35520286757 / success
+  validator valid=true / errors=[] / warnings=[]
+  63 tests / 8/8 matrix jobs
+
+release:
+  tag v0.7.0
+  tag target 93c1688ab23d699915e5ec3f407bdadda79ce12d
+  release id 392484615
+  Latest = true
+  draft = false
+  prerelease = false
+  immutable = true
+  published_at = 2026-09-20T15:55:01Z
+
+source mutation by release effect:
+  none
+```
+
+The release effect therefore closes without changing the promotion source.
+This section is a post-release readback and may move `main` beyond the tag only
+as metadata/state. It does not create a new product semantic resultant or a
+new version.
 
 ## GitHub first-encounter metadata
 
@@ -273,7 +307,8 @@ classic branch protection:
 
 release immutability repository setting:
   enabled for future releases
-  existing v0.6.0 still reports immutable=false
+  existing v0.6.0 reports immutable=false
+  current v0.7.0 reports immutable=true
 ```
 
 These are repository-administration effects, verified through the rulesets,
@@ -283,9 +318,9 @@ The existing v0.6.0 tag remains on its release promotion commit and is now
 protected from update/deletion by the tag ruleset; old release assets do not
 become immutable retroactively.
 
-For a future release, create a draft, upload and verify all intended assets,
-then publish. Publication locks that release's assets and tag. See
-[GitHub immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases).
+The `v0.7.0` publication exercised this boundary: release preparation remained
+separate from source review, the exact green promotion commit was tagged, and
+publication made the new release immutable. See [GitHub immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases).
 
 The initial readback updated CURRENT_STATE. Its CI exposed a portability test
 that required the old pending About status and one current proof method as
@@ -297,8 +332,9 @@ this current-source correction does not erase earlier Git history.
 
 Earlier suite and CI results below remain evidence for their named source
 identities. The historical `0.6.0` source/release relation remains attributable
-to its own revisions; the current source version is `0.7.0` and its tag/release
-remains a separate pending publication effect.
+to its own revisions. The current released product identity is
+`v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d`; later source-only readback
+metadata does not move that release identity.
 
 ## Preserved mechanics and knowledge
 
@@ -371,6 +407,7 @@ behavior in every receiving environment.
 Preceding state and review genealogy remain available through Git history, the
 [review record](docs/EXTERNAL_REVIEW_0_6_0.md) and
 [evolution guide](docs/EVOLUTION_GUIDE.md). They are historical evidence; the
-current README and living owners define the present product relation. Product
-releases, installed instances, account settings and downstream publications
-remain separately selected work.
+current README and living owners define the present product relation. Future
+product releases, installed instances, account settings and downstream
+publications remain separately selected work. The current `v0.7.0` product
+publication is closed.

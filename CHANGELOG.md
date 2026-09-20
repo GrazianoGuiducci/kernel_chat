@@ -4,7 +4,11 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased
 
-_No unreleased changes._
+- **Post-release readback:** recorded that `v0.7.0` is Latest and immutable,
+  resolves exactly to promotion commit
+  `93c1688ab23d699915e5ec3f407bdadda79ce12d`, and that the release effect did
+  not mutate source. This is state/provenance metadata only; it does not form a
+  new product version or imply user-instance/host migration.
 
 ## 0.7.0 — 2026-09-20
 
