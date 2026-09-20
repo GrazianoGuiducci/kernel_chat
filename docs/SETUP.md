@@ -7,7 +7,7 @@ A persistent adoption needs two things:
 
 ```text
 persistent/custom operating instructions or equivalent entry
-+ a persistent kernel source the conversation can reach
++ a persistent kernel source the receiving environment can reach
 ```
 
 Current context and reusable learning then live in that reachable source.
@@ -20,7 +20,7 @@ continuing operating surface, use
 
 ### A. A persistent source is already reachable
 
-If the conversation can already read the user-controlled repository, knowledge
+If the receiving environment can already read the user-controlled repository, knowledge
 space, filesystem, connector or equivalent source that contains the kernel,
 use it in place.
 
@@ -48,16 +48,15 @@ Preserve the canonical paths when that surface supports them. If it exposes
 only flat filenames, preserve the same owner identities and render the
 portable entry with the actual references available there.
 
-The project/knowledge surface is now the kernel source for that host scope
-scope.
+The project/knowledge surface is now the kernel source for that host scope.
 
 ### C. Only current-session attachments are available
 
-The supplied kernel sources can participate in the current conversation, but
+The supplied kernel sources can participate in the current interaction, but
 this is not yet persistent adoption.
 
-Use them now if useful. When continuity across conversations is wanted, place
-the kernel and user-owned context in a source that the later conversation can
+Use them now if useful. When continuity across sessions or interactions is wanted, place
+the kernel and user-owned context in a source that the later receiving environment can
 reach, then install the persistent entry there.
 
 ## 2. Install the same portable entry
