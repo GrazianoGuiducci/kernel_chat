@@ -36,8 +36,8 @@ one reachable kernel source
 The source can be a repository, project/knowledge space, filesystem, connector
 or another durable receiver-native mechanism.
 
-An attachment-only conversation can use the kernel now but does not provide
-cross-conversation persistence by itself.
+An attachment-only session can use the kernel now but does not provide
+cross-session persistence by itself.
 
 ## Use the receiver's actual means
 
