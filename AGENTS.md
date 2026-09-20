@@ -58,7 +58,7 @@ Otherwise supply the exact missing operator step and complete text or file.
 Repository read, repository write, filesystem access, code execution and
 account-setting access are different capabilities. Use only those exposed.
 
-With file-based chat setup, retain source identity, selected app scope and where
+With file-based host setup, retain source identity, selected app scope and where
 updates are saved. Do not create a ChatGPT helper receipt for that other route.
 For the Git/Python ChatGPT helper, use the configuration and receipt contract in
 [INSTALL.md](INSTALL.md) and the
@@ -116,7 +116,7 @@ For operating knowledge, reach the needed owner:
 
 These are paths for understanding, not a fixed loading order. A new kernel
 instance enters through the installed portable entry and AGENTS before
-substantive work. A later conversation inside an already-incarnated scope does
+substantive work. A later session inside an already-incarnated scope does
 not require reloading the whole kernel merely because the chat is new; recover
 only what the present relation makes pertinent. A source encountered first can
 frame the question without acquiring authority to determine its answer.
