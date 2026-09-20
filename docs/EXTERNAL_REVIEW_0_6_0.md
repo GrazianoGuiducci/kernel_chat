@@ -1,5 +1,10 @@
 # kernel_chat 0.6.0 — External Review Brief
 
+> Historical review-time snapshot. The identities, release state, product wording and
+> expected test count below belong to the reviewed `0.6.0` resultant at that time.
+> They are evidence, not the current product state. Use root `CURRENT_STATE.md` and
+> the living kernel owners for current truth.
+
 ```text
 source_version: 0.6.0
 review_state: external_rereview_complete_no_change
@@ -7,9 +12,9 @@ canonical_repository: GrazianoGuiducci/kernel_chat
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
 material_review_ci: 35390696891
 review_result: no_change
-release_promotion: selected_pending_tag_release
-latest_tagged_distribution: v0.5.0
-v0.6.0_release: pending promotion effect
+review_time_release_promotion: selected_pending_tag_release
+review_time_latest_tagged_distribution: v0.5.0
+review_time_v0.6.0_release: pending promotion effect
 ```
 
 ## Purpose
@@ -27,10 +32,15 @@ was part of the material rereview.
 This brief is a navigation/evidence surface. Product truth remains in the
 living owners and executable source.
 
-## Product relation
+## Reviewed product relation at that time
+
+At the reviewed identity, the product relation was expressed as:
 
 `kernel_chat` is a user-owned continuity kernel for cloud chats and small
 conversational systems that do not own a durable workspace.
+
+Later source evolution generalized the carrier beyond this wording. This section
+is retained to preserve what the external review actually evaluated.
 
 Keep these states distinct:
 

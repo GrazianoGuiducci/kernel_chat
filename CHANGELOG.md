@@ -5,6 +5,12 @@ Historical entries describe the contract of their own revision. For the current 
 ## Unreleased — 2026-09-20
 
 
+- **Historical-state hygiene:** clarified that the `0.6.0` external review brief
+  preserves review-time release/product state rather than current product truth,
+  and renamed the 2026-09-17 package-evolution section from `Current` to
+  `Historical reconciliation`. Review identities, expected test counts and
+  evidence remain unchanged.
+
 - **Semantic continuity across reentry:** made explicit that transferring a
   resultant's information does not necessarily transfer the relation that gives
   it meaning. Evolution now preserves, only when consequential, enough

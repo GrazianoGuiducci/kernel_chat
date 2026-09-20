@@ -533,6 +533,11 @@ class ValidateTests(unittest.TestCase):
             "it neither establishes nor rules\nout capabilities outside that surface",
             review,
         )
+        self.assertIn("Historical review-time snapshot", review)
+        self.assertIn("review_time_latest_tagged_distribution", review)
+
+        evolution_guide = (self.root / "docs/EVOLUTION_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn("## Historical reconciliation — 2026-09-17", evolution_guide)
 
         core = (self.root / "kernel/KERNEL.md").read_text(encoding="utf-8")
         self.assertIn(

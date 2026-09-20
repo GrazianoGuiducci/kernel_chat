@@ -33,9 +33,9 @@ schema or fixed checklist. Only the subset whose loss changes later action is
 preserved. No private source topology, new runtime controller, state schema or
 adapter mechanism was imported.
 
-## Current reconciliation — 2026-09-17
+## Historical reconciliation — 2026-09-17
 
-Starting public baseline:
+The following block preserves the starting public baseline observed during that reconciliation:
 
 ```text
 canonical kernel_chat main:
