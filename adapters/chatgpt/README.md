@@ -132,7 +132,7 @@ git show FETCH_HEAD:state/INSTANCE.json
 The fetched commit must equal the expected local commit recorded before push.
 If the remote has advanced, reconcile that state first. Confirm
 `installed_operator_confirmed` in the fetched receipt before starting a new
-remote conversation.
+remote session.
 
 GitHub access and Custom Instructions availability depend on the current
 account and host. The adapter cannot grant or prove those capabilities.
@@ -181,7 +181,7 @@ reconstructible until the operator confirms the replacement.
 
 ## Reachability and evidence
 
-After operator-confirmed installation, a new conversation can verify repository
+After operator-confirmed installation, a new session can verify repository
 reachability when selected:
 
 - `state/CURRENT.md` for missing durable user/context relation;
