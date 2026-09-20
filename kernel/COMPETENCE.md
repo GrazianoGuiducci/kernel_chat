@@ -155,7 +155,6 @@ topology. When a competence crosses hosts, transfer the relation that survives
 the change of host. Do not transfer credentials, hidden state, unsupported
 mechanisms, or inherited authority.
 
-Earlier source work contributed source distinction, open-horizon reasoning,
-competence composition and evolution. Those portable relations are now owned by
-the public kernel sources here; earlier source topology remains lineage rather
-than an operating dependency.
+Source distinction, open-horizon reasoning, competence composition and
+evolution are owned by the public kernel sources here. Historical development
+sources remain lineage rather than operating dependencies.
