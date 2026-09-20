@@ -13,7 +13,7 @@ Describe where the work or relation is now in the smallest form that changes ree
 
 ## Why it matters
 
-State the purpose or decision pressure that should survive the conversation.
+State the purpose or decision pressure that should survive the current session or host boundary.
 Keep the still-valid reason behind a determination and what would revise it
 when those relations change continuation.
 
