@@ -440,11 +440,11 @@ def main() -> int:
     instance_repository = f"{args.github_user}/{args.repository}"
     package_source_version = read_semver(ROOT / "VERSION", "VERSION")
     bridge_template_version = read_semver(
-        ROOT / "adapters/conversational/VERSION",
-        "conversational instructions VERSION",
+        ROOT / "adapters/portable/VERSION",
+        "portable entry VERSION",
     )
 
-    adapter_template = ROOT / "adapters/conversational/INSTRUCTIONS.template.md"
+    adapter_template = ROOT / "adapters/portable/INSTRUCTIONS.template.md"
     adapter_output = ROOT / "adapters/chatgpt/CUSTOM_INSTRUCTIONS_CONFIGURED.md"
     current_template = ROOT / "templates/state/CURRENT.md"
     sources_template = ROOT / "templates/state/SOURCES.md"
