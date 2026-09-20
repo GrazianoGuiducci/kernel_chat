@@ -1,53 +1,17 @@
-# Conversational instructions
+# Compatibility path — conversational entry
 
-This directory owns the provider-neutral backend-instruction entry for
-`kernel_chat`.
+`conversational` was the earlier carrier label. The canonical portable owner is now:
 
-`INSTRUCTIONS.template.md` is the semantic source installed into a
-conversational system's persistent/custom instruction surface. It does not
-contain the whole kernel. It tells the receiver where the kernel lives, how to
-enter it, which constitutive owners remain reachable, how competences
-participate and how reusable learning returns.
+`../interaction/README.md`
 
-```text
-backend instructions
--> kernel source identity
--> AGENTS / CURRENT
--> pertinent kernel and competence owners
--> situated conversational movement
-```
+Canonical instruction source:
 
-The constitutive operating owners named by the entry live in the selected
-kernel source. User/domain sources can become pertinent during real work, and
-optional research sources can deepen study; neither relation supplies missing
-constitutive kernel definitions.
+`../interaction/INSTRUCTIONS.template.md`
 
-The placeholder is:
+Canonical interaction-entry version:
 
-```text
-{{KERNEL_SOURCE}}
-```
+`../interaction/VERSION`
 
-Install it with the source relation that the receiving environment can
-actually reach. A host-specific adapter may render this automatically; it is
-not required when the host already exposes a usable persistent instruction
-surface and persistent source.
+The change removes conversation as an identity parameter. Chat remains one valid host surface when it can retain the operating entry and reach the persistent kernel source. Existing installed conversational-entry incarnations retain their own provenance and remain historical/current according to their recorded identity; this compatibility path does not relabel them.
 
-The current ChatGPT helper renders a GitHub source such as:
-
-```text
-github:owner/repository
-```
-
-Another conversational receiver may use project knowledge, a filesystem,
-another repository service, MCP or another persistent source. The receiving
-mechanism changes; the kernel relation does not.
-
-`VERSION` identifies this portable instruction contract. Host-adapter
-mechanics have their own identity and must not redefine the kernel.
-
-The owner references in the canonical template use the package layout. When a
-receiver's knowledge surface does not preserve directories, either the
-installation step or a host adapter may translate those references. Translation
-must preserve the same owner mapping; it does not rewrite or duplicate the
-kernel logic.
+Do not create a second semantic owner here. Follow the canonical interaction entry.
