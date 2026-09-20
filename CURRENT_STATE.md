@@ -5,7 +5,7 @@ Updated: 2026-09-20
 ```text
 source_version: 0.6.0
 current_work: modality-neutral portable carrier and receiver-relative adoption convergence
-current_change: conversation removed as carrier identity; portable entry 3.0.0 formed; chat retained as one host incarnation; workspace-native MPK distinction preserved
+current_change: public narrative reconciled around identity -> why -> offered transformation -> operation; carrier/setup descend after the object; portable entry 3.0.0 unchanged
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -46,6 +46,38 @@ The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
 with a GitHub instance and retains its configured-bridge and operator-report
 receipts. Other receiving environments use their own persistent/custom
 instruction and source mechanisms while preserving the same owners.
+
+## Current product narrative
+
+The public README now keeps four product functions independently recoverable:
+
+```text
+identity:
+  user-owned semantic operating kernel for AI
+
+why:
+  useful operating context, reasons and ways of working otherwise require
+  reconstruction or remain dependent on host-local persistence
+
+what it offers:
+  continuity from the present
+  + reusable competences
+  + learning from real work
+  + user-owned operating knowledge
+  + portable/selective reentry
+
+what it does:
+  present work
+  -> selective source/state/competence participation
+  -> authorized host effect when needed
+  -> consequence/readback
+  -> reusable learning returns to the owner that must behave differently later
+```
+
+Carrier, provider, setup and implementation mechanics now descend after these
+relations are formed. The narrative functions are not mandatory README section
+names for other products; the reusable editorial owner is
+`Editoriali/skills/editorial-semantic-kernel/references/product-semantic-narrative.md`.
 
 ## Current communication correction
 
