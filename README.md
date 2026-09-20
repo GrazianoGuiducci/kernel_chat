@@ -47,7 +47,7 @@ A dedicated host-specific adapter is optional.
   handled.
 - **User-owned sources** — the operating knowledge lives in a persistent source
   you control and can inspect.
-- **Selective reentry** — the conversation reaches the sources and competences
+- **Selective reentry** — the current work reaches the sources and competences
   that can change the current result instead of loading everything.
 - **Visible participation** — a compact competence trace shows which competence
   owners materially contributed to each final response.
@@ -81,7 +81,7 @@ the reusable change can belong to the competence that forms the question
 itself. Later work can then begin from a different operating relation.
 
 The persistent files, state objects or knowledge surfaces carry this operating
-layer between conversations and environments.
+layer across sessions and environments.
 
 ## Capabilities and where to verify them
 
@@ -159,7 +159,7 @@ reachable repository or filesystem
 -> use that source in place
 
 session-only attachments
--> use the kernel in the current conversation
+-> use the kernel in the current session
 -> add a persistent source when you want cross-session continuity
 ```
 
