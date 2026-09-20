@@ -135,6 +135,7 @@ relations behind each capability.
 | **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
+| **Consequence-aware recomposition** | Lets later consequence deepen present understanding without rewriting what happened or what could actually be understood earlier. | [FDLA](kernel/FDLA.md#kernel-chat-consequence-aware-fdla) |
 | **Competence trace** | Exposes which competence owners materially participated in a final response. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
 | **Provider-neutral portable entry** | Carries the same kernel relation into compatible receiving environments. | [Portable entry](adapters/portable/README.md) · [Instruction source](adapters/portable/INSTRUCTIONS.template.md) |
 | **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Setup](docs/SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
@@ -257,7 +258,8 @@ documents are the study and extension surface:
 - [Evolution](kernel/EVOLUTION.md) — how consequences from real use can change
   later work while remaining attributable and revisable;
 - [FDLA](kernel/FDLA.md) — in-flow correction when the acting interpretation
-  narrows the field it is trying to understand;
+  narrows the field, and consequence-aware recomposition when later evidence
+  changes what can now be understood without rewriting the earlier field;
 - [Architecture](docs/ARCHITECTURE.md) — package, instance, entry, adapter and
   host relations;
 - [Adoption guide](docs/ADOPTION_GUIDE.md) — what complete adoption makes

@@ -4,8 +4,8 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.7.0
-current_work: 0.7.0 publication closed; post-release readback recorded separately from released product identity
-current_change: v0.7.0 published immutably from exact green promotion commit; post-release source change is metadata/readback only; portable entry 3.0.0 unchanged
+current_work: unreleased consequence-aware FDLA source candidate after 0.7.0 publication; released identity remains immutable
+current_change: source candidate deepens FDLA with consequence-aware temporal recomposition, discovery and public capability truth; portable entry 3.0.0 and user/host incarnations remain unchanged
 latest_tagged_distribution: v0.7.0
 release_promotion_commit: 93c1688ab23d699915e5ec3f407bdadda79ce12d
 material_review_target: 10755f36a7764b8694e73a35e022efa69368e961
@@ -151,6 +151,46 @@ receiver-relative rather than as a permanent capability ceiling.
 Exact current-effect boundaries remain explicit where they are evidence-bearing
 (for example read != write, configured != installed, operator report != direct
 host inspection).
+
+## Consequence-aware FDLA — Unreleased candidate
+
+A later source/resultant return exposes a second constitutive FDLA relation.
+The existing in-flow function remains valid: the acting interpretation can
+narrow the field and must be corrected. The new relation covers a different
+case:
+
+```text
+event / source relation at T
++ understanding actually available at T
++ later consequence / evidence at T+1
+-> preserve what happened
+-> preserve what was understood then
+-> distinguish what is understood now
+-> recompose the present from the changed field
+```
+
+The current source therefore preserves:
+
+```text
+what happened
+!= what was understood then
+!= what is understood now
+```
+
+Current understanding does not retroactively become historical knowledge, and
+an earlier faithful interpretation does not remain frozen after a consequence
+materially changes what can be understood.
+
+The function is owned by `kernel/FDLA.md`. `AGENTS.md` now exposes the
+later-consequence condition to that owner, and the existing structural
+validator plus independent CommonMark consumer proof protect the route/anchor
+relation. README and Architecture describe the broadened current capability
+without rewriting the immutable 0.7.0 release notes or review-time evidence.
+
+This is a source candidate, not yet a released product identity. Root VERSION
+remains 0.7.0 until material review selects the next version. Portable entry
+3.0.0, configured bridges, installed host instructions and user-instance state
+remain separate unchanged effects.
 
 ## Semantic continuity return — 2026-09-20
 

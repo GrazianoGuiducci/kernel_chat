@@ -264,9 +264,13 @@ capability-specific resultants such as use/preserve, compose, adapt/deepen,
 form, defer/unknown and `no_change` without a central chooser or fixed ranking.
 
 FDLA lets the system notice when its own interpretation is acting as an
-unjustified limit. It preserves real invariants and present limits while
-revising closures introduced by the acting interpretation. It is not a second
-workflow before ordinary work.
+unjustified limit and also when a later consequence changes what the present
+can now understand about an earlier relation. It preserves real invariants and
+present limits while revising interpretation-introduced closures; in the
+consequence-aware case it preserves the event, the understanding actually
+available then and the understanding available now without retroactive
+narration or historical freezing. It is not a second workflow before ordinary
+work.
 
 ## Operational continuity
 

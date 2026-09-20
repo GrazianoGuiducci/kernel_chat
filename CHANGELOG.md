@@ -4,6 +4,16 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased
 
+- **Consequence-aware FDLA:** extended the constitutive FDLA function without
+  replacing its in-flow correction role. A later consequence or new evidence
+  can make a previously unavailable relation understandable while preserving
+  the event, the understanding actually available at that earlier time and the
+  current understanding as distinct. AGENTS now routes this condition to the
+  FDLA owner; structural validation and the independent rendered Markdown
+  consumer protect the new owner route. README and Architecture expose the
+  current capability. Portable entry 3.0.0, instance schema, configured/installed
+  host incarnations and the immutable v0.7.0 release remain unchanged.
+
 - **Post-release readback:** recorded that `v0.7.0` is Latest and immutable,
   resolves exactly to promotion commit
   `93c1688ab23d699915e5ec3f407bdadda79ce12d`, and that the release effect did

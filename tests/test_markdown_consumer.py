@@ -217,6 +217,11 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-mobile-observation",
                 "Mobile observation without losing the point",
             ),
+            "kernel/FDLA.md#kernel-chat-consequence-aware-fdla": (
+                ROOT / "kernel/FDLA.md",
+                "kernel-chat-consequence-aware-fdla",
+                "Consequence-aware recomposition",
+            ),
             "kernel/EVOLUTION.md#kernel-chat-converge-resultant": (
                 ROOT / "kernel/EVOLUTION.md",
                 "kernel-chat-converge-resultant",
