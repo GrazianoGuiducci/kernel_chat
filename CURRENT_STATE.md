@@ -4,14 +4,14 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.8.0
-current_work: 0.8.0 consequence-aware FDLA promotion candidate; released v0.7.0 remains immutable until a separately selected 0.8.0 release effect
-current_change: 0.8.0 promotion candidate deepens the constitutive FDLA function with consequence-aware temporal recomposition, discovery and public capability truth; portable entry 3.0.0 and user/host incarnations remain unchanged
-latest_tagged_distribution: v0.7.0
-release_promotion_commit: pending_exact_0_8_0_promotion_commit
+current_work: 0.8.0 publication closed; post-release readback recorded separately from released product identity
+current_change: v0.8.0 published immutably from exact green canonical source; post-release source change is metadata/readback only; portable entry 3.0.0 and user/host incarnations remain unchanged
+latest_tagged_distribution: v0.8.0
+release_promotion_commit: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
 material_review_target: ac74126f0cad31b6926e72b184df3ad0104bcf20
 material_review_result: no_material_blocker
 material_review_ci: 35533925195
-release_identity: currently released v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable; 0.8.0 unreleased
+release_identity: v0.8.0@e5520de198454552d8d9cc4a2be1d310dd5fcbb9 / release 392568921 / latest / immutable
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
@@ -152,47 +152,39 @@ Exact current-effect boundaries remain explicit where they are evidence-bearing
 (for example read != write, configured != installed, operator report != direct
 host inspection).
 
-## Consequence-aware FDLA — Unreleased candidate
+## Consequence-aware FDLA — 0.8.0 publication closed
 
-A later source/resultant return exposes a second constitutive FDLA relation.
-The existing in-flow function remains valid: the acting interpretation can
-narrow the field and must be corrected. The new relation covers a different
-case:
+The consequence-aware FDLA source/resultant is now published as immutable
+Latest release `v0.8.0`.
 
 ```text
-event / source relation at T
-+ understanding actually available at T
-+ later consequence / evidence at T+1
--> preserve what happened
--> preserve what was understood then
--> distinguish what is understood now
--> recompose the present from the changed field
+released source:
+  e5520de198454552d8d9cc4a2be1d310dd5fcbb9
+released tree:
+  42de49b0673a93a6ce65a8d30459e45345f4169b
+VERSION:
+  0.8.0
+release:
+  id 392568921
+  Latest true
+  draft false
+  prerelease false
+  immutable true
+  published_at 2026-09-20T20:46:20Z
+main source proof:
+  CI 35534489553 / success
+  validator valid=true / errors=[] / warnings=[]
+  64 tests / 8/8 Python 3.11-3.14 × Ubuntu/Windows
 ```
 
-The current source therefore preserves:
+The tag `v0.8.0` resolves exactly to the released source above. Release notes
+match `docs/RELEASE_NOTES_0_8_0.md` from that source. The bounded release
+effect did not mutate kernel source, portable entry, configurator, adapters,
+state/operations contracts, installed host instructions or user-owned instance
+state.
 
-```text
-what happened
-!= what was understood then
-!= what is understood now
-```
-
-Current understanding does not retroactively become historical knowledge, and
-an earlier faithful interpretation does not remain frozen after a consequence
-materially changes what can be understood.
-
-The function is owned by `kernel/FDLA.md`. `AGENTS.md` now exposes the
-later-consequence condition to that owner, and the existing structural
-validator plus independent CommonMark consumer proof protect the route/anchor
-relation. README and Architecture describe the broadened current capability
-without rewriting the immutable 0.7.0 release notes or review-time evidence.
-
-Material review on exact semantic candidate `ac74126f0cad31b6926e72b184df3ad0104bcf20`
-selected source version 0.8.0 after CI `35533925195` completed clean with validator
-`valid=true / errors=[] / warnings=[]`, 64 tests and 8/8 Python 3.11–3.14 ×
-Ubuntu/Windows jobs. This source promotion still does not publish a release.
-Portable entry 3.0.0, configured bridges, installed host instructions and
-user-instance state remain separate unchanged effects.
+This post-release source update records provenance/current-state metadata only.
+It is not a new product version and does not move the immutable release tag.
 
 ## Semantic continuity return — 2026-09-20
 
