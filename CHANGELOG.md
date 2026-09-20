@@ -4,6 +4,17 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+- **Product narrative convergence:** the public README now makes four semantic
+  product functions independently recoverable before carrier/setup mechanics:
+  what `kernel_chat` is, why the relation is needed, what transformation it
+  offers, and what it does in use. The change does not introduce a fixed
+  marketing template: these are causal narrative functions. Hosting conditions
+  now descend after the operating phenomenon, preserving the modality-neutral
+  carrier relation. Tests protect the narrative dependency order. The reusable
+  communication method is owned by Editoriali's Product Semantic Narrative
+  faculty for later MPK and other product surfaces.
+
+
 - **Post-public carrier audit:** generalized the remaining live `conversation`
   assumptions in Evolution, the CURRENT template and maintenance evidence to
   interaction/session/host boundaries. Corrected current proof attribution:
