@@ -4,8 +4,8 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.6.0
-current_work: public product and receiver-relative adoption convergence
-current_change: receiver readback reconciled: experience -> competence -> later doing made explicit; open-field entry foregrounded; adapter-optional portability preserved
+current_work: modality-neutral portable carrier and receiver-relative adoption convergence
+current_change: conversation removed as carrier identity; portable entry 3.0.0 formed; chat retained as one host incarnation; workspace-native MPK distinction preserved
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -17,21 +17,25 @@ owner: Graziano Guiducci
 
 ## Object and adoption
 
-`kernel_chat` is a user-owned semantic operating kernel for conversational AI.
+`kernel_chat` is a user-owned semantic operating kernel for AI.
 Working knowledge, competence formation, source-aware understanding and learning
 participate together. Persistence makes that knowledge available across chats;
 it is one means of continuing the kernel rather than its full identity.
 
-Use kernel_chat for a conversational app. Use MAIOS Project Kernel for an
-agent harness, agentic application or IDE. The destination's working mode, not
-the model name, determines this product choice.
+Use kernel_chat when the receiving AI environment can retain a persistent/custom
+operating entry and reach a durable kernel source. A chat with Custom
+Instructions plus GitHub, MCP, project knowledge, filesystem, connector or
+equivalent source access is one concrete incarnation. Use MAIOS Project Kernel
+when a durable workspace/filesystem is itself the AI's continuing operating
+surface. The carrier follows those relations rather than a chat-vs-agent
+category.
 
-[Chat setup](docs/CHAT_SETUP.md) now starts from the source route the
+[Setup](docs/SETUP.md) now starts from the source route the
 receiver actually exposes: use an already-reachable persistent source in place,
 use project/knowledge storage as the persistent source when that is the native
 mechanism, or treat attachments as session-only until persistence exists.
 
-The provider-neutral conversational entry is now version `2.2.0`. It
+The provider-neutral portable entry is now version `3.0.0`. It
 foregrounds **"Do not presume. Go deeper without narrowing the field."**, makes
 experience-to-capability return explicit, and continues to activate the Core
 competence trace. Host-specific configuration, provenance, receipt and recovery
@@ -40,7 +44,7 @@ constitutive content in `AGENTS.md`.
 
 The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
 with a GitHub instance and retains its configured-bridge and operator-report
-receipts. Other conversational receivers use their own persistent/custom
+receipts. Other receiving environments use their own persistent/custom
 instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
@@ -78,7 +82,7 @@ user result
 ```
 
 The capability map points directly to Core, Competence, Evolution, FDLA,
-SOURCES, the provider-neutral conversational entry, adoption/setup sources,
+SOURCES, the provider-neutral portable entry, adoption/setup sources,
 the ChatGPT adapter and current package evidence.
 
 The public surface therefore answers uncertainty primarily by exposing the owner
@@ -96,11 +100,11 @@ Portable adoption is defined by the receiver relation:
 
 ```text
 persistent/custom instruction entry
-+ persistent source reachable by the conversation
++ persistent source reachable by the receiving environment
 -> kernel_chat adoption
 ```
 
-README, conversational-entry guidance, CHAT_SETUP, ADOPTION_GUIDE, AGENTS and
+README, portable-entry guidance, CHAT_SETUP, ADOPTION_GUIDE, AGENTS and
 Architecture all preserve the same result. A host-specific adapter is optional;
 when present, it packages receiver-specific setup, translation, receipt or
 recovery mechanics.
@@ -156,7 +160,7 @@ drift handling, exact-delivery confirmation, and fresh remote receipt readback
 remain implemented by their existing owners and tests.
 
 [Architecture](docs/ARCHITECTURE.md), [installation](INSTALL.md),
-[adoption](docs/ADOPTION_GUIDE.md), the [conversational entry](adapters/conversational/README.md), the [ChatGPT adapter](adapters/chatgpt/README.md),
+[adoption](docs/ADOPTION_GUIDE.md), the [portable entry](adapters/portable/README.md), the [ChatGPT adapter](adapters/chatgpt/README.md),
 [Core](kernel/KERNEL.md), [Competence](kernel/COMPETENCE.md),
 [Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md) retain the deeper
 operating and mechanical relations. Ordinary user context, reusable methods
@@ -187,7 +191,7 @@ Those historical identities do not move with subsequent source documentation.
 Live adoption and fresh-receiver behavioral readback remain separate from
 repository proof. The suite establishes the package, navigation, source-route
 and configured-entry relations at the tested revision; it does not certify
-behavior in every conversational host.
+behavior in every receiving environment.
 
 ## Continuity
 
