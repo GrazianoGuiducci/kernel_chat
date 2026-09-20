@@ -1,56 +1,74 @@
 # kernel_chat
 
-`kernel_chat` is a user-owned semantic operating kernel for AI.
+`kernel_chat` is a user-owned semantic operating kernel for AI. It makes
+context, source relations, reusable competences and learning part of an
+inspectable operating layer that can continue across sessions and receiving
+environments.
 
 > **Operating principle: Do not presume. Go deeper without narrowing the field.**
 > Follow the owner/source relations when deeper understanding can change the
 > work; a first representation, current host, adapter, example or apparent
 > capability boundary is not the kernel's horizon.
 
-In practical terms, it lets an AI **carry forward the ways of working it
-develops with you**: relevant sources, current context, reusable competences and
-learning from real work remain available across later sessions and interactions.
+## Why it exists
+
+AI work often spans more than one session, source, correction, tool or method.
+When the useful operating knowledge remains only in transient interaction
+context or whatever persistence one host happens to provide, the user must
+reconstruct not only facts but also reasons, distinctions and ways of working.
+
+`kernel_chat` gives that continuity a user-controlled source and a portable
+operating relation. Later work can reenter from the present instead of replaying
+the whole history.
 
 **Experience can become capability.** When real work teaches a better way to
-understand, decide or do something, that reusable difference returns to the
-competence that performs it. Later, materially different work can begin from
-the improved competence rather than from a remembered outcome alone.
+understand, decide or do something, that reusable difference can change the
+competence that performs it. A later, materially different task can therefore
+begin from an improved capability rather than from a remembered outcome alone.
 
-The result is user-owned continuity of context and capability. You spend less
-time reconstructing context and corrections, while useful ways of understanding
-and working can become part of later work.
-
-It can inhabit an AI host surface — including a chat — when that host can
-retain a persistent/custom operating entry and reach a durable kernel source.
-GitHub, MCP, project knowledge, a filesystem, connectors or equivalent
-receiver-native means can provide that source relation.
-
-This extends a chat beyond dialogue and context recall: experience can become
-competence, competences can change later work, and source, ownership, evolution
-and effect boundaries can live in the semantic operating layer. The actual host
-still supplies the tools and authority for material effects. In that sense a
-chat can acquire system-level properties often implemented in agentic
-architectures without requiring those conceptual and evolutionary structures to
-be hard-coded into an external agent harness.
-
-A dedicated host-specific adapter is optional.
-
-## What you get
+## What it offers
 
 - **Continuity from the present** — later sessions can recover the current
   point, relevant sources and still-useful reasons without replaying the whole
   history.
-- **Reusable competences** — a useful way of understanding, deciding or doing
-  something can participate again when a later task makes it relevant.
+- **Reusable competences** — useful ways of understanding, deciding or doing
+  can participate again when later work makes them relevant.
 - **Learning from real work** — corrections, successful methods, changed
-  directions and other reusable differences can change how later work is
-  handled.
-- **User-owned sources** — the operating knowledge lives in a persistent source
-  you control and can inspect.
-- **Selective reentry** — the current work reaches the sources and competences
-  that can change the current result instead of loading everything.
+  directions and consequences can change how future work is handled.
+- **User-owned operating knowledge** — the sources, context and learned methods
+  live in a persistent surface the user controls and can inspect.
+- **Selective reentry** — the current work reaches only the durable relations
+  that can materially change the result instead of loading everything.
+- **Portable incarnation** — the same semantic kernel relation can be carried
+  through different compatible receiving environments and source mechanisms.
 - **Visible participation** — a compact competence trace shows which competence
   owners materially contributed to each final response.
+
+## What it does in use
+
+```text
+current work and working set are sufficient
+-> work directly
+
+a missing durable relation can change the result
+-> reach the smallest pertinent state / source
+
+a competence can change the movement
+-> use / compose / adapt the pertinent capability
+
+an authorized host capability is needed
+-> act through the means and authority actually exposed there
+
+the result or consequence teaches something reusable
+-> return that difference to the owner / competence that must behave differently
+
+later non-identical work
+-> the changed capability can participate
+```
+
+The persistent files, state objects or knowledge surfaces carry this operating
+layer between encounters. They are not the competence itself: the observable
+result is that later relevant work can be understood or performed differently.
 
 ## A small before / after
 
@@ -82,6 +100,25 @@ itself. Later work can then begin from a different operating relation.
 
 The persistent files, state objects or knowledge surfaces carry this operating
 layer across sessions and environments.
+
+## How it can be hosted
+
+`kernel_chat` can inhabit a receiving AI surface — including a chat — when
+that environment can retain a persistent/custom operating entry and reach a
+durable kernel source. GitHub, MCP, project knowledge, a filesystem, connectors
+or equivalent receiver-native means can provide that source relation.
+
+This can extend a chat beyond dialogue and context recall: competences, source
+and owner relations, learning return and parts of process evolution can live in
+the semantic operating layer. The actual host still supplies the tools,
+execution facilities and authority for material effects. In that sense a chat
+can acquire system-level properties often implemented in agentic architectures
+without requiring those conceptual and evolutionary structures to be hard-coded
+into an external agent harness.
+
+A dedicated host-specific adapter is optional. When the receiving environment
+already exposes the required persistent entry and source route, the portable
+entry can be installed through those native mechanisms.
 
 ## Capabilities and where to verify them
 
