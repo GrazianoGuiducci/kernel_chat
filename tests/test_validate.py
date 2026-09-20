@@ -380,6 +380,8 @@ class ValidateTests(unittest.TestCase):
 
         opening = readme[:capability_position]
         self.assertIn("carry forward the ways of working it", opening)
+        self.assertIn("Experience can become capability.", opening)
+        self.assertIn("A dedicated host-specific\nadapter is optional.", opening)
         self.assertIn("changed handling of task B", opening)
         for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
             with self.subTest(provider_name=provider_name):
@@ -421,8 +423,22 @@ class ValidateTests(unittest.TestCase):
                 self.assertIn(target, setup_links)
                 self.assertTrue((self.root / "docs" / target).is_file())
 
-        agents_links = links((self.root / "AGENTS.md").read_text(encoding="utf-8"))
+        agents_text = (self.root / "AGENTS.md").read_text(encoding="utf-8")
+        agents_links = links(agents_text)
         self.assertIn("docs/CHAT_SETUP.md", agents_links)
+
+        conversational_entry = (
+            self.root / "adapters/conversational/INSTRUCTIONS.template.md"
+        ).read_text(encoding="utf-8")
+        for surface in (readme, agents_text, conversational_entry):
+            self.assertIn("Do not presume", surface)
+            self.assertIn("without narrowing the field", surface)
+
+        competence_text = (self.root / "kernel/COMPETENCE.md").read_text(encoding="utf-8")
+        self.assertIn("reusable capacity to understand and do", competence_text)
+        user_guide = (self.root / "docs/USER_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn("A competence is learned capacity", user_guide)
+
         adoption_text = (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn(
             "does not require a host-specific adapter",
