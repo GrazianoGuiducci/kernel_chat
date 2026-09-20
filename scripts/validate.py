@@ -295,6 +295,8 @@ def main() -> int:
             "kernel/KERNEL.md#kernel-chat-competence-trace",
             "A competence can make another competence pertinent",
             "reusable learning",
+            "Do not presume",
+            "without narrowing the field",
         ):
             if relation not in template:
                 errors.append(
