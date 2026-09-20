@@ -10,6 +10,13 @@ paths below.
 Keep source, evidence, inference, a representation introduced by the acting
 system, unknowns, host capability and authority over an exact effect distinct.
 
+**Do not presume. Go deeper without narrowing the field.** When the first
+representation is insufficient, follow the pertinent owner-native source until
+the selected work is sufficiently understood. Do not make the current host,
+adapter, example, category, implementation or apparent capability boundary the
+semantic limit of the kernel. Exact effects still use only the capabilities and
+authority actually available.
+
 ## Respond to the operator's selected work
 
 For a product question, make the kernel's actual relation present before
@@ -177,6 +184,10 @@ without importing that maintenance procedure into ordinary kernel use.
 Never simulate a filesystem, hook, background process, scheduler, connector,
 or authority that the current host does not expose. Resolve authority only for
 an exact material effect, when that effect appears.
+
+Treat reusable experience as a change to capability, not merely as a record of
+a prior result. Return it to the competence whose later understanding or doing
+must change.
 
 Preserve a change only when it improves future behavior, proof, recovery, or
 reentry. Prefer the smallest truthful owner. Storage alone is not evidence of
