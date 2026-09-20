@@ -20,7 +20,7 @@ The result is user-owned continuity of context and capability. You spend less
 time reconstructing context and corrections, while useful ways of understanding
 and working can become part of later work.
 
-It can inhabit an AI interaction surface — including a chat — when that host can
+It can inhabit an AI host surface — including a chat — when that host can
 retain a persistent/custom operating entry and reach a durable kernel source.
 GitHub, MCP, project knowledge, a filesystem, connectors or equivalent
 receiver-native means can provide that source relation.
@@ -98,7 +98,7 @@ relations behind each capability.
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
 | **Competence trace** | Exposes which competence owners materially participated in a final response. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
-| **Provider-neutral interaction entry** | Carries the same kernel relation into compatible interaction environments. | [Interaction entry](adapters/interaction/README.md) · [Instruction source](adapters/interaction/INSTRUCTIONS.template.md) |
+| **Provider-neutral portable entry** | Carries the same kernel relation into compatible receiving environments. | [Portable entry](adapters/portable/README.md) · [Instruction source](adapters/portable/INSTRUCTIONS.template.md) |
 | **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Chat setup](docs/CHAT_SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
 | **ChatGPT reference integration** | Provides the current ready-made Git/Python configuration and receipt mechanics. | [ChatGPT adapter](adapters/chatgpt/README.md) · [Install](INSTALL.md) |
 | **Current package evidence** | Records current source state, release identity and repository proof boundaries. | [Current state](CURRENT_STATE.md) · [Tests](tests/) |
@@ -112,16 +112,16 @@ itself the exercised competence. Later, different work is where the changed
 capability becomes observable. See [Competence](kernel/COMPETENCE.md) and
 [Evolution](kernel/EVOLUTION.md).
 
-**The kernel is portable across compatible AI interaction hosts.** The canonical
+**The kernel is portable across compatible AI environments.** The canonical
 entry is under [adapters/interaction/](adapters/interaction/README.md).
 A host-specific adapter is a ready-made integration layer, not a requirement
-for adoption. If a interaction environment already provides a persistent
+for adoption. If a receiving environment already provides a persistent
 instruction entry and a persistent source it can reach, the portable entry can
 be installed directly there. ChatGPT currently has the first ready-made
 host-specific helper.
 
 **GitHub and Python belong to the current ChatGPT reference helper**, not to the
-portable semantic relation. The [interaction setup guide](docs/INTERACTION_SETUP.md) starts
+portable semantic relation. The [setup guide](docs/SETUP.md) starts
 from the source route the receiving environment actually exposes.
 
 **The deeper terminology is optional for normal use.** Core, Competence,
@@ -163,13 +163,13 @@ session-only attachments
 -> add a persistent source when you want cross-conversation continuity
 ```
 
-### 2. Install the interaction entry
+### 2. Install the portable entry
 
 Use the provider-neutral
-[interaction instruction source](adapters/interaction/INSTRUCTIONS.template.md)
+[portable instruction source](adapters/portable/INSTRUCTIONS.template.md)
 through the host's persistent/custom instruction mechanism or equivalent entry.
 
-The [interaction setup guide](docs/INTERACTION_SETUP.md) covers the supported source routes.
+The [setup guide](docs/SETUP.md) covers the supported source routes.
 
 ### 3. Start with real work
 
@@ -191,10 +191,10 @@ repository-backed setup.
 
 [INSTALL.md](INSTALL.md) owns the complete reference procedure.
 
-### Other interaction hosts
+### Other receiving environments
 
 The portable entry lives under
-[adapters/interaction/](adapters/interaction/README.md).
+[adapters/portable/](adapters/portable/README.md).
 
 A dedicated host adapter is optional. When the host already exposes persistent
 instructions and a persistent project/knowledge/repository source, install the
