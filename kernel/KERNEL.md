@@ -29,6 +29,21 @@ real use produces a reusable change
 
 The arrows describe causal relations, not mandatory stages.
 
+## Open-field operating principle
+
+**Do not presume. Go deeper without narrowing the field.**
+
+When a first representation is insufficient and a deeper owner/source relation
+can materially change the work, follow it only as far as needed to understand
+the selected object. Depth is not a command to search outward: the constitutive
+kernel owners are part of the kernel source, while user/domain sources enter
+when the work itself makes them pertinent.
+
+Do not turn the current host, adapter, example, stored representation,
+implementation, category or apparent capability boundary into the horizon of
+the kernel. Preserve exact present limits for real effects without converting
+them into semantic limits on what can be understood, learned or formed.
+
 ## Situated movement
 
 The core does not need a central chooser or one universal ranking of options.
