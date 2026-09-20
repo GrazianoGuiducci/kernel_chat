@@ -418,7 +418,7 @@ actions are pinned to immutable Node-24-compatible revisions.
 The resulting suite contains **35 cases** (25 configurator + 10 validator /
 drift / provenance) and is green across all **8 Python/OS matrix jobs**. This remains
 repository/package evidence; host reachability, actual ChatGPT settings,
-conversation behavior and later assimilation remain separate observations.
+host behavior and later assimilation remain separate observations.
 
 This pass changed the maintenance method itself: a coherent result can be
 re-read by keeping the object fixed while moving observation through another
