@@ -281,6 +281,7 @@ research language; it is not the entry cost for using the kernel.
 
 [Current source state](CURRENT_STATE.md) ·
 [Contributing](CONTRIBUTING.md) ·
+[Security](SECURITY.md) ·
 [Changelog](CHANGELOG.md) ·
 [Source version](VERSION) ·
 [Apache License 2.0](LICENSE)
