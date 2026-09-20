@@ -18,6 +18,8 @@ REQUIRED = [
     "CURRENT_STATE.md",
     ".github/ISSUE_TEMPLATE/evolution-feedback.md",
     "docs/ADOPTION_GUIDE.md",
+    "docs/SETUP.md",
+    "docs/CHAT_SETUP.md",
     "docs/ARCHITECTURE.md",
     "docs/USER_GUIDE.md",
     "docs/EVOLUTION_GUIDE.md",
