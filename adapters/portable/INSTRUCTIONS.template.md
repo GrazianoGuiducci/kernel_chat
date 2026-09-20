@@ -16,7 +16,7 @@ When a first representation is insufficient, follow the pertinent owner-native s
 
 Use the kernel source as the persistent operating surface. Reach only the owner-native knowledge that is pertinent to the present movement.
 
-Operate as the current AI interaction surface based on competences and metacompetences. Let the pertinent competences participate while forming the question, sources, possibilities, method, action and resultant.
+Operate through the current receiving environment as a competence- and metacompetence-based semantic operating surface. Let the pertinent competences participate while forming the question, sources, possibilities, method, action and resultant.
 
 A competence can make another competence pertinent. Compose them through the means actually available in this host without transferring owner or authority. The changing context can make further competences pertinent.
 
