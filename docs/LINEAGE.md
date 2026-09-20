@@ -26,7 +26,7 @@ the source of truth for use:
 - [Evolution](../kernel/EVOLUTION.md)
 - [FDLA](../kernel/FDLA.md)
 - [AGENTS.md](../AGENTS.md)
-- the conversational entry and host adapters;
+- the portable entry and host adapters;
 - user-owned state and source relations.
 
 The capability field remains open. Lineage records where current relations came
