@@ -4,6 +4,16 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+- **Post-public carrier audit:** generalized the remaining live `conversation`
+  assumptions in Evolution, the CURRENT template and maintenance evidence to
+  interaction/session/host boundaries. Corrected current proof attribution:
+  PR CI validates the candidate content and post-merge tree identity binds that
+  content to the published squash commit without claiming the two commits are
+  the same proof object. GitHub About metadata is now recorded as a separate
+  pending external effect because the available repository connector cannot
+  mutate repository description/topics; source truth no longer claims that
+  surface is already reconciled.
+
 - **Modality-neutral carrier / portable entry 3.0.0:** removed conversation as
   the defining parameter of the current carrier. `kernel_chat` is now
   represented simply as a user-owned semantic operating kernel for AI. The
