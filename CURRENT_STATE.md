@@ -58,8 +58,8 @@ real experience
 ```
 
 The stored text is a carrier of that learning, not the competence itself. This
-is a communication/entry correction, not a new runtime, memory system or
-portability requirement.
+is a communication/entry correction; the architecture and portable adoption
+contract are unchanged.
 
 Receiver tests remain useful for locating ambiguity, but their doubts are not
 treated as a standing content backlog. The README makes the product inspectable
@@ -105,7 +105,7 @@ Architecture all preserve the same result. A host-specific adapter is optional;
 when present, it packages receiver-specific setup, translation, receipt or
 recovery mechanics.
 
-A public-source hygiene pass also removed private source topology from the
+A public-source hygiene pass also removed non-portable development-source topology from the
 portable entry, Competence, FDLA, Lineage and package-evolution narrative.
 Historical review evidence now states only the scope of what that review
 observed: it neither establishes nor rules out capabilities outside its evidence
