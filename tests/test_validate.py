@@ -452,7 +452,7 @@ class ValidateTests(unittest.TestCase):
             "```markdown\n[setup](docs/CHAT_SETUP.md)\n```\n"
         ))
 
-    def test_public_kernel_does_not_reintroduce_private_or_future_ceiling_frames(self) -> None:
+    def test_public_kernel_does_not_reintroduce_nonportable_or_future_ceiling_frames(self) -> None:
         public_owners = {
             "adapters/conversational/INSTRUCTIONS.template.md": (
                 "Follow KA",
@@ -460,13 +460,11 @@ class ValidateTests(unittest.TestCase):
             ),
             "kernel/COMPETENCE.md": (
                 "Meta_Skill",
-                "private repositories",
             ),
             "kernel/FDLA.md": (
                 "Stiamo seguendo i principi di KA",
             ),
             "docs/LINEAGE.md": (
-                "private ChatGPT host kernel",
                 "Deliberately not inherited",
                 "support for providers without an implemented adapter",
             ),
@@ -491,6 +489,19 @@ class ValidateTests(unittest.TestCase):
 
         lineage = (self.root / "docs/LINEAGE.md").read_text(encoding="utf-8")
         self.assertIn("The capability field remains open.", lineage)
+
+        evolution_guide = (self.root / "docs/EVOLUTION_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "Those relations are now owned\nby the public kernel sources in this repository.",
+            evolution_guide,
+        )
+        conversational_readme = (
+            self.root / "adapters/conversational/README.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn(
+            "constitutive operating owners named by the entry live in the selected\nkernel source",
+            conversational_readme,
+        )
 
         review = (self.root / "docs/EXTERNAL_REVIEW_0_6_0.md").read_text(encoding="utf-8")
         self.assertIn(
