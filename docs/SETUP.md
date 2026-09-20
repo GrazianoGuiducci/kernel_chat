@@ -125,7 +125,7 @@ When current context must survive, keep the smallest useful relation in
 source. Return reusable learning to the competence that should behave
 differently later.
 
-A later conversation in the same already-incarnated scope does not reload the
+A later session in the same already-incarnated scope does not reload the
 whole kernel merely because it is new. It reenters from the present and reaches
 additional owners only when they can change the result.
 
