@@ -3,8 +3,7 @@
 This directory owns the provider-neutral operating entry for
 `kernel_chat`.
 
-`INSTRUCTIONS.template.md` is the semantic source installed into a
-AI receiving AI environment's persistent/custom instruction surface. It does not
+`INSTRUCTIONS.template.md` is the semantic source installed into a receiving AI environment's persistent/custom instruction surface. It does not
 contain the whole kernel. It tells the receiver where the kernel lives, how to
 enter it, which constitutive owners remain reachable, how competences
 participate and how reusable learning returns.
@@ -14,7 +13,7 @@ backend instructions
 -> kernel source identity
 -> AGENTS / CURRENT
 -> pertinent kernel and competence owners
--> situated situated work
+-> situated work
 ```
 
 The constitutive operating owners named by the entry live in the selected
@@ -22,8 +21,8 @@ kernel source. User/domain sources can become pertinent during real work, and
 optional research sources can deepen study; neither relation supplies missing
 constitutive kernel definitions.
 
-A chat is one possible receiving AI environment, not the definition of this carrier. A
-chat that can retain persistent/custom operating instructions and reach a
+A chat is one possible receiving environment, not the definition of this carrier.
+A chat that can retain persistent/custom operating instructions and reach a
 durable source through GitHub, MCP, project knowledge, a filesystem, a
 connector or equivalent means can host this kernel relation. The same semantic
 entry can inhabit other receiving surfaces exposing equivalent capabilities.
@@ -45,7 +44,7 @@ The current ChatGPT helper renders a GitHub source such as:
 github:owner/repository
 ```
 
-Another receiving AI environment may use project knowledge, a filesystem,
+Another receiving environment may use project knowledge, a filesystem,
 another repository service, MCP or another persistent source. The receiving
 mechanism changes; the kernel relation does not.
 
