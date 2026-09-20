@@ -1,6 +1,6 @@
 # User guide
 
-## Your first conversation after adoption
+## Your first session after adoption
 
 Start with your real work. The kernel's working knowledge participates through
 the instructions and sources saved in your receiving environment. You can ask a
@@ -10,23 +10,23 @@ For example:
 
 ```text
 Let's work on [topic]. Use the relevant sources and methods. When we learn
-something reusable, help me preserve it where our next conversation can use it.
+something reusable, help me preserve it where our next session can use it.
 ```
 
 During initial setup, have the assistant reach one supplied method and connect
-it to the work you are starting. The [chat setup guide](CHAT_SETUP.md) explains
+it to the work you are starting. The [setup guide](SETUP.md) explains
 file-based project setup and the existing ChatGPT repository route.
 
 ## Use the chat normally
 
 You do not need to repeat a boot phrase or request a full repository load on
 every turn. Use the principles already available and reach additional knowledge
-when it can change the question, method or result. The conversation stays direct.
+when it can change the question, method or result. The interaction stays direct.
 
 ### Read the competence trace
 
 Every final response closes with two compact functions, localized to the
-conversation language:
+current interaction language:
 
 ```text
 Competences: <owners that materially formed this response | —>
@@ -166,7 +166,7 @@ updates explicit so the next chat reaches the intended form.
 ## Source contact
 
 Check upstream when a relevant change can improve the work. Preserve useful
-observations without making every conversation a maintenance session. Updates
+observations without making every interaction a maintenance session. Updates
 and public feedback are deliberate actions; the current source-contact method
 is in [AGENTS.md](../AGENTS.md).
 
