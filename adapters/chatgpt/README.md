@@ -1,13 +1,13 @@
 # ChatGPT adapter
 
-The ChatGPT adapter installs the provider-neutral conversational entry in
+The ChatGPT adapter installs the provider-neutral portable entry in
 ChatGPT and records the host-specific configured/installed relation.
 
 The semantic instruction source is:
 
-`../conversational/INSTRUCTIONS.template.md`
+`../portable/INSTRUCTIONS.template.md`
 
-It is designed to remain usable by conversational receivers other than ChatGPT.
+It is designed to remain usable by receiving environments other than ChatGPT.
 This adapter owns ChatGPT configuration, delivery and receipt mechanics.
 Runtime facilities remain those actually exposed by the current host; when a
 capability is available and authorized it can participate without becoming part
@@ -15,7 +15,7 @@ of the adapter's semantic contract.
 
 ## Bridge contract
 
-The configured ChatGPT bridge is rendered from the conversational instruction
+The configured ChatGPT bridge is rendered from the portable instruction
 source with:
 
 ```text
@@ -26,7 +26,7 @@ The installed instructions then enter the repository through `AGENTS.md`,
 reach `CURRENT` when continuity matters, and let the pertinent kernel and
 competence owners participate.
 
-`adapters/conversational/VERSION` identifies the portable instruction contract.
+`adapters/portable/VERSION` identifies the portable entry contract.
 `adapters/chatgpt/VERSION` identifies ChatGPT adapter mechanics. Neither is the
 root package `VERSION`, and a package update does not automatically require a
 new host-instruction update.
