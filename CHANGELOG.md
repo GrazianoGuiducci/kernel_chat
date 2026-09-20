@@ -2,7 +2,21 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## Unreleased — 2026-09-19
+## Unreleased — 2026-09-20
+
+- **Receiver comprehension / experience-to-capability:** a fresh receiver
+  readback showed that even after reaching Core, Competence and Evolution the
+  object could still collapse into "structured notes + rereading". The public
+  entry now makes the generative relation explicit: real experience can change
+  the competence that later understands or performs materially different work.
+  README, AGENTS, Competence and User Guide distinguish learned capability from
+  its persistent carrier. The provider-neutral conversational instructions move
+  to `2.2.0` and foreground the operating principle **"Do not presume. Go
+  deeper without narrowing the field."** Portable adoption remains unchanged:
+  receiver-native persistent instructions + reachable persistent source are
+  sufficient, and a dedicated host adapter remains optional. Validator/tests
+  protect the entry principle, experience-to-capability representation and
+  adapter-optional first-contact path.
 
 - **Public-source hygiene / open horizon:** removed private source topology and
   formative internal references from the conversational entry, Competence,
