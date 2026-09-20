@@ -4,6 +4,13 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+- **User-guide carrier convergence:** generalized the live user guide from
+  chat/new-chat defaults to receiving-environment/session language wherever the
+  modality does not change meaning. ChatGPT remains explicit only in its
+  actual helper/install/update mechanics. Added regression coverage so the
+  user guide cannot silently restore conversation as the carrier identity.
+
+
 - **Product narrative convergence:** the public README now makes four semantic
   product functions independently recoverable before carrier/setup mechanics:
   what `kernel_chat` is, why the relation is needed, what transformation it
