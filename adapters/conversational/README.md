@@ -18,10 +18,9 @@ backend instructions
 ```
 
 The constitutive operating owners named by the entry live in the selected
-kernel source. A receiver does not need a separate private development kernel
-to understand or operate kernel_chat. User/domain sources can still become
-pertinent during real work, and optional research sources can deepen study;
-neither relation supplies missing constitutive kernel definitions.
+kernel source. User/domain sources can become pertinent during real work, and
+optional research sources can deepen study; neither relation supplies missing
+constitutive kernel definitions.
 
 The placeholder is:
 
