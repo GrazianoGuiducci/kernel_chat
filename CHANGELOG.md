@@ -4,21 +4,34 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased
 
-- **Consequence-aware FDLA:** extended the constitutive FDLA function without
-  replacing its in-flow correction role. A later consequence or new evidence
-  can make a previously unavailable relation understandable while preserving
-  the event, the understanding actually available at that earlier time and the
-  current understanding as distinct. AGENTS now routes this condition to the
-  FDLA owner; structural validation and the independent rendered Markdown
-  consumer protect the new owner route. README and Architecture expose the
-  current capability. Portable entry 3.0.0, instance schema, configured/installed
-  host incarnations and the immutable v0.7.0 release remain unchanged.
-
 - **Post-release readback:** recorded that `v0.7.0` is Latest and immutable,
   resolves exactly to promotion commit
   `93c1688ab23d699915e5ec3f407bdadda79ce12d`, and that the release effect did
   not mutate source. This is state/provenance metadata only; it does not form a
   new product version or imply user-instance/host migration.
+
+## 0.8.0 — 2026-09-20
+
+- **Release/version decision:** selected source version `0.8.0` after a
+  source-side material review of semantic candidate
+  `ac74126f0cad31b6926e72b184df3ad0104bcf20` (CI `35533925195`, validator
+  clean, 64 tests, 8/8 matrix jobs). The pre-1.0 minor version represents a
+  backward-compatible expansion of a constitutive kernel faculty rather than a
+  wording-only patch. Release/tag publication and user/host migration remain
+  separate effects.
+
+- **Consequence-aware FDLA:** extended the constitutive FDLA function without
+  replacing its in-flow correction role. A later consequence or new evidence
+  can make a previously unavailable relation understandable while preserving
+  the event, the understanding actually available at that earlier time and the
+  current understanding as distinct. AGENTS routes this condition to the FDLA
+  owner; structural validation and the independent rendered Markdown consumer
+  protect the new owner route. README and Architecture expose the current
+  capability.
+
+- **Compatibility:** portable entry stays `3.0.0`, instance schema stays
+  `kernel_chat.instance.v1`, configurator/host-adapter mechanics are unchanged
+  and no installed host instruction or user-owned state migration is implied.
 
 ## 0.7.0 — 2026-09-20
 
