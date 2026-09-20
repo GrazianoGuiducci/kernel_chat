@@ -3,7 +3,7 @@
 ## Your first conversation after adoption
 
 Start with your real work. The kernel's working knowledge participates through
-the instructions and sources saved in your chat environment. You can ask a
+the instructions and sources saved in your receiving environment. You can ask a
 normal question, continue a topic or begin a new activity.
 
 For example:
@@ -72,7 +72,7 @@ one. Availability does not mean every source must be loaded for every task.
 
 The Git/Python helper records package, repository, bridge and reported
 installation identity here. It is setup metadata rather than project knowledge.
-A file-based project in another chat app does not need this ChatGPT receipt.
+A file-based project in another receiving environment does not need this ChatGPT receipt.
 The [adoption guide](ADOPTION_GUIDE.md) explains the distinction.
 
 ## Maintain continuity
