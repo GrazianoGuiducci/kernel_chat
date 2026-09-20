@@ -19,7 +19,7 @@ owner: Graziano Guiducci
 
 `kernel_chat` is a user-owned semantic operating kernel for AI.
 Working knowledge, competence formation, source-aware understanding and learning
-participate together. Persistence makes that knowledge available across chats;
+participate together. Persistence makes that knowledge available across sessions and receiving environments;
 it is one means of continuing the kernel rather than its full identity.
 
 Use kernel_chat when the receiving AI environment can retain a persistent/custom
@@ -171,6 +171,17 @@ Observed GitHub About still carries the preceding conversational description and
 topic. This is an external metadata reconciliation effect, not a source defect
 or permission to rewrite the kernel around that stale label. The repository
 homepage field remains empty.
+
+## Post-resultant consumer convergence
+
+A post-public audit found one live consumer still carrying the old modality
+frame: `docs/USER_GUIDE.md` used "chat" and "new chat" as the default form of
+ordinary use and continuation. The guide now uses receiving environment /
+session where modality does not matter, while ChatGPT remains named only for
+its actual helper/setup mechanics.
+
+This is consumer convergence of the modality-neutral carrier resultant, not a
+new kernel capability or adoption contract.
 
 ## Preserved mechanics and knowledge
 
