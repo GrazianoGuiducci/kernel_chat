@@ -4,6 +4,24 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+- **Modality-neutral carrier / portable entry 3.0.0:** removed conversation as
+  the defining parameter of the current carrier. `kernel_chat` is now
+  represented simply as a user-owned semantic operating kernel for AI. The
+  receiving relation is capability-based: a persistent/custom operating entry
+  plus a reachable durable kernel source are sufficient. Chat remains an
+  important concrete incarnation — including Custom Instructions plus GitHub,
+  MCP, project knowledge, filesystem, connectors or equivalent source routes —
+  but voice, multimodal, tool-using or future host surfaces can carry the same
+  relation. The current canonical entry moves to `adapters/portable/` and the
+  canonical setup guide to `docs/SETUP.md`; the former
+  `adapters/conversational/` and `docs/CHAT_SETUP.md` paths remain explicit
+  compatibility routes rather than semantic owners. The ChatGPT configurator,
+  validator and tests use the portable entry while preserving legacy bridge
+  recognition/provenance. The public explanation also makes explicit that this
+  semantic operating layer can give a chat system-level properties commonly
+  implemented in agentic architectures while leaving actual tools and effect
+  authority with the host.
+
 - **Receiver comprehension / experience-to-capability:** a fresh receiver
   readback showed that even after reaching Core, Competence and Evolution the
   object could still collapse into "structured notes + rereading". The public
