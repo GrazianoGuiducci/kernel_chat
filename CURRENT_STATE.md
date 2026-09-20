@@ -104,7 +104,7 @@ persistent/custom instruction entry
 -> kernel_chat adoption
 ```
 
-README, portable-entry guidance, CHAT_SETUP, ADOPTION_GUIDE, AGENTS and
+README, portable-entry guidance, SETUP, ADOPTION_GUIDE, AGENTS and
 Architecture all preserve the same result. A host-specific adapter is optional;
 when present, it packages receiver-specific setup, translation, receipt or
 recovery mechanics.
@@ -128,7 +128,7 @@ the README rewrite.
 Current public description:
 
 ```text
-A user-owned semantic operating kernel for conversational AI, where situated competences learn from use and change how later work is carried out.
+A user-owned semantic operating kernel for AI, where experience becomes situated competence and changes how later work is understood and carried out.
 ```
 
 Current public topics:
@@ -139,8 +139,8 @@ causal-learning
 competence-evolution
 context-engineering
 context-management
-conversational-ai
 human-ai-collaboration
+human-ai-interaction
 llm
 semantic-kernel
 situated-competence
