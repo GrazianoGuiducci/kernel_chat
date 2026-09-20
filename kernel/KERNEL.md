@@ -8,7 +8,7 @@ competences, and preserve useful evolution without inheriting another host's
 mechanics or authority.
 
 ```text
-current conversation sufficient
+current interaction and working set sufficient
 -> work directly
 
 missing durable relation can change the result
@@ -262,7 +262,7 @@ Competences: <materially participating competence owners | —>
 Emergent possibilities: <materially emerged possibilities | —>
 ```
 
-The labels may follow the conversation language; the two functions remain the
+The labels may follow the current interaction language; the two functions remain the
 same.
 
 The trace keeps the immediately exercised competence composition visible in the
