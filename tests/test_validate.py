@@ -130,6 +130,26 @@ class ValidateTests(unittest.TestCase):
             payload["errors"],
         )
 
+    def test_agents_must_keep_consequence_aware_fdla_discovery_route(self) -> None:
+        agents = self.root / "AGENTS.md"
+        text = agents.read_text(encoding="utf-8")
+        route = "kernel/FDLA.md#kernel-chat-consequence-aware-fdla"
+        text = text.replace(
+            f"- `{route}`",
+            "- `kernel/FDLA.md`",
+        )
+        agents.write_text(text, encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "AGENTS.md missing structural discovery route: "
+            "kernel/FDLA.md#kernel-chat-consequence-aware-fdla",
+            payload["errors"],
+        )
+
+
     def test_missing_local_adapter_is_visible_without_invalidating_instance(self) -> None:
         configured = self.configure()
         self.assertEqual(configured.returncode, 0, configured.stderr)
@@ -412,6 +432,7 @@ class ValidateTests(unittest.TestCase):
             "Revision through later use",
             "Source / inference distinction",
             "In-flow correction",
+            "Consequence-aware recomposition",
             "Competence trace",
             "Provider-neutral portable entry",
             "Receiver-relative adoption",

@@ -3,15 +3,15 @@
 Updated: 2026-09-20
 
 ```text
-source_version: 0.7.0
-current_work: 0.7.0 publication closed; post-release readback recorded separately from released product identity
-current_change: v0.7.0 published immutably from exact green promotion commit; post-release source change is metadata/readback only; portable entry 3.0.0 unchanged
+source_version: 0.8.0
+current_work: 0.8.0 consequence-aware FDLA promotion candidate; released v0.7.0 remains immutable until a separately selected 0.8.0 release effect
+current_change: 0.8.0 promotion candidate deepens the constitutive FDLA function with consequence-aware temporal recomposition, discovery and public capability truth; portable entry 3.0.0 and user/host incarnations remain unchanged
 latest_tagged_distribution: v0.7.0
-release_promotion_commit: 93c1688ab23d699915e5ec3f407bdadda79ce12d
-material_review_target: 10755f36a7764b8694e73a35e022efa69368e961
+release_promotion_commit: pending_exact_0_8_0_promotion_commit
+material_review_target: ac74126f0cad31b6926e72b184df3ad0104bcf20
 material_review_result: no_material_blocker
-material_review_ci: 35519877372
-release_identity: v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable
+material_review_ci: 35533925195
+release_identity: currently released v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable; 0.8.0 unreleased
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
@@ -151,6 +151,48 @@ receiver-relative rather than as a permanent capability ceiling.
 Exact current-effect boundaries remain explicit where they are evidence-bearing
 (for example read != write, configured != installed, operator report != direct
 host inspection).
+
+## Consequence-aware FDLA — Unreleased candidate
+
+A later source/resultant return exposes a second constitutive FDLA relation.
+The existing in-flow function remains valid: the acting interpretation can
+narrow the field and must be corrected. The new relation covers a different
+case:
+
+```text
+event / source relation at T
++ understanding actually available at T
++ later consequence / evidence at T+1
+-> preserve what happened
+-> preserve what was understood then
+-> distinguish what is understood now
+-> recompose the present from the changed field
+```
+
+The current source therefore preserves:
+
+```text
+what happened
+!= what was understood then
+!= what is understood now
+```
+
+Current understanding does not retroactively become historical knowledge, and
+an earlier faithful interpretation does not remain frozen after a consequence
+materially changes what can be understood.
+
+The function is owned by `kernel/FDLA.md`. `AGENTS.md` now exposes the
+later-consequence condition to that owner, and the existing structural
+validator plus independent CommonMark consumer proof protect the route/anchor
+relation. README and Architecture describe the broadened current capability
+without rewriting the immutable 0.7.0 release notes or review-time evidence.
+
+Material review on exact semantic candidate `ac74126f0cad31b6926e72b184df3ad0104bcf20`
+selected source version 0.8.0 after CI `35533925195` completed clean with validator
+`valid=true / errors=[] / warnings=[]`, 64 tests and 8/8 Python 3.11–3.14 ×
+Ubuntu/Windows jobs. This source promotion still does not publish a release.
+Portable entry 3.0.0, configured bridges, installed host instructions and
+user-instance state remain separate unchanged effects.
 
 ## Semantic continuity return — 2026-09-20
 

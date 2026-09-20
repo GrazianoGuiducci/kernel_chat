@@ -71,6 +71,10 @@ AGENT_DISCOVERY_ROUTES = (
         '<a name="kernel-chat-mobile-observation"></a>',
     ),
     (
+        "kernel/FDLA.md#kernel-chat-consequence-aware-fdla",
+        '<a name="kernel-chat-consequence-aware-fdla"></a>',
+    ),
+    (
         "kernel/EVOLUTION.md#kernel-chat-converge-resultant",
         '<a name="kernel-chat-converge-resultant"></a>',
     ),

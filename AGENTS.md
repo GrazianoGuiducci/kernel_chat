@@ -111,7 +111,7 @@ For operating knowledge, reach the needed owner:
 - [Core](kernel/KERNEL.md): source meaning, situated movement and observation;
 - [Competence](kernel/COMPETENCE.md): use, composition, formation and cultivation;
 - [Evolution](kernel/EVOLUTION.md): owner-local learning, causal return and convergence;
-- [FDLA](kernel/FDLA.md): correction of an interpretation that narrows the field;
+- [FDLA](kernel/FDLA.md): in-flow correction of an interpretation that narrows the field, plus consequence-aware recomposition when later evidence changes what can now be understood without rewriting what was understood earlier;
 - [Operations](operations/CURRENT.md): unfinished effects and recovery when material.
 
 These are paths for understanding, not a fixed loading order. A new kernel
@@ -162,6 +162,14 @@ If the acting interpretation is narrowing the field on behalf of the sources,
 use `kernel/FDLA.md` to inspect and revise that closure. This is not a mandatory
 workflow and does not delay direct work when the field is already sufficient.
 
+If a later consequence or new evidence materially changes what can now be
+understood about an earlier event or source relation, use
+[FDLA consequence-aware recomposition](kernel/FDLA.md#kernel-chat-consequence-aware-fdla).
+Preserve the event, the understanding actually available then and the current
+understanding as distinct relations; do not retrodate the new relation or freeze
+the earlier interpretation merely because it was once faithful. Use Evolution
+when the resulting change must continue through owners, consumers or reentry.
+
 If the point or object remains stable but the current frame may itself hide a
 material relation, use [Core mobile observation](kernel/KERNEL.md#kernel-chat-mobile-observation) only as far as another causal or identity
 position can change the result.
@@ -181,6 +189,7 @@ Constitutive discovery routes are also stated as stable owner paths so runtime
 validation does not need to emulate a full Markdown renderer:
 
 - `kernel/KERNEL.md#kernel-chat-mobile-observation`
+- `kernel/FDLA.md#kernel-chat-consequence-aware-fdla`
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
 - `kernel/EVOLUTION.md#kernel-chat-semantic-continuity`
 
