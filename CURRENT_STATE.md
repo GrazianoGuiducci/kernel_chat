@@ -11,7 +11,7 @@ release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
 material_review_result: no_change
 material_review_ci: 35390696891
-current_proof_owner: GitHub Actions on the exact current source commit
+current_proof_owner: GitHub Actions on validated PR tree + post-merge tree-identity verification
 owner: Graziano Guiducci
 ```
 
@@ -122,33 +122,23 @@ host inspection).
 
 ## GitHub first-encounter metadata
 
-The repository-level GitHub About surface has been reconciled and re-read after
-the README rewrite.
+The repository source now carries the modality-neutral product relation, but the
+separate GitHub About metadata has not yet been mutated through the available
+repository connector.
 
-Current public description:
+Target description:
 
 ```text
 A user-owned semantic operating kernel for AI, where experience becomes situated competence and changes how later work is understood and carried out.
 ```
 
-Current public topics:
+Target topics replace `conversational-ai` with `human-ai-interaction` while
+preserving the other current product topics.
 
-```text
-ai-architecture
-causal-learning
-competence-evolution
-context-engineering
-context-management
-human-ai-collaboration
-human-ai-interaction
-llm
-semantic-kernel
-situated-competence
-```
-
-The GitHub About surface is reconciled to the current product relation. The
-repository homepage field is currently empty, so no separate homepage
-representation participates in this first-encounter path.
+Observed GitHub About still carries the preceding conversational description and
+topic. This is an external metadata reconciliation effect, not a source defect
+or permission to rewrite the kernel around that stale label. The repository
+homepage field remains empty.
 
 ## Preserved mechanics and knowledge
 
@@ -165,6 +155,29 @@ remain implemented by their existing owners and tests.
 [Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md) retain the deeper
 operating and mechanical relations. Ordinary user context, reusable methods
 and optional unfinished operations keep their distinct purposes.
+
+## Current source proof after portable-carrier publication
+
+```text
+validated candidate:
+  8d7ce3a1d8bfda73917841a560d398fddb268ab7
+
+CI:
+  run 35503746605
+  validator valid=true / errors=[]
+  62 tests
+  8/8 Python 3.11–3.14 x Ubuntu/Windows
+
+published main:
+  4ff04dab5d87cd0ddfcdfe71dce9a2a4770ff032
+
+validated tree = published tree:
+  955f7bc469a04e3dc555e2ea87c6cc3118db615d
+```
+
+The squash commit has a different commit identity from the validated candidate;
+tree identity establishes that the published source content is the tested
+result. This does not make the two commits the same evidence object.
 
 ## Evidence and released identity
 
