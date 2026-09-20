@@ -449,6 +449,9 @@ class ValidateTests(unittest.TestCase):
         user_guide = (self.root / "docs/USER_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn("A competence is learned capacity", user_guide)
 
+        self.assertNotIn("## Use the chat normally", user_guide)
+        self.assertNotIn("## Continue a relation in a new chat", user_guide)
+
         adoption_text = (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn(
             "does not require a host-specific adapter",

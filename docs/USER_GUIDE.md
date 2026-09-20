@@ -17,7 +17,7 @@ During initial setup, have the assistant reach one supplied method and connect
 it to the work you are starting. The [setup guide](SETUP.md) explains
 file-based project setup and the existing ChatGPT repository route.
 
-## Use the chat normally
+## Use the receiving environment normally
 
 You do not need to repeat a boot phrase or request a full repository load on
 every turn. Use the principles already available and reach additional knowledge
@@ -41,7 +41,7 @@ A competence is listed because its knowledge materially changed the movement,
 not merely because its file was opened. The possibilities line may be `—`;
 the kernel does not generate alternatives simply to populate the footer.
 
-## Continue a relation in a new chat
+## Continue a relation in a later session
 
 Use the same project or connected source where you saved the kernel and current
 context. Ask to continue the topic. The assistant uses `CURRENT.md` and the
@@ -51,7 +51,7 @@ The topic may be research, a project, a recurring activity, a business question
 or another context worth continuing. A project is optional.
 
 In a repository-backed setup, these files live under `state/`. In a file-based
-chat setup, they live in the selected knowledge area. Use the location that
+host setup, they live in the selected knowledge area. Use the location that
 actually exists. When a source is unavailable, supply or reconnect that source
 rather than reconstructing its contents from a guess.
 
@@ -83,8 +83,8 @@ the reason a method should now work differently.
 
 With authorized writing access, the assistant updates the selected source and
 reports what was saved. Otherwise it provides the complete updated file for you
-to save in project knowledge or your repository. A response in one chat is not
-by itself a saved update to the source used by the next chat.
+to save in project knowledge or your repository. A response in one session is not
+by itself a saved update to the source used by a later session.
 
 Keep original facts in their own sources, reusable methods in their competence
 and the current reentry margin in CURRENT. Avoid duplicate histories and never
@@ -161,7 +161,7 @@ text, publish the receipt and freshly read it before remote reentry.
 
 For project knowledge, replace the selected files in the app and preserve their
 source revision and useful local changes. Keep account settings and saved file
-updates explicit so the next chat reaches the intended form.
+updates explicit so a later session reaches the intended form.
 
 ## Source contact
 
