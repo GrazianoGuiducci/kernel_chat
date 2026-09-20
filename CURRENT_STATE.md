@@ -3,15 +3,15 @@
 Updated: 2026-09-20
 
 ```text
-source_version: 0.7.0
-current_work: unreleased consequence-aware FDLA source candidate after 0.7.0 publication; released identity remains immutable
-current_change: source candidate deepens FDLA with consequence-aware temporal recomposition, discovery and public capability truth; portable entry 3.0.0 and user/host incarnations remain unchanged
+source_version: 0.8.0
+current_work: 0.8.0 consequence-aware FDLA promotion candidate; released v0.7.0 remains immutable until a separately selected 0.8.0 release effect
+current_change: 0.8.0 promotion candidate deepens the constitutive FDLA function with consequence-aware temporal recomposition, discovery and public capability truth; portable entry 3.0.0 and user/host incarnations remain unchanged
 latest_tagged_distribution: v0.7.0
-release_promotion_commit: 93c1688ab23d699915e5ec3f407bdadda79ce12d
-material_review_target: 10755f36a7764b8694e73a35e022efa69368e961
+release_promotion_commit: pending_exact_0_8_0_promotion_commit
+material_review_target: ac74126f0cad31b6926e72b184df3ad0104bcf20
 material_review_result: no_material_blocker
-material_review_ci: 35519877372
-release_identity: v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable
+material_review_ci: 35533925195
+release_identity: currently released v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d / release 392484615 / latest / immutable; 0.8.0 unreleased
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
@@ -187,10 +187,12 @@ validator plus independent CommonMark consumer proof protect the route/anchor
 relation. README and Architecture describe the broadened current capability
 without rewriting the immutable 0.7.0 release notes or review-time evidence.
 
-This is a source candidate, not yet a released product identity. Root VERSION
-remains 0.7.0 until material review selects the next version. Portable entry
-3.0.0, configured bridges, installed host instructions and user-instance state
-remain separate unchanged effects.
+Material review on exact semantic candidate `ac74126f0cad31b6926e72b184df3ad0104bcf20`
+selected source version 0.8.0 after CI `35533925195` completed clean with validator
+`valid=true / errors=[] / warnings=[]`, 64 tests and 8/8 Python 3.11–3.14 ×
+Ubuntu/Windows jobs. This source promotion still does not publish a release.
+Portable entry 3.0.0, configured bridges, installed host instructions and
+user-instance state remain separate unchanged effects.
 
 ## Semantic continuity return — 2026-09-20
 
