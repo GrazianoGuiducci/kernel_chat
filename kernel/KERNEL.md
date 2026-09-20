@@ -2,7 +2,7 @@
 
 ## Identity
 
-The core is the portable relation that lets an receiving AI environment work from
+The core is the portable relation that lets a receiving AI environment work from
 the present, recover durable context selectively, exercise situated
 competences, and preserve useful evolution without inheriting another host's
 mechanics or authority.

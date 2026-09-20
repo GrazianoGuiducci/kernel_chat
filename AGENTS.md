@@ -117,7 +117,7 @@ For operating knowledge, reach the needed owner:
 These are paths for understanding, not a fixed loading order. A new kernel
 instance enters through the installed portable entry and AGENTS before
 substantive work. A later session inside an already-incarnated scope does
-not require reloading the whole kernel merely because the chat is new; recover
+not require reloading the whole kernel merely because the session is new; recover
 only what the present relation makes pertinent. A source encountered first can
 frame the question without acquiring authority to determine its answer.
 
