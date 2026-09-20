@@ -17,6 +17,11 @@ backend instructions
 -> situated conversational movement
 ```
 
+The constitutive operating owners named by the entry live in the selected
+kernel source. User/domain sources can become pertinent during real work, and
+optional research sources can deepen study; neither relation supplies missing
+constitutive kernel definitions.
+
 The placeholder is:
 
 ```text

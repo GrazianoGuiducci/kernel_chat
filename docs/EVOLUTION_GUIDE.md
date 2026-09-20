@@ -621,10 +621,12 @@ The owner selected implementation and source publication of the conversational
 kernel transfer. Account installation, a tagged release and website updates
 were separate effects. The transfer was implemented as source version `0.5.0`.
 
-The source contribution was the private ChatGPT kernel's evolved September 10
-result, including semantic relational comprehension. MAIOS Project Kernel
-4.1.0 contributed causal knowledge to that source; it was not the destination
-architecture. Earlier September 4 bundles remain genealogy, not present state.
+The 0.5.0 transfer incorporated portable relations already developed through
+earlier kernel work, including source-aware relational comprehension,
+competence circulation and owner-local learning. Those relations are now owned
+by the public kernel sources in this repository. Development-source genealogy
+is historical evidence, not an operating dependency or a source that a receiver
+must reach to understand or use kernel_chat.
 
 ### Decisions and their reasons
 

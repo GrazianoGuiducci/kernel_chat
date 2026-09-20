@@ -380,6 +380,8 @@ class ValidateTests(unittest.TestCase):
 
         opening = readme[:capability_position]
         self.assertIn("carry forward the ways of working it", opening)
+        self.assertIn("Experience can become capability.", opening)
+        self.assertIn("A dedicated host-specific\nadapter is optional.", opening)
         self.assertIn("changed handling of task B", opening)
         for provider_name in ("ChatGPT", "Claude", "Codex", "OpenCode"):
             with self.subTest(provider_name=provider_name):
@@ -421,8 +423,22 @@ class ValidateTests(unittest.TestCase):
                 self.assertIn(target, setup_links)
                 self.assertTrue((self.root / "docs" / target).is_file())
 
-        agents_links = links((self.root / "AGENTS.md").read_text(encoding="utf-8"))
+        agents_text = (self.root / "AGENTS.md").read_text(encoding="utf-8")
+        agents_links = links(agents_text)
         self.assertIn("docs/CHAT_SETUP.md", agents_links)
+
+        conversational_entry = (
+            self.root / "adapters/conversational/INSTRUCTIONS.template.md"
+        ).read_text(encoding="utf-8")
+        for surface in (readme, agents_text, conversational_entry):
+            self.assertIn("Do not presume", surface)
+            self.assertIn("without narrowing the field", surface)
+
+        competence_text = (self.root / "kernel/COMPETENCE.md").read_text(encoding="utf-8")
+        self.assertIn("reusable capacity to understand and do", competence_text)
+        user_guide = (self.root / "docs/USER_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn("A competence is learned capacity", user_guide)
+
         adoption_text = (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn(
             "does not require a host-specific adapter",
@@ -436,7 +452,7 @@ class ValidateTests(unittest.TestCase):
             "```markdown\n[setup](docs/CHAT_SETUP.md)\n```\n"
         ))
 
-    def test_public_kernel_does_not_reintroduce_private_or_future_ceiling_frames(self) -> None:
+    def test_public_kernel_does_not_reintroduce_nonportable_or_future_ceiling_frames(self) -> None:
         public_owners = {
             "adapters/conversational/INSTRUCTIONS.template.md": (
                 "Follow KA",
@@ -444,13 +460,11 @@ class ValidateTests(unittest.TestCase):
             ),
             "kernel/COMPETENCE.md": (
                 "Meta_Skill",
-                "private repositories",
             ),
             "kernel/FDLA.md": (
                 "Stiamo seguendo i principi di KA",
             ),
             "docs/LINEAGE.md": (
-                "private ChatGPT host kernel",
                 "Deliberately not inherited",
                 "support for providers without an implemented adapter",
             ),
@@ -475,6 +489,19 @@ class ValidateTests(unittest.TestCase):
 
         lineage = (self.root / "docs/LINEAGE.md").read_text(encoding="utf-8")
         self.assertIn("The capability field remains open.", lineage)
+
+        evolution_guide = (self.root / "docs/EVOLUTION_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "Those relations are now owned\nby the public kernel sources in this repository.",
+            evolution_guide,
+        )
+        conversational_readme = (
+            self.root / "adapters/conversational/README.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn(
+            "constitutive operating owners named by the entry live in the selected\nkernel source",
+            conversational_readme,
+        )
 
         review = (self.root / "docs/EXTERNAL_REVIEW_0_6_0.md").read_text(encoding="utf-8")
         self.assertIn(

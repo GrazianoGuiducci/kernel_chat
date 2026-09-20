@@ -2,6 +2,12 @@
 
 ## Competence in the present
 
+A competence is a reusable capacity to understand and do, shaped by experience
+and capable of changing later non-identical work. A file, instruction or state
+entry can carry that learning, but the persistent representation is not the
+competence itself. Exercise becomes visible when later work is formed or
+performed differently.
+
 A competence participates because the current relation makes it useful, not
 because a fixed workflow preselected it.
 
@@ -149,7 +155,6 @@ topology. When a competence crosses hosts, transfer the relation that survives
 the change of host. Do not transfer credentials, hidden state, unsupported
 mechanisms, or inherited authority.
 
-Earlier source work contributed source distinction, open-horizon reasoning,
-competence composition and evolution. Those portable relations are now owned by
-the public kernel sources here; earlier source topology remains lineage rather
-than an operating dependency.
+Source distinction, open-horizon reasoning, competence composition and
+evolution are owned by the public kernel sources here. Historical development
+sources remain lineage rather than operating dependencies.

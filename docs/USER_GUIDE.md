@@ -98,6 +98,11 @@ rather than hard-coding the first project as the kernel's identity.
 
 ## Add competences and metacompetences
 
+A competence is learned capacity, not merely the file that carries it. When
+experience teaches a better way to understand or do something, preserve the
+reusable relation in the owner that will use it later. Its effect becomes
+visible when a later, non-identical task is formed or performed differently.
+
 A competence carries a usable way of understanding and working. It can combine
 with others, adapt to a different situation or improve through experience.
 A metacompetence helps form, combine or evolve those capabilities.

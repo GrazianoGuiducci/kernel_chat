@@ -2,13 +2,27 @@
 
 `kernel_chat` is a user-owned semantic operating kernel for conversational AI.
 
+> **Operating principle: Do not presume. Go deeper without narrowing the field.**
+> Follow the owner/source relations when deeper understanding can change the
+> work; a first representation, current host, adapter, example or apparent
+> capability boundary is not the kernel's horizon.
+
 In practical terms, it lets an AI **carry forward the ways of working it
 develops with you**: relevant sources, current context, reusable competences and
 learning from real work remain available across later conversations.
 
-The result is continuity that belongs to the user. You spend less time
-reconstructing context and corrections, while useful ways of understanding and
-working can become part of later work.
+**Experience can become capability.** When real work teaches a better way to
+understand, decide or do something, that reusable difference returns to the
+competence that performs it. Later, materially different work can begin from
+the improved competence rather than from a remembered outcome alone.
+
+The result is user-owned continuity of context and capability. You spend less
+time reconstructing context and corrections, while useful ways of understanding
+and working can become part of later work.
+
+Portable adoption uses the persistent instruction and source mechanisms a
+compatible conversational host actually exposes. A dedicated host-specific
+adapter is optional.
 
 ## What you get
 
@@ -68,7 +82,7 @@ relations behind each capability.
 | **Present-first continuity** | Recovers only the durable relation that can change the work now. | [Core](kernel/KERNEL.md) · [User guide](docs/USER_GUIDE.md) |
 | **Selective source reentry** | Reaches owner-native sources when they become relevant instead of replaying a whole history. | [Core](kernel/KERNEL.md) · [SOURCES template](templates/state/SOURCES.md) |
 | **Situated competences** | Lets reusable ways of understanding and working participate, combine, deepen or form when needed. | [Competence](kernel/COMPETENCE.md) |
-| **Learning return** | Returns a reusable difference to the competence or owner that should behave differently later. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
+| **Learning return** | Turns a reusable difference from real work into a change in the competence or owner that should understand or perform later work differently. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
 | **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
@@ -80,11 +94,12 @@ relations behind each capability.
 
 ## Useful clarifications
 
-**Learning** refers to change in the user-owned operating layer: competences,
-source distinctions, current relations and reusable ways of working can change
-through use. The persistent representation carries that change; later,
-different work is where its effect becomes observable. See
-[Competence](kernel/COMPETENCE.md) and [Evolution](kernel/EVOLUTION.md).
+**Learning** means experience changing a reusable competence or source relation
+so later relevant work can be understood or performed differently. The
+persistent representation carries that change between encounters; it is not by
+itself the exercised competence. Later, different work is where the changed
+capability becomes observable. See [Competence](kernel/COMPETENCE.md) and
+[Evolution](kernel/EVOLUTION.md).
 
 **The kernel is portable across compatible conversational hosts.** The common
 entry is under [adapters/conversational/](adapters/conversational/README.md).

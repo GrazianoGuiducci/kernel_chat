@@ -1,11 +1,11 @@
 # kernel_chat — current state
 
-Updated: 2026-09-19
+Updated: 2026-09-20
 
 ```text
 source_version: 0.6.0
 current_work: public product and receiver-relative adoption convergence
-current_change: public-source hygiene reconciled: private topology removed, adapter optionality preserved, evidence scoped without future capability ceilings
+current_change: receiver readback reconciled: experience -> competence -> later doing made explicit; open-field entry foregrounded; adapter-optional portability preserved
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -31,10 +31,12 @@ receiver actually exposes: use an already-reachable persistent source in place,
 use project/knowledge storage as the persistent source when that is the native
 mechanism, or treat attachments as session-only until persistence exists.
 
-The provider-neutral conversational entry is now version `2.1.0`. It also
-activates the Core competence trace. Host-specific configuration, provenance,
-receipt and recovery mechanics are routed downward to their adapters instead of
-remaining constitutive content in `AGENTS.md`.
+The provider-neutral conversational entry is now version `2.2.0`. It
+foregrounds **"Do not presume. Go deeper without narrowing the field."**, makes
+experience-to-capability return explicit, and continues to activate the Core
+competence trace. Host-specific configuration, provenance, receipt and recovery
+mechanics are routed downward to their adapters instead of remaining
+constitutive content in `AGENTS.md`.
 
 The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
 with a GitHub instance and retains its configured-bridge and operator-report
@@ -43,8 +45,24 @@ instruction and source mechanisms while preserving the same owners.
 
 ## Current communication correction
 
-Receiver tests were useful for locating ambiguity, but their doubts are no
-longer treated as a content backlog. The README now makes the product inspectable
+A fresh receiver readback exposed one remaining first-encounter compression:
+after reaching deeper owners, a receiver could still reduce competence to a
+structured note and continuity to rereading. The current surface therefore
+makes the constitutive relation explicit:
+
+```text
+real experience
+-> reusable difference
+-> competence that understands / does differently
+-> later non-identical work begins from the changed capability
+```
+
+The stored text is a carrier of that learning, not the competence itself. This
+is a communication/entry correction; the architecture and portable adoption
+contract are unchanged.
+
+Receiver tests remain useful for locating ambiguity, but their doubts are not
+treated as a standing content backlog. The README makes the product inspectable
 through direct capability-to-source routes.
 
 The public progression is:
@@ -87,7 +105,7 @@ Architecture all preserve the same result. A host-specific adapter is optional;
 when present, it packages receiver-specific setup, translation, receipt or
 recovery mechanics.
 
-A public-source hygiene pass also removed private source topology from the
+A public-source hygiene pass also removed non-portable development-source topology from the
 portable entry, Competence, FDLA, Lineage and package-evolution narrative.
 Historical review evidence now states only the scope of what that review
 observed: it neither establishes nor rules out capabilities outside its evidence
