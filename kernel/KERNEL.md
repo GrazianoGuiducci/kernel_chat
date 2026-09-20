@@ -2,7 +2,7 @@
 
 ## Identity
 
-The core is the portable relation that lets an AI interaction host work from
+The core is the portable relation that lets an receiving AI environment work from
 the present, recover durable context selectively, exercise situated
 competences, and preserve useful evolution without inheriting another host's
 mechanics or authority.
@@ -197,7 +197,7 @@ procedure.
 
 ## Persistence and selective reentry
 
-The core does not require one storage technology. An interaction host may
+The core does not require one storage technology. A receiving environment may
 reach the kernel through a user-controlled repository, project/knowledge
 surface, filesystem, connector or another durable source. The host adapter owns
 the mechanics that make that source reachable; those mechanics do not define
@@ -266,7 +266,7 @@ The labels may follow the conversation language; the two functions remain the
 same.
 
 The trace keeps the immediately exercised competence composition visible in the
-following interaction field. It is an observation of the completed movement,
+following working field. It is an observation of the completed movement,
 not a registry, controller or mandatory next stack.
 
 ```text
