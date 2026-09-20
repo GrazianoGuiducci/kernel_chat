@@ -358,8 +358,11 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, readme_links)
 
-        value_position = readme.index("## What you get")
+        why_position = readme.index("## Why it exists")
+        offer_position = readme.index("## What it offers")
+        operation_position = readme.index("## What it does in use")
         example_position = readme.index("## A small before / after")
+        hosting_position = readme.index("## How it can be hosted")
         capability_position = readme.index("## Capabilities and where to verify them")
         clarification_position = readme.index("## Useful clarifications")
         check_position = readme.index("## Check it directly")
@@ -367,8 +370,11 @@ class ValidateTests(unittest.TestCase):
         deep_position = readme.index("## Go deeper")
         reading_position = readme.index("## Reading path")
 
-        self.assertLess(value_position, example_position)
-        self.assertLess(example_position, capability_position)
+        self.assertLess(why_position, offer_position)
+        self.assertLess(offer_position, operation_position)
+        self.assertLess(operation_position, example_position)
+        self.assertLess(example_position, hosting_position)
+        self.assertLess(hosting_position, capability_position)
         self.assertLess(capability_position, clarification_position)
         self.assertLess(clarification_position, check_position)
         self.assertLess(check_position, setup_position)
@@ -376,8 +382,12 @@ class ValidateTests(unittest.TestCase):
         self.assertLess(deep_position, reading_position)
 
         opening = readme[:capability_position]
-        self.assertIn("carry forward the ways of working it", opening)
+        self.assertIn("user-owned semantic operating kernel for AI", opening)
+        self.assertIn("## Why it exists", opening)
+        self.assertIn("## What it offers", opening)
+        self.assertIn("## What it does in use", opening)
         self.assertIn("Experience can become capability.", opening)
+        self.assertIn("later non-identical work", opening)
         self.assertIn("including a chat", opening)
         self.assertIn("GitHub, MCP", opening)
         self.assertIn("system-level properties often implemented in agentic", opening)
