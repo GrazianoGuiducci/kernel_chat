@@ -14,6 +14,7 @@ REQUIRED = [
     "README.md",
     "INSTALL.md",
     "CONTRIBUTING.md",
+    "SECURITY.md",
     "AGENTS.md",
     "CURRENT_STATE.md",
     ".github/ISSUE_TEMPLATE/evolution-feedback.md",

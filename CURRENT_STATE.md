@@ -183,6 +183,36 @@ its actual helper/setup mechanics.
 This is consumer convergence of the modality-neutral carrier resultant, not a
 new kernel capability or adoption contract.
 
+## Security hardening — 2026-09-20
+
+The public repository now has a dedicated `SECURITY.md` reporting and boundary
+surface. It separates semantic instructions from connector/tool/repository/
+runtime/account authority, forbids public disclosure of exploitable or sensitive
+material, and routes vulnerabilities away from Evolution Feedback.
+
+Current workflow security posture:
+
+```text
+GitHub Actions permissions:
+  contents: read
+
+action dependencies:
+  checkout / setup-python pinned to immutable commit SHAs
+
+test dependencies:
+  exact package versions in requirements-test.txt
+
+repository rulesets:
+  none observed through the public repository API
+
+classic branch protection:
+  not inspectable through the current GitHub integration
+```
+
+The absence of observable rulesets is a repository-administration hardening
+opportunity, not evidence that classic branch protection is absent. Current
+release/tag identities remain separately observable.
+
 ## Preserved mechanics and knowledge
 
 For the ChatGPT helper, INSTANCE retains package/bridge identity and reported

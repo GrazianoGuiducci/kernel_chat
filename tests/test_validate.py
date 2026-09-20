@@ -351,7 +351,7 @@ class ValidateTests(unittest.TestCase):
         readme_links = links(readme)
         for target in (
             "docs/SETUP.md", "docs/ADOPTION_GUIDE.md", "docs/USER_GUIDE.md",
-            "kernel/KERNEL.md", "INSTALL.md", "adapters/chatgpt/README.md",
+            "kernel/KERNEL.md", "INSTALL.md", "SECURITY.md", "adapters/chatgpt/README.md",
             "adapters/portable/INSTRUCTIONS.template.md",
             "https://github.com/GrazianoGuiducci/maios-project-kernel",
         ):
@@ -451,6 +451,16 @@ class ValidateTests(unittest.TestCase):
 
         self.assertNotIn("## Use the chat normally", user_guide)
         self.assertNotIn("## Continue a relation in a new chat", user_guide)
+
+        security_text = (self.root / "SECURITY.md").read_text(encoding="utf-8")
+        for marker in (
+            "Do **not** publish exploitable details",
+            "semantic instruction",
+            "!= connector/tool permission",
+            "Never store secrets",
+            "immutable identities",
+        ):
+            self.assertIn(marker, security_text)
 
         adoption_text = (self.root / "docs/ADOPTION_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn(
