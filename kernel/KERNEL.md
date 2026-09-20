@@ -215,6 +215,13 @@ being required for the kernel instance to exist. Missing operating knowledge
 uses the selective owner links in [AGENTS.md](../AGENTS.md); it does not require
 reading user state first. Both paths are available without being automatic work.
 
+When a material resultant must survive a session, host or consumer boundary,
+do not let a fresh identifier stand in for the relation that the next movement
+needs. Use [Evolution semantic continuity](EVOLUTION.md#kernel-chat-semantic-continuity)
+to preserve only the material owner, fact, method, temporal condition, reason,
+meaning and consequence. The relation is selective: no reentry schema or fixed
+boot payload follows from it.
+
 ## Semantic relation, incarnation and consequence
 
 A semantic relation may gain a persistent operational form in an adapter,

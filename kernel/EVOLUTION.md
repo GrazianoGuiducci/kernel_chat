@@ -35,6 +35,52 @@ the still-valid result and reason, the owner carrying the learning, uncertainty
 and the condition that would change continuation. Do not replay a stale next
 action or claim another session's or actor's experience as your own.
 
+<a name="kernel-chat-semantic-continuity"></a>
+
+## Preserve semantic continuity across reentry
+
+A material resultant can remain factually recorded and still be reconstructed
+incorrectly if a later consumer receives what happened but loses the relation
+that gives it meaning. Preserve only the dimensions whose loss could change
+later understanding or action:
+
+```text
+who         owner / actor / authority
+what        changed fact / determination / resultant
+how         operating relation or method
+when        temporal validity / trigger / current-vs-historical condition
+why         cause, intent or reason
+meaning     what the relation changes in comprehension and possibility
+where       consumer / persistence surface that must recover it
+consequence what must begin, stop or behave differently later
+```
+
+These are semantic dimensions, not required fields or a fixed handoff schema.
+Their useful subset follows the receiving relation. `why` and `meaning` are
+related but not interchangeable: a cause can explain why a determination
+exists while its meaning explains what that determination changes in the
+system.
+
+```text
+information transferred
+!= meaning transferred
+
+current source identity unchanged
+-> no new source revision observed
+!= an already-open exercise / integration / validation / resultant gate closed
+```
+
+Derive the continuity surfaces from their functions instead of maintaining a
+universal update list. State or a handoff can carry the current reason and
+pointer; a competence carries reusable method; discovery makes the living
+owner reachable from the material condition; a stable entry changes only when
+its own receiving relation changes. Another host may incarnate the same
+functions differently.
+
+Read back from the receiving surface when possible. If a later session can
+recover the identifier but would form a materially different movement because
+reason, meaning or consequence was lost, continuity is not yet complete.
+
 ## Read back the changed field
 
 Form the useful result, then reenter from what actually resulted. Correct lost

@@ -5,6 +5,34 @@ evolving this package or resuming that work; ordinary chats use the pertinent
 owners reached from [AGENTS.md](../AGENTS.md). The living method is owned by
 [Evolution](../kernel/EVOLUTION.md), not by a release receipt.
 
+## Current return — semantic continuity across reentry, 2026-09-20
+
+A real reentry correction exposed a difference between carrying a current
+identifier and carrying enough of the relation for the next receiver to form
+the same material movement:
+
+```text
+information transferred
+!= meaning transferred
+
+unchanged source identity
+!= pending semantic/resultant work completed
+```
+
+The target already carried causal reentry reasons, first-losing-transformation
+diagnosis and the rule that unchanged identity ends only new-source inspection.
+The missing delta was to make the semantic continuity obligation explicit and
+discoverable. Evolution therefore owns the receiver-neutral relation; Core
+reaches it from selective reentry; AGENTS exposes the condition-to-owner route;
+validator and the independent Markdown consumer oracle preserve route/owner
+composition.
+
+The transferred dimensions — owner/actor, fact/resultant, method, temporal
+condition, reason, meaning, receiving surface and consequence — are not a
+schema or fixed checklist. Only the subset whose loss changes later action is
+preserved. No private source topology, new runtime controller, state schema or
+adapter mechanism was imported.
+
 ## Current reconciliation — 2026-09-17
 
 Starting public baseline:

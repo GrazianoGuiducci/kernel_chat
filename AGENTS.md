@@ -170,11 +170,19 @@ If a material correction creates a new resultant, use [Evolution closure converg
 proof, consumer/reachability, state and descriptive surfaces whose truth changed
 with it. The previous green result remains evidence for its own revision.
 
+If a material resultant must survive another session, host or consumer and
+losing its reason or meaning could change the next movement, use
+[Evolution semantic continuity](kernel/EVOLUTION.md#kernel-chat-semantic-continuity).
+A fresh or unchanged source identity is freshness evidence; it does not by
+itself close an already-open exercise, integration, validation or resultant
+gate.
+
 Constitutive discovery routes are also stated as stable owner paths so runtime
 validation does not need to emulate a full Markdown renderer:
 
 - `kernel/KERNEL.md#kernel-chat-mobile-observation`
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
+- `kernel/EVOLUTION.md#kernel-chat-semantic-continuity`
 
 When repository/package work forms a stronger claim, route to the
 [package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and

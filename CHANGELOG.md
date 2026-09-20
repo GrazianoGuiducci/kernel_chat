@@ -4,6 +4,18 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-20
 
+
+- **Semantic continuity across reentry:** made explicit that transferring a
+  resultant's information does not necessarily transfer the relation that gives
+  it meaning. Evolution now preserves, only when consequential, enough
+  owner/actor, changed fact, method, temporal condition, reason, meaning,
+  receiving surface and consequence for later work to reconstruct the movement.
+  `why` and `meaning` remain distinct, and an unchanged source identity closes
+  only new-source inspection rather than an already-open exercise, integration,
+  validation or resultant gate. Core and AGENTS reach the new Evolution owner
+  route; validator and the independent CommonMark consumer test protect its
+  discovery. No runtime, state-schema, portable-entry, version or release effect
+  follows from this source change.
 - **Security policy / reporting hardening:** added a public `SECURITY.md`,
   routed vulnerability reports away from public Evolution Feedback, made
   credential/private-source boundaries explicit, and documented the distinction

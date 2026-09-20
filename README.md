@@ -129,6 +129,7 @@ relations behind each capability.
 | --- | --- | --- |
 | **Present-first continuity** | Recovers only the durable relation that can change the work now. | [Core](kernel/KERNEL.md) · [User guide](docs/USER_GUIDE.md) |
 | **Selective source reentry** | Reaches owner-native sources when they become relevant instead of replaying a whole history. | [Core](kernel/KERNEL.md) · [SOURCES template](templates/state/SOURCES.md) |
+| **Semantic continuity across reentry** | Preserves enough reason, meaning, temporal condition and consequence for a material resultant to be reconstructed without replaying its history. | [Evolution](kernel/EVOLUTION.md#kernel-chat-semantic-continuity) |
 | **Situated competences** | Lets reusable ways of understanding and working participate, combine, deepen or form when needed. | [Competence](kernel/COMPETENCE.md) |
 | **Learning return** | Turns a reusable difference from real work into a change in the competence or owner that should understand or perform later work differently. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
 | **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |

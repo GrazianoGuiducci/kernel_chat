@@ -74,6 +74,10 @@ AGENT_DISCOVERY_ROUTES = (
         "kernel/EVOLUTION.md#kernel-chat-converge-resultant",
         '<a name="kernel-chat-converge-resultant"></a>',
     ),
+    (
+        "kernel/EVOLUTION.md#kernel-chat-semantic-continuity",
+        '<a name="kernel-chat-semantic-continuity"></a>',
+    ),
 )
 
 

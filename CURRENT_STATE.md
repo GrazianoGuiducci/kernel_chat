@@ -4,8 +4,8 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.6.0
-current_work: modality-neutral portable carrier and receiver-relative adoption convergence
-current_change: public narrative reconciled around identity -> why -> offered transformation -> operation; carrier/setup descend after the object; portable entry 3.0.0 unchanged
+current_work: modality-neutral portable carrier + semantic-continuity/reentry convergence
+current_change: semantic continuity across reentry is explicit in Core/Evolution/AGENTS and structurally discoverable; public narrative/carrier convergence preserved; portable entry 3.0.0 unchanged
 latest_tagged_distribution: v0.6.0
 release_promotion_commit: d2c94ca4e4523f1f7a343601d6beec1e84031fac
 material_review_target: 2c111f2797a7ffe945067ac4b6eee8baace7c9c9
@@ -150,6 +150,35 @@ receiver-relative rather than as a permanent capability ceiling.
 Exact current-effect boundaries remain explicit where they are evidence-bearing
 (for example read != write, configured != installed, operator report != direct
 host inspection).
+
+## Semantic continuity return — 2026-09-20
+
+A receiver-side reentry correction exposed a portable difference that was
+already partly present in Core and Evolution but not explicit enough as one
+discoverable capability:
+
+```text
+information transferred
+!= meaning transferred
+
+current source identity unchanged
+!= an already-open resultant gate completed
+```
+
+When losing the relation can change later work, Evolution now preserves only
+the material owner/actor, fact or resultant, method, temporal condition,
+reason, meaning, receiving surface and consequence. These are semantic
+dimensions rather than a required state schema or handoff form; `why` and
+`meaning` remain distinct.
+
+Core reaches this relation from selective reentry, AGENTS routes the material
+condition to its Evolution owner, and validator + independent CommonMark
+consumer proof preserve that owner path. No new controller, runtime, state
+schema or adapter mechanism is introduced. Portable entry `3.0.0` is unchanged.
+
+Source `VERSION` remains `0.6.0` and the published `v0.6.0` remains its own
+historical release identity. This source delta does not pre-decide the version
+or release selected by the next publication pass.
 
 ## GitHub first-encounter metadata
 

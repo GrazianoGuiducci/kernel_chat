@@ -222,6 +222,11 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-converge-resultant",
                 "Converge the changed resultant",
             ),
+            "kernel/EVOLUTION.md#kernel-chat-semantic-continuity": (
+                ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-semantic-continuity",
+                "Preserve semantic continuity across reentry",
+            ),
             "kernel/KERNEL.md#kernel-chat-competence-trace": (
                 ROOT / "kernel/KERNEL.md",
                 "kernel-chat-competence-trace",
