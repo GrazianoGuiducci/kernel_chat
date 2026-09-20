@@ -22,7 +22,7 @@ real situation
   the core;
 - an unverified observation remains an observation, not a rule.
 
-Do not turn every conversation into memory. Preserve only what changes later
+Do not turn every interaction into memory. Preserve only what changes later
 behavior, proof, recovery, or reentry. Keep the change attributable and
 reversible.
 
@@ -33,7 +33,7 @@ Keep its accumulated guide deep enough to recover why the method changed,
 while the active margin stays small. After compact, recover current intent,
 the still-valid result and reason, the owner carrying the learning, uncertainty
 and the condition that would change continuation. Do not replay a stale next
-action or claim another conversation's experience as your own.
+action or claim another session's or actor's experience as your own.
 
 ## Read back the changed field
 
