@@ -99,7 +99,7 @@ relations behind each capability.
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
 | **Competence trace** | Exposes which competence owners materially participated in a final response. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
 | **Provider-neutral portable entry** | Carries the same kernel relation into compatible receiving environments. | [Portable entry](adapters/portable/README.md) · [Instruction source](adapters/portable/INSTRUCTIONS.template.md) |
-| **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Chat setup](docs/CHAT_SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
+| **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Setup](docs/SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
 | **ChatGPT reference integration** | Provides the current ready-made Git/Python configuration and receipt mechanics. | [ChatGPT adapter](adapters/chatgpt/README.md) · [Install](INSTALL.md) |
 | **Current package evidence** | Records current source state, release identity and repository proof boundaries. | [Current state](CURRENT_STATE.md) · [Tests](tests/) |
 
@@ -113,7 +113,7 @@ capability becomes observable. See [Competence](kernel/COMPETENCE.md) and
 [Evolution](kernel/EVOLUTION.md).
 
 **The kernel is portable across compatible AI environments.** The canonical
-entry is under [adapters/interaction/](adapters/interaction/README.md).
+entry is under [adapters/portable/](adapters/portable/README.md).
 A host-specific adapter is a ready-made integration layer, not a requirement
 for adoption. If a receiving environment already provides a persistent
 instruction entry and a persistent source it can reach, the portable entry can
