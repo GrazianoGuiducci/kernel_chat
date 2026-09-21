@@ -13,6 +13,10 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## 0.9.0 — candidate
 
+- **Material review:** semantic target `f66b9b13265a4bd7a3fb0d2d9c0b78eeaf986455`
+  passed GitHub Actions run `35593403680` with validator clean, 65 tests and
+  8/8 Python 3.11-3.14 × Ubuntu/Windows jobs. No material source blocker remains;
+  release/tag publication is not selected.
 - **Generative first-entry contract:** made the competence field explicit before
   ordinary task framing can collapse it into optional skill routing. The
   portable entry now reaches a compact seed: reuse/deepen/compose existing

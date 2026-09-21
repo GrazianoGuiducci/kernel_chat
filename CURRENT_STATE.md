@@ -8,11 +8,11 @@ current_work: 0.9.0 source candidate; generative first-entry relation added, rel
 current_change: competence formation is now explicit at first entry; transient state is separated from durable preferences/decision methods; portable entry advances to 3.1.0 while v0.8.0 remains the immutable published release
 latest_tagged_distribution: v0.8.0
 release_promotion_commit: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
-material_review_target: ac74126f0cad31b6926e72b184df3ad0104bcf20
+material_review_target: f66b9b13265a4bd7a3fb0d2d9c0b78eeaf986455
 material_review_result: no_material_blocker
-material_review_ci: 35533925195
+material_review_ci: 35593403680
 release_identity: v0.8.0@e5520de198454552d8d9cc4a2be1d310dd5fcbb9 / release 392568921 / latest / immutable
-current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
+current_proof_owner: semantic review target f66b9b1 proved by GitHub Actions 35593403680 (65 tests, 8/8 Python 3.11-3.14 x Ubuntu/Windows); this readback commit requires its own exact-main CI before source closure
 owner: Graziano Guiducci
 ```
 
