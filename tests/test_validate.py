@@ -104,7 +104,7 @@ class ValidateTests(unittest.TestCase):
 
         self.assertIn('<a name="generative-entry-seed"></a>', competence)
         for marker in (
-            "work forms **inside** the competence field",
+            "forms **inside** the competence field",
             "durable operator preference",
             "reusable planning or strategy method",
             "Learn to learn",
@@ -112,14 +112,14 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker.lower(), competence.lower())
 
-        self.assertIn("kernel/COMPETENCE.md#generative-entry-seed", portable)
+        self.assertIn("../../kernel/COMPETENCE.md#generative-entry-seed", portable)
         self.assertIn("reuse, deepen or compose", portable)
         self.assertIn("Do not add a planner or supervisor", portable)
         self.assertIn("kernel/COMPETENCE.md#generative-entry-seed", agents)
 
         for marker in (
             "current preference",
-            "reusable planning/strategy method",
+            "planning/strategy method or operating convention",
             "asset/path/provider",
             "generative competence itself",
         ):
