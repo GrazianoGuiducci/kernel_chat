@@ -129,6 +129,22 @@ class ValidateTests(unittest.TestCase):
         self.assertIn("Generative competence field", readme)
         self.assertIn("Generative entry seed", readme)
 
+    def test_release_source_truth_is_publication_stable(self) -> None:
+        current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
+        changelog = (self.root / "CHANGELOG.md").read_text(encoding="utf-8")
+        release_notes = (
+            self.root / "docs/RELEASE_NOTES_0_9_0.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("0.9.0 competence-generative release source", current_state)
+        self.assertIn("publication_identity:", current_state)
+        self.assertIn("## 0.9.0", changelog)
+        self.assertNotIn("## 0.9.0 — candidate", changelog)
+        self.assertNotIn("source candidate; generative", current_state)
+        self.assertNotIn("release not selected", current_state)
+        self.assertNotIn("this is a source candidate only", changelog.lower())
+        self.assertIn("Publication boundary", release_notes)
+
     def test_portable_instruction_source_is_required(self) -> None:
         (self.root / "adapters/portable/INSTRUCTIONS.template.md").unlink()
         result, payload = self.validate()

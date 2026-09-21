@@ -4,19 +4,19 @@ Updated: 2026-09-20
 
 ```text
 source_version: 0.9.0
-current_work: 0.9.0 source candidate; generative first-entry relation added, release not selected
-current_change: competence formation is now explicit at first entry; transient state is separated from durable preferences/decision methods; portable entry advances to 3.1.0 while v0.8.0 remains the immutable published release
-latest_tagged_distribution: v0.8.0
-release_promotion_commit: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
+current_work: 0.9.0 release source; generative first-entry relation integrated
+current_change: competence formation is explicit at first entry; transient state is separated from durable preferences/decision methods; portable entry is 3.1.0
+previous_tagged_distribution: v0.8.0
+previous_release_source: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
 material_review_target: f66b9b13265a4bd7a3fb0d2d9c0b78eeaf986455
 material_review_result: no_material_blocker
 material_review_ci: 35593403680
-release_identity: v0.8.0@e5520de198454552d8d9cc4a2be1d310dd5fcbb9 / release 392568921 / latest / immutable
-current_proof_owner: semantic review target f66b9b1 proved by GitHub Actions 35593403680 (65 tests, 8/8 Python 3.11-3.14 x Ubuntu/Windows); this readback commit requires its own exact-main CI before source closure
+current_release_source_proof: main 94ef88315c85619a48b5fc39aeffb5977880b203 / CI 35593777292 / 8 of 8 success
+publication_identity: resolve from the current protected tag / GitHub Release; source publication does not imply user-instance or installed-host migration
 owner: Graziano Guiducci
 ```
 
-## 0.9.0 competence-generative source candidate — 2026-09-21
+## 0.9.0 competence-generative release source — 2026-09-21
 
 The current source extends the already-present competence architecture rather
 than introducing a new controller.
@@ -38,9 +38,11 @@ asset/tool handling methods can become competence knowledge when their preserved
 reason changes later non-identical work.
 
 Root source version: `0.9.0`.
-Portable-entry candidate: `3.1.0`.
-Latest published immutable release remains `v0.8.0`; no release, host
-migration or user-owned instance update is implied by this source candidate.
+Portable entry: `3.1.0`.
+These statements describe the source/product relation and remain true before
+and after publication. Tag/Release identity is resolved from GitHub at read
+time. Source publication does not imply host-instruction replacement,
+configured-adapter refresh or user-owned instance migration.
 
 ## Object and adoption
 

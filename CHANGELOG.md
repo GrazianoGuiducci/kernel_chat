@@ -2,21 +2,21 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## Unreleased
+## 0.9.0
 
-- **Post-release readback:** recorded that `v0.8.0` is Latest and immutable,
-  resolves exactly to released source
-  `e5520de198454552d8d9cc4a2be1d310dd5fcbb9` (release `392568921`), and
-  that the bounded release effect did not mutate source. This is
-  state/provenance metadata only; it does not form a new product version or
-  imply portable-entry, user-instance, configured-adapter or host migration.
-
-## 0.9.0 — candidate
+- **Release-source finalization:** active source truth is written to remain valid
+  before and after publication; GitHub tag/Release/assets own external
+  publication state. No metadata-only post-release source commit is required
+  merely to record publication.
+- **Prior v0.8.0 publication readback:** preserved as historical provenance;
+  `v0.8.0` resolved exactly to
+  `e5520de198454552d8d9cc4a2be1d310dd5fcbb9` (release `392568921`) and the
+  release effect did not mutate semantic source.
 
 - **Material review:** semantic target `f66b9b13265a4bd7a3fb0d2d9c0b78eeaf986455`
   passed GitHub Actions run `35593403680` with validator clean, 65 tests and
-  8/8 Python 3.11-3.14 × Ubuntu/Windows jobs. No material source blocker remains;
-  release/tag publication is not selected.
+  8/8 Python 3.11-3.14 × Ubuntu/Windows jobs. No material semantic blocker
+  remained; exact release-source proof belongs to the finalized source identity.
 - **Generative first-entry contract:** made the competence field explicit before
   ordinary task framing can collapse it into optional skill routing. The
   portable entry now reaches a compact seed: reuse/deepen/compose existing
@@ -33,9 +33,9 @@ Historical entries describe the contract of their own revision. For the current 
   generative relation without adding a planner, supervisor, fixed taxonomy or
   mandatory preflight. Existing host adapters remain incarnations of the same
   kernel relation.
-- **Release boundary:** this is a source candidate only. Latest immutable
-  release remains `v0.8.0`; no tag, release, host-instruction replacement or
-  user-instance migration is implied.
+- **Effect boundary:** source/tag/Release publication remains separate from
+  host-instruction replacement, configured-adapter refresh and user-instance
+  migration.
 
 ## 0.8.0 — 2026-09-20
 
