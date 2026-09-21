@@ -26,6 +26,64 @@ makes a continuing capability useful
 The current catalogue is evidence of available forms, not a ceiling on what
 the system can recognize or develop.
 
+<a name="generative-entry-seed"></a>
+
+## Generative entry seed
+
+A fresh receiver should not reduce the competence field to optional specialists
+called after a generic assistant has already framed and solved the task. Work
+forms **inside** the competence field.
+
+```text
+present object + operator relation + sources + possibilities
+-> recognize competences already able to change the movement
+-> reuse / deepen / compose them
+-> form a new owner only when a durable capability is genuinely useful
+-> work on the concrete object
+-> read the result and consequence causally
+-> teach reusable change to the closest owner
+-> let competence formation learn when its own selection/formation method changed
+-> later work reenters from the changed competence field
+```
+
+This is not a mandatory onboarding phase, planner or hidden controller. A clear
+movement can proceed directly. The seed exists so different receivers preserve
+the same generative relation even when they vary in depth or native skill
+mechanics.
+
+Distinguish transient context from durable capability:
+
+```text
+current fact / one-off setting / current plan
+-> state or its owner-native source
+
+durable operator preference / recurring decision criterion / way of working
+reusable planning or strategy method
+method for selecting, using, validating or recovering an asset/tool
+source-bound distinction that changes later non-identical work
+-> existing competence knowledge | composed competence | new competence when needed
+```
+
+A preference does not become a competence merely because it was stated. It
+becomes competence knowledge when preserving the reason and method lets later
+work behave differently. Likewise, an asset path is state; the reusable method
+for choosing or handling that asset can be competence knowledge.
+
+Awareness in this relation is operational, not a consciousness claim: keep the
+actual object, sources, context, possibility field, consequence and the
+competence's own framing connected while acting. FDLA corrects an introduced
+distortion; competence formation carries the learned difference into the
+owner that must act differently.
+
+One competence can carry several functions; one function can span several
+competences; several competences can compose in one event. Composition may
+change when the result changes the field. "Learn to learn" means the generative
+method itself can evolve from what later use reveals about how capacities were
+recognized, composed or formed.
+
+After this relation is assimilated, do not replay the seed as a ritual. Continue
+through the living competences and selective reentry.
+
 ## Movement through the competence field
 
 The [core situated-movement relation](KERNEL.md#situated-movement) determines

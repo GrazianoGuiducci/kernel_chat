@@ -93,6 +93,42 @@ class ValidateTests(unittest.TestCase):
         self.assertIn(f"source_version: {version}", current_state)
         self.assertIn(f"## {version} —", changelog)
 
+    def test_generative_entry_seed_is_convergent(self) -> None:
+        competence = (self.root / "kernel/COMPETENCE.md").read_text(encoding="utf-8")
+        portable = (
+            self.root / "adapters/portable/INSTRUCTIONS.template.md"
+        ).read_text(encoding="utf-8")
+        agents = (self.root / "AGENTS.md").read_text(encoding="utf-8")
+        evolution = (self.root / "kernel/EVOLUTION.md").read_text(encoding="utf-8")
+        readme = (self.root / "README.md").read_text(encoding="utf-8")
+
+        self.assertIn('<a name="generative-entry-seed"></a>', competence)
+        for marker in (
+            "work forms **inside** the competence field",
+            "durable operator preference",
+            "reusable planning or strategy method",
+            "Learn to learn",
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker.lower(), competence.lower())
+
+        self.assertIn("kernel/COMPETENCE.md#generative-entry-seed", portable)
+        self.assertIn("reuse, deepen or compose", portable)
+        self.assertIn("Do not add a planner or supervisor", portable)
+        self.assertIn("kernel/COMPETENCE.md#generative-entry-seed", agents)
+
+        for marker in (
+            "current preference",
+            "reusable planning/strategy method",
+            "asset/path/provider",
+            "generative competence itself",
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, evolution)
+
+        self.assertIn("Generative competence field", readme)
+        self.assertIn("Generative entry seed", readme)
+
     def test_portable_instruction_source_is_required(self) -> None:
         (self.root / "adapters/portable/INSTRUCTIONS.template.md").unlink()
         result, payload = self.validate()

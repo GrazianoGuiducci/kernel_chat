@@ -11,6 +11,28 @@ Historical entries describe the contract of their own revision. For the current 
   state/provenance metadata only; it does not form a new product version or
   imply portable-entry, user-instance, configured-adapter or host migration.
 
+## 0.9.0 — candidate
+
+- **Generative first-entry contract:** made the competence field explicit before
+  ordinary task framing can collapse it into optional skill routing. The
+  portable entry now reaches a compact seed: reuse/deepen/compose existing
+  competence owners before creating new structure; treat the task itself as a
+  possible learning event; return reusable consequences to the closest owner;
+  and let competence formation learn from how capacities were selected or
+  formed.
+- **State vs durable capability:** clarified that current facts, settings,
+  asset paths and plans remain state/context, while durable preferences with
+  reasons, recurring decision criteria, planning/strategy methods and reusable
+  asset/tool handling methods can become competence knowledge when they change
+  later non-identical work.
+- **Portable entry 3.1.0:** the provider-neutral entry carries this compact
+  generative relation without adding a planner, supervisor, fixed taxonomy or
+  mandatory preflight. Existing host adapters remain incarnations of the same
+  kernel relation.
+- **Release boundary:** this is a source candidate only. Latest immutable
+  release remains `v0.8.0`; no tag, release, host-instruction replacement or
+  user-instance migration is implied.
+
 ## 0.8.0 — 2026-09-20
 
 - **Release/version decision:** selected source version `0.8.0` after a

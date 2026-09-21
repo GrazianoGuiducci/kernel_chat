@@ -3,9 +3,9 @@
 Updated: 2026-09-20
 
 ```text
-source_version: 0.8.0
-current_work: 0.8.0 publication closed; post-release readback recorded separately from released product identity
-current_change: v0.8.0 published immutably from exact green canonical source; post-release source change is metadata/readback only; portable entry 3.0.0 and user/host incarnations remain unchanged
+source_version: 0.9.0
+current_work: 0.9.0 source candidate; generative first-entry relation added, release not selected
+current_change: competence formation is now explicit at first entry; transient state is separated from durable preferences/decision methods; portable entry advances to 3.1.0 while v0.8.0 remains the immutable published release
 latest_tagged_distribution: v0.8.0
 release_promotion_commit: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
 material_review_target: ac74126f0cad31b6926e72b184df3ad0104bcf20
@@ -15,6 +15,32 @@ release_identity: v0.8.0@e5520de198454552d8d9cc4a2be1d310dd5fcbb9 / release 3925
 current_proof_owner: GitHub Actions on the exact current main revision; observe run identity from the repository at read time
 owner: Graziano Guiducci
 ```
+
+## 0.9.0 competence-generative source candidate — 2026-09-21
+
+The current source extends the already-present competence architecture rather
+than introducing a new controller.
+
+```text
+present field
+-> competence composition / formation
+-> concrete task or inquiry
+-> resultant and consequence
+-> owner-bound learning
+-> changed competence field
+```
+
+The portable entry now points to the generative seed so heterogeneous receivers
+do not collapse this into ordinary task execution plus optional skill routing.
+State remains the owner of contextual facts, settings and current plans.
+Reusable operator preferences, decision criteria, planning/strategy methods and
+asset/tool handling methods can become competence knowledge when their preserved
+reason changes later non-identical work.
+
+Root source version: `0.9.0`.
+Portable-entry candidate: `3.1.0`.
+Latest published immutable release remains `v0.8.0`; no release, host
+migration or user-owned instance update is implied by this source candidate.
 
 ## Object and adoption
 
@@ -36,10 +62,13 @@ receiver actually exposes: use an already-reachable persistent source in place,
 use project/knowledge storage as the persistent source when that is the native
 mechanism, or treat attachments as session-only until persistence exists.
 
-The provider-neutral portable entry is now version `3.0.0`. It
-foregrounds **"Do not presume. Go deeper without narrowing the field."**, makes
-experience-to-capability return explicit, and continues to activate the Core
-competence trace. Host-specific configuration, provenance, receipt and recovery
+The provider-neutral portable entry candidate is now version `3.1.0`. It
+retains **"Do not presume. Go deeper without narrowing the field."** and adds a
+compact generative seed: work forms inside the competence field; existing
+competences are reused/deepened/composed before new structure; transient
+facts/settings/plans stay distinct from durable methods/preferences/decision
+criteria; and competence formation can learn from later use. The Core competence
+trace remains unchanged. Host-specific configuration, provenance, receipt and recovery
 mechanics are routed downward to their adapters instead of remaining
 constitutive content in `AGENTS.md`.
 

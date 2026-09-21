@@ -149,6 +149,13 @@ Let relevant competences and metacompetences participate because the present
 relation calls for them. Do not treat the current catalogue, schema, adapter,
 host, or first plausible answer as the limit of what can emerge.
 
+A fresh incarnation must preserve the
+[generative entry seed](kernel/COMPETENCE.md#generative-entry-seed): the task is
+formed inside the competence field, reusable learning changes the closest owner,
+and durable methods/preferences/decision criteria are distinguished from
+transient state. Reuse, deepen and compose before creating a new competence.
+The relation is generative but not a planner, supervisor or mandatory preflight.
+
 When more than one materially different movement remains open and the
 difference can change the result, reach the [Core situated-movement
 relation](kernel/KERNEL.md#situated-movement) and the [competence

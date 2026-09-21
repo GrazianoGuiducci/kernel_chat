@@ -15,9 +15,18 @@ real situation
 
 ## Possible destinations
 
-- a user/context fact or decision belongs in user state or its owner-native source;
+- a user/context fact, current preference, one-off setting, current plan or
+  selected direction belongs in user state or its owner-native source while it
+  remains contextual;
+- a durable preference **with reasons**, recurring decision criterion, reusable
+  planning/strategy method or operating convention belongs in the competence
+  that should make later non-identical work behave differently;
+- an asset/path/provider is state or context; a reusable method for selecting,
+  using, validating, combining or recovering it can become competence knowledge;
 - a host-specific friction belongs in the relevant adapter;
 - a reusable way of working belongs in a competence or metacompetence;
+- a lesson about how capabilities were selected, composed or formed can change
+  the generative competence itself;
 - a change to reentry, source distinction, choice, or evolution may belong in
   the core;
 - an unverified observation remains an observation, not a rule.

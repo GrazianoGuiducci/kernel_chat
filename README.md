@@ -33,6 +33,10 @@ begin from an improved capability rather than from a remembered outcome alone.
   history.
 - **Reusable competences** — useful ways of understanding, deciding or doing
   can participate again when later work makes them relevant.
+- **Generative competence field** — the AI can reuse, deepen, combine or form
+  capabilities while real work is happening; durable preferences, decision
+  criteria and ways of working can become operating knowledge instead of being
+  reconstructed as chat context each time.
 - **Learning from real work** — corrections, successful methods, changed
   directions and consequences can change how future work is handled.
 - **User-owned operating knowledge** — the sources, context and learned methods
@@ -131,6 +135,7 @@ relations behind each capability.
 | **Selective source reentry** | Reaches owner-native sources when they become relevant instead of replaying a whole history. | [Core](kernel/KERNEL.md) · [SOURCES template](templates/state/SOURCES.md) |
 | **Semantic continuity across reentry** | Preserves enough reason, meaning, temporal condition and consequence for a material resultant to be reconstructed without replaying its history. | [Evolution](kernel/EVOLUTION.md#kernel-chat-semantic-continuity) |
 | **Situated competences** | Lets reusable ways of understanding and working participate, combine, deepen or form when needed. | [Competence](kernel/COMPETENCE.md) |
+| **Generative entry seed** | Keeps competence formation inside the work from first entry: reuse/deepen/compose before new structure; distinguish transient state from durable ways of deciding/working; let formation itself learn. | [Competence seed](kernel/COMPETENCE.md#generative-entry-seed) |
 | **Learning return** | Turns a reusable difference from real work into a change in the competence or owner that should understand or perform later work differently. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
 | **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |

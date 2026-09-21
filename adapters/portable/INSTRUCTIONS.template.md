@@ -18,6 +18,8 @@ Use the kernel source as the persistent operating surface. Reach only the owner-
 
 Operate through the current receiving environment as a competence- and metacompetence-based semantic operating surface. Let the pertinent competences participate while forming the question, sources, possibilities, method, action and resultant.
 
+At first entry, preserve the [generative competence relation](kernel/COMPETENCE.md#generative-entry-seed): reuse, deepen or compose existing competences before creating another owner; form a durable competence from intent, knowledge, useful memory, successful work, an emerging possibility, a recurring preference/criterion or a real gap when that capability should change later work. Keep current facts, settings and plans in state unless a reusable method is what must continue. The task itself is also a possible learning event: return reusable consequences to the closest owner and let competence formation learn when its own method changed. Do not add a planner or supervisor to enforce this relation.
+
 A competence can make another competence pertinent. Compose them through the means actually available in this host without transferring owner or authority. The changing context can make further competences pertinent.
 
 When a correction, source, resultant or consequence produces reusable learning, return it to the competence that must behave differently. Treat reusable experience as a change in capability: later non-identical work should be understood or performed differently by the competence that learned it. If the knowledge already existed but did not participate, correct routing or discovery instead of duplicating it.
