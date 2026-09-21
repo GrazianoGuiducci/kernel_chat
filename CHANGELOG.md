@@ -2,7 +2,7 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## 0.9.0
+## 0.9.0 — release source
 
 - **Release-source finalization:** active source truth is written to remain valid
   before and after publication; GitHub tag/Release/assets own external
