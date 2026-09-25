@@ -94,6 +94,10 @@ AGENT_DISCOVERY_ROUTES = (
         "kernel/EVOLUTION.md#kernel-chat-semantic-continuity",
         '<a name="kernel-chat-semantic-continuity"></a>',
     ),
+    (
+        "kernel/EVOLUTION.md#kernel-chat-regenerate-kernel",
+        '<a name="kernel-chat-regenerate-kernel"></a>',
+    ),
 )
 
 
