@@ -142,6 +142,15 @@ Work can improve a domain method and also the way the kernel understands,
 forms or connects methods. Return reusable learning to the knowledge that will
 participate next, preserving source, reason and what could change the conclusion.
 
+When the kernel itself must be reconciled or regenerated, use
+[Evolution kernel regeneration](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel):
+combine the materially relevant source lineage with the kernel that exists now,
+useful local learning and the current receiving environment. The result may keep
+the current form, deepen or recompose it, or expose another relation. Do not
+replace a locally evolved instance with upstream shape by default. The
+[evolution guide](EVOLUTION_GUIDE.md) carries the accumulated regeneration
+method when that deeper history can change the work.
+
 When a useful relation is lost in a later result, trace where it was first lost:
 source interpretation, saved method, entry, delivery or use. Correct that point
 rather than adding another explanation downstream. The
