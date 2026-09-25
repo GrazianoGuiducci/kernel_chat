@@ -28,6 +28,12 @@ that contact instead of substituting an imagined audience judgment.
 The public README is a first encounter with the object; it does not override
 the operator's request or authorize installation by itself.
 
+When human comprehension of a material relation can change orientation,
+correction, stopping or safely continuing, or learning during the work, use
+[Core participatory legibility](kernel/KERNEL.md#kernel-chat-participatory-legibility).
+Expose only the smallest useful relation and continue the selected work; do not
+turn this route into a standing tutorial.
+
 For a selected adoption, proceed with setup. Do not insert an unsolicited
 review, proof debate or repeated suitability interview before an already
 selected action. When review is the selected task, perform that review.
@@ -121,6 +127,12 @@ not require reloading the whole kernel merely because the session is new; recove
 only what the present relation makes pertinent. A source encountered first can
 frame the question without acquiring authority to determine its answer.
 
+When an unfinished movement crosses a session, host or consumer boundary and
+competence participation is still causal, use [Core situated reentry](kernel/KERNEL.md#kernel-chat-situated-reentry)
+with [Competence continuity](kernel/COMPETENCE.md#kernel-chat-active-competence-continuity).
+Reconstruct fresh situated awareness from the present; do not restore a prior
+awareness state or a fixed competence stack.
+
 ## Source contact and evolution feedback
 
 The canonical upstream is
@@ -195,6 +207,9 @@ gate.
 Constitutive discovery routes are also stated as stable owner paths so runtime
 validation does not need to emulate a full Markdown renderer:
 
+- `kernel/KERNEL.md#kernel-chat-participatory-legibility`
+- `kernel/KERNEL.md#kernel-chat-situated-reentry`
+- `kernel/COMPETENCE.md#kernel-chat-active-competence-continuity`
 - `kernel/KERNEL.md#kernel-chat-mobile-observation`
 - `kernel/FDLA.md#kernel-chat-consequence-aware-fdla`
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`

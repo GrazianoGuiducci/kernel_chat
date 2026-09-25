@@ -2,6 +2,29 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
+## Unreleased — 2026-09-25
+
+- **Participatory legibility during movement:** Core now makes the smallest
+  useful relation legible while work is still forming when human comprehension
+  can materially change orientation, correction, stopping, safe continuation or
+  learning. This does not introduce a standing tutorial or make the
+  response-closure competence trace sufficient by itself.
+- **Situated reentry:** Core now distinguishes prior awareness, reentry payload,
+  partial perceived context, situated awareness and the still-causal continuum.
+  Reentry can draw separately from state continuity, causal continuity,
+  still-causal competence continuity and the reachable competence horizon.
+- **Competence continuity:** Competence now preserves only the smallest
+  owner-native relation needed for a still-causal capacity to continue across a
+  session, host or consumer boundary; earlier activation does not become a
+  fixed next-session stack.
+- **Discovery proof:** AGENTS routes the two conditions to their target-native
+  owners. Both the dependency-free structural validator and the independent
+  CommonMark consumer protect route-to-owner composition.
+- **Receiver/effect boundary:** no ChatGPT-specific footer was imported; no new
+  state schema, runtime controller, adapter or portable-entry change was
+  introduced. Root version remains `0.9.0`; a new version, tag, Release or
+  migration is a separate later decision.
+
 ## 0.9.0 — release source
 
 - **Release-source finalization:** active source truth is written to remain valid

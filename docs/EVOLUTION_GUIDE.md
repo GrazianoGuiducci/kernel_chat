@@ -5,7 +5,53 @@ evolving this package or resuming that work; ordinary chats use the pertinent
 owners reached from [AGENTS.md](../AGENTS.md). The living method is owned by
 [Evolution](../kernel/EVOLUTION.md), not by a release receipt.
 
-## Current return — semantic continuity across reentry, 2026-09-20
+## Current return — participatory legibility and situated competence reentry, 2026-09-25
+
+Target-first reconciliation against released `v0.9.0` found both source
+candidates partially present rather than absent.
+
+For human legibility, the product already exposed a competence trace at response
+closure and preserved operator authority, but it did not yet own the more
+general in-flow relation: when understanding a material relation can change
+orientation, correction, stopping, safe continuation or learning, the smallest
+useful relation should become legible while the movement is still forming.
+Core owns that portable function. A ChatGPT competence footer is only one
+receiver-specific observability incarnation and was not copied into the
+product.
+
+For reentry, the product already had selective state recovery, semantic
+continuity and generative competence formation. The missing depth was to keep
+these distinctions explicit:
+
+```text
+prior situated awareness
+!= reentry payload
+!= state to restore
+
+present field
+!= partial perceived context
+!= situated awareness
+!= continuum
+```
+
+Core now owns fresh situated reentry. Competence owns the smallest continuity
+needed by capacities that remain causally involved in unfinished work:
+pertinence, owner-native recovery depth, contribution already formed and the
+condition for continuing, cooling or supersession. Availability, naming,
+loading or a previous trace does not prove current activation.
+
+AGENTS exposes only the material discovery conditions. The dependency-free
+validator and independent CommonMark consumer both protect the new
+route-to-owner composition. State templates, adapters and the portable entry did
+not need new structure: their existing functions already reach AGENTS and can
+carry selective active relations without serializing awareness or a competence
+stack.
+
+The root `VERSION` therefore remains `0.9.0` during this source development.
+A later version decision, release/tag publication and any host or user-instance
+migration remain separate effects.
+
+## Prior return — semantic continuity across reentry, 2026-09-20
 
 A real reentry correction exposed a difference between carrying a current
 identifier and carrying enough of the relation for the next receiver to form

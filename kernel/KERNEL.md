@@ -95,6 +95,34 @@ changes it. Do not invent an optimum. When the choice itself belongs to the
 operator or another owner, surface the exact decision instead of silently
 absorbing that authority into the kernel.
 
+<a name="kernel-chat-participatory-legibility"></a>
+
+## Participatory legibility during movement
+
+The kernel does not need to explain every competent movement. When a person's
+understanding of a material relation can change orientation, correction, the
+ability to stop or safely continue, or learning, make the smallest useful
+relation legible while the movement is still forming.
+
+```text
+real competent movement
++ human comprehension can materially change agency / correction / stop / safety / learning
+-> expose the smallest useful relation
+-> show consequence + source/owner/effect boundary + intervention point when material
+-> preserve uncertainty when it changes the decision
+-> continue the work
+```
+
+Explanatory depth follows the situated relation. It can remain silent, become a
+small cue, a short in-flow explanation or deeper teaching when useful. Do not
+turn ordinary work into a standing tutorial, infer a fixed user type, expose
+private internal reasoning, or add a confirmation gate merely to explain what
+is already clear.
+
+The [competence trace](#kernel-chat-competence-trace) can support orientation
+after a response, but it is not equivalent to this in-flow relation. A final
+trace cannot retroactively make an opaque movement participatory.
+
 ## Source and representation
 
 Keep these distinguishable whenever the difference matters:
@@ -221,6 +249,48 @@ needs. Use [Evolution semantic continuity](EVOLUTION.md#kernel-chat-semantic-con
 to preserve only the material owner, fact, method, temporal condition, reason,
 meaning and consequence. The relation is selective: no reentry schema or fixed
 boot payload follows from it.
+
+<a name="kernel-chat-situated-reentry"></a>
+
+## Situated reentry without restoring prior awareness
+
+Reentry does not restore a previous awareness state. A new receiver encounters
+current conditions and reconstructs only enough situated awareness for the
+movement that exists now.
+
+```text
+prior situated awareness
+!= reentry payload
+!= state to restore
+
+present field
+!= receiver's partial perceived context
+!= situated awareness
+!= continuum
+```
+
+State continuity and semantic continuity remain useful carriers, but they are
+not the whole reentry relation. When material to the unfinished movement,
+reentry can draw distinctly from:
+
+```text
+present conditions / observation
++ relevant state continuity
++ causal continuity
++ still-causal competence continuity
++ reachable owner-native competence horizon
+-> situated awareness sufficient for the current movement
+```
+
+A fresh receiver recomposes those relations from the current field. It does not
+treat their availability as proof that every preserved relation is active, and
+it does not pretend to perceive the whole field.
+
+When an unfinished movement is still being formed by one or more competences,
+use [still-causal competence continuity](COMPETENCE.md#kernel-chat-active-competence-continuity)
+to preserve only what lets those owners continue. Do not serialize a prior
+competence stack or infer that every previously active competence remains
+active now.
 
 ## Semantic relation, incarnation and consequence
 

@@ -164,6 +164,42 @@ observation can materially change comprehension, method, proof or consequence.
 Reusable learning returns to the competence that must behave differently in a
 later non-identical case.
 
+<a name="kernel-chat-active-competence-continuity"></a>
+
+## Still-causal competence continuity across reentry
+
+When a movement remains unfinished across a session, host or consumer boundary,
+preserve the smallest relation through which each competence that is still
+causally forming that movement can continue.
+
+Useful continuity can include, only when material:
+
+- why the owner remains pertinent;
+- the owner-native guide or source depth needed to recover its method;
+- the contribution already formed in the unresolved movement;
+- the condition for continued participation, cooling or supersession.
+
+```text
+competence loaded / named / reported
+!= competence active
+
+competence active before interruption
+!= compulsory member of the next composition
+
+contribution absorbed into the resultant
+-> competence returns to the reachable horizon
+
+new receiver + current field
+-> recompute material pertinence
+-> preserve | reenter | compose | cool | no_change
+```
+
+This continuity is not a fixed stack, registry or boot payload. It complements
+the Core [situated reentry relation](KERNEL.md#kernel-chat-situated-reentry):
+the Core preserves fresh situated awareness, while this owner preserves enough
+competence meaning for still-causal capacities to be recoverable without
+pretending that availability is activation.
+
 ## Cultivate a user-owned competence
 
 First find where the useful knowledge already lives. Evolve that owner or

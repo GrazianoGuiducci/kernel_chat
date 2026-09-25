@@ -67,6 +67,18 @@ BRIDGE_IDENTITY_HEADER = re.compile(
 
 AGENT_DISCOVERY_ROUTES = (
     (
+        "kernel/KERNEL.md#kernel-chat-participatory-legibility",
+        '<a name="kernel-chat-participatory-legibility"></a>',
+    ),
+    (
+        "kernel/KERNEL.md#kernel-chat-situated-reentry",
+        '<a name="kernel-chat-situated-reentry"></a>',
+    ),
+    (
+        "kernel/COMPETENCE.md#kernel-chat-active-competence-continuity",
+        '<a name="kernel-chat-active-competence-continuity"></a>',
+    ),
+    (
         "kernel/KERNEL.md#kernel-chat-mobile-observation",
         '<a name="kernel-chat-mobile-observation"></a>',
     ),

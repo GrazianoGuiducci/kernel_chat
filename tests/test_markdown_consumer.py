@@ -212,6 +212,21 @@ class MarkdownConsumerTests(unittest.TestCase):
         agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         links = set(active_links(agents))
         contracts = {
+            "kernel/KERNEL.md#kernel-chat-participatory-legibility": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-participatory-legibility",
+                "Participatory legibility during movement",
+            ),
+            "kernel/KERNEL.md#kernel-chat-situated-reentry": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-situated-reentry",
+                "Situated reentry without restoring prior awareness",
+            ),
+            "kernel/COMPETENCE.md#kernel-chat-active-competence-continuity": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-active-competence-continuity",
+                "Still-causal competence continuity across reentry",
+            ),
             "kernel/KERNEL.md#kernel-chat-mobile-observation": (
                 ROOT / "kernel/KERNEL.md",
                 "kernel-chat-mobile-observation",

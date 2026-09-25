@@ -1,20 +1,43 @@
 # kernel_chat — current state
 
-Updated: 2026-09-20
+Updated: 2026-09-25
 
 ```text
 source_version: 0.9.0
-current_work: 0.9.0 release source; generative first-entry relation integrated
-current_change: competence formation is explicit at first entry; transient state is separated from durable preferences/decision methods; portable entry is 3.1.0
-previous_tagged_distribution: v0.8.0
-previous_release_source: e5520de198454552d8d9cc4a2be1d310dd5fcbb9
-material_review_target: f66b9b13265a4bd7a3fb0d2d9c0b78eeaf986455
-material_review_result: no_material_blocker
-material_review_ci: 35593403680
-current_release_source_proof: main 94ef88315c85619a48b5fc39aeffb5977880b203 / CI 35593777292 / 8 of 8 success
-publication_identity: resolve from the current protected tag / GitHub Release; source publication does not imply user-instance or installed-host migration
+released_baseline: v0.9.0 @ dc73cc703e3aed3b7e8fb60aa827a83bae39bfd1
+current_work: post-0.9.0 semantic source development; participatory legibility and situated reentry integrated
+current_change: in-flow human legibility is distinct from response-closure trace; reentry reconstructs fresh situated awareness and preserves still-causal competence continuity without restoring a prior stack
+current_source_status: source development; release/version decision not selected
+release_source_ci: 35612347737 / 8 of 8 success
+release_tag_ci: 35614470422 / 8 of 8 success
+portable_entry: 3.1.0 unchanged
+publication_identity: v0.9.0 remains the released baseline; later source work does not imply a new tag or GitHub Release
+migration_effect: no_change; no host-instruction replacement, configured-adapter refresh or user-instance migration selected
 owner: Graziano Guiducci
 ```
+
+## Post-0.9.0 source development — 2026-09-25
+
+The current source deepens two relations that were only partially explicit in
+the released baseline.
+
+First, human legibility can participate **during** competent work when a
+person's understanding can change orientation, correction, stopping, safe
+continuation or learning. This is distinct from the response-closure competence
+trace and does not prescribe a footer, tutorial mode or fixed user model.
+
+Second, reentry does not restore a previous awareness state. It reconstructs
+situated awareness from the current field and, when material, combines relevant
+state continuity, causal continuity, still-causal competence continuity and the
+reachable competence horizon. A competence that was loaded, named or active
+earlier is not automatically active now.
+
+Core owns the portable relations; Competence owns still-causal competence
+continuity; AGENTS owns discovery conditions. Structural validation and an
+independent CommonMark consumer protect those routes. No new state schema,
+runtime controller, adapter behavior or portable-entry change follows from this
+source development.
+
 
 ## 0.9.0 competence-generative release source — 2026-09-21
 

@@ -163,6 +163,31 @@ class ValidateTests(unittest.TestCase):
             payload["errors"],
         )
 
+    def test_agents_must_keep_participatory_reentry_discovery_routes(self) -> None:
+        agents = self.root / "AGENTS.md"
+        original = agents.read_text(encoding="utf-8")
+        routes = (
+            "kernel/KERNEL.md#kernel-chat-participatory-legibility",
+            "kernel/KERNEL.md#kernel-chat-situated-reentry",
+            "kernel/COMPETENCE.md#kernel-chat-active-competence-continuity",
+        )
+
+        for route in routes:
+            with self.subTest(route=route):
+                agents.write_text(
+                    original.replace(f"- `{route}`", "- `missing-owner`"),
+                    encoding="utf-8",
+                )
+                result, payload = self.validate()
+                self.assertNotEqual(result.returncode, 0)
+                self.assertFalse(payload["valid"])
+                self.assertIn(
+                    f"AGENTS.md missing structural discovery route: {route}",
+                    payload["errors"],
+                )
+
+        agents.write_text(original, encoding="utf-8")
+
     def test_agents_must_keep_mobile_observation_discovery_route(self) -> None:
         agents = self.root / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
