@@ -247,6 +247,11 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-semantic-continuity",
                 "Preserve semantic continuity across reentry",
             ),
+            "kernel/EVOLUTION.md#kernel-chat-regenerate-kernel": (
+                ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-regenerate-kernel",
+                "Regenerate the kernel through the current receiver",
+            ),
             "kernel/KERNEL.md#kernel-chat-competence-trace": (
                 ROOT / "kernel/KERNEL.md",
                 "kernel-chat-competence-trace",
