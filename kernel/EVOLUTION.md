@@ -203,6 +203,51 @@ This relation does not create automatic synchronization. A source change is a
 reason to inspect a potentially affected incarnation, not permission to update
 it or its host.
 
+<a name="kernel-chat-regenerate-kernel"></a>
+
+## Regenerate the kernel through the current receiver
+
+When the kernel itself becomes the object of change, do not rebuild it from an
+upstream snapshot and do not treat local evolution as drift by default.
+
+```text
+source lineage / materially relevant upstream relation
++ current kernel owners
++ receiver-local learning and valid customizations
++ present receiving environment / capabilities / limits
+-> regenerated situated kernel
+-> real use / consequence / readback
+-> owner-local learning
+-> later regeneration begins from the changed kernel
+```
+
+This is a metacompetence of Evolution: the kernel can reform the relations
+through which it understands, composes, reenters and evolves, while preserving
+the source meaning and local learning that remain causal.
+
+Regeneration can resolve to `no_change`, deepen an existing owner, recompose
+several owners, form a distinct competence/metacompetence, revise discovery or
+incarnation, or expose another still-unresolved relation. Do not rank those
+forms in advance.
+
+Use the whole receiver, not one similarly named file, when deciding what is
+already present. A source formalism can be absent while its function is already
+distributed across Core, Competence, FDLA, Evolution, entries, state or local
+competences. Conversely, matching words or a registered source do not prove
+that the method is reachable or exercised.
+
+When a material relation is lost, use the first-losing-transformation relation
+below. When the accumulated history of earlier kernel incarnations can change
+the present method, reach the
+[Kernel regeneration and package evolution guide](../docs/EVOLUTION_GUIDE.md).
+The guide is cumulative knowledge, not a task queue or authority to repeat old
+changes.
+
+A newer source is a possibility to understand, not permission to synchronize.
+Preserve useful receiver-local learning and exact effect boundaries. Package
+publication, host instruction replacement, user-instance migration and public
+feedback remain separate effects.
+
 ## Learn across incarnations
 
 When a sibling or external source teaches a useful relation, understand and
@@ -224,10 +269,12 @@ inspection, not pending integration, validation or return. A newer repository
 template does not automatically outrank a user's configured or installed
 adapter; freshness belongs to the specific relation.
 
-For package changes, follow the affected builders, projections, tests and CI.
-A successful Git/API operation proves its effect, not completion of those
-contracts. The [package evolution guide](../docs/EVOLUTION_GUIDE.md) preserves
-maintenance reasons and completion evidence without becoming a chat boot.
+For kernel regeneration, the [evolution guide](../docs/EVOLUTION_GUIDE.md)
+preserves the accumulated incarnation method. For package changes, follow the
+affected builders, projections, tests and CI. A successful Git/API operation
+proves its effect, not completion of those contracts. The same guide preserves
+package-maintenance reasons and completion evidence without becoming a chat
+boot.
 
 ```text
 stored != active
