@@ -145,6 +145,14 @@ A newer source is a possibility to understand, not an automatic instruction to
 update. Preserve useful local evolution and keep source revision, configured
 entry, installed host instructions and actual behavior distinguishable.
 
+When the kernel itself becomes the object because source lineage,
+receiver-local learning, or a changed receiving environment can materially
+change its operating or generative relations, use
+[Evolution kernel regeneration](kernel/EVOLUTION.md#kernel-chat-regenerate-kernel).
+Reach the [evolution guide](docs/EVOLUTION_GUIDE.md) only when its accumulated
+incarnation knowledge can change the movement. Regenerate from the current
+receiver; do not reset local evolution merely to reproduce upstream form.
+
 When package/repository maintenance itself is selected, use the
 [package evolution guide](docs/EVOLUTION_GUIDE.md) and the relevant host adapter
 for exact migration, provenance, validation, receipt and recovery mechanics.
@@ -214,6 +222,7 @@ validation does not need to emulate a full Markdown renderer:
 - `kernel/FDLA.md#kernel-chat-consequence-aware-fdla`
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
 - `kernel/EVOLUTION.md#kernel-chat-semantic-continuity`
+- `kernel/EVOLUTION.md#kernel-chat-regenerate-kernel`
 
 When repository/package work forms a stronger claim, route to the
 [package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and
