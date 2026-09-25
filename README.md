@@ -137,6 +137,7 @@ relations behind each capability.
 | **Situated competences** | Lets reusable ways of understanding and working participate, combine, deepen or form when needed. | [Competence](kernel/COMPETENCE.md) |
 | **Generative entry seed** | Keeps competence formation inside the work from first entry: reuse/deepen/compose before new structure; distinguish transient state from durable ways of deciding/working; let formation itself learn. | [Competence seed](kernel/COMPETENCE.md#generative-entry-seed) |
 | **Learning return** | Turns a reusable difference from real work into a change in the competence or owner that should understand or perform later work differently. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
+| **Kernel regeneration** | Re-forms the kernel from material source lineage, the current receiver, useful local evolution and present capabilities instead of resetting to an upstream snapshot. | [Evolution regeneration](kernel/EVOLUTION.md#kernel-chat-regenerate-kernel) · [Evolution guide](docs/EVOLUTION_GUIDE.md) |
 | **Revision through later use** | Refines, revises or retires persistent forms when later consequences change the relation they carry. | [Evolution](kernel/EVOLUTION.md) |
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
