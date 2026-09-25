@@ -4,6 +4,17 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-25
 
+- **Receiver-native kernel regeneration:** Evolution now owns an explicit
+  regeneration relation for the kernel itself: materially relevant source
+  lineage + current kernel + useful receiver-local evolution + present receiver
+  capabilities form the next situated kernel. This is not upstream reset or
+  automatic package synchronization.
+- **Regeneration discovery and cumulative method:** AGENTS exposes a stable
+  route to the new Evolution owner relation, while `docs/EVOLUTION_GUIDE.md`
+  now serves both kernel-regeneration and package-evolution depth. Structural
+  validation and the independent CommonMark consumer protect the new
+  route-to-owner contract.
+
 - **Participatory legibility during movement:** Core now makes the smallest
   useful relation legible while work is still forming when human comprehension
   can materially change orientation, correction, stopping, safe continuation or
