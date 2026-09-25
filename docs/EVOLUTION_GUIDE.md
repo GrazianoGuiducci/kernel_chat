@@ -1,9 +1,50 @@
-# Package evolution guide
+# Kernel regeneration and package evolution guide
 
-This guide carries accumulated reasons for package maintenance. Read it when
-evolving this package or resuming that work; ordinary chats use the pertinent
-owners reached from [AGENTS.md](../AGENTS.md). The living method is owned by
-[Evolution](../kernel/EVOLUTION.md), not by a release receipt.
+This guide carries accumulated reasons for receiver-native kernel regeneration
+and package maintenance. Read it when the kernel itself must be reconciled or
+regenerated across source lineage, receiver-local evolution or a changed
+receiving environment, and when package maintenance needs the exact historical
+mechanics. Ordinary work still uses the pertinent owners reached from
+[AGENTS.md](../AGENTS.md). The living method is owned by
+[Evolution](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel), not by this
+history or a release receipt.
+
+## Current return — receiver-native kernel regeneration, 2026-09-25
+
+Repeated source/receiver reconciliation exposed a relation already latent in
+the package: Evolution could learn locally, preserve source lineage, compare
+incarnations and converge changed resultants, while this guide already
+accumulated the cases that changed that method. What remained too implicit was
+the relation among those functions when **the kernel itself** is the object.
+
+The receiver-native relation is now:
+
+```text
+material source lineage
++ current kernel
++ useful local evolution
++ current receiver capabilities and limits
+-> regenerated situated kernel
+-> real use / consequence
+-> learning returns to the owner that must behave differently
+-> later regeneration starts from the changed kernel
+```
+
+Regeneration is not package reset, upstream synchronization or recreation from
+zero. It preserves receiver-local learning whose reasons still hold and does
+not keep a local workaround merely because it exists when the source relation
+still matters.
+
+This method also compares against the whole receiver before adding structure.
+A relation can already be distributed across Core, Competence, FDLA, Evolution,
+entry and local competences. A material loss can instead occur in discovery,
+delivery, exercise or consequence. Correct the first losing transformation.
+
+The stable discovery owner is
+[Evolution kernel regeneration](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel).
+This guide remains the deeper cumulative method and package-history surface.
+No root VERSION, release, host installation or user-instance migration follows
+from this source development.
 
 ## Current return — participatory legibility and situated competence reentry, 2026-09-25
 
