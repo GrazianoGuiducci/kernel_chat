@@ -5,8 +5,8 @@ Updated: 2026-09-25
 ```text
 source_version: 0.9.0
 released_baseline: v0.9.0 @ dc73cc703e3aed3b7e8fb60aa827a83bae39bfd1
-current_work: post-0.9.0 semantic source development; participatory legibility and situated reentry integrated
-current_change: in-flow human legibility is distinct from response-closure trace; reentry reconstructs fresh situated awareness and preserves still-causal competence continuity without restoring a prior stack
+current_work: post-0.9.0 semantic source development; participatory legibility, situated reentry and receiver-native kernel regeneration integrated
+current_change: Evolution now makes kernel regeneration explicit: material source lineage + current kernel + useful local evolution + current receiver -> regenerated situated kernel, with accumulated method reachable beyond package-only maintenance
 current_source_status: source development; release/version decision not selected
 release_source_ci: 35612347737 / 8 of 8 success
 release_tag_ci: 35614470422 / 8 of 8 success
@@ -38,6 +38,32 @@ independent CommonMark consumer protect those routes. No new state schema,
 runtime controller, adapter behavior or portable-entry change follows from this
 source development.
 
+
+## Post-0.9.0 kernel-regeneration source development — 2026-09-25
+
+The current source also makes explicit a capability that was previously
+distributed across Evolution, lineage, local-learning preservation and the
+package evolution guide.
+
+```text
+material source lineage
++ current kernel
++ useful receiver-local evolution
++ current receiving environment
+-> regenerated situated kernel
+-> real use / consequence
+-> reusable learning returns to the appropriate owner
+```
+
+The first losing transformation was discovery: the accumulated method already
+lived in `docs/EVOLUTION_GUIDE.md`, but its entry identity was package
+maintenance, so non-package kernel regeneration could reach Evolution without
+reaching the deeper learned method. Evolution now owns a stable regeneration
+anchor and AGENTS exposes its material condition.
+
+This source development does not change root VERSION, the portable-entry
+version, release identity, configured host instructions or user-instance
+migration state.
 
 ## 0.9.0 competence-generative release source — 2026-09-21
 
