@@ -255,6 +255,25 @@ expose a consequence that revises an earlier method. Reusable learning lives in
 the affected owner; CURRENT/SOURCES preserve the current reentry implication
 and pointer when needed.
 
+## Kernel regeneration
+
+Evolution owns the receiver-native relation for regenerating the kernel itself.
+
+```text
+material source lineage
++ current kernel owners
++ useful receiver-local evolution
++ current host / source / capability reality
+-> regenerated situated kernel
+-> readback and owner-local learning
+```
+
+This is not package synchronization. The public upstream, a user-owned instance,
+configured host entry and actual host behavior remain distinct. The deeper
+[regeneration guide](EVOLUTION_GUIDE.md) accumulates the method learned through
+earlier incarnations; [AGENTS](../AGENTS.md) reaches it only when the kernel
+itself is materially the object.
+
 ## Situated movement, choice and self-observation
 
 The Core can recognize a situated movement from the present relation, still-
