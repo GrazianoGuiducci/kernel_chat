@@ -188,6 +188,25 @@ class ValidateTests(unittest.TestCase):
 
         agents.write_text(original, encoding="utf-8")
 
+    def test_agents_must_keep_kernel_regeneration_discovery_route(self) -> None:
+        agents = self.root / "AGENTS.md"
+        text = agents.read_text(encoding="utf-8")
+        route = "kernel/EVOLUTION.md#kernel-chat-regenerate-kernel"
+        text = text.replace(
+            f"- `{route}`",
+            "- `kernel/EVOLUTION.md`",
+        )
+        agents.write_text(text, encoding="utf-8")
+
+        result, payload = self.validate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(payload["valid"])
+        self.assertIn(
+            "AGENTS.md missing structural discovery route: "
+            "kernel/EVOLUTION.md#kernel-chat-regenerate-kernel",
+            payload["errors"],
+        )
+
     def test_agents_must_keep_mobile_observation_discovery_route(self) -> None:
         agents = self.root / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
