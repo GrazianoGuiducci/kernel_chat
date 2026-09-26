@@ -252,6 +252,31 @@ class MarkdownConsumerTests(unittest.TestCase):
                 "kernel-chat-regenerate-kernel",
                 "Regenerate the kernel through the current receiver",
             ),
+            "kernel/KERNEL.md#kernel-chat-synthetic-awareness": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-synthetic-awareness",
+                "Synthetic situated awareness and material variance",
+            ),
+            "kernel/KERNEL.md#kernel-chat-source-bound-regression": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-source-bound-regression",
+                "Source-bound causal regression",
+            ),
+            "kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-focus-resolve-on-contact",
+                "Local FOCUS and resolve-on-contact",
+            ),
+            "kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage": (
+                ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-cross-kernel-lineage",
+                "Primary living lineage and assimilated cross-kernel influence",
+            ),
+            "kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary": (
+                ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-source-evolution-evidence-boundary",
+                "Source evolution and evidentiary closure",
+            ),
             "kernel/KERNEL.md#kernel-chat-competence-trace": (
                 ROOT / "kernel/KERNEL.md",
                 "kernel-chat-competence-trace",
