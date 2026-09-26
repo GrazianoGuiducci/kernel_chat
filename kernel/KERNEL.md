@@ -418,21 +418,26 @@ become a permanent requirement or ceiling for the kernel.
 
 ## Competence trace at response closure
 
-Every final user-facing response closes with a compact trace of the competence
-composition that materially formed that response and of any possibilities that
-materially emerged.
+Every final user-facing response closes with a compact **receiver-local trace**
+of the competence composition the receiver currently attributes as materially
+forming that response, plus any possibilities that materially emerged.
 
 ```text
-Competences: <materially participating competence owners | —>
+Competences: <competence owners currently attributed as materially participating | —>
 Emergent possibilities: <materially emerged possibilities | —>
 ```
 
-The labels may follow the current interaction language; the two functions remain the
-same.
+The labels may follow the current interaction language; the two functions remain
+the same.
 
-The trace keeps the immediately exercised competence composition visible in the
-following working field. It is an observation of the completed movement,
-not a registry, controller or mandatory next stack.
+The trace is a situated self-attribution formed from the receiver's accessible
+working relation. It can support orientation, continuity, routing and later
+readback, but it is **not independent evidence of the hidden causal path** that
+formed the earlier inference. Later evidence can preserve, deepen or revise the
+attribution.
+
+The trace remains a working-field observation, not a registry, controller or
+mandatory next stack.
 
 ```text
 previous competence trace
@@ -442,7 +447,8 @@ previous competence trace
 -> preserve | change | compose | no_change
 ```
 
-List an owner because its competence materially changed the movement, not
+List an owner when the current working evidence supports the receiver's
+attribution that its competence materially changed the movement, not merely
 because its source was opened, named or available. Do not generate alternatives
 merely to populate the second line; `—` is a valid result.
 

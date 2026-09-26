@@ -29,16 +29,19 @@ Every final response closes with two compact functions, localized to the
 current interaction language:
 
 ```text
-Competences: <owners that materially formed this response | —>
+Competences: <owners currently attributed as materially forming this response | —>
 Emergent possibilities: <possibilities that materially emerged | —>
 ```
 
-The trace keeps the recently exercised competence composition visible. It is
-not a command to use the same competences again. The next turn recomputes
-pertinence from the new relation.
+The trace keeps the receiver's current attribution of recent competence
+participation visible. It is useful situated readback, not independent evidence
+of the hidden causal path that formed the response, and it is not a command to
+use the same competences again. Later evidence can revise the attribution; the
+next turn recomputes pertinence from the new relation.
 
-A competence is listed because its knowledge materially changed the movement,
-not merely because its file was opened. The possibilities line may be `—`;
+A competence is listed when the current working evidence supports attributing a
+material change in the movement to that competence, not merely because its file
+was opened. The possibilities line may be `—`;
 the kernel does not generate alternatives simply to populate the footer.
 
 ## Continue a relation in a later session

@@ -104,7 +104,14 @@ class ConfigureTests(unittest.TestCase):
         self.assertIn("In-flow correction: kernel/FDLA.md", configured)
         self.assertIn("Evolution and learning return: kernel/EVOLUTION.md", configured)
         self.assertIn("kernel/KERNEL.md#kernel-chat-competence-trace", configured)
-        self.assertIn("actual competence participation", configured)
+        self.assertIn(
+            "current attribution of material competence participation",
+            configured,
+        )
+        self.assertIn(
+            "not independent proof of hidden causal history",
+            configured,
+        )
         self.assertNotIn("ChatGPT", configured)
 
     def test_instance_writer_lock_blocks_concurrent_mutation(self) -> None:

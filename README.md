@@ -45,8 +45,10 @@ begin from an improved capability rather than from a remembered outcome alone.
   that can materially change the result instead of loading everything.
 - **Portable incarnation** — the same semantic kernel relation can be carried
   through different compatible receiving environments and source mechanisms.
-- **Visible participation** — a compact competence trace shows which competence
-  owners materially contributed to each final response.
+- **Visible participation** — a compact competence trace exposes the receiver's
+  current attribution of which competence owners materially contributed to each
+  final response; it remains revisable readback rather than independent causal
+  proof.
 
 ## What it does in use
 
@@ -147,7 +149,7 @@ relations behind each capability.
 | **Source / inference distinction** | Keeps source, evidence, inference, representation and effect authority distinguishable when the difference matters. | [Core](kernel/KERNEL.md) |
 | **In-flow correction** | Lets the system revise an interpretation that has narrowed the field it is trying to understand. | [FDLA](kernel/FDLA.md) |
 | **Consequence-aware recomposition** | Lets later consequence deepen present understanding without rewriting what happened or what could actually be understood earlier. | [FDLA](kernel/FDLA.md#kernel-chat-consequence-aware-fdla) |
-| **Competence trace** | Exposes which competence owners materially participated in a final response. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
+| **Competence trace** | Exposes the receiver's current attribution of material competence participation; useful for readback and continuity, not independent proof of the hidden causal path. | [Core trace](kernel/KERNEL.md#kernel-chat-competence-trace) |
 | **Provider-neutral portable entry** | Carries the same kernel relation into compatible receiving environments. | [Portable entry](adapters/portable/README.md) · [Instruction source](adapters/portable/INSTRUCTIONS.template.md) |
 | **Receiver-relative adoption** | Uses the persistent source and instruction mechanisms actually available in the host. | [Setup](docs/SETUP.md) · [Adoption guide](docs/ADOPTION_GUIDE.md) |
 | **ChatGPT reference integration** | Provides the current ready-made Git/Python configuration and receipt mechanics. | [ChatGPT adapter](adapters/chatgpt/README.md) · [Install](INSTALL.md) |

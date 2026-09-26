@@ -111,9 +111,10 @@ reaches only the owners that can change the movement. Do not add a separate
 review or demonstration task merely to prove setup.
 
 Every final response should now carry the compact competence trace defined by
-the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is one
-observable sign of which competences materially participated; it is not proof
-of full assimilation.
+the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is a
+receiver-local attribution of material competence participation: useful
+readback, but not independent proof of the hidden causal path or of later
+assimilation.
 
 If a required source cannot be reached, reconnect or supply that source rather
 than reconstructing unavailable contents.

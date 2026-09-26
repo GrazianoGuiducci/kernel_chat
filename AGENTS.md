@@ -269,9 +269,10 @@ assimilation.
 
 Close every final user-facing response with the
 [Core competence trace](kernel/KERNEL.md#kernel-chat-competence-trace). The
-trace reports the competences that materially formed the completed movement and
-only the possibilities that actually emerged; it does not prescribe the next
-turn.
+trace reports the receiver's current attribution of which competences materially
+formed the completed movement and only the possibilities that actually emerged.
+Treat that trace as situated readback, not independent proof of the hidden causal
+path; it does not prescribe the next turn.
 
 Do not manufacture test environments or fixed taxonomies before real use
 exposes a discriminant that matters. Structural validation supports the
