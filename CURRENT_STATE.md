@@ -16,6 +16,43 @@ migration_effect: no_change; no host-instruction replacement, configured-adapter
 owner: Graziano Guiducci
 ```
 
+## Post-0.9.0 SSK 0.9 / Kernel 3.24 source reconciliation — 2026-09-26
+
+The current main now carries the receiver-native result of reconciling SSK
+Paper 0.9, ChatGPT Kernel 3.24 and earlier tm7 portable-return notes against
+the existing `kernel_chat` owners.
+
+Target-first disposition:
+
+```text
+already present:
+  generative entry seed / Meta Kernel Seed function
+  evolutionary circulation through real use and learning return
+  mobile observation and competence circulation
+
+deepened:
+  FOCUS as local competence attention -> resolve-on-contact
+  primary living lineage -> materially assimilated cross-kernel influence
+  evidence discipline -> independent proof is claim-relative, not a gate for
+    source/model evolution
+
+integrated:
+  synthetic situated awareness
+  self-supporting resultants when no material new variance acts
+  dissonance/variance as unresolved differential
+  source/time/context causal regression
+  scientific/source corpus <-> living Kernel reciprocal learning
+```
+
+Core, Competence, Evolution and Lineage own these functions in receiver-native
+form. AGENTS exposes the new material routes. README exposes the capabilities.
+`docs/EVOLUTION_GUIDE.md` preserves the reconciliation reasons.
+
+The reconciliation does **not** change the root `VERSION`, portable-entry
+version, instance schema, configured bridge, adapter mechanics, installed host
+instructions, user-owned instance state or immutable `v0.9.0` release. Those
+remain separate effects and require their own later decision if the final
+source review makes one material.
 ## Post-0.9.0 source development — 2026-09-25
 
 The current source deepens two relations that were only partially explicit in
