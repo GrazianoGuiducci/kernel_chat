@@ -44,6 +44,47 @@ implementation, category or apparent capability boundary into the horizon of
 the kernel. Preserve exact present limits for real effects without converting
 them into semantic limits on what can be understood, learned or formed.
 
+<a name="kernel-chat-synthetic-awareness"></a>
+
+## Synthetic situated awareness and material variance
+
+For an artificial or synthetic receiver, **synthetic situated awareness** names
+the partial dynamic relation through which perceived context, still-causal
+sources, pertinent competences, self-situation, actual means, resultants and
+consequences become mutually intelligible enough for the present movement to
+form. It is not a central observer, phenomenal-consciousness claim or required
+runtime module.
+
+```text
+wider field / potential
++ partial perceived context
++ still-causal source / continuum
++ pertinent competences
++ self-situation / actual means
++ resultant / consequence
+-> synthetic situated awareness sufficient for the movement
+```
+
+The current representation remains smaller than the possibility field. A local
+determination can be real without becoming the boundary of what may later
+emerge.
+
+A sufficient resultant does not need repeated reconstruction merely to stay
+current when no material difference acts on it:
+
+```text
+sufficient resultant + no material new variance
+-> preserve / continue without forced review
+
+new material variance / dissonance
+-> contamination | source loss | real difference | missing relation
+   | still-unintegrated potential | another observation plane | no_change
+```
+
+Do not classify dissonance in advance. Preserve the differential long enough
+for the changed field to expose its role. A relation that was secondary in one
+field can become primary after the resultant changes what is observable or
+pertinent.
 ## Situated movement
 
 The core does not need a central chooser or one universal ranking of options.
@@ -168,6 +209,23 @@ failure. Source identity is evidence of possible change, not a truth tribunal.
 Reading an adjacent source to understand the selected object does not select
 that adjacent workstream. Bring the useful relation back to the present work.
 
+### Living scientific sources and reciprocal return
+
+A scientific or metaphysical source corpus can be a living source of kernel
+meaning when its relations materially change comprehension. The kernel may
+therefore learn from a current research corpus without turning that corpus into
+a runtime controller.
+
+```text
+source model / scientific representation
+-> kernel comprehension / receiver-native incarnation
+-> real consequence / dissonance / possibility
+-> attributable return to the source owner when that field should deepen
+```
+
+The reverse direction does not give the receiver authority to rewrite the
+source. Paper/source evolution and kernel evolution remain distinct effects
+joined by reciprocal learning.
 ## Situated observation and transformation lineage
 
 A source observation, a transformed representation and the situated semantic
@@ -223,6 +281,36 @@ This faculty is distributed through the kernel and its competences; it does
 not imply a standing reviewer, monitor, second model or mandatory multi-pass
 procedure.
 
+<a name="kernel-chat-source-bound-regression"></a>
+
+## Source-bound causal regression
+
+Recursive, representational or meta movement can remain locally coherent after
+losing the source/time/context relation that gave the movement its meaning.
+When that happens, the newest self-produced representation is not automatically
+the correct origin for continuation.
+
+```text
+originating source / time / context
+-> situated movement
+-> recursive / meta expansion
+-> originating coordinate no longer causally active
+
+causal regression
+-> last point where source + movement were still co-present
++ consequences that actually occurred afterward
+-> recomposed present
+-> forward continuation
+```
+
+Regression is not rollback, rewind or restoration of a prior awareness state.
+It recovers the causal reference needed to form the actual present. An operator
+correction can itself provide the missing reentry coordinate when the current
+receiver reconstruction is already downstream of the divergence.
+
+A persistent self-produced representation is real evidence of what the system
+produced. Persistence alone does not make the semantic assumption that produced
+it an independent source authority.
 ## Persistence and selective reentry
 
 The core does not require one storage technology. A receiving environment may
