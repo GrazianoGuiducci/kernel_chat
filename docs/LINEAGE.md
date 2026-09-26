@@ -6,6 +6,23 @@ ancestry and historical release remain part of this repository's provenance.
 
 ## Portable lineage
 
+The current public lineage is not lineage-free and not isolated purity.
+`kernel_chat` is the receiver-native portable incarnation of the living
+ChatGPT/tm7 kernel **after** materially assimilated relations from sibling
+kernels, D-ND/SSK research and receiver-local consequence have changed that
+living source resultant where appropriate.
+
+```text
+ChatGPT/tm7 primary living lineage
++ materially assimilated sibling / D-ND / SSK relations
++ receiver-local learning that remains valid
+-> current source resultant
+-> kernel_chat receiver-native incarnation
+```
+
+Primary lineage preserves identity. Cross-kernel contamination preserves real
+learning that changed the source or receiver. Neither relation authorizes
+repository synchronization or owner collapse.
 The public package keeps relations that survive translation into its current
 owners:
 
