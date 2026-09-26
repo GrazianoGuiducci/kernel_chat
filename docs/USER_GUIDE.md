@@ -1,5 +1,13 @@
 # User guide
 
+After adoption, `kernel_chat` should feel less like a system you repeatedly
+re-initialize and more like a continuing operating relation: start with real
+work, let only pertinent sources and competences participate, and preserve
+reusable differences when they should change later work.
+
+You do not need to "use every feature". Continuity, learning and evolution
+remain selective and situated.
+
 ## Your first session after adoption
 
 Start with your real work. The kernel's working knowledge participates through

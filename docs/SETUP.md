@@ -1,5 +1,10 @@
 # Set up kernel_chat in a receiving AI environment
 
+You are not copying the whole kernel into one prompt. A persistent adoption
+connects a **small operating entry** to a **durable kernel source** so the
+receiving AI can reach deeper owners only when the current work makes them
+pertinent.
+
 `kernel_chat` uses a portable host carrier. A chat is one common case,
 but not the defining parameter.
 

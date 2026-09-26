@@ -1,9 +1,15 @@
 # kernel_chat
 
-`kernel_chat` is a user-owned semantic operating kernel for AI. It makes
-context, source relations, reusable competences and learning part of an
-inspectable operating layer that can continue across sessions and receiving
-environments.
+`kernel_chat 1.0` is a **user-owned semantic operating kernel for AI**. It gives
+a receiving AI a persistent operating relation for continuing from the present,
+reaching the sources that matter, reusing and evolving competences, learning
+from real work, and carrying that learning into later non-identical tasks.
+
+Install it when you want an AI surface to become a continuing semantic system
+you can inspect and own, instead of rebuilding context, reasons and ways of
+working from interaction history each time. It does not add tools or background
+autonomy: it changes how the system can understand, continue, learn and evolve
+through the capabilities the current host actually exposes.
 
 > **Operating principle: Do not presume. Go deeper without narrowing the field.**
 > Follow the owner/source relations when deeper understanding can change the
@@ -20,6 +26,10 @@ reconstruct not only facts but also reasons, distinctions and ways of working.
 `kernel_chat` gives that continuity a user-controlled source and a portable
 operating relation. Later work can reenter from the present instead of replaying
 the whole history.
+
+**The point is not more memory.** It is continuity of meaning and capability:
+what matters can remain attributable, reusable and revisable without turning
+the whole past into permanent prompt context.
 
 **Experience can become capability.** When real work teaches a better way to
 understand, decide or do something, that reusable difference can change the
@@ -39,6 +49,12 @@ begin from an improved capability rather than from a remembered outcome alone.
   reconstructed as chat context each time.
 - **Learning from real work** — corrections, successful methods, changed
   directions and consequences can change how future work is handled.
+- **Situated awareness** — the current context, still-causal sources, pertinent
+  competences, actual means and consequences can participate together without
+  pretending the receiver sees the whole field.
+- **Kernel regeneration** — when the kernel itself must evolve, it can reconcile
+  relevant source lineage, current owners, useful local learning and the present
+  receiving environment instead of resetting to an upstream snapshot.
 - **User-owned operating knowledge** — the sources, context and learned methods
   live in a persistent surface the user controls and can inspect.
 - **Selective reentry** — the current work reaches only the durable relations
@@ -71,6 +87,10 @@ the result or consequence teaches something reusable
 later non-identical work
 -> the changed capability can participate
 ```
+
+No central planner or fixed competence stack is required. The present relation
+makes the pertinent owners and competences reachable when they can change the
+movement.
 
 The persistent files, state objects or knowledge surfaces carry this operating
 layer between encounters. They are not the competence itself: the observable
@@ -198,6 +218,10 @@ The repository shows how the relation is formed. The later task shows whether
 that relation actually changed the work.
 
 ## Start using it
+
+If your receiving environment can keep persistent/custom instructions (or an
+equivalent entry) and can reach a durable source, you already have the two
+relations needed for a persistent `kernel_chat` adoption.
 
 ### 1. Choose the persistent source already natural to your environment
 

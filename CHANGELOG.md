@@ -2,15 +2,32 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## Unreleased — 2026-09-26
+## 1.0.0 — release source
 
+- **1.0 stable public identity:** the current receiver-native semantic kernel is
+  selected as the first stable public product identity. The stable contract is
+  the operating relation — present-first continuity, owner/source distinction,
+  generative competence participation, learning return, situated reentry,
+  in-flow correction and receiver-native kernel regeneration — not a frozen
+  capability ceiling. Future evolution remains part of the product relation.
+- **First-encounter presentation:** README, Setup, Adoption and User Guide now
+  make the installation value explicit before deep architecture: a small
+  persistent entry reaches a durable user-owned kernel source; experience can
+  become reusable capability; the kernel can evolve without importing a central
+  planner or fixed competence stack.
+- **Release-source finalization:** root source version advances to `1.0.0`.
+  Portable entry remains `3.1.0`; instance schema remains
+  `kernel_chat.instance.v1`. Tag/GitHub Release publication, user-instance
+  adoption and host updates remain separate effects.
 - **Competence-trace epistemic boundary:** clarified the response-closing trace as receiver-local situated attribution rather than independent proof of the hidden causal path. Core remains the owner; AGENTS, portable instructions, README, Setup and User Guide carry the same boundary, and the ChatGPT configurator regression protects the portable wording. No new controller, Codex receipt/schema mechanism, portable-entry version, instance schema or release effect was added.
 - **SSK 0.9 / Kernel 3.24 receiver reconciliation:** integrated synthetic situated awareness, material variance/dissonance, source/time/context causal regression and Paper/source ↔ living-Kernel reciprocal learning in receiver-native owners.
 - **Local FOCUS resolve-on-contact:** deepened competence circulation so live references are resolved at the point of material use; path/version/name are locators, and an unreachable reference does not by itself prove capability absence.
 - **Primary living lineage:** made `kernel_chat` lineage explicit as a portable incarnation of its primary living source after materially assimilated cross-kernel relations, without repository synchronization or ownership collapse.
 - **Source/evidence boundary:** separated conceptual/source evolution from independent-proof requirements; independent evidence remains mandatory only where the selected claim or effect actually depends on it.
 - **Prior-note reconciliation:** confirmed evolutionary circulation and the generative/Meta Kernel Seed relation as already present; no duplicate owner or new controller was added.
-- **Effect boundary:** root VERSION remains `0.9.0`; portable entry, instance schema, adapters, host installation, user state and immutable `v0.9.0` release remain unchanged pending a separate version/release decision.
+- **Effect boundary:** portable entry, instance schema, adapters, host installation
+  and user-owned state remain unchanged by the 1.0 source formation. Publication
+  and later adoption effects remain separately selected.
 - **Receiver-native kernel regeneration:** Evolution now owns an explicit
   regeneration relation for the kernel itself: materially relevant source
   lineage + current kernel + useful receiver-local evolution + present receiver

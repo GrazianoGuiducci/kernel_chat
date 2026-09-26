@@ -130,18 +130,19 @@ class ValidateTests(unittest.TestCase):
         self.assertIn("Generative entry seed", readme)
 
     def test_release_source_truth_is_publication_stable(self) -> None:
+        version = (self.root / "VERSION").read_text(encoding="utf-8").strip()
         current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
         changelog = (self.root / "CHANGELOG.md").read_text(encoding="utf-8")
-        release_notes = (
-            self.root / "docs/RELEASE_NOTES_0_9_0.md"
-        ).read_text(encoding="utf-8")
+        notes_path = self.root / (
+            "docs/RELEASE_NOTES_" + version.replace(".", "_") + ".md"
+        )
 
-        self.assertIn("0.9.0 competence-generative release source", current_state)
+        self.assertTrue(notes_path.is_file(), notes_path)
+        release_notes = notes_path.read_text(encoding="utf-8")
+        self.assertIn(f"{version} release source", current_state)
         self.assertIn("publication_identity:", current_state)
-        self.assertIn("## 0.9.0", changelog)
-        self.assertNotIn("## 0.9.0 — candidate", changelog)
-        self.assertNotIn("source candidate; generative", current_state)
-        self.assertNotIn("release not selected", current_state)
+        self.assertIn(f"## {version} — release source", changelog)
+        self.assertNotIn(f"## {version} — candidate", changelog)
         self.assertNotIn("this is a source candidate only", changelog.lower())
         self.assertIn("Publication boundary", release_notes)
 

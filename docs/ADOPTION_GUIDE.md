@@ -3,6 +3,12 @@
 Adoption makes the kernel's operating relation reachable in a receiving AI
 environment and keeps useful context and learning available for later work.
 
+Choose `kernel_chat` when you want continuity, reusable competence and learning
+to remain user-owned and inspectable while the receiving AI continues to use
+only the tools and authority its current host actually provides. The kernel is
+the semantic operating layer; it is not a replacement runtime or background
+agent.
+
 ## Recognize the receiving relation
 
 ```text

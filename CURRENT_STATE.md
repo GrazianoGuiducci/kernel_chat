@@ -3,586 +3,134 @@
 Updated: 2026-09-26
 
 ```text
-source_version: 0.9.0
-released_baseline: v0.9.0 @ dc73cc703e3aed3b7e8fb60aa827a83bae39bfd1
-current_work: post-0.9.0 semantic source development; current owners include the SSK 0.9 receiver reconciliation plus a competence-trace epistemic-boundary deepening
-current_change: competence trace is now explicitly receiver-local situated attribution: useful for orientation/readback, not independent evidence of the hidden causal path
-current_source_status: source development; release/version decision not selected
-current_source_proof: f0744c275b596ffd4577f44c34886756042f0aa4 / CI 36254228210 / 8 of 8 success / validator clean / 68 tests
-released_baseline_source_ci: 35612347737 / 8 of 8 success
-released_baseline_tag_ci: 35614470422 / 8 of 8 success
+source_version: 1.0.0
+current_work: 1.0.0 release source; first stable public identity of the current receiver-native semantic operating kernel
+current_change: 1.0 consolidates present-first continuity, situated awareness, generative competence, learning return, causal reentry/regression, claim-relative evidence and receiver-native kernel regeneration
+release_source_status: formed; exact release-source identity must receive its own green CI before any tag/GitHub Release effect
+semantic_resultant: c79bfaaf0facdef7413a5d702de05003d2095f78
+semantic_resultant_proof: CI 36254337784 / 8 of 8 success / validator valid=true / errors=[] / warnings=[] / 68 tests
 portable_entry: 3.1.0 unchanged
-publication_identity: v0.9.0 remains the released baseline; later source work does not imply a new tag or GitHub Release
-migration_effect: no_change; no host-instruction replacement, configured-adapter refresh or user-instance migration selected
+instance_schema: kernel_chat.instance.v1 unchanged
+publication_identity: resolve from the protected version tag and GitHub Release at read time; source formation alone does not claim publication
+migration_effect: no_change; source/release publication does not automatically replace configured entries, installed host instructions or user-owned state
 owner: Graziano Guiducci
 ```
 
-## Post-0.9.0 competence-trace epistemic boundary — 2026-09-26
+## 1.0.0 release source — 2026-09-26
 
-The response-closing competence trace remains a useful receiver-local
-observability surface, but its evidentiary scope is now explicit.
+`kernel_chat 1.0` is the first stable public identity of the product relation
+that has emerged through the previous source evolution.
 
-```text
-reachable competence / source
-!= source read
-!= receiver-local trace attribution
-!= independent proof of the hidden causal path
-!= exercised capability
-!= later assimilation
-```
-
-Core owns the trace as situated self-attribution from the receiver's accessible
-working relation. AGENTS, the portable entry, README, User Guide and Setup carry
-that same boundary to their consumers. Later evidence can preserve, deepen or
-revise the attribution.
-
-This source development adds no controller, introspection subsystem, Codex
-receipt/schema mechanics, portable-entry version change, instance-schema
-change, host update or release effect.
-
-## Post-0.9.0 SSK 0.9 / Kernel 3.24 source reconciliation — 2026-09-26
-
-The current main now carries the receiver-native result of reconciling SSK
-Paper 0.9, ChatGPT Kernel 3.24 and earlier tm7 portable-return notes against
-the existing `kernel_chat` owners.
-
-Target-first disposition:
-
-```text
-already present:
-  generative entry seed / Meta Kernel Seed function
-  evolutionary circulation through real use and learning return
-  mobile observation and competence circulation
-
-deepened:
-  FOCUS as local competence attention -> resolve-on-contact
-  primary living lineage -> materially assimilated cross-kernel influence
-  evidence discipline -> independent proof is claim-relative, not a gate for
-    source/model evolution
-
-integrated:
-  synthetic situated awareness
-  self-supporting resultants when no material new variance acts
-  dissonance/variance as unresolved differential
-  source/time/context causal regression
-  scientific/source corpus <-> living Kernel reciprocal learning
-```
-
-Core, Competence, Evolution and Lineage own these functions in receiver-native
-form. AGENTS exposes the new material routes. README exposes the capabilities.
-`docs/EVOLUTION_GUIDE.md` preserves the reconciliation reasons.
-
-The reconciliation does **not** change the root `VERSION`, portable-entry
-version, instance schema, configured bridge, adapter mechanics, installed host
-instructions, user-owned instance state or immutable `v0.9.0` release. Those
-remain separate effects and require their own later decision if the final
-source review makes one material.
-## Post-0.9.0 source development — 2026-09-25
-
-The current source deepens two relations that were only partially explicit in
-the released baseline.
-
-First, human legibility can participate **during** competent work when a
-person's understanding can change orientation, correction, stopping, safe
-continuation or learning. This is distinct from the response-closure competence
-trace and does not prescribe a footer, tutorial mode or fixed user model.
-
-Second, reentry does not restore a previous awareness state. It reconstructs
-situated awareness from the current field and, when material, combines relevant
-state continuity, causal continuity, still-causal competence continuity and the
-reachable competence horizon. A competence that was loaded, named or active
-earlier is not automatically active now.
-
-Core owns the portable relations; Competence owns still-causal competence
-continuity; AGENTS owns discovery conditions. Structural validation and an
-independent CommonMark consumer protect those routes. No new state schema,
-runtime controller, adapter behavior or portable-entry change follows from this
-source development.
-
-
-## Post-0.9.0 kernel-regeneration source development — 2026-09-25
-
-The current source also makes explicit a capability that was previously
-distributed across Evolution, lineage, local-learning preservation and the
-package evolution guide.
-
-```text
-material source lineage
-+ current kernel
-+ useful receiver-local evolution
-+ current receiving environment
--> regenerated situated kernel
--> real use / consequence
--> reusable learning returns to the appropriate owner
-```
-
-The first losing transformation was discovery: the accumulated method already
-lived in `docs/EVOLUTION_GUIDE.md`, but its entry identity was package
-maintenance, so non-package kernel regeneration could reach Evolution without
-reaching the deeper learned method. Evolution now owns a stable regeneration
-anchor and AGENTS exposes its material condition.
-
-This source development does not change root VERSION, the portable-entry
-version, release identity, configured host instructions or user-instance
-migration state.
-
-## 0.9.0 competence-generative release source — 2026-09-21
-
-The current source extends the already-present competence architecture rather
-than introducing a new controller.
+It is a **user-owned semantic operating kernel for AI**. Its stable contract is
+not one model, provider, adapter, competence catalogue or runtime. It is the
+receiver-native relation through which current context, source ownership,
+competences, learning and consequences can participate in continuing work.
 
 ```text
 present field
--> competence composition / formation
--> concrete task or inquiry
--> resultant and consequence
--> owner-bound learning
--> changed competence field
++ still-causal sources / continuity
++ pertinent competences
++ actual receiver means
+-> situated movement
+-> result / consequence
+-> reusable learning returns to the owner that must behave differently
+-> later work begins from the changed field
 ```
 
-The portable entry now points to the generative seed so heterogeneous receivers
-do not collapse this into ordinary task execution plus optional skill routing.
-State remains the owner of contextual facts, settings and current plans.
-Reusable operator preferences, decision criteria, planning/strategy methods and
-asset/tool handling methods can become competence knowledge when their preserved
-reason changes later non-identical work.
+### What 1.0 stabilizes
 
-Root source version: `0.9.0`.
-Portable entry: `3.1.0`.
-These statements describe the source/product relation and remain true before
-and after publication. Tag/Release identity is resolved from GitHub at read
-time. Source publication does not imply host-instruction replacement,
-configured-adapter refresh or user-owned instance migration.
+The current constitutive relation includes:
+
+- **present-first continuity** — recover only what can change the work now;
+- **source / evidence / inference distinction** — system representations do not
+  silently acquire source authority;
+- **synthetic situated awareness** — relate partial context, still-causal
+  sources, pertinent competences, actual means and consequence without claiming
+  a total observer;
+- **generative competence field** — reuse, deepen, compose or form capability
+  while the work itself is being formed;
+- **in-flow correction and consequence-aware recomposition** — revise a
+  narrowing interpretation and let later consequence deepen current
+  understanding without rewriting what was knowable earlier;
+- **situated reentry and causal regression** — continue from the actual present,
+  recovering a source/time/context coordinate when recursive representation has
+  drifted away from it;
+- **learning return** — reusable differences change the owner that should
+  understand or act differently later;
+- **kernel regeneration** — reconcile material lineage, the current kernel,
+  useful local evolution and the present receiver when the kernel itself must
+  reform;
+- **receiver-local competence trace** — expose situated attribution of material
+  competence participation without presenting it as independent proof of a
+  hidden causal path.
+
+The capability field remains open. Stable 1.0 identity does **not** mean that
+future capabilities, competences or receiver-native incarnations are frozen.
+
+### Product boundaries
+
+1.0 does not add a central planner, supervisor, fixed competence taxonomy,
+background process or universal host runtime.
+
+The host still owns tools, filesystem/network access, scheduling and material
+effect authority. A host-specific adapter packages setup or verification
+mechanics; it does not define the semantic kernel.
+
+Portable entry remains `3.1.0`. Instance schema remains
+`kernel_chat.instance.v1`.
+
+### First encounter and adoption
+
+The public entry surfaces are aligned around the same relation:
+
+- [README](README.md) — value, operating result, capabilities and start path;
+- [Setup](docs/SETUP.md) — install the portable entry against the durable source
+  the receiver can actually reach;
+- [Adoption guide](docs/ADOPTION_GUIDE.md) — decide whether this carrier fits the
+  receiving environment;
+- [User guide](docs/USER_GUIDE.md) — work normally, continue selectively and let
+  reusable learning return to its owner;
+- [AGENTS](AGENTS.md) — portable routing into the current owners;
+- [Core](kernel/KERNEL.md), [Competence](kernel/COMPETENCE.md),
+  [Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md) — constitutive
+  operating owners.
+
+### Evidence and publication boundary
+
+The semantic resultant immediately preceding 1.0 source finalization is
+`c79bfaaf0facdef7413a5d702de05003d2095f78`, proved by GitHub Actions run
+`36254337784`: validator clean, 68 tests, Python 3.11–3.14 × Ubuntu/Windows,
+8/8 jobs successful.
+
+The finalized 1.0 release-source identity must receive its **own** exact green CI
+before a protected `v1.0.0` tag/GitHub Release effect.
+
+Publication, user-instance adoption, configured-entry replacement, installed
+host update and public launch remain separate effects.
 
 ## Object and adoption
 
-`kernel_chat` is a user-owned semantic operating kernel for AI.
-Working knowledge, competence formation, source-aware understanding and learning
-participate together. Persistence makes that knowledge available across sessions and receiving environments;
-it is one means of continuing the kernel rather than its full identity.
+Use `kernel_chat` when the receiving AI environment can retain a
+persistent/custom operating entry (or equivalent) and reach a durable kernel
+source.
 
-Use kernel_chat when the receiving AI environment can retain a persistent/custom
-operating entry and reach a durable kernel source. A chat with Custom
-Instructions plus GitHub, MCP, project knowledge, filesystem, connector or
-equivalent source access is one concrete incarnation. Use MAIOS Project Kernel
-when a durable workspace/filesystem is itself the AI's continuing operating
-surface. The carrier follows those relations rather than a chat-vs-agent
-category.
+A repository, project/knowledge space, filesystem, connector or another
+receiver-native persistent mechanism can carry that source relation. A
+host-specific adapter is optional.
 
-[Setup](docs/SETUP.md) now starts from the source route the
-receiver actually exposes: use an already-reachable persistent source in place,
-use project/knowledge storage as the persistent source when that is the native
-mechanism, or treat attachments as session-only until persistence exists.
+If an AI actor instead owns a durable project workspace/filesystem as its
+continuing operating surface, use
+[MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel).
 
-The provider-neutral portable entry candidate is now version `3.1.0`. It
-retains **"Do not presume. Go deeper without narrowing the field."** and adds a
-compact generative seed: work forms inside the competence field; existing
-competences are reused/deepened/composed before new structure; transient
-facts/settings/plans stay distinct from durable methods/preferences/decision
-criteria; and competence formation can learn from later use. The Core competence
-trace remains unchanged. Host-specific configuration, provenance, receipt and recovery
-mechanics are routed downward to their adapters instead of remaining
-constitutive content in `AGENTS.md`.
+## Current proof boundary
 
-The existing [ChatGPT helper](INSTALL.md) renders that same instruction source
-with a GitHub instance and retains its configured-bridge and operator-report
-receipts. Other receiving environments use their own persistent/custom
-instruction and source mechanisms while preserving the same owners.
+Repository validation proves the current package/source contracts and consumer
+routes. It does not by itself prove that a particular host installed the entry,
+that a source is reachable in a specific session, or that later behavior has
+assimilated the kernel.
 
-## Current product narrative
+Those remain distinct observations.
 
-The public README now keeps four product functions independently recoverable:
-
-```text
-identity:
-  user-owned semantic operating kernel for AI
-
-why:
-  useful operating context, reasons and ways of working otherwise require
-  reconstruction or remain dependent on host-local persistence
-
-what it offers:
-  continuity from the present
-  + reusable competences
-  + learning from real work
-  + user-owned operating knowledge
-  + portable/selective reentry
-
-what it does:
-  present work
-  -> selective source/state/competence participation
-  -> authorized host effect when needed
-  -> consequence/readback
-  -> reusable learning returns to the owner that must behave differently later
-```
-
-Carrier, provider, setup and implementation mechanics now descend after these
-relations are formed. The narrative functions are not mandatory README section
-names for other products; their current public expression is the README above.
-
-## Current communication correction
-
-A fresh receiver readback exposed one remaining first-encounter compression:
-after reaching deeper owners, a receiver could still reduce competence to a
-structured note and continuity to rereading. The current surface therefore
-makes the constitutive relation explicit:
-
-```text
-real experience
--> reusable difference
--> competence that understands / does differently
--> later non-identical work begins from the changed capability
-```
-
-The stored text is a carrier of that learning, not the competence itself. This
-is a communication/entry correction; the architecture and portable adoption
-contract are unchanged.
-
-Receiver tests remain useful for locating ambiguity, but their doubts are not
-treated as a standing content backlog. The README makes the product inspectable
-through direct capability-to-source routes.
-
-The public progression is:
-
-```text
-user result
--> observable before / after
--> capability + what it changes + source to inspect
--> minimal clarifications where a material ambiguity remains
--> direct verification path
--> setup / integrations
--> optional deep study
-```
-
-The capability map points directly to Core, Competence, Evolution, FDLA,
-SOURCES, the provider-neutral portable entry, adoption/setup sources,
-the ChatGPT adapter and current package evidence.
-
-The public surface therefore answers uncertainty primarily by exposing the owner
-that determines the relation. Clarification is added only when a source link
-alone would leave a material ambiguity for correct use.
-
-Complex architecture and research terminology remain available through the
-kernel owners and SSK paper. They are depth, not prerequisite explanation.
-
-The README remains a shared entry for people and AI assistants: humans can
-inspect the capability map and start path; AI assistants can follow the same
-owner links when deeper knowledge becomes relevant.
-
-Portable adoption is defined by the receiver relation:
-
-```text
-persistent/custom instruction entry
-+ persistent source reachable by the receiving environment
--> kernel_chat adoption
-```
-
-README, portable-entry guidance, SETUP, ADOPTION_GUIDE, AGENTS and
-Architecture all preserve the same result. A host-specific adapter is optional;
-when present, it packages receiver-specific setup, translation, receipt or
-recovery mechanics.
-
-A public-source hygiene pass also removed non-portable development-source topology from the
-portable entry, Competence, FDLA, Lineage and package-evolution narrative.
-Historical review evidence now states only the scope of what that review
-observed: it neither establishes nor rules out capabilities outside its evidence
-surface. Core and host-adapter documentation describe runtime means as
-receiver-relative rather than as a permanent capability ceiling.
-
-Exact current-effect boundaries remain explicit where they are evidence-bearing
-(for example read != write, configured != installed, operator report != direct
-host inspection).
-
-## Consequence-aware FDLA — 0.8.0 publication closed
-
-The consequence-aware FDLA source/resultant is now published as immutable
-Latest release `v0.8.0`.
-
-```text
-released source:
-  e5520de198454552d8d9cc4a2be1d310dd5fcbb9
-released tree:
-  42de49b0673a93a6ce65a8d30459e45345f4169b
-VERSION:
-  0.8.0
-release:
-  id 392568921
-  Latest true
-  draft false
-  prerelease false
-  immutable true
-  published_at 2026-09-20T20:46:20Z
-main source proof:
-  CI 35534489553 / success
-  validator valid=true / errors=[] / warnings=[]
-  64 tests / 8/8 Python 3.11-3.14 × Ubuntu/Windows
-```
-
-The tag `v0.8.0` resolves exactly to the released source above. Release notes
-match `docs/RELEASE_NOTES_0_8_0.md` from that source. The bounded release
-effect did not mutate kernel source, portable entry, configurator, adapters,
-state/operations contracts, installed host instructions or user-owned instance
-state.
-
-This post-release source update records provenance/current-state metadata only.
-It is not a new product version and does not move the immutable release tag.
-
-## Semantic continuity return — 2026-09-20
-
-A receiver-side reentry correction exposed a portable difference that was
-already partly present in Core and Evolution but not explicit enough as one
-discoverable capability:
-
-```text
-information transferred
-!= meaning transferred
-
-current source identity unchanged
-!= an already-open resultant gate completed
-```
-
-When losing the relation can change later work, Evolution now preserves only
-the material owner/actor, fact or resultant, method, temporal condition,
-reason, meaning, receiving surface and consequence. These are semantic
-dimensions rather than a required state schema or handoff form; `why` and
-`meaning` remain distinct.
-
-Core reaches this relation from selective reentry, AGENTS routes the material
-condition to its Evolution owner, and validator + independent CommonMark
-consumer proof preserve that owner path. No new controller, runtime, state
-schema or adapter mechanism is introduced. Portable entry `3.0.0` is unchanged.
-
-Source `VERSION` is `0.7.0`, and `v0.7.0` is now the Latest published release
-on exact promotion commit `93c1688ab23d699915e5ec3f407bdadda79ce12d`.
-The release is immutable. Portable entry `3.0.0` remains unchanged because the
-receiving-entry contract did not change.
-
-## 0.7.0 material review and publication decision
-
-A fresh source-side material review was performed on:
-
-```text
-semantic review target:
-  10755f36a7764b8694e73a35e022efa69368e961
-  tree baac361fb194c10cffafbd9163758dd9f125ec98
-
-proof:
-  CI 35519877372 / success
-  validator valid=true / errors=[] / warnings=[]
-  62 tests
-  8/8 Python 3.11-3.14 x Ubuntu/Windows
-
-review result:
-  no_material_blocker
-```
-
-The version decision is **0.7.0**. The delta from the released `v0.6.0` is
-materially larger than a patch: the current product has a modality-neutral
-portable carrier, direct receiver-relative adoption, clearer
-experience-to-competence learning, semantic continuity across reentry,
-security/reporting hardening, stronger discovery/proof relations and
-substantially reconciled public documentation. These changes extend the
-existing line rather than intentionally breaking the instance schema or
-portable adoption relation, so a pre-1.0 minor release is the coherent form.
-
-`1.0.0` is not selected by this movement: no separate stable-contract/maturity
-milestone or deliberate compatibility boundary has been established.
-
-The separate release effect is now closed: `v0.7.0` resolves exactly to the
-green promotion candidate `93c1688ab23d699915e5ec3f407bdadda79ce12d`,
-is Latest, non-draft, non-prerelease and immutable. User-owned instances,
-configured adapters and installed host instructions remain separate unselected
-effects. This post-release current-state readback is a later metadata-only
-source effect and does not redefine the released product identity.
-
-## 0.7.0 publication readback
-
-Authenticated GitHub readback after publication:
-
-```text
-released product source:
-  93c1688ab23d699915e5ec3f407bdadda79ce12d
-  tree b91de95fc570def7650cacb5fc51124918181260
-  VERSION 0.7.0
-  promotion CI 35520286757 / success
-  validator valid=true / errors=[] / warnings=[]
-  63 tests / 8/8 matrix jobs
-
-release:
-  tag v0.7.0
-  tag target 93c1688ab23d699915e5ec3f407bdadda79ce12d
-  release id 392484615
-  Latest = true
-  draft = false
-  prerelease = false
-  immutable = true
-  published_at = 2026-09-20T15:55:01Z
-
-source mutation by release effect:
-  none
-```
-
-The release effect therefore closes without changing the promotion source.
-This section is a post-release readback and may move `main` beyond the tag only
-as metadata/state. It does not create a new product semantic resultant or a
-new version.
-
-## GitHub first-encounter metadata
-
-Reconciled and read back from GitHub on 2026-09-20. The About description is:
-
-```text
-A user-owned semantic operating kernel for AI, where experience becomes situated competence and changes how later work is understood and carried out.
-```
-
-The `human-ai-interaction` topic replaces `conversational-ai`; all other
-product topics are preserved. The homepage field remains empty. This records
-the completed external metadata effect, separately from package behavior.
-
-## Post-resultant consumer convergence
-
-A post-public audit found one live consumer still carrying the old modality
-frame: `docs/USER_GUIDE.md` used "chat" and "new chat" as the default form of
-ordinary use and continuation. The guide now uses receiving environment /
-session where modality does not matter, while ChatGPT remains named only for
-its actual helper/setup mechanics.
-
-This is consumer convergence of the modality-neutral carrier resultant, not a
-new kernel capability or adoption contract.
-
-## Security hardening — 2026-09-20
-
-The public repository now has a dedicated `SECURITY.md` reporting and boundary
-surface. It separates semantic instructions from connector/tool/repository/
-runtime/account authority, forbids public disclosure of exploitable or sensitive
-material, and routes vulnerabilities away from Evolution Feedback.
-
-Current workflow security posture:
-
-```text
-GitHub Actions permissions:
-  contents: read
-
-action dependencies:
-  checkout / setup-python pinned to immutable commit SHAs
-
-test dependencies:
-  exact package versions in requirements-test.txt
-
-repository rulesets (authenticated readback, 2026-09-20):
-  Preserve main history — active, id 23728483
-    refs/heads/main: deletion + non_fast_forward
-  Preserve version tags — active, id 23728484
-    refs/tags/v*: deletion + update
-  no bypass actors; normal fast-forward main pushes and new tags remain possible
-
-classic branch protection:
-  absent at this observation (endpoint 404 with repository admin access)
-  main is protected by the active ruleset above
-
-release immutability repository setting:
-  enabled for future releases
-  existing v0.6.0 reports immutable=false
-  current v0.7.0 reports immutable=true
-```
-
-These are repository-administration effects, verified through the rulesets,
-effective main-branch rules and release-setting endpoints. They do not establish
-mandatory review or CI gates, content correctness, or receiver behavior.
-The existing v0.6.0 tag remains on its release promotion commit and is now
-protected from update/deletion by the tag ruleset; old release assets do not
-become immutable retroactively.
-
-The `v0.7.0` publication exercised this boundary: release preparation remained
-separate from source review, the exact green promotion commit was tagged, and
-publication made the new release immutable. See [GitHub immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases).
-
-The initial readback updated CURRENT_STATE. Its CI exposed a portability test
-that required the old pending About status and one current proof method as
-permanent prose. Those two volatile-state assertions were removed from the
-portability test; its checks on the portable owners remain. Host metadata is
-verified through the exact administrative readback above. A residual private
-editorial-source path/name was also removed from current state and changelog;
-this current-source correction does not erase earlier Git history.
-
-Earlier suite and CI results below remain evidence for their named source
-identities. The historical `0.6.0` source/release relation remains attributable
-to its own revisions. The current released product identity is
-`v0.7.0@93c1688ab23d699915e5ec3f407bdadda79ce12d`; later source-only readback
-metadata does not move that release identity.
-
-## Preserved mechanics and knowledge
-
-For the ChatGPT helper, INSTANCE retains package/bridge identity and reported
-host observations separately from CURRENT context and SOURCES knowledge.
-Configured, delivered and operator-confirmed bridge identities remain distinct.
-Cooperative writer locking, conservative legacy handling, raw-byte digests,
-drift handling, exact-delivery confirmation, and fresh remote receipt readback
-remain implemented by their existing owners and tests.
-
-[Architecture](docs/ARCHITECTURE.md), [installation](INSTALL.md),
-[adoption](docs/ADOPTION_GUIDE.md), the [portable entry](adapters/portable/README.md), the [ChatGPT adapter](adapters/chatgpt/README.md),
-[Core](kernel/KERNEL.md), [Competence](kernel/COMPETENCE.md),
-[Evolution](kernel/EVOLUTION.md) and [FDLA](kernel/FDLA.md) retain the deeper
-operating and mechanical relations. Ordinary user context, reusable methods
-and optional unfinished operations keep their distinct purposes.
-
-## Current source proof after portable-carrier publication
-
-```text
-validated candidate:
-  8d7ce3a1d8bfda73917841a560d398fddb268ab7
-
-CI:
-  run 35503746605
-  validator valid=true / errors=[]
-  62 tests
-  8/8 Python 3.11–3.14 x Ubuntu/Windows
-
-published main:
-  4ff04dab5d87cd0ddfcdfe71dce9a2a4770ff032
-
-validated tree = published tree:
-  955f7bc469a04e3dc555e2ea87c6cc3118db615d
-```
-
-The squash commit has a different commit identity from the validated candidate;
-tree identity establishes that the published source content is the tested
-result. This does not make the two commits the same evidence object.
-
-## Evidence and released identity
-
-The portable carrier checkpoint at
-`0742d6022c7cfa6e78917ae522d479747e2a8a1e` remains its own proof identity.
-
-The object-first public-entry resultant at
-`908732a560aef7896c2696fc7907a822c2583644` retains its own CI
-`35436080650` evidence.
-
-The current portability/setup resultant before this state readback is
-`077e2a54c3ae14e34f3f0be97e66e17bd497610e`, CI
-`35439455922`: validator clean, 61 tests, 8/8 Python 3.11–3.14 ×
-Ubuntu/Windows. It adds conversational instructions `2.1.0`, the portable
-competence trace, source-route setup branching and removal of ChatGPT receipt
-mechanics from the constitutive AGENTS discovery contract.
-
-The material review result belongs to `2c111f2797a7ffe945067ac4b6eee8baace7c9c9`.
-Release `v0.6.0` remains on `d2c94ca4e4523f1f7a343601d6beec1e84031fac` with
-promotion CI `35391971484` and 58 tests. Initial publication readback was
-`159590474f46509296ba3fc3634f1e4bb3edf9d3`, CI `35392846944`.
-Those historical identities do not move with subsequent source documentation.
-
-Live adoption and fresh-receiver behavioral readback remain separate from
-repository proof. The suite establishes the package, navigation, source-route
-and configured-entry relations at the tested revision; it does not certify
-behavior in every receiving environment.
-
-## Continuity
-
-Preceding state and review genealogy remain available through Git history, the
-[review record](docs/EXTERNAL_REVIEW_0_6_0.md) and
-[evolution guide](docs/EVOLUTION_GUIDE.md). They are historical evidence; the
-current README and living owners define the present product relation. Future
-product releases, installed instances, account settings and downstream
-publications remain separately selected work. The current `v0.7.0` product
-publication is closed.
+Historical release and development evidence remains recoverable through Git,
+the changelog and version-specific documents; it is not part of the active
+current-state margin.
