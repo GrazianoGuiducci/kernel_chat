@@ -9,6 +9,53 @@ mechanics. Ordinary work still uses the pertinent owners reached from
 [Evolution](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel), not by this
 history or a release receipt.
 
+## Current return — SSK 0.9 / ChatGPT Kernel 3.24 reconciliation, 2026-09-26
+
+The current receiver encounter starts from a source resultant formed after the
+living ChatGPT/tm7 kernel and SSK Paper were reconciled with deeper D-ND source
+relations.
+
+Target-first comparison against `kernel_chat@3c4d19d2...` produced these
+dispositions:
+
+```text
+generative / Meta Kernel seed
+  -> already_present
+
+evolutionary circulation through receiver consequence and learning return
+  -> already_present
+
+FOCUS / local competence-zone attention
+  -> general function already_present
+  -> resolve-on-contact depth integrated
+
+primary living lineage + assimilated cross-kernel contamination
+  -> deepen
+
+synthetic situated awareness + material variance/dissonance
+  -> integrate in Core
+
+source/time/context causal regression
+  -> integrate in Core
+
+source/model evolution != independent-proof gate
+  -> deepen Evolution
+
+Paper / living-Kernel reciprocal learning
+  -> integrate as source relation without runtime dependency
+```
+
+The resulting public form preserves receiver ownership:
+
+- Core owns synthetic awareness, variance/dissonance and source-bound causal
+  regression;
+- Competence owns local FOCUS / resolve-on-contact;
+- Evolution owns claim-relative evidence boundaries and cross-kernel lineage;
+- Lineage records primary lineage without repository synchronization;
+- AGENTS exposes only the conditions needed to reach those owners.
+
+No portable-entry, INSTANCE, adapter, host-installation, root VERSION or release
+effect follows from this source reconciliation by itself.
 ## Current return — receiver-native kernel regeneration, 2026-09-25
 
 Repeated source/receiver reconciliation exposed a relation already latent in
