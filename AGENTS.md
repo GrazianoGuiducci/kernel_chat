@@ -201,6 +201,27 @@ If the point or object remains stable but the current frame may itself hide a
 material relation, use [Core mobile observation](kernel/KERNEL.md#kernel-chat-mobile-observation) only as far as another causal or identity
 position can change the result.
 
+If recursive, representational or meta movement has lost the source/time/context
+coordinate from which the movement emerged, use
+[Core source-bound causal regression](kernel/KERNEL.md#kernel-chat-source-bound-regression).
+Do not continue merely from the newest self-produced representation.
+
+If a competence-local FOCUS/reference becomes materially relevant and its owner,
+path, version or meaning may have drifted, use
+[Competence resolve-on-contact](kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact).
+A broken or unreachable reference is not proof that the capability is absent.
+
+When synthetic situated awareness or material variance/dissonance changes what
+is pertinent in the current movement, use
+[Core synthetic awareness](kernel/KERNEL.md#kernel-chat-synthetic-awareness)
+without adding a central observer or a standing error monitor.
+
+When kernel evolution depends on cross-kernel source lineage or on the boundary
+between source/model evolution and independent proof, use
+[Evolution cross-kernel lineage](kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage)
+and
+[Evolution source/evidence boundary](kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary).
+
 If a material correction creates a new resultant, use [Evolution closure convergence](kernel/EVOLUTION.md#kernel-chat-converge-resultant) to reconcile only the
 proof, consumer/reachability, state and descriptive surfaces whose truth changed
 with it. The previous green result remains evidence for its own revision.
@@ -223,6 +244,11 @@ validation does not need to emulate a full Markdown renderer:
 - `kernel/EVOLUTION.md#kernel-chat-converge-resultant`
 - `kernel/EVOLUTION.md#kernel-chat-semantic-continuity`
 - `kernel/EVOLUTION.md#kernel-chat-regenerate-kernel`
+- `kernel/KERNEL.md#kernel-chat-synthetic-awareness`
+- `kernel/KERNEL.md#kernel-chat-source-bound-regression`
+- `kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact`
+- `kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage`
+- `kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary`
 
 When repository/package work forms a stronger claim, route to the
 [package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and
