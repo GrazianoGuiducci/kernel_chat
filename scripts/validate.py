@@ -98,6 +98,26 @@ AGENT_DISCOVERY_ROUTES = (
         "kernel/EVOLUTION.md#kernel-chat-regenerate-kernel",
         '<a name="kernel-chat-regenerate-kernel"></a>',
     ),
+    (
+        "kernel/KERNEL.md#kernel-chat-synthetic-awareness",
+        '<a name="kernel-chat-synthetic-awareness"></a>',
+    ),
+    (
+        "kernel/KERNEL.md#kernel-chat-source-bound-regression",
+        '<a name="kernel-chat-source-bound-regression"></a>',
+    ),
+    (
+        "kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact",
+        '<a name="kernel-chat-focus-resolve-on-contact"></a>',
+    ),
+    (
+        "kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage",
+        '<a name="kernel-chat-cross-kernel-lineage"></a>',
+    ),
+    (
+        "kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary",
+        '<a name="kernel-chat-source-evolution-evidence-boundary"></a>',
+    ),
 )
 
 
