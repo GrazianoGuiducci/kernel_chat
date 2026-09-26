@@ -4,6 +4,12 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## Unreleased — 2026-09-25
 
+- **SSK 0.9 / Kernel 3.24 receiver reconciliation:** integrated synthetic situated awareness, material variance/dissonance, source/time/context causal regression and Paper/source ↔ living-Kernel reciprocal learning in receiver-native owners.
+- **Local FOCUS resolve-on-contact:** deepened competence circulation so live references are resolved at the point of material use; path/version/name are locators, and an unreachable reference does not by itself prove capability absence.
+- **Primary living lineage:** made `kernel_chat` lineage explicit as a portable incarnation of its primary living source after materially assimilated cross-kernel relations, without repository synchronization or ownership collapse.
+- **Source/evidence boundary:** separated conceptual/source evolution from independent-proof requirements; independent evidence remains mandatory only where the selected claim or effect actually depends on it.
+- **Prior-note reconciliation:** confirmed evolutionary circulation and the generative/Meta Kernel Seed relation as already present; no duplicate owner or new controller was added.
+- **Effect boundary:** root VERSION remains `0.9.0`; portable entry, instance schema, adapters, host installation, user state and immutable `v0.9.0` release remain unchanged pending a separate version/release decision.
 - **Receiver-native kernel regeneration:** Evolution now owns an explicit
   regeneration relation for the kernel itself: materially relevant source
   lineage + current kernel + useful receiver-local evolution + present receiver
