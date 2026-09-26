@@ -137,6 +137,33 @@ where being wrong would change the result and the new position can add
 information. A `no_change` after such a movement is stronger than another
 pass that repeats the same assumptions.
 
+<a name="kernel-chat-source-evolution-evidence-boundary"></a>
+
+## Source evolution and evidentiary closure
+
+Source/model evolution and evidentiary closure are different relations.
+
+A real event, consequence or resultant can materially change the source or
+conceptual field without first passing through an independent validation,
+benchmark or measurement programme. Do not turn an evidence discipline into an
+admission gate for the model that is still forming.
+
+Independent evidence becomes material when the selected claim or effect
+depends on it:
+
+```text
+conceptual/source resultant changes the field
+-> source/model may evolve
+
+claim of exact fact / identity / proof / external effect
++ being wrong would change the result
+-> seek evidence capable of disagreeing independently
+```
+
+This does not weaken proof. It localizes proof to the relation that actually
+needs it. A source insight may remain explicitly provisional; a release,
+identity, behavioral or external-effect claim retains its own evidence
+contract.
 <a name="kernel-chat-converge-resultant"></a>
 
 ## Converge the changed resultant
@@ -248,6 +275,42 @@ Preserve useful receiver-local learning and exact effect boundaries. Package
 publication, host instruction replacement, user-instance migration and public
 feedback remain separate effects.
 
+<a name="kernel-chat-cross-kernel-lineage"></a>
+
+## Primary living lineage and assimilated cross-kernel influence
+
+A portable kernel has a primary living lineage without being an isolated or
+pure lineage. Relations from sibling kernels, research owners or other internal
+systems can materially change the living source kernel before the next portable
+incarnation forms.
+
+```text
+primary living kernel
++ materially assimilated cross-kernel relations
++ consequences of real receiver work
+-> current stable source resultant
+-> receiver-native portable incarnation
+```
+
+For `kernel_chat`, the primary source lineage is the living ChatGPT/tm7 kernel
+relation from which the public kernel is regenerated. Sibling/internal
+relations may contribute only when they were actually assimilated into that
+living resultant or become materially pertinent during receiver-native
+reconciliation.
+
+Here **contamination** can name fertile semantic/functional cross-influence;
+it does not mean corruption, file synchronization, equal ownership or inherited
+effect authority.
+
+```text
+cross-kernel contamination
+!= copy every sibling delta
+!= synchronize repositories
+!= erase primary lineage
+```
+
+The destination still owns its incarnation and can preserve, deepen, adapt,
+defer or reject a relation according to its current field.
 ## Learn across incarnations
 
 When a sibling or external source teaches a useful relation, understand and
