@@ -142,6 +142,43 @@ learn from qualified sources, implementations and their failure/recovery
 behavior. Let the causal knowledge change the local method; do not import a
 foreign workflow, taxonomy, metric or host assumption as its required form.
 
+<a name="kernel-chat-focus-resolve-on-contact"></a>
+
+## Local FOCUS and resolve-on-contact
+
+A competence can keep a small local attention boundary around relations that
+may change its own work. **FOCUS** is one possible representation of that
+boundary; it is not a required footer, registry, dependency graph or global
+map.
+
+```text
+local condition becomes material
+-> nearby competence / owner / source may become pertinent
+-> resolve that relation in the present before relying on it
+-> use / deepen / compose / preserve unknown / no_change
+```
+
+A stored name, path, version or link is a locator and provenance clue, not
+authority over the current function. Before a local reference materially
+changes the movement, resolve the current owner/body/meaning when drift is
+plausible.
+
+```text
+stored reference
++ current material condition
+-> resolve-on-contact
+-> current function / owner / source relation
+```
+
+A broken, moved or unreachable reference does **not** by itself prove that the
+capability is absent. Preserve the unknown, widen only as far as materially
+useful, and avoid polling or global rescans merely to keep every local relation
+fresh.
+
+The attention boundary should be allowed to evolve or disappear when later
+consequence shows noise, rigidity, circular reconstruction or false
+association. Its purpose is to make useful depth reachable at the point of
+use, not to keep adjacent depth permanently active.
 ## Let a competence move its own observation
 
 A competence can itself become the frame that hides a material relation. When
