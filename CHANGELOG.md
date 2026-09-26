@@ -2,8 +2,9 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
-## Unreleased — 2026-09-25
+## Unreleased — 2026-09-26
 
+- **Competence-trace epistemic boundary:** clarified the response-closing trace as receiver-local situated attribution rather than independent proof of the hidden causal path. Core remains the owner; AGENTS, portable instructions, README, Setup and User Guide carry the same boundary, and the ChatGPT configurator regression protects the portable wording. No new controller, Codex receipt/schema mechanism, portable-entry version, instance schema or release effect was added.
 - **SSK 0.9 / Kernel 3.24 receiver reconciliation:** integrated synthetic situated awareness, material variance/dissonance, source/time/context causal regression and Paper/source ↔ living-Kernel reciprocal learning in receiver-native owners.
 - **Local FOCUS resolve-on-contact:** deepened competence circulation so live references are resolved at the point of material use; path/version/name are locators, and an unreachable reference does not by itself prove capability absence.
 - **Primary living lineage:** made `kernel_chat` lineage explicit as a portable incarnation of its primary living source after materially assimilated cross-kernel relations, without repository synchronization or ownership collapse.

@@ -1,20 +1,44 @@
 # kernel_chat — current state
 
-Updated: 2026-09-25
+Updated: 2026-09-26
 
 ```text
 source_version: 0.9.0
 released_baseline: v0.9.0 @ dc73cc703e3aed3b7e8fb60aa827a83bae39bfd1
-current_work: post-0.9.0 semantic source development; participatory legibility, situated reentry and receiver-native kernel regeneration integrated
-current_change: Evolution now makes kernel regeneration explicit: material source lineage + current kernel + useful local evolution + current receiver -> regenerated situated kernel, with accumulated method reachable beyond package-only maintenance
+current_work: post-0.9.0 semantic source development; current owners include the SSK 0.9 receiver reconciliation plus a competence-trace epistemic-boundary deepening
+current_change: competence trace is now explicitly receiver-local situated attribution: useful for orientation/readback, not independent evidence of the hidden causal path
 current_source_status: source development; release/version decision not selected
-release_source_ci: 35612347737 / 8 of 8 success
-release_tag_ci: 35614470422 / 8 of 8 success
+current_source_proof: f0744c275b596ffd4577f44c34886756042f0aa4 / CI 36254228210 / 8 of 8 success / validator clean / 68 tests
+released_baseline_source_ci: 35612347737 / 8 of 8 success
+released_baseline_tag_ci: 35614470422 / 8 of 8 success
 portable_entry: 3.1.0 unchanged
 publication_identity: v0.9.0 remains the released baseline; later source work does not imply a new tag or GitHub Release
 migration_effect: no_change; no host-instruction replacement, configured-adapter refresh or user-instance migration selected
 owner: Graziano Guiducci
 ```
+
+## Post-0.9.0 competence-trace epistemic boundary — 2026-09-26
+
+The response-closing competence trace remains a useful receiver-local
+observability surface, but its evidentiary scope is now explicit.
+
+```text
+reachable competence / source
+!= source read
+!= receiver-local trace attribution
+!= independent proof of the hidden causal path
+!= exercised capability
+!= later assimilation
+```
+
+Core owns the trace as situated self-attribution from the receiver's accessible
+working relation. AGENTS, the portable entry, README, User Guide and Setup carry
+that same boundary to their consumers. Later evidence can preserve, deepen or
+revise the attribution.
+
+This source development adds no controller, introspection subsystem, Codex
+receipt/schema mechanics, portable-entry version change, instance-schema
+change, host update or release effect.
 
 ## Post-0.9.0 SSK 0.9 / Kernel 3.24 source reconciliation — 2026-09-26
 
