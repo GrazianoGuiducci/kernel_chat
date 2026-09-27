@@ -22,6 +22,10 @@ present field
 
 The current product includes:
 
+- **whole-field continuation** — the movement remains related to what it has
+  already produced and to the wider field; when that relation changes
+  pertinence it can reform the following question, source, competence, method or
+  continuation without turning review into a mandatory phase;
 - present-first continuity and selective reentry;
 - source / evidence / inference / representation distinction;
 - synthetic situated awareness without a central observer;
