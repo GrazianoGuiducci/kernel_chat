@@ -9,6 +9,33 @@ mechanics. Ordinary work still uses the pertinent owners reached from
 [Evolution](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel), not by this
 history or a release receipt.
 
+## Current return — whole-field continuation, 2026-09-27
+
+A later source-side correction exposed one relation that was already distributed
+across open-field operation, synthetic situated awareness, mobile observation
+and changed-field readback but not explicit enough as one Core relation.
+
+```text
+current movement
++ what it has already produced
++ what is now happening in the wider field
+-> materially changed pertinence when present
+-> question / source / competence / method / continuation can reform
+```
+
+The receiver-native integration lives in Core. A recent result, competence
+trace or stored possibility remains part of the field; its persistence or
+recency does not select the next object.
+
+This does not add a controller, footer, planner, review stage, full reload or
+mandatory multi-pass procedure. A sufficient determination can continue
+directly. Competence, FDLA, Evolution, portable entry, INSTANCE, adapters and
+host state remain unchanged for this relation.
+
+This clarification remains inside the already selected 1.0 source identity.
+Because the source bytes changed after the previous 1.0 source proof, the new
+resultant requires its own exact repository proof before publication.
+
 ## Current return — SSK 0.9 / ChatGPT Kernel 3.24 reconciliation, 2026-09-26
 
 The current receiver encounter starts from a source resultant formed after the

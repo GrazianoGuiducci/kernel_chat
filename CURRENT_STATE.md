@@ -1,20 +1,36 @@
 # kernel_chat — current state
 
-Updated: 2026-09-26
+Updated: 2026-09-27
 
 ```text
 source_version: 1.0.0
-current_work: 1.0.0 release source; first stable public identity of the current receiver-native semantic operating kernel
-current_change: 1.0 consolidates present-first continuity, situated awareness, generative competence, learning return, causal reentry/regression, claim-relative evidence and receiver-native kernel regeneration
-release_source_status: formed; exact release-source identity must receive its own green CI before any tag/GitHub Release effect
-semantic_resultant: c79bfaaf0facdef7413a5d702de05003d2095f78
-semantic_resultant_proof: CI 36254337784 / 8 of 8 success / validator valid=true / errors=[] / warnings=[] / 68 tests
+current_work: 1.0.0 release source; whole-field continuation clarification integrated into the first stable public identity
+current_change: the movement can let its own result and the wider field reshape pertinence, including the following question/source/competence/method/continuation, without turning review into a mandatory phase
+release_source_status: formed; the exact current source identity must receive green CI before any tag/GitHub Release effect
+preceding_release_source: b18cea6d3d1a02fb04f5fe2ba946909e20b7015f
+preceding_release_source_proof: CI 36256713727 / 8 of 8 success / validator valid=true / errors=[] / warnings=[] / 68 tests
 portable_entry: 3.1.0 unchanged
 instance_schema: kernel_chat.instance.v1 unchanged
 publication_identity: resolve from the protected version tag and GitHub Release at read time; source formation alone does not claim publication
 migration_effect: no_change; source/release publication does not automatically replace configured entries, installed host instructions or user-owned state
 owner: Graziano Guiducci
 ```
+
+## Whole-field continuation clarification — 2026-09-27
+
+Core now makes explicit that the current movement includes what it has already
+produced in relation to the wider field. When that relation materially changes
+pertinence, it can reform the next question, source, competence, method or
+continuation.
+
+A recent result, competence trace or stored possibility therefore remains an
+input to the field rather than an automatic next task. The relation does not
+create a standing reviewer, mandatory full reload or ritual reopening of
+sufficient determinations.
+
+No portable-entry, instance-schema, adapter, host or user-state contract changes
+from this clarification. Version remains `1.0.0`; the changed source identity
+requires its own exact proof before publication.
 
 ## 1.0.0 release source — 2026-09-26
 

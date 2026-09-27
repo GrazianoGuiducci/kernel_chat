@@ -44,6 +44,19 @@ implementation, category or apparent capability boundary into the horizon of
 the kernel. Preserve exact present limits for real effects without converting
 them into semantic limits on what can be understood, learned or formed.
 
+The current movement remains related to what it has already produced and to
+what is now happening in the wider field. When that relation can materially
+change pertinence, let still-valid determinations, their reasons and
+consequences, unresolved tensions and materially open possibilities reshape the
+frame from which the next question, source, competence, method or continuation
+forms.
+
+The newest result, trace or written possibility is part of that field, not
+authority to become the next object merely because it is most recent or
+available. This is not a mandatory review phase, full reload or ritual reopening
+of sufficient results. Existing understanding can act directly; the wider-field
+relation becomes active only as far as it can change the movement.
+
 <a name="kernel-chat-synthetic-awareness"></a>
 
 ## Synthetic situated awareness and material variance

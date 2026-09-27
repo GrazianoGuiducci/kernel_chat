@@ -4,6 +4,12 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## 1.0.0 — release source
 
+- **Whole-field continuation:** made explicit that a movement remains related to
+  what it has already produced and to the wider field; when that relation changes
+  pertinence it can reform the following question, source, competence, method or
+  continuation. A recent result, trace or stored possibility does not acquire
+  authority to become the next task merely through recency or persistence. No
+  mandatory review phase, full reload, planner or controller is introduced.
 - **1.0 stable public identity:** the current receiver-native semantic kernel is
   selected as the first stable public product identity. The stable contract is
   the operating relation — present-first continuity, owner/source distinction,
