@@ -150,3 +150,37 @@ Those remain distinct observations.
 Historical release and development evidence remains recoverable through Git,
 the changelog and version-specific documents; it is not part of the active
 current-state margin.
+
+
+## Private OpenAI plugin prototype — 2026-10-03
+
+A private skills-only OpenAI plugin incarnation now exists for behavioral
+testing under the product name **MAIOS Kernel**.
+
+Source design:
+`docs/OPENAI_PLUGIN_INCARCATION.md`.
+
+Prototype scope:
+
+~~~text
+maios-present-first-reentry
+maios-source-authority
+maios-competence-routing
+maios-learning-return
+maios-effect-boundary
+~~~
+
+No GitHub, VPS, MCP, background autonomy or material-effect capability is
+claimed by this first prototype.
+
+The next proof is receiver behavior after installation in a fresh ChatGPT/Codex
+conversation:
+- does the plugin make the right skill pertinent without operator reconstruction?
+- does it preserve current-source authority?
+- does it distinguish competence gap from access/routing gap?
+- does learning return to the right owner?
+- does effect authority remain explicit?
+
+Live GitHub/VPS capability belongs to the later shared MAIOS Bridge MCP, whose
+contract is currently formed in Meta_Skill. Plugin installation/test does not
+change the stable semantic identity of kernel_chat 1.0.
