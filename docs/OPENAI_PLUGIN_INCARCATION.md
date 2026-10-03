@@ -1,9 +1,9 @@
 # OpenAI Plugin Incarnation — kernel_chat
 
 ~~~text
-status: private-prototype selected
+status: historical private skills-only probe / naming reclassified
 source product: kernel_chat 1.0
-plugin product name: MAIOS Kernel
+historical private probe name: maios-kernel / previously described as "MAIOS Kernel"; superseded as product naming
 first incarnation: skills-only
 later live bridge: MAIOS Bridge MCP
 ~~~
@@ -63,3 +63,45 @@ The plugin must not imply:
 - authority to mutate a source merely because it can read it.
 
 The source product remains GrazianoGuiducci/kernel_chat.
+
+
+## Naming correction — 2026-10-03
+
+The first private plugin probe was initially described as **MAIOS Kernel**.
+
+That name is now reclassified as too broad.
+
+Reason:
+
+~~~text
+MAIOS
+  = wider system / field
+
+kernel_chat
+  = one semantic kernel product
+
+OpenAI plugin
+  = one receiver/package incarnation
+
+therefore:
+  plugin != new semantic product called "MAIOS Kernel"
+~~~
+
+Current interpretation:
+
+~~~text
+plugins_6ac0e842365881918e95a628b5f40b9b
+= kernel_chat skills-only probe A0
+= useful historical package/activation experiment
+!= product identity
+!= current selected ChatGPT adapter
+~~~
+
+If kernel_chat later receives a production OpenAI package, name it as a
+kernel_chat distribution/incarnation (for example a product-aligned
+"kernel_chat for OpenAI/ChatGPT" form) rather than claiming the whole MAIOS
+kernel namespace.
+
+The current selected private host experiment is instead
+**MAIOS ChatGPT Adapter**, sourced from the living tm7/chatgpt incarnation and
+used to test the MAIOS operating method plus owner adapters such as K-Social.
