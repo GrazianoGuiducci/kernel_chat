@@ -9,7 +9,42 @@ mechanics. Ordinary work still uses the pertinent owners reached from
 [Evolution](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel), not by this
 history or a release receipt.
 
-## Current canonical-source formation — 2026-10-31
+## Current canonical return —1.2.0,2026-10-31
+
+The [canonical-source record](CANONICAL_1_2_0.md) joins baseline/currentaf035d8
+and reviewed9a6ad9b. The reviewed tree was reconstructed exactly on the current
+canonical parent before phase descriptions changed. Constitutive operating
+bodies, practical depth, entry and executable contracts retain their reviewed
+bytes. Canonical validation and exact main CI belong to the new resultant.
+Release and configured/installed incarnations retain distinct identities.
+
+## Acquired candidate — inheritable receiver knowledge, 2026-10-31
+
+The [situated review](REVIEW_1_2_0.md) follows positive conditions of use and
+real participation, as well as the source-to-owner map. It repairs recognition
+of works/practice, actual intervention conditions and selected deep-section
+navigation. Its CommonMark counterexample distinguishes a containing file from
+its fragment destination. The reviewed revision receives its own 71-test and
+exact CI proof; earlier construction observations keep their own identity.
+
+The [1.2.0 candidate](CANDIDATE_1_2_0.md) builds on canonical 1.1.0. Existing
+formation, encounter and source-field methods gain usable local decisions;
+two selective bodies deepen evolution decisions and actual-medium expression.
+Their owners, AGENTS routes, file-source delivery and portable entry reach the
+same knowledge. This is additive source knowledge, not demonstrated model
+assimilation. Portable entry 3.2.0 has its own identity; existing configured and
+operator-confirmed host incarnations are preserved until an explicit update.
+
+The construction found that a host-local voice convention could not simply
+be copied: the public relation preserves trace functions through the real
+medium and keeps decisive qualifications perceivable. Likewise, cooperation
+formation belongs in source-field/composition knowledge, rather than a new
+handoff supervisor. Let later experience change these determinations when it
+adds a material difference.
+
+Earlier 1.1.0 records below retain their own result and proof identities.
+
+## Earlier canonical-source formation — 2026-10-31
 
 The [canonical-source record](CANONICAL_1_1_0.md) connects the reviewed 1.1.0
 candidate to the current canonical owner. Baseline and main matched at the
@@ -18,9 +53,9 @@ descriptions are formed for canonical truth. The resulting main revision
 receives its own CI. Candidate proof, canonical source, release and installed
 host remain distinct. Do not repeat the earlier comparison as a new task.
 
-## Development candidate — practical formation, 2026-10-31
+## Earlier development candidate — practical formation, 2026-10-31
 
-The [1.1.0 candidate review](CANDIDATE_1_1_0.md) preserves the current
+The [1.1.0 candidate review](CANDIDATE_1_1_0.md) preserves that result's
 baseline, design reasons, receiving contracts and proof scope. The comparison
 found the general generative faculty already present. Formation, source-field,
 encounter and activity knowledge now make its practical inheritance deeper

@@ -139,7 +139,9 @@ establish assimilation or authorize an account change.
 
 Bring the real topic, question or activity. Pertinent competences participate
 where they change the movement, and each final response exposes a compact
-competence trace.
+competence trace through the actual written or spoken medium. The
+[receiving-expression method](../kernel/KERNEL.md#kernel-chat-receiver-expression)
+keeps material qualifications perceivable without assuming another display.
 
 The trace is continuity and observation, not a permanent activation list. A
 later turn can preserve, drop or add competences as the field changes.

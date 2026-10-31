@@ -2,6 +2,39 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
+## 1.2.0 — canonical source
+
+- Reconstructed the accepted net result of reviewed candidate9a6ad9b on current
+  canonical parentaf035d8 after authenticated reconciliation. Main still matched
+  the recorded baseline. Source-phase descriptions now identify canonical
+  source; this resultant receives its own validation and exact main CI.
+
+- Situated review: extended entry conditions to learning from works, teaching
+  and practice before a demonstration exists; connected actual intervention
+  conditions to the receiving method; added stable deep-section anchors and a
+  CommonMark consumer test of real incoming fragments and rendered destinations.
+  The reviewed resultant has its own source identity and proof.
+- Deepened formation with coherence in the competence's own source inputs,
+  transformations and decisions. Useful knowledge, embedded directives and
+  effect authority remain distinct; local synthesis can itself need correction.
+- Extended encounter learning to capabilities, qualities and conditions of
+  effectiveness from works and explanations, supporting original construction.
+- Extended source-field composition to forming cooperation before a project or
+  task division is fixed; independent owners, real contact states, late returns
+  and the smallest useful human bridge remain connected.
+- Added selective Evolution depth for contextual rejection, useful subtraction,
+  necessary equivalent choices, surprise-localized learning and carrier-role
+  readback that preserves schema/API compatibility.
+- Added selective Core depth for expression through the actual medium and
+  observability. Decisive qualifications and trace functions reach the perceived
+  channel without assuming another display, tools or authority.
+- Portable entry is `3.2.0`; root source is `1.2.0`. ChatGPT adapter `1.0.0`,
+  configurator and INSTANCE v1 contracts are unchanged. Existing configured and
+  installed incarnations are preserved. Canonical source promotion does not
+  establish a tag/release or account installation.
+- Extended structural delivery and independent CommonMark navigation coverage
+  to the new owner routes and their practical depth, including file-source setup.
+
 ## 1.1.0 — canonical source
 
 - Formed canonical-source identity from the reviewed candidate after comparing

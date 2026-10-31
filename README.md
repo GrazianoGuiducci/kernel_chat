@@ -5,12 +5,13 @@ a receiving AI a persistent operating relation for continuing from the present,
 reaching the sources that matter, reusing and evolving competences, learning
 from real work, and carrying that learning into later non-identical tasks.
 
-Source version **1.1.0** deepens practical competence formation and independent
-continuation. The [canonical-source record](docs/CANONICAL_1_1_0.md),
-[source review](docs/CANDIDATE_1_1_0.md) and
-[source notes](docs/RELEASE_NOTES_1_1_0.md) describe that result. The canonical
-revision is resolved from `main`; a published release has its own tag and
-release identity.
+Canonical source version **1.2.0** deepens what formed competences can inherit:
+coherence in their own decisions, learning qualities from works, cooperation
+that can shape the common question, and continuation adapted to actual receiving
+conditions. The [canonical-source record](docs/CANONICAL_1_2_0.md),
+[source notes](docs/RELEASE_NOTES_1_2_0.md) and
+[situated review](docs/REVIEW_1_2_0.md) describe the result. Resolve the accepted
+revision from `main`; a published release has its own tag and release identity.
 
 Install it when you want an AI surface to become a continuing semantic system
 you can inspect and own, instead of rebuilding context, reasons and ways of

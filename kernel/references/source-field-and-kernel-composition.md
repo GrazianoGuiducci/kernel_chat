@@ -64,6 +64,52 @@ concurrency or the place where learning must continue. Preserve valid local
 specialization and provenance. Moving or replacing material is an exact effect
 with its own owner; understanding the topology does not perform that effect.
 
+<a name="form-a-cooperative-capability"></a>
+
+## Form a cooperative capability
+
+Cooperation can itself be the capacity being formed, before a project,
+application or allocation of tasks is determined. People, AI systems,
+competences or future participants can contribute different sources and
+reasons that change the common question. Understand what their relation could
+make possible and what each must be able to continue independently. A usable
+method, a capability seed or a kernel can be a sufficient result of this work.
+
+Form the participation boundary with that capability. Receiving knowledge
+does not absorb a contributor's ownership, state, meaning, access or authority.
+A contribution can change shared understanding while its source retains its
+own decisions and continuation. Do not reduce participants to executing parts
+of a solution that was fixed before their knowledge could affect it.
+
+For example, an operator's domain experience and an AI's comparison of sources
+can reveal a different research question. Preserve who supplied each reason,
+what is now shared and what remains owned separately. A source offered for
+understanding does not by itself authorize publication or action for its owner.
+The common result can teach both the domain method and the way of cooperating.
+
+When another receiver must actually execute a contribution, prepare enough
+intent, useful result, current sources, real means, scope and return location
+for it to act competently. Use an available controller only when that effect
+is selected. Keep the actual states distinguishable:
+
+```text
+prepared != notified != read != accepted != executed != integrated
+```
+
+A saved packet does not wake another receiver; a sent message does not prove
+receipt or acceptance. A late return meets the current field, which may have
+changed since the request. Reconcile what is still useful with current sources,
+local learning and authority instead of applying it merely because it arrived.
+The [request/result owner](../../operations/REQUESTS_RESULTS.md) supplies
+practical continuation when such a transfer is needed.
+
+If a human bridge is genuinely required, prepare the irreducible gesture with
+the exact recipient and usable material. Complete the preparation that the
+current competence can perform; do not transfer the whole coordination queue
+or repeated reconstruction to the person. An existing guide or shared field
+can preserve the reasons. Cooperation does not require a new broker, registry,
+protocol, supervisor or second general kernel.
+
 ## Compose kernels by their contribution
 
 A kernel can be useful independently and also contribute inside a common

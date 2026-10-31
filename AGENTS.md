@@ -181,14 +181,27 @@ generative inheritance changes the capacity being formed, use
 [Competence practical formation](kernel/COMPETENCE.md#kernel-chat-practical-formation).
 It reaches the deeper method without requiring another formation phase.
 
-When a demonstration, correction or shared encounter teaches a consequential
-decision, use [Competence learning from encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters).
+When a work, teaching, practical tradition, demonstration, correction or shared
+encounter can form a capability, quality or consequential decision, use
+[Competence learning from encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters).
 Keep assistance and observation attributable; a doubt can change the question.
 
 When the distribution of sources or participation of independent kernels
 changes what is reachable, composable or able to continue, use
 [Core source-field formation](kernel/KERNEL.md#kernel-chat-source-field).
 Preserve distinct source, state, learning and effect owners.
+
+When the cooperation itself needs to be formed from distinct contributions,
+use [Competence cooperative formation](kernel/COMPETENCE.md#kernel-chat-cooperative-formation).
+The common question can emerge before a project or division of tasks exists;
+contribution does not absorb ownership or authority.
+
+When contextual rejection, simplification, surprise or a carrier's semantic
+role changes continuation, use [Evolution decisions](kernel/EVOLUTION.md#kernel-chat-evolution-decisions).
+When modality, observability or the person's ability to intervene changes
+what can be perceived, performed or corrected,
+use [Core receiver expression](kernel/KERNEL.md#kernel-chat-receiver-expression).
+These routes deepen their existing owners only when the relation matters.
 
 When work continues across reentries, events or actual scheduled wakes, use
 [Competence continuing activities](kernel/COMPETENCE.md#kernel-chat-continuing-activities)
@@ -277,6 +290,9 @@ validation does not need to emulate a full Markdown renderer:
 - `kernel/KERNEL.md#kernel-chat-source-field`
 - `kernel/COMPETENCE.md#kernel-chat-continuing-activities`
 - `kernel/COMPETENCE.md#kernel-chat-situated-presence`
+- `kernel/COMPETENCE.md#kernel-chat-cooperative-formation`
+- `kernel/EVOLUTION.md#kernel-chat-evolution-decisions`
+- `kernel/KERNEL.md#kernel-chat-receiver-expression`
 
 When repository/package work forms a stronger claim, route to the
 [package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and

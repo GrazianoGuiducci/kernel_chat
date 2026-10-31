@@ -99,6 +99,8 @@ class ValidateTests(unittest.TestCase):
             "kernel/references/learning-from-encounters.md",
             "kernel/references/source-field-and-kernel-composition.md",
             "kernel/references/situated-presence.md",
+            "kernel/references/evolution-decisions.md",
+            "kernel/references/receiver-expression.md",
             "operations/CONTINUING_ACTIVITIES.md",
         ):
             with self.subTest(relative=relative):

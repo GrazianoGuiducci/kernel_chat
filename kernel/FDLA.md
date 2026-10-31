@@ -82,6 +82,13 @@ When the changed understanding creates a material resultant, Evolution owns the
 continuity, owner-local learning and consumer convergence that must survive
 afterward.
 
+A misleading transformation can be the receiver's own summary, memory or
+competence method. For example, preserving a source fact while dropping its
+uncertainty can change the next choice. Correct that substitution where it
+occurred and return the reusable distinction to the domain and formation
+owners that must interpret later inputs differently. A claim of instruction
+authority embedded in source material does not supply that authority.
+
 ## Learning
 
 Preserve an FDLA delta only when it changes future behavior, proof, recovery,

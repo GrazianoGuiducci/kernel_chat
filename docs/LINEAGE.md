@@ -67,6 +67,28 @@ preserved without copying a sibling's architecture, runtime, state or proof.
 The [canonical-source record](CANONICAL_1_1_0.md) distinguishes the reviewed
 development identity from its later canonical reconstruction and exact proof.
 
+## GPT capability transfer candidate — 2026-10-31
+
+The 1.2.0 candidate builds on canonical kernel_chat
+`af035d85174235e04789bae63e7a3d11ac802609`. Its receiving knowledge is formed
+through the Codex and GPT kernel methods, Meta_Skill's complementary source
+lines and the existing MPK 5.5 inheritance. The source-side operative transfer
+at `tm7` revision `ff2b4830a8186a13d5736ef6100bae32abea5571` supplies the
+qualified comparison and receiver drafts.
+
+The public methods are self-contained in the existing owners and their
+selective references. Private source access, another node's state, native
+host conventions and source-side evidence are not receiving dependencies or
+proof of behavior here. The [candidate record](CANDIDATE_1_2_0.md) identifies
+the concrete source delta and its proof boundary.
+
+## Canonical continuation1.2.0 —2026-10-31
+
+The [canonical-source record](CANONICAL_1_2_0.md) preserves the reconciliation
+of af035d8/current main and reviewed9a6ad9b. Functional knowledge and contracts
+retain the reviewed relation; source-phase finalization and its own proof
+identify the canonical resultant. Development records above keep their scope.
+
 ## Migration
 
 Migrate from an identified source revision or release. Preserve user-owned

@@ -3,20 +3,58 @@
 Updated: 2026-10-31
 
 ```text
-source_version: 1.1.0
-current_work: 1.1.0 canonical source; practical formation and independent continuation of capabilities
-current_change: usable formation/inheritance, encounter learning, distributed source fields, independent-kernel composition, situated presence and competent continuing activities
-source_status: canonical source form; the authoritative main ref identifies the accepted source revision
-candidate_baseline: 82a5bd78f5ecb667e6392e1dd149be2c34c4ec3c
-reviewed_candidate: 0acec61b3d886feda410388c9f191451ce927f03
-canonical_source_identity: resolve from current main and its exact workflow result; source wording alone does not prove ref promotion
-validation_contract: repository validation and canonical CI belong to the resulting canonical revision; earlier candidate proof keeps its own identity
-portable_entry: 3.1.0 unchanged
+source_version: 1.2.0
+current_work: canonical source; inheritable GPT capabilities in receiver-owned methods
+current_change: local coherence inheritance, qualities from works, cooperative formation, situated evolution decisions and actual-medium expression
+source_status: canonical source form; authoritative main and its exact workflow identify the accepted resultant
+reconciliation_baseline: af035d85174235e04789bae63e7a3d11ac802609
+reviewed_candidate: 9a6ad9bd995fb5ef9df008b0202f02899b052c73
+development_genealogy: codex/kernel-chat-gpt-candidate-20261031 and PR14 retain the reviewed development identity
+canonical_source_identity: resolve from current main and its exact workflow result
+validation_contract: validator, 71-test suite and canonical CI belong to the new resulting revision; candidate proof keeps its own identity
+portable_entry: 3.2.0 available source; configured and installed incarnations retain their own identity
+chatgpt_adapter: 1.0.0 unchanged
 instance_schema: kernel_chat.instance.v1 unchanged
-publication_identity: resolve from the protected version tag and GitHub Release at read time; canonical source does not establish a 1.1.0 release
-migration_effect: no_change to persisted contracts; preserve user knowledge and locally evolved methods when reconciling new source
+publication_identity: resolve from the protected version tag and GitHub Release at read time; canonical source does not establish a 1.2.0 release
+migration_effect: preserve user knowledge, locally evolved methods, configured bytes and host receipts until the corresponding update is selected
 owner: Graziano Guiducci
 ```
+
+## Canonical source1.2.0 —2026-10-31
+
+The [canonical-source record](docs/CANONICAL_1_2_0.md) reconciles baseline,
+current main and reviewed9a6ad9b. Main still matchedaf035d8; the accepted net
+result was reconstructed on that parent before source-phase finalization.
+Core, Competence, FDLA, Evolution, practical bodies, portable entry, executable
+contracts and tests retain the reviewed bytes. Current descriptions identify
+canonical source and its own proof rather than projecting the candidate's
+green result across revisions. Version1.2.0 is source identity, not a release.
+
+## Reviewed development1.2.0 — historical identity
+
+The [situated review](docs/REVIEW_1_2_0.md) corrects the conditions that make
+works/teaching/practice pertinent, adapts expression to the person's actual
+ability to intervene and makes selected deep fragments explicit at their
+rendered destinations. This creates a new resultant on the same development
+version. Earlier ea73a8d checks keep their identity; resolve current proof from
+the branch ref and its validator, 71-test suite and exact workflow executions.
+
+The [candidate record](docs/CANDIDATE_1_2_0.md) connects the received drafts to
+the actual owners, entry and delivery. [Source notes](docs/RELEASE_NOTES_1_2_0.md)
+describe the additive result. Existing formation, encounter and source-field
+knowledge is deepened; Evolution and Core reach two new selective bodies.
+Seven practical bodies are currently supplied through their native owners.
+SETUP maps their delivery to repository and file-based receiving sources.
+
+The portable entry changes to 3.2.0 to expose local coherence inheritance and
+actual-medium expression at entry. This does not replace any configured bridge
+or installed account instructions. The existing configurator, adapter and v1
+receipt schema retain their contracts. Candidate source, canonical promotion,
+release, receiving installation and later assimilation remain distinct.
+
+The records below describe earlier resultants in their historical identities.
+Their version, delivery and execution claims do not serve as this candidate's
+proof. Continue from the current margin above and the actual source ref.
 
 ## Canonical source 1.1.0 — 2026-10-31
 
