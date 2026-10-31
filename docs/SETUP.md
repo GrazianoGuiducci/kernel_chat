@@ -44,14 +44,50 @@ Keep these owner paths reachable from one source revision:
 Use or create the user-owned `CURRENT` and `SOURCES` forms only when
 continuity or source relations need them.
 
+The owners also reach practical knowledge supplied with this source. Keep
+that depth available through the same source route; availability does not
+mean loading every body at entry:
+
+| Canonical source body | Example name on a flat knowledge surface |
+| --- | --- |
+| [Formation and inheritance](../kernel/references/formation-and-inheritance.md) | `formation-and-inheritance.md` |
+| [Learning from encounters](../kernel/references/learning-from-encounters.md) | `learning-from-encounters.md` |
+| [Source field and kernel composition](../kernel/references/source-field-and-kernel-composition.md) | `source-field-and-kernel-composition.md` |
+| [Situated presence](../kernel/references/situated-presence.md) | `situated-presence.md` |
+| [Continuing activities](../operations/CONTINUING_ACTIVITIES.md) | `CONTINUING_ACTIVITIES.md` |
+
+Further linked depth remains selective. For example, a continuing activity
+with an uncertain effect can need [Receipts and recovery](../operations/RECEIPTS_RECOVERY.md).
+Its actual source must then be reachable too. A later version can supply a
+different set: follow the living owners and their material dependencies rather
+than freezing this table as a permanent inventory.
+
 ### B. Project / knowledge storage is the persistent source
 
 Place the same constitutive owners in the environment's persistent
 project/knowledge surface and keep the source revision attributable.
 
+Include the practical bodies above, or connect an actual persistent source
+from which they can be retrieved. Uploading only AGENTS and the four main
+owners leaves the new practical depth unavailable on a files-only route.
+
 Preserve the canonical paths when that surface supports them. If it exposes
 only flat filenames, preserve the same owner identities and render the
 portable entry with the actual references available there.
+
+Keep a usable mapping from canonical paths to the saved names. The table gives
+examples; choose distinct names when this host already contains a collision.
+Translate or resolve the references inside the owners and their deeper bodies
+as well as the entry. For instance, `kernel/references/formation-and-inheritance.md`
+can resolve to the saved `formation-and-inheritance.md`; it does not require
+an emulated filesystem. Retain the method's owner and source revision when a
+native reader uses a filename or search rather than a literal relative link.
+
+If the host cannot retain or retrieve part of the selected depth, identify
+that specific gap and use another adequate source route or supply the body
+when needed. Do not report the full candidate knowledge as available merely
+because its main owners were saved. Existing reachable knowledge can still
+support the work.
 
 The project/knowledge surface is now the kernel source for that host scope.
 
@@ -114,6 +150,12 @@ Start the actual question, activity or project.
 The new kernel instance enters through the installed portable entry and
 reaches only the owners that can change the movement. Do not add a separate
 review or demonstration task merely to prove setup.
+
+An actual question, example or doubt can already teach a useful distinction
+during this first work. Use the
+[encounter method](../kernel/COMPETENCE.md#kernel-chat-learn-from-encounters)
+when that relationship matters; explanation or shared work follows the actual
+question rather than a prescribed demonstration.
 
 Every final response should now carry the compact competence trace defined by
 the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is a

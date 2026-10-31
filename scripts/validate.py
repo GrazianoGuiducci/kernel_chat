@@ -31,10 +31,15 @@ REQUIRED = [
     "kernel/COMPETENCE.md",
     "kernel/FDLA.md",
     "kernel/EVOLUTION.md",
+    "kernel/references/formation-and-inheritance.md",
+    "kernel/references/learning-from-encounters.md",
+    "kernel/references/source-field-and-kernel-composition.md",
+    "kernel/references/situated-presence.md",
     "operations/CURRENT.md",
     "operations/FLOWS.md",
     "operations/REQUESTS_RESULTS.md",
     "operations/RECEIPTS_RECOVERY.md",
+    "operations/CONTINUING_ACTIVITIES.md",
     "adapters/portable/VERSION",
     "adapters/portable/INSTRUCTIONS.template.md",
     "adapters/portable/README.md",
@@ -66,6 +71,26 @@ BRIDGE_IDENTITY_HEADER = re.compile(
 )
 
 AGENT_DISCOVERY_ROUTES = (
+    (
+        "kernel/COMPETENCE.md#kernel-chat-practical-formation",
+        '<a name="kernel-chat-practical-formation"></a>',
+    ),
+    (
+        "kernel/COMPETENCE.md#kernel-chat-learn-from-encounters",
+        '<a name="kernel-chat-learn-from-encounters"></a>',
+    ),
+    (
+        "kernel/KERNEL.md#kernel-chat-source-field",
+        '<a name="kernel-chat-source-field"></a>',
+    ),
+    (
+        "kernel/COMPETENCE.md#kernel-chat-continuing-activities",
+        '<a name="kernel-chat-continuing-activities"></a>',
+    ),
+    (
+        "kernel/COMPETENCE.md#kernel-chat-situated-presence",
+        '<a name="kernel-chat-situated-presence"></a>',
+    ),
     (
         "kernel/KERNEL.md#kernel-chat-participatory-legibility",
         '<a name="kernel-chat-participatory-legibility"></a>',

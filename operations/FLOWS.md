@@ -18,3 +18,9 @@ recovery, stop, or supersession
 
 A flow records continuation, not a transcript and not project truth. It does
 not imply a running worker, daemon, or scheduler.
+
+When that flow belongs to a continuing activity, its competence retains the
+originating purpose and evolving method through
+[continuing activities](CONTINUING_ACTIVITIES.md). The flow can point to that
+knowledge without absorbing it or turning a latent possibility into a decided
+effect.

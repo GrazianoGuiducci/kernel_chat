@@ -25,3 +25,8 @@ read this file
 
 A configured fork may add small objects under this directory. Keep project
 truth in its owner-native source and link to it rather than copying it here.
+
+For work that continues as an activity, use
+[continuing activities](CONTINUING_ACTIVITIES.md) when purpose, domain method
+or a real controller changes the continuation. A schedule can trigger work;
+it does not own the domain knowledge or create a running process here.

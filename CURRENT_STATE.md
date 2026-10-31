@@ -1,22 +1,58 @@
 # kernel_chat — current state
 
-Updated: 2026-09-27
+Updated: 2026-10-31
 
 ```text
-source_version: 1.0.0
-current_work: 1.0.0 release source; whole-field continuation clarification integrated into the first stable public identity
-current_change: the movement can let its own result and the wider field reshape pertinence, including the following question/source/competence/method/continuation, without turning review into a mandatory phase
-release_source_status: formed; the exact current source identity must receive green CI before any tag/GitHub Release effect
-preceding_release_source: b18cea6d3d1a02fb04f5fe2ba946909e20b7015f
-preceding_release_source_proof: CI 36256713727 / 8 of 8 success / validator valid=true / errors=[] / warnings=[] / 68 tests
+source_version: 1.1.0
+current_work: 1.1.0 canonical source; practical formation and independent continuation of capabilities
+current_change: usable formation/inheritance, encounter learning, distributed source fields, independent-kernel composition, situated presence and competent continuing activities
+source_status: canonical source form; the authoritative main ref identifies the accepted source revision
+candidate_baseline: 82a5bd78f5ecb667e6392e1dd149be2c34c4ec3c
+reviewed_candidate: 0acec61b3d886feda410388c9f191451ce927f03
+canonical_source_identity: resolve from current main and its exact workflow result; source wording alone does not prove ref promotion
+validation_contract: repository validation and canonical CI belong to the resulting canonical revision; earlier candidate proof keeps its own identity
 portable_entry: 3.1.0 unchanged
 instance_schema: kernel_chat.instance.v1 unchanged
-publication_identity: resolve from the protected version tag and GitHub Release at read time; source formation alone does not claim publication
-migration_effect: no_change; source/release publication does not automatically replace configured entries, installed host instructions or user-owned state
+publication_identity: resolve from the protected version tag and GitHub Release at read time; canonical source does not establish a 1.1.0 release
+migration_effect: no_change to persisted contracts; preserve user knowledge and locally evolved methods when reconciling new source
 owner: Graziano Guiducci
 ```
 
-## Whole-field continuation clarification — 2026-09-27
+## Canonical source 1.1.0 — 2026-10-31
+
+The [canonical-source record](docs/CANONICAL_1_1_0.md) preserves reconciliation
+of baseline, current main and the reviewed candidate. At that contact main
+still matched the baseline, so no independent canonical delta was discarded.
+The accepted functional relation is reconstructed with truthful source-phase
+wording; canonical identity and proof come from the actual ref and execution.
+
+The existing owners now carry more usable practical knowledge. Competence
+reaches formation/inheritance, principles and maturing possibilities, learning
+from demonstrations and encounters, situated presence and continuing activity.
+Core reaches the distributed source-field method and adapts the density of
+its competence trace. Evolution deepens reconciliation with locally evolved
+knowledge. Operations connects originating purpose and mutable method to a
+real controller when present.
+
+Five on-demand knowledge bodies continue these methods. AGENTS reaches their
+acting owners from material conditions; structural validation protects their
+delivery and route markers, while the CommonMark consumer observes active
+navigation. They are not a fixed loading sequence or a new runtime.
+
+The [development review](docs/CANDIDATE_1_1_0.md) records the baseline, decisions,
+compatibility and evidence scope. [Source notes](docs/RELEASE_NOTES_1_1_0.md)
+explain the resulting source identity. The portable entry remains `3.1.0`,
+ChatGPT adapter `1.0.0` and INSTANCE schema `kernel_chat.instance.v1`.
+No account instruction, configured bridge, user instance or scheduler is changed
+by forming this canonical source.
+
+The situated review also deepens complementary functional orientation while
+the question forms and closes a file/knowledge delivery gap. Setup identifies
+the practical bodies and their canonical-to-flat-name mapping, including
+owner-to-reference resolution. Each changed source has its own validation
+identity; earlier source proof remains scoped to the earlier revision.
+
+## Historical 1.0.0 source — whole-field clarification, 2026-09-27
 
 Core now makes explicit that the current movement includes what it has already
 produced in relation to the wider field. When that relation materially changes

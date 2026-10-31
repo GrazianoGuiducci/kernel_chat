@@ -2,6 +2,35 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
+## 1.1.0 — canonical source
+
+- Formed canonical-source identity from the reviewed candidate after comparing
+  both deltas against the recorded baseline. Main still matched that baseline;
+  current source wording, canonical proof, release and installation retain
+  distinct identities.
+
+- Situated review deepened complementary functional orientation while the
+  question forms and corrected file/knowledge adoption so the practical bodies
+  and inner source references remain reachable beyond a complete repository.
+- Deepened formation with practical acquisition, recomposition, consolidation
+  and generative inheritance. Principles change concrete abilities; useful
+  possibilities can mature with their source and reason before their final form.
+- Added on-demand methods for learning decisions from demonstrations and shared
+  encounters, attributing assistance and letting doubt change the shared question.
+- Added source-field formation and optional composition of independent kernels,
+  preserving identity, state, local learning and effect owners. Situated presence
+  knowledge participates when representation itself changes the work.
+- Connected continuing activity to originating purpose, evolving domain method
+  and a native controller when present. Existing uncertain-effect recovery stays
+  with Operations.
+- Deepened local/source reconciliation and adaptive competence-trace density.
+- Connected five practical knowledge bodies through existing owners and AGENTS.
+  Extended structural delivery checks and CommonMark navigation coverage.
+- Root source version is `1.1.0`: additive operating knowledge within the
+  stable semantic contract. Portable entry `3.1.0`, ChatGPT adapter `1.0.0`,
+  INSTANCE schema, configuration mechanics and installed host state are unchanged.
+  Canonical promotion, tag and release publication remain separate effects.
+
 ## 1.0.0 — release source
 
 - **Whole-field continuation:** made explicit that a movement remains related to

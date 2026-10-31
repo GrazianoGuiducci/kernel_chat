@@ -9,7 +9,35 @@ mechanics. Ordinary work still uses the pertinent owners reached from
 [Evolution](../kernel/EVOLUTION.md#kernel-chat-regenerate-kernel), not by this
 history or a release receipt.
 
-## Current return — whole-field continuation, 2026-09-27
+## Current canonical-source formation — 2026-10-31
+
+The [canonical-source record](CANONICAL_1_1_0.md) connects the reviewed 1.1.0
+candidate to the current canonical owner. Baseline and main matched at the
+reconciliation contact; the functional delta is preserved and source-phase
+descriptions are formed for canonical truth. The resulting main revision
+receives its own CI. Candidate proof, canonical source, release and installed
+host remain distinct. Do not repeat the earlier comparison as a new task.
+
+## Development candidate — practical formation, 2026-10-31
+
+The [1.1.0 candidate review](CANDIDATE_1_1_0.md) preserves the current
+baseline, design reasons, receiving contracts and proof scope. The comparison
+found the general generative faculty already present. Formation, source-field,
+encounter and activity knowledge now make its practical inheritance deeper
+through existing owners and five on-demand bodies.
+
+This construction distinguishes missing know-how from an existing body whose
+entry was lost. It preserves sufficient evidence/recovery methods and connects
+their use rather than duplicating them. The operating entry still reaches the
+same four owners; package validation protects delivery and active navigation,
+not model behavior. Source candidate, canonical promotion, release, instance
+reconciliation and host installation keep their distinct identities.
+
+Earlier returns below are accumulated history, not a task queue or current
+version/proof claim. Continue from the present receiving result and the
+material difference that can change it.
+
+## Earlier return — whole-field continuation, 2026-09-27
 
 A later source-side correction exposed one relation that was already distributed
 across open-field operation, synthetic situated awareness, mobile observation

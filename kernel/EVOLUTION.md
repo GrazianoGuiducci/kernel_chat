@@ -263,6 +263,21 @@ distributed across Core, Competence, FDLA, Evolution, entries, state or local
 competences. Conversely, matching words or a registered source do not prove
 that the method is reachable or exercised.
 
+When a later source meets a locally evolved kernel, compare the received base
+when known, the current local method and the proposal, including references
+and consumers whose meaning can change. Keep an unknown base unknown. Preserve
+complementary local knowledge; a newer date or textual merge does not decide
+which method fits the present field. Competence's
+[formation and inheritance knowledge](references/formation-and-inheritance.md#reconcile-what-returns)
+deepens this reconciliation.
+
+The result may teach both a domain method and the method that selected or
+formed its knowledge. Return the specific difference to each owner that must
+act differently. If a body was sufficient but its entry lost it, reconnect the
+entry instead of duplicating the method. A completed part returns to the
+larger movement it served with its contribution and still-open question;
+recency alone does not select the next object.
+
 When a material relation is lost, use the first-losing-transformation relation
 below. When the accumulated history of earlier kernel incarnations can change
 the present method, reach the

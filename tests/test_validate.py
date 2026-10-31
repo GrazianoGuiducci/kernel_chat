@@ -93,6 +93,28 @@ class ValidateTests(unittest.TestCase):
         self.assertIn(f"source_version: {version}", current_state)
         self.assertIn(f"## {version} —", changelog)
 
+    def test_missing_practical_knowledge_is_not_a_valid_delivery(self) -> None:
+        for relative in (
+            "kernel/references/formation-and-inheritance.md",
+            "kernel/references/learning-from-encounters.md",
+            "kernel/references/source-field-and-kernel-composition.md",
+            "kernel/references/situated-presence.md",
+            "operations/CONTINUING_ACTIVITIES.md",
+        ):
+            with self.subTest(relative=relative):
+                path = self.root / relative
+                original = path.read_bytes()
+                path.unlink()
+                try:
+                    result, payload = self.validate()
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertFalse(payload["valid"])
+                    self.assertIn(
+                        f"missing required file: {relative}", payload["errors"]
+                    )
+                finally:
+                    path.write_bytes(original)
+
     def test_generative_entry_seed_is_convergent(self) -> None:
         competence = (self.root / "kernel/COMPETENCE.md").read_text(encoding="utf-8")
         portable = (
@@ -129,7 +151,7 @@ class ValidateTests(unittest.TestCase):
         self.assertIn("Generative competence field", readme)
         self.assertIn("Generative entry seed", readme)
 
-    def test_release_source_truth_is_publication_stable(self) -> None:
+    def test_source_phase_keeps_publication_identity_separate(self) -> None:
         version = (self.root / "VERSION").read_text(encoding="utf-8").strip()
         current_state = (self.root / "CURRENT_STATE.md").read_text(encoding="utf-8")
         changelog = (self.root / "CHANGELOG.md").read_text(encoding="utf-8")
@@ -139,11 +161,24 @@ class ValidateTests(unittest.TestCase):
 
         self.assertTrue(notes_path.is_file(), notes_path)
         release_notes = notes_path.read_text(encoding="utf-8")
-        self.assertIn(f"{version} release source", current_state)
-        self.assertIn("publication_identity:", current_state)
-        self.assertIn(f"## {version} — release source", changelog)
-        self.assertNotIn(f"## {version} — candidate", changelog)
-        self.assertNotIn("this is a source candidate only", changelog.lower())
+        self.assertIn(f"source_version: {version}", current_state)
+        self.assertIn(version, release_notes.splitlines()[0])
+        self.assertTrue(
+            any(
+                line in (
+                    f"## {version} — candidate source",
+                    f"## {version} — canonical source",
+                    f"## {version} — release source",
+                )
+                for line in changelog.splitlines()
+            )
+        )
+        publication_identity = next(
+            line for line in current_state.splitlines()
+            if line.startswith("publication_identity:")
+        )
+        self.assertIn("protected version tag", publication_identity)
+        self.assertIn("GitHub Release", publication_identity)
         self.assertIn("Publication boundary", release_notes)
 
     def test_portable_instruction_source_is_required(self) -> None:
