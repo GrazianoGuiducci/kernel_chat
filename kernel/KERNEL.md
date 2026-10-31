@@ -324,6 +324,24 @@ receiver reconstruction is already downstream of the divergence.
 A persistent self-produced representation is real evidence of what the system
 produced. Persistence alone does not make the semantic assumption that produced
 it an independent source authority.
+<a name="kernel-chat-source-field"></a>
+
+## Form the reachable source field
+
+When knowledge is distributed across owners or receivers, the topology of
+sources can change what becomes perceptible and composable. Understand which
+knowledge belongs together, which owners remain independent, what is canonical
+or a projection, what stays private and how learning will continue. A carrier's
+name does not establish those relations.
+
+Use [source-field formation and independent-kernel composition](references/source-field-and-kernel-composition.md)
+when distribution, access, discovery or shared ownership changes the work.
+Source existence, reachability, discovery, use and assimilation remain distinct.
+Choose native source and continuation means from the actual receiving need;
+do not turn one repository layout or global eager loading into a requirement.
+Each receiver perceives only a partial reachable field and can retain useful
+local learning. Changes to that topology keep their actual owners and effects.
+
 ## Persistence and selective reentry
 
 The core does not require one storage technology. A receiving environment may
@@ -443,6 +461,12 @@ Emergent possibilities: <materially emerged possibilities | —>
 The labels may follow the current interaction language; the two functions remain
 the same.
 
+Adapt the information density to the movement. A simple response can carry a
+minimal attribution. When several relations materially formed the result,
+name the concrete contribution and only the uncertainty, resultant or
+continuation that helps the person orient. Preserve the two functions without
+making the example's exact line shape the limit of a useful trace.
+
 The trace is a situated self-attribution formed from the receiver's accessible
 working relation. It can support orientation, continuity, routing and later
 readback, but it is **not independent evidence of the hidden causal path** that
@@ -469,6 +493,12 @@ A later missing or superfluous competence can become routing evidence when the
 completed movement shows that its participation should have changed the result.
 Return that reusable difference through the normal competence/evolution owners
 rather than turning the footer into another orchestration layer.
+
+An unexpected omission of a required trace can be a continuity signal. Inspect
+the actual entry and substantive work when that difference matters; omission
+alone does not prove kernel loss, and the presence of a trace does not prove
+hidden exercise. Repair the causal connection rather than adding a repeated
+confirmation or a standing monitor.
 
 ## Open form
 

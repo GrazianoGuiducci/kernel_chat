@@ -255,6 +255,33 @@ expose a consequence that revises an earlier method. Reusable learning lives in
 the affected owner; CURRENT/SOURCES preserve the current reentry implication
 and pointer when needed.
 
+## Practical depth and independent composition
+
+The existing semantic owners reach practical knowledge on demand:
+
+- Competence reaches formation/inheritance, principles and maturing
+  possibilities, demonstration/encounter learning and situated presence;
+- Core and Competence reach source-field formation and independent-kernel
+  composition;
+- Competence and Operations connect continuing purpose, domain learning and
+  a real controller when present;
+- Evolution preserves the specific returns and reconciles new source knowledge
+  with locally evolved methods.
+
+These bodies are readable operating knowledge. They introduce no second
+planner, scheduler or state schema. AGENTS supplies conditions of pertinence;
+the acting owner supplies its method and reaches deeper references when needed.
+The portable entry can keep pointing to those same owners.
+
+Kernel_chat is usable alone and can be an optional general continuity kernel
+inside an operator-controlled environment. Other kernels retain their identity,
+sources, state and learning. The environment supplies real access and tools;
+it does not automatically become the semantic owner. A concrete integration
+can later need a native interface, but source availability alone does not
+require a registry or broker. The
+[source-field method](../kernel/references/source-field-and-kernel-composition.md)
+carries that practical relation.
+
 ## Kernel regeneration
 
 Evolution owns the receiver-native relation for regenerating the kernel itself.

@@ -212,6 +212,31 @@ class MarkdownConsumerTests(unittest.TestCase):
         agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         links = set(active_links(agents))
         contracts = {
+            "kernel/COMPETENCE.md#kernel-chat-practical-formation": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-practical-formation",
+                "Practical formation and inheritance",
+            ),
+            "kernel/COMPETENCE.md#kernel-chat-learn-from-encounters": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-learn-from-encounters",
+                "Learn from encounters",
+            ),
+            "kernel/KERNEL.md#kernel-chat-source-field": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-source-field",
+                "Form the reachable source field",
+            ),
+            "kernel/COMPETENCE.md#kernel-chat-continuing-activities": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-continuing-activities",
+                "Continue competent activities",
+            ),
+            "kernel/COMPETENCE.md#kernel-chat-situated-presence": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-situated-presence",
+                "Form a situated presence",
+            ),
             "kernel/KERNEL.md#kernel-chat-participatory-legibility": (
                 ROOT / "kernel/KERNEL.md",
                 "kernel-chat-participatory-legibility",
@@ -356,6 +381,30 @@ class MarkdownConsumerTests(unittest.TestCase):
             ),
             active_anchor_owner_pairs(intervening_rendered_element),
         )
+
+    def test_practical_depth_is_linked_from_the_acting_owner(self) -> None:
+        # A depth file elsewhere in the package is insufficient if the acting
+        # owner no longer gives the receiver an active route to its method.
+        contracts = {
+            "kernel/COMPETENCE.md": (
+                "references/formation-and-inheritance.md",
+                "references/learning-from-encounters.md",
+                "references/source-field-and-kernel-composition.md",
+                "references/situated-presence.md",
+                "../operations/CONTINUING_ACTIVITIES.md",
+            ),
+            "kernel/KERNEL.md": (
+                "references/source-field-and-kernel-composition.md",
+            ),
+        }
+        for owner, destinations in contracts.items():
+            path = ROOT / owner
+            links = set(active_links(path.read_text(encoding="utf-8")))
+            for destination in destinations:
+                with self.subTest(owner=owner, destination=destination):
+                    self.assertIn(destination, links)
+                    self.assertTrue((path.parent / destination).is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

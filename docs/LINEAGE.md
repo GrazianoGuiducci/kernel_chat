@@ -50,6 +50,20 @@ The capability field remains open. Lineage records where current relations came
 from; it is not a ceiling on forms or capabilities that later use may make
 pertinent.
 
+## Practical formation candidate — 2026-10-31
+
+The 1.1.0 candidate starts from kernel_chat
+`82a5bd78f5ecb667e6392e1dd149be2c34c4ec3c`. Its practical knowledge is formed
+through the living Codex and GPT kernel methods and the concrete portable
+inheritance of MAIOS Project Kernel 5.5 at
+`605ea6136a096d971424ab93863280c02e6235d9`.
+
+The contribution deepens receiver-owned formation, principles/possibilities,
+encounter learning, source topology, independent-kernel composition, presence
+and continuing activity. The current public bodies contain the usable methods;
+no private source access is needed to understand them. Primary lineage is
+preserved without copying a sibling's architecture, runtime, state or proof.
+
 ## Migration
 
 Migrate from an identified source revision or release. Preserve user-owned

@@ -1,9 +1,14 @@
 # kernel_chat
 
-`kernel_chat 1.0` is a **user-owned semantic operating kernel for AI**. It gives
+`kernel_chat` is a **user-owned semantic operating kernel for AI**. It gives
 a receiving AI a persistent operating relation for continuing from the present,
 reaching the sources that matter, reusing and evolving competences, learning
 from real work, and carrying that learning into later non-identical tasks.
+
+This branch carries the **1.1.0 source candidate**. Its
+[candidate review](docs/CANDIDATE_1_1_0.md) and
+[candidate notes](docs/RELEASE_NOTES_1_1_0.md) describe the new practical depth;
+a published release has its own tag and release identity.
 
 Install it when you want an AI surface to become a continuing semantic system
 you can inspect and own, instead of rebuilding context, reasons and ways of
@@ -49,6 +54,13 @@ begin from an improved capability rather than from a remembered outcome alone.
   reconstructed as chat context each time.
 - **Learning from real work** — corrections, successful methods, changed
   directions and consequences can change how future work is handled.
+- **Practical formation** — sources, principles, examples and emerging
+  possibilities can become usable methods; the way those methods are formed
+  can learn too.
+- **Independent cooperation** — distributed sources and compatible kernels
+  can contribute while identities, continuity and learning remain distinct.
+- **Competent continuing activity** — retain an activity's originating purpose
+  while its domain method improves through reentry or actual scheduled work.
 - **Situated awareness** — the current context, still-causal sources, pertinent
   competences, actual means and consequences can participate together without
   pretending the receiver sees the whole field.
@@ -162,6 +174,11 @@ relations behind each capability.
 | **Local FOCUS / resolve-on-contact** | Lets competence-local references make nearby depth pertinent without freezing owner/path/version or treating a broken reference as capability absence. | [Competence FOCUS](kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact) |
 | **Generative entry seed** | Keeps competence formation inside the work from first entry: reuse/deepen/compose before new structure; distinguish transient state from durable ways of deciding/working; let formation itself learn. | [Competence seed](kernel/COMPETENCE.md#generative-entry-seed) |
 | **Learning return** | Turns a reusable difference from real work into a change in the competence or owner that should understand or perform later work differently. | [Evolution](kernel/EVOLUTION.md) · [Competence](kernel/COMPETENCE.md) |
+| **Practical formation and inheritance** | Makes knowledge, principles and maturing possibilities usable in a capacity that can continue forming and learning. | [Formation](kernel/COMPETENCE.md#kernel-chat-practical-formation) |
+| **Learning from encounters** | Learns consequential decisions from demonstrations, corrections and shared work, with help and uncertainty attributable. | [Encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters) |
+| **Distributed sources and independent kernels** | Shapes a reachable source field and composes useful contributions while preserving independent owners and learning. | [Source field](kernel/KERNEL.md#kernel-chat-source-field) |
+| **Continuing activities** | Connects originating purpose, evolving domain method and a real controller when present. | [Activities](kernel/COMPETENCE.md#kernel-chat-continuing-activities) |
+| **Situated presence** | Forms a truthful signature, explanation or representation when presence itself changes the encounter. | [Presence](kernel/COMPETENCE.md#kernel-chat-situated-presence) |
 | **Kernel regeneration** | Re-forms the kernel from material source lineage, the current receiver, useful local evolution and present capabilities instead of resetting to an upstream snapshot. | [Evolution regeneration](kernel/EVOLUTION.md#kernel-chat-regenerate-kernel) · [Evolution guide](docs/EVOLUTION_GUIDE.md) |
 | **Primary living lineage** | Preserves a primary kernel lineage while allowing materially assimilated cross-kernel relations to change the next portable resultant. | [Evolution lineage](kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage) · [Lineage](docs/LINEAGE.md) |
 | **Claim-relative evidence boundary** | Keeps source/model evolution distinct from independent-proof requirements; independence becomes a gate only for claims/effects that depend on it. | [Evolution evidence boundary](kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary) |

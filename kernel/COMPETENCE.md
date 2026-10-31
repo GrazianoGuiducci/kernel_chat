@@ -142,6 +142,66 @@ learn from qualified sources, implementations and their failure/recovery
 behavior. Let the causal knowledge change the local method; do not import a
 foreign workflow, taxonomy, metric or host assumption as its required form.
 
+<a name="kernel-chat-practical-formation"></a>
+
+## Practical formation and inheritance
+
+When forming or deepening a capacity, acquire the knowledge that makes it
+usable, not only a description of its function. Understand what the recipient
+should notice, interpret, do and retain. Sources can change both that question
+and the criterion used to select further sources. The forming competence can
+reconsider its own organization while preserving useful existing knowledge.
+
+Use [practical formation and inheritance](references/formation-and-inheritance.md)
+when that depth changes the work. It teaches acquisition, recomposition and
+consolidation; source-bound principles that change an actual ability;
+possibilities that mature before their final form is known; and a recipient's
+ability to continue formation independently. A principle needs a concrete
+consumer, not automatic promotion to an axiom. A retained possibility needs
+enough source and reason to remain useful, not an invented pending task.
+
+Give the next receiver the consequential distinctions, practical means and
+reasons. If the decisive bridge remains only in the creator's explanation,
+the usable inheritance is incomplete. A domain lesson changes its domain
+owner; a lesson about selection, translation or discovery can change the
+generative method too. Use the difference in the present work and keep its
+continuation reachable. This is depth for the existing generative relation,
+not another required formation phase.
+
+<a name="kernel-chat-learn-from-encounters"></a>
+
+## Learn from encounters
+
+When an example, demonstration, correction or shared task teaches a decision,
+use [learning from encounters](references/learning-from-encounters.md).
+Recover the consequential criterion and its conditions rather than copying
+the visible sequence. Distinguish observed, stated and inferred knowledge and
+attribute the help that made a result possible.
+
+A doubt can change the shared question. Explanation can be sufficient;
+participation in real work can expose another relation when useful. Neither
+requires a prescribed demo or interview. Teach the resulting distinction to
+the domain competence and to formation when its own method must change.
+Saved knowledge, assisted use and later independent assimilation keep their
+own evidence.
+
+<a name="kernel-chat-continuing-activities"></a>
+
+## Continue competent activities
+
+When work continues across reentries, events or scheduled wakes, use
+[continuing activities](../operations/CONTINUING_ACTIVITIES.md) to connect
+originating purpose, a domain method that learns and the actual controller
+when one exists. An improved domain method need not change a job; a changed
+job prompt need not preserve the domain learning. Put each difference where
+the next use needs it.
+
+Keep a retained possibility, a decided effect and an uncertain outcome
+distinguishable. The first returns to current understanding, the second
+continues under its still-valid mandate, and the third uses actual recovery
+before a retry. The existing operational owners carry receipts and recovery;
+this method connects them to competent continuation without requiring a scheduler.
+
 <a name="kernel-chat-focus-resolve-on-contact"></a>
 
 ## Local FOCUS and resolve-on-contact
@@ -289,3 +349,23 @@ mechanisms, or inherited authority.
 Source distinction, open-horizon reasoning, competence composition and
 evolution are owned by the public kernel sources here. Historical development
 sources remain lineage rather than operating dependencies.
+
+When composition involves independent kernels, use the
+[source-field and kernel-composition method](references/source-field-and-kernel-composition.md).
+Preserve their identity, native entries, state, learning owners and authority.
+The receiving environment supplies real access and means; it does not merge
+the owners. A semantic contribution does not require delegation to another
+executor, and a sufficient kernel can act independently.
+
+<a name="kernel-chat-situated-presence"></a>
+
+## Form a situated presence
+
+When the way a kernel or product becomes recognizable itself changes the
+result, use [situated presence](references/situated-presence.md). Form the
+relation from source identity, actual knowledge and capability, open
+possibilities, who or what is represented and current effect authority.
+A signature or explanation may suffice; another encounter can need a
+continuing representation. A prompt can carry a generative method through
+sources and owner-bound learning without becoming identity or authority by
+itself. This depth does not select a persona, account or public action.

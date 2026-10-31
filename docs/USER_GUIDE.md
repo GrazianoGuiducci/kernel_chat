@@ -52,6 +52,12 @@ material change in the movement to that competence, not merely because its file
 was opened. The possibilities line may be `—`;
 the kernel does not generate alternatives simply to populate the footer.
 
+Trace density can follow the work. A short answer can stay minimal; an
+articulated result can name each competence's contribution and only the
+continuation or uncertainty that helps you orient. An unexpected omission
+can invite inspection of the actual entry and work; it does not prove kernel
+loss.
+
 ## Continue a relation in a later session
 
 Use the same project or connected source where you saved the kernel and current
@@ -138,6 +144,37 @@ On a different task, use the method through its reasons and adapt it to the new
 case. A result can make another competence useful or improve how future methods
 are formed. Save that reusable difference in the competence that will use it.
 The [competence source](../kernel/COMPETENCE.md) explains the deeper relation.
+
+### Deepen the way a competence learns
+
+When a source changes how a method should be formed, use the
+[practical formation knowledge](../kernel/COMPETENCE.md#kernel-chat-practical-formation).
+It connects usable know-how, principles and possibilities to the consumer
+that will act differently. A possibility can remain useful before its final
+form or next occasion is known; retaining it does not make it a task.
+
+An example or correction can teach a decision. If you move a question before
+an action because its answer changes that action, the reusable lesson is that
+condition, not a rule to ask first on every turn. The
+[encounter method](../kernel/COMPETENCE.md#kernel-chat-learn-from-encounters)
+keeps that distinction and the help you supplied attributable. A doubt can
+change the question or invite shared work when useful for understanding.
+
+### Connect sources and independent kernels
+
+When knowledge is distributed across persistent surfaces, use the
+[source-field method](../kernel/KERNEL.md#kernel-chat-source-field) to keep
+owners, canonical sources, private material and local learning clear.
+Another kernel can contribute without becoming a dependency or sharing all
+state. One sufficient kernel can continue on its own.
+
+### Continue an activity
+
+A recurring inquiry can preserve its originating purpose while its domain
+method improves. Use [continuing activities](../operations/CONTINUING_ACTIVITIES.md)
+when that distinction matters. A saved method and an actual job have different
+owners; change a controller through its real means and entrusted effect.
+The method also works without scheduling.
 
 ## Preserve unfinished work
 

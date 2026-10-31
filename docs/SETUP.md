@@ -115,6 +115,12 @@ The new kernel instance enters through the installed portable entry and
 reaches only the owners that can change the movement. Do not add a separate
 review or demonstration task merely to prove setup.
 
+An actual question, example or doubt can already teach a useful distinction
+during this first work. Use the
+[encounter method](../kernel/COMPETENCE.md#kernel-chat-learn-from-encounters)
+when that relationship matters; explanation or shared work follows the actual
+question rather than a prescribed demonstration.
+
 Every final response should now carry the compact competence trace defined by
 the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is a
 receiver-local attribution of material competence participation: useful

@@ -176,6 +176,29 @@ and durable methods/preferences/decision criteria are distinguished from
 transient state. Reuse, deepen and compose before creating a new competence.
 The relation is generative but not a planner, supervisor or mandatory preflight.
 
+When usable know-how, a source-bound principle, a maturing possibility or
+generative inheritance changes the capacity being formed, use
+[Competence practical formation](kernel/COMPETENCE.md#kernel-chat-practical-formation).
+It reaches the deeper method without requiring another formation phase.
+
+When a demonstration, correction or shared encounter teaches a consequential
+decision, use [Competence learning from encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters).
+Keep assistance and observation attributable; a doubt can change the question.
+
+When the distribution of sources or participation of independent kernels
+changes what is reachable, composable or able to continue, use
+[Core source-field formation](kernel/KERNEL.md#kernel-chat-source-field).
+Preserve distinct source, state, learning and effect owners.
+
+When work continues across reentries, events or actual scheduled wakes, use
+[Competence continuing activities](kernel/COMPETENCE.md#kernel-chat-continuing-activities)
+to connect purpose, domain method and controller when present.
+
+When the way a kernel or product becomes recognizable itself changes the work,
+use [Competence situated presence](kernel/COMPETENCE.md#kernel-chat-situated-presence).
+Its identity, knowledge, capability, possibility, representation and authority
+remain distinguishable in the actual encounter.
+
 When more than one materially different movement remains open and the
 difference can change the result, reach the [Core situated-movement
 relation](kernel/KERNEL.md#situated-movement) and the [competence
@@ -249,6 +272,11 @@ validation does not need to emulate a full Markdown renderer:
 - `kernel/COMPETENCE.md#kernel-chat-focus-resolve-on-contact`
 - `kernel/EVOLUTION.md#kernel-chat-cross-kernel-lineage`
 - `kernel/EVOLUTION.md#kernel-chat-source-evolution-evidence-boundary`
+- `kernel/COMPETENCE.md#kernel-chat-practical-formation`
+- `kernel/COMPETENCE.md#kernel-chat-learn-from-encounters`
+- `kernel/KERNEL.md#kernel-chat-source-field`
+- `kernel/COMPETENCE.md#kernel-chat-continuing-activities`
+- `kernel/COMPETENCE.md#kernel-chat-situated-presence`
 
 When repository/package work forms a stronger claim, route to the
 [package evolution guide](docs/EVOLUTION_GUIDE.md). Keep claim identity and

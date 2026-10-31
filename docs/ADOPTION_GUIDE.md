@@ -114,6 +114,22 @@ observed host behavior
 Inspect or update only the relation that can materially change the present
 result.
 
+## Optional composition and shared encounters
+
+Kernel_chat is usable independently. It can provide general continuity inside
+an operator-controlled environment alongside compatible independent kernels
+when their contributions differ usefully. Preserve each kernel's source,
+entry, state, learning owner and effect authority. The
+[source-field method](../kernel/KERNEL.md#kernel-chat-source-field) explains
+that composition without requiring another general kernel or a registry.
+
+A question or doubt during first use can change what should be understood.
+Explain pertinent facts or participate in actual work when that adds useful
+understanding. The [encounter method](../kernel/COMPETENCE.md#kernel-chat-learn-from-encounters)
+supports learning from that contact without prescribing a demo or onboarding
+interview. Its result can inform the local method and context; it does not
+establish assimilation or authorize an account change.
+
 ## Continue normally
 
 Bring the real topic, question or activity. Pertinent competences participate
