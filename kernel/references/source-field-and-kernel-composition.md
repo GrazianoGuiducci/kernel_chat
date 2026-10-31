@@ -46,6 +46,13 @@ repository, knowledge space, filesystem, connector graph or another adequate
 carrier can support the relation. Git is not required by the semantic method.
 Do not load every source merely to make the field appear complete.
 
+Reachability can change which competences become recognizable, not only where
+their files are stored. If the initial question is selecting every source and
+excluding unfamiliar contributions, use the
+[formation method's complementary orientation](formation-and-inheritance.md#let-the-reachable-field-change-pertinence).
+Let the resulting knowledge change the question or the selection criterion,
+then preserve the useful source connection in its actual owner.
+
 When a source becomes material, resolve its actual identity and current owner.
 An old checkout can remain useful history without representing the latest
 source. An unreachable pointer leaves that relation uncertain; it does not

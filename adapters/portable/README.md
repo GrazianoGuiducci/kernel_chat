@@ -64,3 +64,9 @@ receiver's knowledge surface does not preserve directories, either the
 installation step or a host adapter may translate those references. Translation
 must preserve the same owner mapping; it does not rewrite or duplicate the
 kernel logic.
+
+That mapping also covers owner-to-reference links and any deeper body needed
+by the selected method. Saving only the entry and main owners does not deliver
+their practical depth. The [setup guide](../../docs/SETUP.md) identifies the
+current bodies and gives flat-name examples. Keep them reachable through the
+actual source route, without loading all of them into the persistent prompt.

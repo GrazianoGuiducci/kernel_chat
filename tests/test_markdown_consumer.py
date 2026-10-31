@@ -382,9 +382,10 @@ class MarkdownConsumerTests(unittest.TestCase):
             active_anchor_owner_pairs(intervening_rendered_element),
         )
 
-    def test_practical_depth_is_linked_from_the_acting_owner(self) -> None:
+    def test_practical_depth_is_reachable_from_owners_and_file_setup(self) -> None:
         # A depth file elsewhere in the package is insufficient if the acting
         # owner no longer gives the receiver an active route to its method.
+        # File-based setup must also make the selected depth available.
         contracts = {
             "kernel/COMPETENCE.md": (
                 "references/formation-and-inheritance.md",
@@ -395,6 +396,14 @@ class MarkdownConsumerTests(unittest.TestCase):
             ),
             "kernel/KERNEL.md": (
                 "references/source-field-and-kernel-composition.md",
+            ),
+            "docs/SETUP.md": (
+                "../kernel/references/formation-and-inheritance.md",
+                "../kernel/references/learning-from-encounters.md",
+                "../kernel/references/source-field-and-kernel-composition.md",
+                "../kernel/references/situated-presence.md",
+                "../operations/CONTINUING_ACTIVITIES.md",
+                "../operations/RECEIPTS_RECOVERY.md",
             ),
         }
         for owner, destinations in contracts.items():

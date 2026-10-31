@@ -79,6 +79,41 @@ of versioned notes and an external publication identity resolved through the
 protected tag and GitHub Release. No candidate is relabeled as published to
 satisfy the old assertion.
 
+## Situated review — 2026-10-31
+
+The review starts from candidate `ab78c19d5b235d91cee80036605aa1af2eecf77c`
+and moves from assembled files to the receiving capacity: how a competence
+becomes pertinent, what can change the first question, and which knowledge
+the receiving environment can actually encounter.
+
+Two material differences changed the candidate:
+
+- Formation already let acquisition change the question, but its practical
+  method now teaches complementary functional orientation beyond the initial
+  vocabulary and criterion. The seed reaches that depth while the question
+  forms. A source can make an unrecognized capacity pertinent without first
+  satisfying the frame it may change. Valid determinations remain usable.
+- File/knowledge setup previously named the main owners without identifying
+  the new practical bodies. A repository could be complete while a files-only
+  receiver saved only the entry and main owners. Setup now identifies the
+  deeper sources, gives flat-name examples and covers owner-to-reference
+  resolution as well as the entry. Existing recovery depth is included when
+  an actual effect needs it. The CommonMark test observes this delivery surface.
+
+Broader possibility awareness changed the source-selection question; moving to
+the files-only receiving relation exposed the delivery seam. Possibility of
+other receiving means stays open through logical owner mappings rather than
+a provider-specific mechanism. The operating focus joins intended capability,
+acting owner and actual means. Human-facing setup now makes the missing
+knowledge and the next useful source step recognizable.
+
+The review preserves the five practical bodies and existing semantic owners.
+It has not produced a reason for a new fixed competence stack or a central
+controller. These are source/consumer findings, not a controlled comparison of
+model behavior. The earlier candidate retains its own proof; this changed
+resultant receives validation and CI on its new identity. Root version remains
+the unpublished 1.1.0 candidate within the same compatible source evolution.
+
 ## Validation and its limits
 
 Use the repository-native checks on the candidate revision:

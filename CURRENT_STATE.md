@@ -38,6 +38,12 @@ ChatGPT adapter `1.0.0` and INSTANCE schema `kernel_chat.instance.v1`.
 No account instruction, configured bridge, user instance or scheduler is changed
 by forming this source candidate.
 
+The situated review also deepens complementary functional orientation while
+the question forms and closes a file/knowledge delivery gap. Setup identifies
+the practical bodies and their canonical-to-flat-name mapping, including
+owner-to-reference resolution. The changed candidate has its own validation
+identity; earlier source proof remains scoped to the earlier revision.
+
 ## Historical 1.0.0 source — whole-field clarification, 2026-09-27
 
 Core now makes explicit that the current movement includes what it has already

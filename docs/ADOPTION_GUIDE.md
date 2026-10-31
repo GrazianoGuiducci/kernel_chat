@@ -42,6 +42,11 @@ one reachable kernel source
 The source can be a repository, project/knowledge space, filesystem, connector
 or another durable receiver-native mechanism.
 
+The reachable source includes the practical depth used by its owners. On a
+files-only knowledge surface, use the [setup mapping](SETUP.md) to retain those
+bodies and resolve their references. An entry that names a method is distinct
+from the source knowledge that lets the receiver use it.
+
 An attachment-only session can use the kernel now but does not provide
 cross-session persistence by itself.
 

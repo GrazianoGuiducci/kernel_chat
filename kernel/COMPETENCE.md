@@ -46,6 +46,12 @@ present object + operator relation + sources + possibilities
 -> later work reenters from the changed competence field
 ```
 
+When the first frame may make useful capacities invisible, recover
+[complementary functional orientation](references/formation-and-inheritance.md#let-the-reachable-field-change-pertinence)
+while the question forms. Let a source change what becomes pertinent instead
+of letting the current list decide every contribution. Sufficient acquired
+orientation can act directly.
+
 This is not a mandatory onboarding phase, planner or hidden controller. A clear
 movement can proceed directly. The seed exists so different receivers preserve
 the same generative relation even when they vary in depth or native skill
@@ -151,6 +157,12 @@ usable, not only a description of its function. Understand what the recipient
 should notice, interpret, do and retain. Sources can change both that question
 and the criterion used to select further sources. The forming competence can
 reconsider its own organization while preserving useful existing knowledge.
+
+When the present frame may be choosing both every source and its own criterion
+of completion, recover complementary functional orientation. Let a source or
+another causal plane change which capacities are pertinent; an unrecognized
+contribution need not fit the old filter before it can teach the work.
+Use already sufficient orientation directly and preserve sound determinations.
 
 Use [practical formation and inheritance](references/formation-and-inheritance.md)
 when that depth changes the work. It teaches acquisition, recomposition and

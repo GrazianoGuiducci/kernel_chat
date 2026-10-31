@@ -24,6 +24,41 @@ decisions. Improve the reader's selection method and, if formation selected the
 wrong depth, improve that criterion too. More extracted text is useful only if
 it carries the missing relationship.
 
+## Let the reachable field change pertinence
+
+When the intended capacity is still forming, or the same frame selected all
+sources and what would count as completion, recover a complementary view of
+what can contribute. Consider functions, relations and receiving purposes
+beyond the initial topic vocabulary. Use existing orientation when it is
+sufficient; this is not a full catalogue scan before every task.
+
+A source or another causal plane can make a previously unrecognized competence
+pertinent. Reach its actual body and useful guide, understand the contribution
+and let it change the question, method or criterion when warranted. It need
+not first prove its value inside the frame it may change. An index helps locate
+knowledge; the current list and what the receiver has perceived are smaller
+than the field of possible contribution.
+
+For example, a request to improve repeated answers may first suggest a
+formatting method. A domain source can reveal that interpreting the input is
+the consequential decision. Preserve any useful formatting work while letting
+that knowledge change the question and which competence should carry it.
+A coherent answer under the first criterion does not settle whether that
+criterion fits the intended ability.
+
+Keep the real object and valid determinations while changing observation
+through a useful source, owner, scale, representation or receiving condition.
+An unexamined relation remains unexamined, not an automatic no_change. Another
+view that adds no material difference can support continuing directly.
+Openness does not require inventing alternatives or undoing a sound result.
+
+Carry the contribution into the work: why it becomes pertinent now, which
+knowledge changes a decision, the actual means and where its consequence
+teaches the continuing owner. An existing guide can retain that focus.
+Adding names to a trace or recording more context does not perform this
+connection. A known method displaced by the assistant's frame needs corrected
+use; it does not automatically require another body in the receiving kernel.
+
 ## Let acquisition change the forming method
 
 When consolidating substantial knowledge, acquire its meaning, recompose the
