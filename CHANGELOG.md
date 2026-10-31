@@ -2,6 +2,29 @@
 
 Historical entries describe the contract of their own revision. For the current product relation, use [README.md](README.md) and [CURRENT_STATE.md](CURRENT_STATE.md); later entries may supersede earlier host/adoption descriptions.
 
+## 1.2.0 — candidate source
+
+- Deepened formation with coherence in the competence's own source inputs,
+  transformations and decisions. Useful knowledge, embedded directives and
+  effect authority remain distinct; local synthesis can itself need correction.
+- Extended encounter learning to capabilities, qualities and conditions of
+  effectiveness from works and explanations, supporting original construction.
+- Extended source-field composition to forming cooperation before a project or
+  task division is fixed; independent owners, real contact states, late returns
+  and the smallest useful human bridge remain connected.
+- Added selective Evolution depth for contextual rejection, useful subtraction,
+  necessary equivalent choices, surprise-localized learning and carrier-role
+  readback that preserves schema/API compatibility.
+- Added selective Core depth for expression through the actual medium and
+  observability. Decisive qualifications and trace functions reach the perceived
+  channel without assuming another display, tools or authority.
+- Portable entry is `3.2.0`; root source is `1.2.0`. ChatGPT adapter `1.0.0`,
+  configurator and INSTANCE v1 contracts are unchanged. Existing configured and
+  installed incarnations are preserved. No canonical promotion, tag/release or
+  account installation follows from this candidate.
+- Extended structural delivery and independent CommonMark navigation coverage
+  to the new owner routes and their practical depth, including file-source setup.
+
 ## 1.1.0 — canonical source
 
 - Formed canonical-source identity from the reviewed candidate after comparing

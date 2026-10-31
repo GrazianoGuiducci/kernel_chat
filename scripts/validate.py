@@ -35,6 +35,8 @@ REQUIRED = [
     "kernel/references/learning-from-encounters.md",
     "kernel/references/source-field-and-kernel-composition.md",
     "kernel/references/situated-presence.md",
+    "kernel/references/evolution-decisions.md",
+    "kernel/references/receiver-expression.md",
     "operations/CURRENT.md",
     "operations/FLOWS.md",
     "operations/REQUESTS_RESULTS.md",
@@ -71,6 +73,18 @@ BRIDGE_IDENTITY_HEADER = re.compile(
 )
 
 AGENT_DISCOVERY_ROUTES = (
+    (
+        "kernel/COMPETENCE.md#kernel-chat-cooperative-formation",
+        '<a name="kernel-chat-cooperative-formation"></a>',
+    ),
+    (
+        "kernel/EVOLUTION.md#kernel-chat-evolution-decisions",
+        '<a name="kernel-chat-evolution-decisions"></a>',
+    ),
+    (
+        "kernel/KERNEL.md#kernel-chat-receiver-expression",
+        '<a name="kernel-chat-receiver-expression"></a>',
+    ),
     (
         "kernel/COMPETENCE.md#kernel-chat-practical-formation",
         '<a name="kernel-chat-practical-formation"></a>',

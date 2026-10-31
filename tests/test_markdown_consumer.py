@@ -212,6 +212,21 @@ class MarkdownConsumerTests(unittest.TestCase):
         agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         links = set(active_links(agents))
         contracts = {
+            "kernel/COMPETENCE.md#kernel-chat-cooperative-formation": (
+                ROOT / "kernel/COMPETENCE.md",
+                "kernel-chat-cooperative-formation",
+                "Form cooperation through distinct contributions",
+            ),
+            "kernel/EVOLUTION.md#kernel-chat-evolution-decisions": (
+                ROOT / "kernel/EVOLUTION.md",
+                "kernel-chat-evolution-decisions",
+                "Retain decisions without accumulating constraints",
+            ),
+            "kernel/KERNEL.md#kernel-chat-receiver-expression": (
+                ROOT / "kernel/KERNEL.md",
+                "kernel-chat-receiver-expression",
+                "Expression through the actual receiving medium",
+            ),
             "kernel/COMPETENCE.md#kernel-chat-practical-formation": (
                 ROOT / "kernel/COMPETENCE.md",
                 "kernel-chat-practical-formation",
@@ -396,12 +411,18 @@ class MarkdownConsumerTests(unittest.TestCase):
             ),
             "kernel/KERNEL.md": (
                 "references/source-field-and-kernel-composition.md",
+                "references/receiver-expression.md",
+            ),
+            "kernel/EVOLUTION.md": (
+                "references/evolution-decisions.md",
             ),
             "docs/SETUP.md": (
                 "../kernel/references/formation-and-inheritance.md",
                 "../kernel/references/learning-from-encounters.md",
                 "../kernel/references/source-field-and-kernel-composition.md",
                 "../kernel/references/situated-presence.md",
+                "../kernel/references/evolution-decisions.md",
+                "../kernel/references/receiver-expression.md",
                 "../operations/CONTINUING_ACTIVITIES.md",
                 "../operations/RECEIPTS_RECOVERY.md",
             ),

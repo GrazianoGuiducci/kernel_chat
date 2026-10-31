@@ -34,7 +34,9 @@ when it can change the question, method or result. The interaction stays direct.
 ### Read the competence trace
 
 Every final response closes with two compact functions, localized to the
-current interaction language:
+current interaction language. Its written or spoken form follows the
+[actual receiving medium](../kernel/KERNEL.md#kernel-chat-receiver-expression);
+decisive qualifications stay in the channel you can perceive:
 
 ```text
 Competences: <owners currently attributed as materially forming this response | —>

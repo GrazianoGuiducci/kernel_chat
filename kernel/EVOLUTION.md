@@ -99,6 +99,25 @@ preserve the same capability. A substantive difference exposed during
 refinement needs correction, not merely polishing. Simple work can complete
 this relation directly; no fixed pass count or repeated material effect follows.
 
+<a name="kernel-chat-evolution-decisions"></a>
+
+## Retain decisions without accumulating constraints
+
+When a contextual rejection, useful subtraction or surprising consequence
+changes continuation, use [evolution decisions](references/evolution-decisions.md).
+Keep a rejection's reason and conditions distinct from deferral, missing
+knowledge and refutation. Simplify after determination while retaining still
+causal evidence, recovery, provenance and possibilities. Learn at the first
+point that failed to explain a surprise; cool added support when its reason
+no longer applies. If a choice is necessary between genuinely equivalent
+trajectories, preserve the legitimate owner's criterion and favor a sufficient
+less irreversible movement when that criterion leaves the choice open.
+
+This depth also reads semantic carrier roles at the actual consumer: changing
+a value can leave an old meaning in its key, status or receiving entry. Resolve
+that relationship while preserving schema/API compatibility. These are situated
+decisions, not a required simplification or review pass for every change.
+
 ## Sense incongruence before closure
 
 Evolution does not have to wait until a completed result fails. While a
@@ -213,6 +232,10 @@ Correct the first owner or transformation that changes the required relation,
 then propagate only to consumers whose behavior must change. Do not patch the
 nearest visible artifact merely because the loss becomes visible there. The
 sequence is a diagnostic relation, not a mandatory workflow for ordinary work.
+
+Read a changed value together with the [role its consumer gives the carrier](references/evolution-decisions.md#read-the-carriers-role-at-its-consumer).
+A label that still means current, next or active can reintroduce the previous
+role even when the contained revision is correct.
 
 Persistent incarnations also require semantic readback. A configured bridge,
 state object or other operational projection can remain mechanically current

@@ -3,20 +3,41 @@
 Updated: 2026-10-31
 
 ```text
-source_version: 1.1.0
-current_work: 1.1.0 canonical source; practical formation and independent continuation of capabilities
-current_change: usable formation/inheritance, encounter learning, distributed source fields, independent-kernel composition, situated presence and competent continuing activities
-source_status: canonical source form; the authoritative main ref identifies the accepted source revision
-candidate_baseline: 82a5bd78f5ecb667e6392e1dd149be2c34c4ec3c
-reviewed_candidate: 0acec61b3d886feda410388c9f191451ce927f03
-canonical_source_identity: resolve from current main and its exact workflow result; source wording alone does not prove ref promotion
-validation_contract: repository validation and canonical CI belong to the resulting canonical revision; earlier candidate proof keeps its own identity
-portable_entry: 3.1.0 unchanged
+source_version: 1.2.0
+current_work: candidate source; inheritable GPT capabilities in receiver-owned methods
+current_change: local coherence inheritance, qualities from works, cooperative formation, situated evolution decisions and actual-medium expression
+source_status: development candidate; no canonical promotion is implied
+candidate_baseline: af035d85174235e04789bae63e7a3d11ac802609
+candidate_branch: codex/kernel-chat-gpt-candidate-20261031
+candidate_source_identity: resolve from this branch ref and its exact workflow result
+canonical_source_identity: resolve separately from current main
+validation_contract: structural delivery, CommonMark navigation and configurator tests belong to this candidate revision; earlier proof keeps its own identity
+portable_entry: 3.2.0 available source; prior configured and installed incarnations retain their own identity
+chatgpt_adapter: 1.0.0 unchanged
 instance_schema: kernel_chat.instance.v1 unchanged
-publication_identity: resolve from the protected version tag and GitHub Release at read time; canonical source does not establish a 1.1.0 release
-migration_effect: no_change to persisted contracts; preserve user knowledge and locally evolved methods when reconciling new source
+publication_identity: resolve from the protected version tag and GitHub Release at read time; candidate source does not establish a 1.2.0 release
+migration_effect: additive source and entry knowledge; reconcile useful local learning, preserve configured bytes and host receipts until an explicit corresponding update
 owner: Graziano Guiducci
 ```
+
+## Candidate 1.2.0 — 2026-10-31
+
+The [candidate record](docs/CANDIDATE_1_2_0.md) connects the received drafts to
+the actual owners, entry and delivery. [Source notes](docs/RELEASE_NOTES_1_2_0.md)
+describe the additive result. Existing formation, encounter and source-field
+knowledge is deepened; Evolution and Core reach two new selective bodies.
+Seven practical bodies are currently supplied through their native owners.
+SETUP maps their delivery to repository and file-based receiving sources.
+
+The portable entry changes to 3.2.0 to expose local coherence inheritance and
+actual-medium expression at entry. This does not replace any configured bridge
+or installed account instructions. The existing configurator, adapter and v1
+receipt schema retain their contracts. Candidate source, canonical promotion,
+release, receiving installation and later assimilation remain distinct.
+
+The records below describe earlier resultants in their historical identities.
+Their version, delivery and execution claims do not serve as this candidate's
+proof. Continue from the current margin above and the actual source ref.
 
 ## Canonical source 1.1.0 — 2026-10-31
 

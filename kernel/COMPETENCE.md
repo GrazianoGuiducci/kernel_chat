@@ -172,6 +172,13 @@ ability to continue formation independently. A principle needs a concrete
 consumer, not automatic promotion to an axiom. A retained possibility needs
 enough source and reason to remain useful, not an invented pending task.
 
+Teach coherence in the competence's own inputs and decisions through
+[formation and inheritance](references/formation-and-inheritance.md#inherit-coherence-in-the-competences-own-decisions).
+Useful knowledge, a directive embedded in that knowledge and authority over
+an effect have different roles. A competence's own summary can also lose a
+source qualification. Correct the local method that made the substitution;
+a central kernel reference alone cannot repair it.
+
 Give the next receiver the consequential distinctions, practical means and
 reasons. If the decisive bridge remains only in the creator's explanation,
 the usable inheritance is incomplete. A domain lesson changes its domain
@@ -180,6 +187,23 @@ generative method too. Use the difference in the present work and keep its
 continuation reachable. This is depth for the existing generative relation,
 not another required formation phase.
 
+<a name="kernel-chat-cooperative-formation"></a>
+
+## Form cooperation through distinct contributions
+
+When cooperation itself can make a useful capacity possible, use the
+[cooperative formation method](references/source-field-and-kernel-composition.md#form-a-cooperative-capability).
+Participants can change the common question before a project or division of
+work exists. Form their participation boundaries with the work, preserving
+separate ownership, continuity and effect authority. A capability, method or
+kernel seed can be the first useful result.
+
+Prepared contributions, actual contact and integrated returns keep distinct
+states. A late return meets the present field. When a human bridge is needed,
+prepare the smallest irreducible action and usable material through the actual
+means, rather than passing the reconstruction of the whole coordination to
+the person. No fixed coordination mechanism follows from this relation.
+
 <a name="kernel-chat-learn-from-encounters"></a>
 
 ## Learn from encounters
@@ -187,7 +211,10 @@ not another required formation phase.
 When an example, demonstration, correction or shared task teaches a decision,
 use [learning from encounters](references/learning-from-encounters.md).
 Recover the consequential criterion and its conditions rather than copying
-the visible sequence. Distinguish observed, stated and inferred knowledge and
+the visible sequence. A work or explanation can also teach the qualities and
+conditions that make a construction effective. Let that understanding support
+an original construction and change how relevant knowledge is acquired.
+Distinguish observed, stated and inferred knowledge and
 attribute the help that made a result possible.
 
 A doubt can change the shared question. Explanation can be sufficient;

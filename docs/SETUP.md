@@ -53,6 +53,8 @@ mean loading every body at entry:
 | [Formation and inheritance](../kernel/references/formation-and-inheritance.md) | `formation-and-inheritance.md` |
 | [Learning from encounters](../kernel/references/learning-from-encounters.md) | `learning-from-encounters.md` |
 | [Source field and kernel composition](../kernel/references/source-field-and-kernel-composition.md) | `source-field-and-kernel-composition.md` |
+| [Evolution decisions](../kernel/references/evolution-decisions.md) | `evolution-decisions.md` |
+| [Receiver expression](../kernel/references/receiver-expression.md) | `receiver-expression.md` |
 | [Situated presence](../kernel/references/situated-presence.md) | `situated-presence.md` |
 | [Continuing activities](../operations/CONTINUING_ACTIVITIES.md) | `CONTINUING_ACTIVITIES.md` |
 
@@ -157,7 +159,8 @@ during this first work. Use the
 when that relationship matters; explanation or shared work follows the actual
 question rather than a prescribed demonstration.
 
-Every final response should now carry the compact competence trace defined by
+Every final response should now carry, through its actual written or spoken
+medium, the compact competence trace defined by
 the [Core](../kernel/KERNEL.md#kernel-chat-competence-trace). That trace is a
 receiver-local attribution of material competence participation: useful
 readback, but not independent proof of the hidden causal path or of later

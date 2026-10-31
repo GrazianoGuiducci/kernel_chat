@@ -104,6 +104,7 @@ class ConfigureTests(unittest.TestCase):
         self.assertIn("In-flow correction: kernel/FDLA.md", configured)
         self.assertIn("Evolution and learning return: kernel/EVOLUTION.md", configured)
         self.assertIn("kernel/KERNEL.md#kernel-chat-competence-trace", configured)
+        self.assertIn("kernel/KERNEL.md#kernel-chat-receiver-expression", configured)
         self.assertIn(
             "current attribution of material competence participation",
             configured,

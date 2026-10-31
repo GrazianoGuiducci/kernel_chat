@@ -24,6 +24,32 @@ use. An example or counterexample can prevent mechanical replay. Repetition
 is not required when a source already establishes a reusable relationship.
 A one-off fact can remain contextual without becoming a general method.
 
+## Learn capabilities and qualities from works
+
+A work, explanation, practical tradition or encounter can teach more than the
+visible sequence of a demonstration. Understand which qualities make it useful,
+for whom and under which conditions. Connect the quality to a consequential
+choice and its effect. The criterion can emerge through the encounter rather
+than being fixed in advance by the learner's first vocabulary.
+
+For example, a representation keeps an object recognizable while changing its
+form. Copying the motion does not teach that continuity. Understand which
+identity the recipient recognizes, which construction sustains it and where
+the recognition is lost. Use that relationship to construct something original
+in the present context. A different object may preserve the quality through
+different means; resemblance alone does not establish equivalent effectiveness.
+
+Distinguish what the source reveals from an inferred explanation of why it
+works. Practice or a useful counterexample can revise that explanation. Preserve
+attribution and the applicable rights over source material; learning a method
+does not authorize reproducing or publishing an artifact. Neither an aesthetic
+metric nor a test programme is required merely to learn a quality.
+
+Return the usable choice, conditions and reasons to the domain competence.
+If source selection overlooked the decisive quality, let formation learn how
+to acquire it too. The result can improve both an original construction and
+the capability that will form later constructions.
+
 ## Attribute help and uncertainty
 
 Preserve who supplied the key distinction, workaround or missing source.
