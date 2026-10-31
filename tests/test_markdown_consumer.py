@@ -397,6 +397,59 @@ class MarkdownConsumerTests(unittest.TestCase):
             active_anchor_owner_pairs(intervening_rendered_element),
         )
 
+    def test_selected_depth_fragments_reach_rendered_owners(self) -> None:
+        # A real link to an existing file does not establish that its fragment
+        # reaches a section in a renderer without implicit GitHub heading IDs.
+        contracts = (
+            (
+                "kernel/references/formation-and-inheritance.md",
+                "inherit-coherence-in-the-competences-own-decisions",
+                "Inherit coherence in the competence's own decisions",
+            ),
+            (
+                "kernel/references/learning-from-encounters.md",
+                "learn-capabilities-and-qualities-from-works",
+                "Learn capabilities and qualities from works",
+            ),
+            (
+                "kernel/references/source-field-and-kernel-composition.md",
+                "form-a-cooperative-capability",
+                "Form a cooperative capability",
+            ),
+            (
+                "kernel/references/evolution-decisions.md",
+                "read-the-carriers-role-at-its-consumer",
+                "Read the carrier's role at its consumer",
+            ),
+            (
+                "kernel/references/receiver-expression.md",
+                "adapt-to-the-persons-actual-ability-to-intervene",
+                "Adapt to the person's actual ability to intervene",
+            ),
+        )
+        entry_paths = (
+            "kernel/KERNEL.md", "kernel/COMPETENCE.md", "kernel/EVOLUTION.md",
+            "docs/CANDIDATE_1_2_0.md",
+        )
+        incoming: set[tuple[Path, str]] = set()
+        for relative in entry_paths:
+            source = ROOT / relative
+            for href in active_links(source.read_text(encoding="utf-8")):
+                parsed = urlsplit(href)
+                if parsed.scheme or parsed.netloc or not parsed.path:
+                    continue
+                incoming.add((
+                    (source.parent / unquote(parsed.path)).resolve(),
+                    unquote(parsed.fragment),
+                ))
+        for relative, anchor, heading in contracts:
+            with self.subTest(target=relative, anchor=anchor):
+                target = ROOT / relative
+                self.assertIn((target.resolve(), anchor), incoming)
+                text = target.read_text(encoding="utf-8")
+                self.assertEqual(active_anchors(text).count(anchor), 1)
+                self.assertIn((anchor, heading), active_anchor_owner_pairs(text))
+
     def test_practical_depth_is_reachable_from_owners_and_file_setup(self) -> None:
         # A depth file elsewhere in the package is insufficient if the acting
         # owner no longer gives the receiver an active route to its method.

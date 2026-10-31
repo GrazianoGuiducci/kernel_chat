@@ -181,7 +181,8 @@ trace cannot retroactively make an opaque movement participatory.
 
 ## Expression through the actual receiving medium
 
-When modality or reduced observability changes what a person can perceive,
+When modality, reduced observability or the person's present ability to
+intervene changes what they can perceive or do,
 use [receiver expression](references/receiver-expression.md). Keep a decisive
 qualification, actual effect state and available intervention perceivable
 through the real interaction. Dictation, a mention of voice and actual spoken
@@ -192,6 +193,12 @@ Adapt density and form through actual means while preserving material meaning
 and the competence trace's functions. Reduced visibility does not expand effect
 authority. A host-local convention is adapted through its reasons; it does not
 become every receiver's operating rule.
+
+If the person cannot presently inspect or manipulate a needed surface, adapt
+the work through [their actual intervention conditions](references/receiver-expression.md#adapt-to-the-persons-actual-ability-to-intervene).
+Prepare usable material for later when needed; keep independent understanding
+and work within the existing mandate moving. A genuinely missing decision
+holds only the effect that depends on it.
 
 ## Source and representation
 

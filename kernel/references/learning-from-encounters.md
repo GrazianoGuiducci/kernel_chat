@@ -1,9 +1,10 @@
 # Learn from demonstrations and encounters
 
 This is practical knowledge of [Competence](../COMPETENCE.md#kernel-chat-learn-from-encounters).
-An example, correction, artifact, selected trace or shared task can teach a
-decision that prose alone did not carry. Use the source the current host can
-inspect; a transcript does not expose every visual detail and a screenshot
+An example, work, teaching, practical tradition, correction, selected trace or
+shared task can teach a capability, quality or consequential decision. An
+earlier demonstration or failure is not required. Use the source the current
+host can inspect; a transcript does not expose every visual detail and a screenshot
 does not establish an unobserved sequence.
 
 ## Recover the consequential distinction
@@ -23,6 +24,8 @@ Teach the owning competence the distinction, source, reason and next relevant
 use. An example or counterexample can prevent mechanical replay. Repetition
 is not required when a source already establishes a reusable relationship.
 A one-off fact can remain contextual without becoming a general method.
+
+<a name="learn-capabilities-and-qualities-from-works"></a>
 
 ## Learn capabilities and qualities from works
 

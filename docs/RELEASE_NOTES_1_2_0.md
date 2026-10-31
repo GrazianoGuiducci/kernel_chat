@@ -13,6 +13,11 @@ and competence-trace functions in the perceived channel.
 
 ## Receiving continuity
 
+The [situated review](REVIEW_1_2_0.md) deepens recognition of works and practice
+before a demonstration exists, actual participation conditions, and stable
+navigation to selected deep sections. These changes belong to the current
+development revision and require their own proof.
+
 Root source version is `1.2.0`; portable entry is `3.2.0`. The ChatGPT adapter
 remains `1.0.0`, the configurator is unchanged and INSTANCE remains
 `kernel_chat.instance.v1`. Existing configured bytes, customized entries and

@@ -181,8 +181,9 @@ generative inheritance changes the capacity being formed, use
 [Competence practical formation](kernel/COMPETENCE.md#kernel-chat-practical-formation).
 It reaches the deeper method without requiring another formation phase.
 
-When a demonstration, correction or shared encounter teaches a consequential
-decision, use [Competence learning from encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters).
+When a work, teaching, practical tradition, demonstration, correction or shared
+encounter can form a capability, quality or consequential decision, use
+[Competence learning from encounters](kernel/COMPETENCE.md#kernel-chat-learn-from-encounters).
 Keep assistance and observation attributable; a doubt can change the question.
 
 When the distribution of sources or participation of independent kernels
@@ -197,7 +198,8 @@ contribution does not absorb ownership or authority.
 
 When contextual rejection, simplification, surprise or a carrier's semantic
 role changes continuation, use [Evolution decisions](kernel/EVOLUTION.md#kernel-chat-evolution-decisions).
-When modality or observability changes what can be perceived or corrected,
+When modality, observability or the person's ability to intervene changes
+what can be perceived, performed or corrected,
 use [Core receiver expression](kernel/KERNEL.md#kernel-chat-receiver-expression).
 These routes deepen their existing owners only when the relation matters.
 

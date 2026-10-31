@@ -11,6 +11,13 @@ history or a release receipt.
 
 ## Current candidate — inheritable receiver knowledge, 2026-10-31
 
+The [situated review](REVIEW_1_2_0.md) follows positive conditions of use and
+real participation, as well as the source-to-owner map. It repairs recognition
+of works/practice, actual intervention conditions and selected deep-section
+navigation. Its CommonMark counterexample distinguishes a containing file from
+its fragment destination. The reviewed revision receives its own 71-test and
+exact CI proof; earlier construction observations keep their own identity.
+
 The [1.2.0 candidate](CANDIDATE_1_2_0.md) builds on canonical 1.1.0. Existing
 formation, encounter and source-field methods gain usable local decisions;
 two selective bodies deepen evolution decisions and actual-medium expression.

@@ -85,6 +85,12 @@ can resolve to the saved `formation-and-inheritance.md`; it does not require
 an emulated filesystem. Retain the method's owner and source revision when a
 native reader uses a filename or search rather than a literal relative link.
 
+Preserve the selected section destination as well as the body filename.
+The source supplies explicit anchors for the newly deepened methods. A reader
+that uses search or section titles can map to the same section through its
+native means; reaching the containing file alone does not establish that
+the internal destination was resolved.
+
 If the host cannot retain or retrieve part of the selected depth, identify
 that specific gap and use another adequate source route or supply the body
 when needed. Do not report the full candidate knowledge as available merely

@@ -4,6 +4,11 @@ Historical entries describe the contract of their own revision. For the current 
 
 ## 1.2.0 — candidate source
 
+- Situated review: extended entry conditions to learning from works, teaching
+  and practice before a demonstration exists; connected actual intervention
+  conditions to the receiving method; added stable deep-section anchors and a
+  CommonMark consumer test of real incoming fragments and rendered destinations.
+  The reviewed resultant has its own source identity and proof.
 - Deepened formation with coherence in the competence's own source inputs,
   transformations and decisions. Useful knowledge, embedded directives and
   effect authority remain distinct; local synthesis can itself need correction.

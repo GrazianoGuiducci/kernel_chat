@@ -9,7 +9,8 @@ Candidate source version **1.2.0** deepens what formed competences can inherit:
 coherence in their own decisions, learning qualities from works, cooperation
 that can shape the common question, and continuation adapted to actual receiving
 conditions. The [candidate record](docs/CANDIDATE_1_2_0.md) and
-[source notes](docs/RELEASE_NOTES_1_2_0.md) describe the result. Canonical `main`
+[source notes](docs/RELEASE_NOTES_1_2_0.md) and
+[situated review](docs/REVIEW_1_2_0.md) describe the result. Canonical `main`
 and a published release retain their own source, tag and release identities.
 
 Install it when you want an AI surface to become a continuing semantic system

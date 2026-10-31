@@ -6,7 +6,7 @@ Updated: 2026-10-31
 source_version: 1.2.0
 current_work: candidate source; inheritable GPT capabilities in receiver-owned methods
 current_change: local coherence inheritance, qualities from works, cooperative formation, situated evolution decisions and actual-medium expression
-source_status: development candidate; no canonical promotion is implied
+source_status: reviewed development candidate; exact proof resolves from the current branch revision; no canonical promotion is implied
 candidate_baseline: af035d85174235e04789bae63e7a3d11ac802609
 candidate_branch: codex/kernel-chat-gpt-candidate-20261031
 candidate_source_identity: resolve from this branch ref and its exact workflow result
@@ -21,6 +21,13 @@ owner: Graziano Guiducci
 ```
 
 ## Candidate 1.2.0 — 2026-10-31
+
+The [situated review](docs/REVIEW_1_2_0.md) corrects the conditions that make
+works/teaching/practice pertinent, adapts expression to the person's actual
+ability to intervene and makes selected deep fragments explicit at their
+rendered destinations. This creates a new resultant on the same development
+version. Earlier ea73a8d checks keep their identity; resolve current proof from
+the branch ref and its validator, 71-test suite and exact workflow executions.
 
 The [candidate record](docs/CANDIDATE_1_2_0.md) connects the received drafts to
 the actual owners, entry and delivery. [Source notes](docs/RELEASE_NOTES_1_2_0.md)

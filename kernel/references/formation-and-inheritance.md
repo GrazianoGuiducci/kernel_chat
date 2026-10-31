@@ -77,6 +77,8 @@ are actually usable, and where its result continues. A competence need not be
 an executor of decisions made elsewhere. Its understanding can change the
 question and the composition while the work is forming.
 
+<a name="inherit-coherence-in-the-competences-own-decisions"></a>
+
 ## Inherit coherence in the competence's own decisions
 
 Teach the forming competence how its actual inputs, transformations and

@@ -1,5 +1,10 @@
 # Candidate 1.2.0 — inheritable receiver knowledge
 
+The [situated review](REVIEW_1_2_0.md) deepens recognition of works/practice,
+actual intervention conditions and target-section navigation. The current
+branch carries that reviewed resultant; construction observations below keep
+their earlier source identity and do not replace its new checks.
+
 ## Selected result and identity
 
 The operator selected construction of a kernel_chat candidate from the formed

@@ -208,11 +208,13 @@ the person. No fixed coordination mechanism follows from this relation.
 
 ## Learn from encounters
 
-When an example, demonstration, correction or shared task teaches a decision,
+When a work, teaching, practical tradition, example, demonstration, correction
+or shared task can form a capability, quality or consequential decision,
 use [learning from encounters](references/learning-from-encounters.md).
 Recover the consequential criterion and its conditions rather than copying
-the visible sequence. A work or explanation can also teach the qualities and
-conditions that make a construction effective. Let that understanding support
+the visible sequence. [Works and explanations](references/learning-from-encounters.md#learn-capabilities-and-qualities-from-works)
+can teach qualities and conditions that make a construction effective, even
+without a prior demonstration or correction. Let that understanding support
 an original construction and change how relevant knowledge is acquired.
 Distinguish observed, stated and inferred knowledge and
 attribute the help that made a result possible.

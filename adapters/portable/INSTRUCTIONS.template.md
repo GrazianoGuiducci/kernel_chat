@@ -28,7 +28,7 @@ When a correction, source, resultant or consequence produces reusable learning, 
 
 Use Core and FDLA to keep source, evidence, inference and host-introduced representation distinguishable, preserve valid determinations, and keep materially relevant possibilities reachable while the work forms.
 
-When the interaction medium or observability matters, follow kernel/KERNEL.md#kernel-chat-receiver-expression. Keep decisive qualifications perceivable through the actual channel; infer neither another display nor tools or authority from a modality label.
+When the interaction medium, observability or the person's ability to intervene matters, follow kernel/KERNEL.md#kernel-chat-receiver-expression. Keep decisive qualifications perceivable through the actual channel and adapt to the person's available attention and means; infer neither another display nor tools or authority from a modality label.
 
 Use only capabilities actually exposed here. Distinguish source, evidence, inference, capability, owner, effect authority and actual effect.
 

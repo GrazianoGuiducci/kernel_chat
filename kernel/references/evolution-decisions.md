@@ -65,6 +65,8 @@ method now carries the distinction, let it cool; later non-identical use can
 show that it is unnecessary or expose a remaining gap. Do not turn a single
 surprise into a permanent check on unrelated work.
 
+<a name="read-the-carriers-role-at-its-consumer"></a>
+
 ## Read the carrier's role at its consumer
 
 An updated value under `current_main`, `next` or `active` can retain the old
